@@ -663,7 +663,7 @@ The $\Vect$-valued connection on $\Fr_X$ is induced from the Grothendieck connec
 
 \begin{dfn}\label{fmlexp} 
 Let $\Exp (X)$ denote the quotient $X^{coor} / \GL_n$. 
-A holomorphic section of $\Exp(X)$ over $X$ is called a {\em formal exponential}. 
+A $C^\infty$-section of $\Exp(X)$ over $X$ is called a {\em formal exponential}. 
 \end{dfn}
 
 \begin{rmk} 
@@ -675,7 +675,7 @@ This structure on $\Exp(X)$ depends on a choice of a section of the short exact 
 It is natural to use the splitting determined by the choice of coordinates on the formal disk.
 \end{rmk}
 
-Note that $\Aut_n^+$ is contractible, and so sections always exist. 
+Note that $\Aut_n^+$ is contractible, and so smooth sections always exist. 
 A formal exponential is useful because it equips the frame bundle with a $(\Vect,\GL_n)$-module structure, as follows.
 
 %The space of formal exponentials is the (infinite dimensional) affine space $\Sect_X(\Exp_X^\infty)$. Unraveling the definition, such a section $\sigma$ of $X^{aff}$ is an $\infty$-jet equivalence class of a local diffeomorphism
@@ -721,7 +721,7 @@ so one can produce an explicit gauge equivalence.
 % an observation that Willwacher refines.}
 
 % In practice, formal exponentials are easy to produce. Consider a connection on the holomorphic tangent bundle. \brian{finish this}
-
+ 
 \begin{rmk} 
 In \cite{willwacher} Willwacher provides a description of the space $\Exp(X)$ of {\em all} formal exponentials. He shows that it is isomorphic to the space of pairs $(\nabla_0, \Phi)$
 where $\nabla_0$ is a torsion-free connection on $X$ for $T_X$ and $\Phi$ is a section of the bundle
@@ -2195,9 +2195,11 @@ It is clear that the action by an exact one-form is zero, so $\rho_{\Omega^1}$ f
 where we have identified $\hOmega_n^1 / \d \hO_n \cong \hOmega^2_{n,cl}$ via the de Rham differential. 
 The map $\rho_{\Omega^2_{cl}}$ is the desired action by closed two-forms. 
 
-We can explicitly describe the action by a closed two-form $f(t_1,\ldots,t_n) \d t_{j_1} \d t_{j_2}$ by
+We can explicitly describe the action by a closed two-form $\omega$ as follows.
+Let $\alpha = \alpha_i (t) \d t^i$ be a one-form such that $\d \alpha =  \omega$.
+Then
 \ben
-\rho_{\Omega^2_{cl}} (f(t_1,\ldots,t_n) \d t_{j_1} \d t_{j_2}) = \left(f(c_0^i) T (c_0^{j_1}) T (c_0^{j_2})\right)_{(1)} .
+\rho_{\Omega^2_{cl}} (\omega) = - \left(\partial_j \alpha_i (c) T(c_0^j) T (c_0^{i}) + \alpha_i(c) T (c_0^{i})^2 \right)_{(1)} .
 \een
 
 \subsubsection{}
@@ -2342,7 +2344,7 @@ but it is well-defined for any vector space $M$ such that smooth maps $C^\infty(
 The differential $\d_{Grp}$ is defined by
 \ben
 (\d_{\rm Grp} \alpha)(g_1,\ldots, g_{k+1}) = 
-\alpha(g_2, \ldots, g_{k+1}) + 
+g_1 \alpha(g_2, \ldots, g_{k+1}) + 
 \sum_{i = 1}^{k} (-1)^i \alpha(g_1,\ldots,g_{i}g_{i+1}, \ldots, g_{k+1}) +
 (-1)^{k+1} \alpha(g_1,\ldots,g_k) .
 \een 
@@ -2852,12 +2854,13 @@ degree zero)
 
 A direct calculation shows that $\Theta^{(k)}_A$ is both $\partial$ and
 $\dbar$-closed. In fact, we will use a
-preferred one given by the Chern-Simons functional. In the case $k =
-2$ It is defined as the $3$-form
-\ben
-\CS (A) := {\rm Tr}\left(A \wedge \dbar A + \frac{1}{3} A\wedge A \wedge
-  A\right)
-\een
+preferred one given by the Chern-Simons functional. 
+In the case $k = 2$ we evaluate the usual Chern-Simons functional on the Chern connection $A$:is defined as the $3$-form
+\begin{align*}
+\CS (A) & = {\rm Tr}\left(A \wedge \d A + \frac{2}{3} A \wedge A \wedge A \right) \\ & = {\rm Tr}\left(A \wedge \dbar A + A \wedge \partial A + \frac{2}{3} A \wedge A \wedge A \right) \\
+& = {\rm Tr}\left(A \wedge \dbar A - \frac{1}{3} A\wedge A \wedge A\right)
+\end{align*}
+using the property of the Chern connection: $\partial A + A \wedge A = 0$. 
 Note that $\CS (A)$ is an element in $\Omega^{\geq 2, *} (U)$ of cohomological degree one. 
 By construction $\d\CS(A) =\Theta^{(2)}_A$, 
 where $\d$ is the total differential on the complex. 
