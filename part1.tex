@@ -908,7 +908,7 @@ The induced map $\fm_n^1 \cdot \Vect \to \fm_n^1 \cdot \Vect / \fm_n^2
 \cdot \Vect \cong \fgl_n$ allows us to restrict $V$ to a $(\fm_n^1 \cdot
 \Vect)$-module. 
 We  then coinduce this module along the inclusion $\fm^1 \cdot \Vect
-\subset \Vect$ to get a $\Vect$-module $\cV = \Hom_{\fm_n^1 \cdot \Vect}(\Vect,V)$. 
+\subset \Vect$ to get a $\Vect$-module $\cV = \Hom_{\fm_n^1 \cdot \Vect}(U(\Vect),V)$. 
 There is an induced action of $\GL_n$ on $\cV$. Indeed, as a $\GL_n$-representation one has $\cV \cong \hO_n \tensor_{\CC} V$.
 Moreover, this action is compatible with the $\Vect$-module structure, so that $\cV$ is actually a $(\Vect, \GL_n)$-module. 
 Thus, the construction provides a functor  from $\Rep_{\GL_n}$ to
@@ -2385,7 +2385,7 @@ intertwines with the de Rham differential.
 First, we write down a 2-cocycle $\alpha_{GMS} \in {\rm C}_{\rm Grp}^*(\Aut_n ; \hOmega^{\geq 2}_n)$,
 following~\cite{GMS}.
 Given an element $f \in \Aut_n$, we will use $\D f$ to denote its Jacobian.
-we give an explicit formula via a pair of maps $(\alpha_2, \alpha_3)$, where 
+We give an explicit formula for $\alpha_{GMS}$ via a pair of maps $(\alpha_2, \alpha_3)$, where 
 \ben
 \begin{array}{cccc}
 \alpha_2 : & \Aut_n \times \Aut_n & \to & \hOmega^{2}_n \\ 
@@ -2396,7 +2396,7 @@ and
 \ben
 \begin{array}{cccc}
 \alpha_3 : & \Aut_n & \to & \hOmega^3_n \\ 
-& f & \mapsto & \frac{1}{3} \tr\left( (\D f^{-1}\d_{dR} \D f)^3\right) .
+& f & \mapsto & \frac{1}{3} \tr\left( ((\D f)^{-1}\d_{dR} \D f)^3\right) .
 \end{array}
 \een
 This cochain is of degree 2 and has no terms of type $\Omega^k$ for $k \geq 4$. 
@@ -2421,7 +2421,7 @@ Thus, for instance, we have
 \d_{dR} \D f_1 . 
 \een 
 Let $\D f = Jac(f_2 \circ f_1)$ so that $\alpha_3(f_2 \circ f_1) =
-\frac{1}{3} \Tr\left((\D f^{-1} \d_{dR} \D f)^3\right)$. Plugging in the formula for the
+\frac{1}{3} \Tr\left(((\D f)^{-1} \d_{dR} \D f)^3\right)$. Plugging in the formula for the
 Jacobian we compute
 \bestar
 \frac{1}{3} \left((\D f)^{-1} \d_{dR} \D f\right)^3 & = & \frac{1}{3} \left((\D f_1)^{-1} f_1^*((\D f_2)^{-1} \d_{dR}
