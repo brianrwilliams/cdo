@@ -14,8 +14,10 @@ The action functional is
 \[\int_S \langle \beta \wedge \dbar \gamma \rangle, \]
 where the brackets indicate that one uses the fiberwise evaluation pairing between the tangent bundle $T_X$ and the cotangent bundle $T^*_X$.
 The equations of motion for this action are then
-\[ \dbar \gamma = 0 = \dbar \beta. \]
-In other words, a solution is a holomorphic map from $S$ to $T^*X$.
+\[ 
+\dbar \gamma = 0 = \dbar \beta. 
+\]
+In other words, a solution is a holomorphic map $\gamma$ from $S$ to $X$ along with a holomorphic 1-form $\beta$ on $S$ with values in the pullback along $\gamma$ of the cotangent bundle. 
 Here we will develop the perturbative aspects of the curved $\beta\gamma$ system in the BV formalism.
 
 The quantization of the classical $\beta\gamma$ system is a chiral conformal field theory whose chiral algebra is the CDOs of $X$,
@@ -231,7 +233,16 @@ Finally, a map of $\L8$ algebras $f$ is determined by the composite
 as any coalgebra map is determined by how it maps to cogenerators.
 This composite provides an element $\alpha_f \in \cSym(\fg^\vee[-1]) \otimes \fg'[1]$,
 and the condition that $f$ intertwines the differentials is equivalent 
-to the Maurer-Cartan equation on $\alpha_f$.
+to the Maurer-Cartan equation on~$\alpha_f$.
+
+We introduce one final bit of notation, since we use it repeatedly below.
+Let ${\rm C}^*_{\rm Lie, red}(\fg)$ denote the {\em reduced} cochains:
+we remove the constant terms (i.e., the span of the unit element).
+That is, the underlying graded vector space~is
+\[
+{\rm C}^\sharp_{\rm Lie,red}(\fg) = \cSym^{>0}(\fg^*[-1]),
+\]
+namely, the functions that vanish at the base point of the formal moduli space encoded by~$\fg$.
 
 \section{The formal $\beta\gamma$ system}
 \label{sec formal}
@@ -279,9 +290,6 @@ The equations of motion are thus
 for $i = 1,\ldots,n$.
 \end{dfn}
 
-We can think of a solution of the equations of motion as a holomorphic
-map $S \to T^* \CC^n$. 
-
 There is an action of the general linear group $\GL_n$ on the space of
 fields of the free $\beta\gamma$ system. Explicitly, for a field of
 the form $(f \tensor v, g \tensor \lambda) \in \Omega^{0,*}(S ;
@@ -300,12 +308,12 @@ construction this action preserves $S_{free}$.
 We now turn to the case where the target is the formal $n$-disk $\hD^n$,
 which is closely related to the free case we just described.
 
-Let $S$ denote a Riemann surface. 
+Let $S$ denote a Riemann surface, and let $\fg_n$ be the abelian Lie algebra from Definition~\ref{dfn fgn}. 
 The dg Lie algebra $$\fg_n^S := \Omega^{0,*}(S,\fg_n)$$ plays a central role for us.
 It is abelian but has a nontrivial differential via $\dbar$.
 The Maurer-Cartan equation of this dg Lie algebra is $\dbar(\gamma) = 0$, where $\gamma: S \to \CC^n$ is a smooth function;
 in other words, a solution is simply a holomorphic map from $S$ to $\CC^n$.
-Under the dictionary, this dg Lie algebra $\fg^S_n$ encodes ``deformations of the constant map to $0$ to nearby holomorphic functions.''
+Under the dictionary, this dg Lie algebra $\fg^S_n$ encodes a formal moduli space that describes how to deform the constant function with value $0$ to a holomorphic functions.
 Note that this Maurer-Cartan equation is precisely the Euler-Lagrange equation for $\gamma$ in the free $\beta\gamma$ system,
 and the deformations describe the formal neighborhood of the constant zero map among all holomorphic functions.
 
@@ -786,8 +794,7 @@ note that affine linear automorphisms ${\rm Aff}(\CC) = \CC \ltimes \CC^\times$ 
 of the $\beta\gamma$ system.
 %(Later, in Section \owen{ref}, we will consider instead how holomorphic vector fields act on local functionals
 %and hence determine the central charge of the quantized theory.)
-We are only interested in the subcomplex of $\Def^{W}_n$ consisting of local functionals with the same symmetries,
-namely weight one under the scaling action and invariant under the $\Aff(\CC)$ action.
+We are only interested in the subcomplex of $\Def^{W}_n$ consisting of local functionals that are weight zero under the scaling action and invariant under the $\Aff(\CC)$ action.
 Then we have the subcomplex
 \ben
 (\Def_n)^{\CC^\times \times {\rm Aff}(\CC)} \subset \Def_n
@@ -878,16 +885,16 @@ Thus, to define $J$, we need to introduce a few constructions.
 
 First, there is an assignment
 \ben
-(-)^S : \hO_n \to {\rm Hom}_{\CC} \left( \Omega^{0,*}_S \tensor \fg_n, \Omega^{0,*}_S\right) 
+(-)^S : \hO_n \to {\rm Hom}_{\CC} \left( \Sym(\Omega^{0,*}_S \tensor \fg_n[1]), \Omega^{0,*}_S\right) 
 \een
-that produces a linear map on $\fgn^S$ from a function on the formal $n$-disk,
+that produces an $L_\infty$ map on $\fgn^S$ from a function on the formal $n$-disk,
 which we now describe.
 Given an input $f \in \hO_n$, let $f_k$ denote its homogeneous component of degree $k$. 
 View $f_k$ as a linear map $f_k : \Sym^k(\fg_n[1]) \to \CC$. 
 We then define 
 \ben
 \begin{array}{cccc}
-f^S_k : & \Sym^k(\Omega^{0,*}_S \tensor \fg_n) & \to & \Omega^{0,*}_S \\ 
+f^S_k : & \Sym^k(\Omega^{0,*}_S \tensor \fg_n[1]) & \to & \Omega^{0,*}_S \\ 
 &(\gamma_1 \tensor \xi_1) \cdots (\gamma_k \tensor \xi_k) & \mapsto &
 (\gamma_1 \wedge \cdots \wedge \gamma_k) f(\xi_1, \cdots, \xi_k) 
 \end{array}
@@ -933,7 +940,7 @@ We tie up the properties of the functional $\Tilde{J}$ in the following proposit
 \begin{prop} \label{jmap} 
 The assignment $\theta \mapsto \Tilde{J}_\theta$ satisfies:
 \begin{itemize}
-\item[(1)] For all $\theta$, the local functional $\Tilde{J}_\theta$ is closed
+\item[(1)] For all $\theta$, the local functional $\Tilde{J}_\theta$ is $\dbar$-closed
   inside $\Def_n$ and lies in the subcomplex $(\Def_n)^{\CC^\times \times {\rm
     Aff}(\CC)}$.
 \item[(2)] The assignment $\theta \mapsto \Tilde{J}_\theta$ is
@@ -1077,8 +1084,8 @@ $\Vect$-equivariant. To complete the proof it suffices to show that we have a $\
 this equivalence appears as Proposition 15.1.1 in \cite{WG2},
 whose proof we will review in order to keep track of the $\Vect$-action. 
 
-First, observe that by restricting to weight one local functionals under the scaling action, 
-we only consider functionals that are linear in $\beta$.
+First, observe that by restricting to weight zero local functionals under the scaling action, 
+we only consider functionals that are independent of $\beta$.
 This constraint implies that 
 \[
 (\Def_n)^{\CC^\times \times {\rm Aff}(\CC)} \cong {\rm C}^*_{\rm loc}(\Omega^{0,*}(\CC, \fgn))^{{\rm Aff}(\CC)},
