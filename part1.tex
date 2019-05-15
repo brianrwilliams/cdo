@@ -23,7 +23,7 @@ We will extract some familiar properties and structures of the sheaf of chiral d
 
 \section{Flat vector bundles and Harish-Chandra descent} \label{sec hc descent}
 
-This section is a discussion of the theory of vector bundles with flat connection arising from Harish-Chandra pairs. It establishes notation and terminology but can likely be used as a reference. In this section we have largely treated both the case of both smooth and holomorphic geometry, but throughout the rest of the paper we are concerned with the latter.
+This section is a discussion of the theory of vector bundles with flat connection arising from Harish-Chandra pairs. It establishes notation and terminology but can likely be used as a reference. In this section we have largely treated both smooth and holomorphic geometry, but throughout the rest of the paper we are concerned with the latter.
 
 \subsection{Algebra of Harish-Chandra pairs}
 
@@ -135,9 +135,41 @@ where the bracket is taken in the Lie algebra $\fg$.
 \end{itemize}
 \end{dfn}
 
-The condition that $\omega(\xi_a) = a$ simply says that $\omega$ restricts to a connection $1$-form for the principal bundle $P \to X$. 
-The Maurer-Cartan condition says that $\omega$ is {\em flat}. 
-In particular, if $\fg = \Lie(K)$, then we recover the usual notion of a principal $K$-bundle together with a flat connection, i.e., a principal bundle for the discrete group $K^\delta$. 
+In particular, if $\fg = \Lie(K)$, then condition (1) encdes the usual notion of a principal $K$-bundle, while condition (2) says that $\omega$ is {\em flat}, i.e., we have a principal bundle for the discrete group~$K^\delta$ underlying~$K$. 
+
+Recall that one can interpret a connection on a principal $K$-bundle as a splitting of the tangent bundle $TP$ into horizontal and vertical components in a $K$-equivariant way. 
+Let $T_\pi P$ denote the vertical tangent bundle (i.e., the kernel of the projection map $TP \to \pi^* TX$);
+note that $T_\pi P$ is canonically isomorphic to the trivial bundle $\ul{{\rm Lie}(K)}$ over $P$.
+A connection $\omega \in \Omega^1(P,{\rm Lie}(K))$ then determines a splitting
+\ben
+TP = T_\pi P \oplus H_\omega
+\een
+where $H_\omega \subset TP$ is defined as $\ker \omega$. That is, $H_\omega|_{p}$ is the subspace of $T_p P$ consisting of all vectors $X_p$ such that $\omega(X_p) = 0$ so that $H_{\omega}|_p \cong T_{\pi(p)}X$.   
+
+There is a similar interpretation for Harish-Chandra pairs.
+The embedding $i: \Lie(K) \hookrightarrow \fg$ determines a map of trivial bundles $i_P: \ul{{\rm Lie}(K)} \to \ul{\fg}$ over $P$. Define $T_\fg P$ to be the pushout
+\ben
+\xymatrix{
+\ul{{\rm Lie}(K)} \ar[r] \ar[d] & \ul{\fg} \ar[d] \\
+TP \ar[r] & T_\fg P
+}
+\een
+in bundles over $P$. Then a $K$-equivariant element $\omega \in \Omega^1(P; \fg)$ satisfying (ii) above is equivalent to a $K$-equivariant splitting
+\ben
+T_\fg P = \ul{\fg} \oplus H_{\omega}, 
+\een
+where $H_{\omega}|_p \cong T_{\pi(p)} X$. 
+
+Note that if there is an inclusion of Lie groups $K \hookrightarrow G$ inducing $\Lie(K) \hookrightarrow \Lie(G) = \fg$, 
+then this data is a flat $G$-bundle along with a reduction of structure group to a flat $K$-bundle.
+This example indicates that the Harish-Chandra version is a useful replacement in the case where the map $i:\Lie(K) \to \fg$ does \emph{not} integrate to a map of Lie groups. 
+
+\begin{ex} The most
+important example is the case where $\fg = \Vect$, the Lie algebra
+of formal vector fields, and $K = \GL_n$. In fact, $\Vect$ is not the
+Lie algebra of any Lie group. The pair $(\Vect,\GL_n)$ is
+fundamental for Gelfand-Kazhdan descent, defined in later sections.
+\end{ex}
 
 In the complex case it is natural to include the holomorphic structure. 
 
@@ -168,37 +200,7 @@ an ordinary $(\fg,K)$-principal bundle with flat connection (as in Definition \r
 the underlying $K$-bundle is holomorphic and $\omega$ is a $(1,0)$-form.
 \end{rmk}
 
-Recall that one can interpret a connection on a principal $K$-bundle as a splitting of the tangent bundle $TP$ into horizontal and vertical components in a $K$-equivariant way. 
-Indeed, a connection $\omega \in \Omega^1(P,{\rm Lie}(K))$ determines a splitting
-\ben
-TP = T_\pi P \oplus H_\omega
-\een
-where $H_\omega \subset TP$ is defined as $\ker \omega$. That is, $H_\omega|_{p}$ is the subspace of $T_pP$ consisting of all vectors $X_p$ such that $\omega(X_p) = 0$ so that $H_{\omega}|_p \cong T_{\pi(p)}X$. Moreover, $T_\pi P$ is canonically isomorphic to the trivial bundle $\ul{{\rm Lie}(K)}$ over $P$. 
-
-There is a similar interpretation for Harish-Chandra pairs.
-The embedding $i: \Lie(K) \hookrightarrow \fg$ determines a map of trivial bundles $i_P: \ul{{\rm Lie}(K)} \to \ul{\fg}$ over $P$. Define $T_\fg P$ to be the pushout
-\ben
-\xymatrix{
-\ul{{\rm Lie}(K)} \ar[r] \ar[d] & \ul{\fg} \ar[d] \\
-TP \ar[r] & T_\fg P
-}
-\een
-in bundles over $P$. Then a $K$-equivariant element $\omega \in \Omega^1(P; \fg)$ satisfying (ii) above is equivalent to a $K$-equivariant splitting
-\ben
-T_\fg P = \ul{\fg} \oplus H_{\omega}, 
-\een
-where $H_{\omega}|_p \cong T_{\pi(p)} X$. 
-
-Note that if there is an inclusion of Lie groups $K \hookrightarrow G$ inducing $\Lie(K) \hookrightarrow \Lie(G) = \fg$, 
-then this data is a flat $G$-bundle along with a reduction of structure group to a flat $K$-bundle.
-This example indicates that the Harish-Chandra version is a useful replacement in the case where the map $i:\Lie(K) \to \fg$ does \emph{not} integrate to a map of Lie groups. 
-
-\begin{ex} The most
-important example is the case where $\fg = \Vect$, the Lie algebra
-of formal vector fields, and $K = \GL_n$. In fact, $\Vect$ is not the
-Lie algebra of any Lie group. The pair $(\Vect,\GL_n)$ is
-fundamental for Gelfand-Kazhdan descent, defined in later sections.
-\end{ex}
+We now turn to maps between such structures.
 
 \begin{dfn}
 A {\em morphism of $(\fg,K)$-bundles} $(P \to X, \omega) \to (P' \to X', \omega')$ is a map of $K$-principal bundles
@@ -225,7 +227,9 @@ Recall the associated bundle construction: given a principal $K$-bundle $\pi : P
 V_X := P \times^K V
 \een
 over $X$. 
-One can view it as a pairing between the category of principal $K$-bundles and the category of finite-dimensional $K$-modules, i.e., a functor
+(People often use the notation $P\times_K V$ instead, but we wish to avoid potential confusion with the fibered product.)
+
+One can view this construction as a pairing between the category of principal $K$-bundles and the category of finite-dimensional $K$-modules, i.e., a functor
 \[
 - \times^K - : {\rm Bun}_K^\op \times \Mod_K^{fin} \to {\rm VB}
 \]
@@ -294,7 +298,7 @@ Denote the subspace of basic $k$-forms by $\Omega^k(P; \ul{V})_{bas}$. Just as w
 s : \Omega^k(P; \ul{V})_{bas} \xto{\cong} \Omega^k(X; V_X) 
 \een
 between basic $k$-forms and $k$-forms on $X$ with values in the associated bundle.
-In fact, $\Omega^{\#}(P; \ul{V})_{bas}$ forms a graded subalgebra of $\Omega^{\#}(P; \ul{V})$ and the isomorphism $s$ extends to an isomorphism of graded algebras $\Omega^{\#}(P; \ul{V})_{bas} \cong \Omega^{\#}(X; V_X)$.
+In fact, $\Omega^{\#}(P; \ul{V})_{bas}$ forms a graded submodule of $\Omega^{\#}(P; \ul{V})$ and the isomorphism $s$ extends to an isomorphism of graded modules $\Omega^{\#}(P; \ul{V})_{bas} \cong \Omega^{\#}(X; V_X)$.
 
 It is manifest that this construction of basic forms is natural in maps of $(\fg,K)$-bundles: basic forms pull back to basic forms along maps of bundles.
 
@@ -312,14 +316,14 @@ for each $k$. Let $\nabla^{P,V}$ denote the operator
 \ben
 \nabla^{P,V} := \d_{dR,P} + \rho_\fg(\omega) : \Omega^k(P; \ul{V}) \to \Omega^{k+1}(P; \ul{V})
 \een 
-for each $k$. 
+for each~$k$. 
 
 A direct calculation verifies the following. 
 
 \begin{lemma} 
-The operator $\nabla^{P,V}$ is a differential on the subalgebra of basic forms.
-Under the isomorphism $s: \Omega^{\#}(P; \ul{V}) \cong \Omega^{\#}(X;
-V_X)$, the cochain complex $(\Omega^{\#}(P; \ul{V}), \nabla^V)$ is a
+The operator $\nabla^{P,V}$ is a differential on the submodule of basic forms.
+Under the isomorphism $s: \Omega^{\#}(P; \ul{V})_{bas} \cong \Omega^{\#}(X;
+V_X)$, the cochain complex $(\Omega^{\#}(P; \ul{V})_{bas}, \nabla^V)$ is a
 dg module over $\Omega^*(X)$. 
 \end{lemma}
 
@@ -339,7 +343,7 @@ dg module over $\Omega^*(X)$.
 \begin{dfn}\label{def desc}
 The {\em associated flat vector bundle} to the flat $(\fg,K)$-bundle $P \to X$ and the finite-dimensional $(\fg,K)$-representation $V$ is 
 \[
-\desc((P\to X),V) := (P \times^X V, \nabla^{P,V}),
+\desc((P\to X),V) := (P \times^K V, \nabla^{P,V}),
 \]
 namely the associated vector bundle on $X$ and its flat connection.
 Its {\em de Rham complex} is
@@ -397,12 +401,12 @@ cohomology of $V$.
 Suppose $K$ is a Lie group and let $\fk$ be its Lie algebra. 
 Then $(\fk,K)$ is a HC-pair and we have an equivalence of categories
 \ben
-\Mod_{(\fk,K)} \cong {\rm Rep}^{fin}_K .
+\Mod^{fin}_{(\fk,K)} \cong {\rm Rep}^{fin}_K .
 \een
 Let $P \to X$ be a principal $K$-bundle and $\omega \in \Omega^1(P;\fk)$ a {\em flat} connection (in the traditional sense). 
 Then the functor
 \ben
-\ddesc((P,\omega),-) : {\rm Mod}_{(\fk,K)} \to {\rm Mod}_{\Omega^*_X}
+\ddesc((P,\omega),-) : {\rm Mod}^{fin}_{(\fk,K)} \to {\rm Mod}_{\Omega^*_X}
 \een
 is equivalent to the functor ${\rm Rep}_{K}^{fin} \to
 \Mod_{\Omega^*_X}$ that sends a $K$-representation $V$ to the de Rham
@@ -515,10 +519,10 @@ is invertible over $\hO_n$, by a version of the inverse function theorem.
 Note that this group is far from being finite-dimensional, so it does not fit immediately into the setting of HC-pairs described above. 
 It is, however, a {\em pro}-Lie group in the following way. 
 As each $\phi \in \Aut_n$ preserves the filtration on $\hO_n$, it induces an automorphism of each partial quotient $\hO_n/\fm_n^k$.
-Let $\Aut_{n,k}$ denote the image of $\Aut_n$ in $\Aut(\hO_n/\fm_n^k)$; this group $\Aut_{n,k}$ is clearly a quotient of $\Aut_n$.
+Let $\Aut_{n,k}$ denote the image of $\Aut_n$ in $\Aut(\hO_n/\fm_n^{k+1})$; this group $\Aut_{n,k}$ is clearly a quotient of $\Aut_n$.
 Note, for instance, that $\Aut_{n,1} = \GL_n$.
 Explicitly, an element $\phi$ of ${\rm Aut}_{n,k}$ is the collection of $n$-tuples $(\phi_1,\ldots,\phi_n)$ 
-such that each $\phi_i$ is an element of $\fm_n/\fm_n^k$ and such that the Jacobian matrix $Jac(\phi)$ is invertible in $\hO_n/\fm_n^k$.
+such that each $\phi_i$ is an element of $\fm_n/\fm_n^{k+1}$ and such that the Jacobian matrix $Jac(\phi)$ is invertible in $\hO_n/\fm_n^{k+1}$.
 The group ${\rm Aut}_{n,k}$ is manifestly a finite dimensional Lie group, as the quotient algebra is a finite-dimensional vector space. 
  
 The group of automorphisms $\Aut_n$ is the pro-Lie group associated with the natural sequence of Lie groups
@@ -602,9 +606,9 @@ For instance, ${\rm W}_{n,1} = \mathfrak{aff}_n = \CC^n \ltimes \fgl_n$, the Lie
 
 The Lie algebra of $\Aut_{n,k}$ is
 \[
-{\rm W}_{n,k}^0 := \fm_n \cdot \Vect /\fm_n^{k+1} \Vectz .
+{\rm W}_{n,k}^0 := \fm_n \cdot \Vectz /\fm_n^{k+1} \Vectz .
 \]
-That is, the Lie algebra of vector fields vanishing at zero modulo the $k+1$ power of the maximal ideal. Thus, the principal $\Aut_{n,k}$-bundle $X_{k}^{coor} \to X$ induces an exact sequence of tangent spaces
+That is, the Lie algebra of vector fields vanishing at zero modulo the $(k+1)$th power of the maximal ideal. Thus, the principal $\Aut_{n,k}$-bundle $X_{k}^{coor} \to X$ induces an exact sequence of tangent spaces
 \ben
 {\rm W}_{n,k}^0 \to T_{(x,[\varphi]_k)}X^{coor} \to T_x X;
 \een
@@ -821,7 +825,10 @@ $(\Vect, \GL_n)$-modules $f : \cV \to \cV'$. We denote this category
 by $\Mod_{(\Vect, \GL_n)}^{\cO_n}$. 
 \end{dfn}
 
-Just as the category of $D$-modules is symmetric monoidal via tensor over $\cO$, we have the following result.
+It is useful to bear in mind that such an object is much like a vector bundle equipped with a flat connection,
+due to the action of vector fields by derivations.
+More properly this category behaves much like $D$-modules (i.e., modules over the ring $D$ of differential operators).
+For instance, just as the category of $D$-modules is symmetric monoidal via tensor over $\cO$, we have the following result.
 
 \begin{lemma}
 The category $\Mod^{\cO_n}_{(\Vect, \GL_n)}$ is symmetric monoidal with respect to tensor over $\hO_n$.
@@ -840,24 +847,23 @@ be the full subcategory spanned by objects that are free and finitely generated 
 Upon descent these will correspond to ordinary vector bundles and so
 we refer to this category as {\em formal vector bundles}. 
 
-The category of formal $\hO_n$-modules has a natural symmetric monoidal structure by tensor product over $\hO$. The Harish-Chandra action is extended by
+The category of formal $\hO_n$-modules has a natural symmetric monoidal structure by tensor product over~$\hO$. The Harish-Chandra action is extended by
 \[
 X \cdot (s \otimes t) = (X s) \otimes t + s \otimes (Xt). 
 \]
 This should not look surprising; it is the same formula for tensoring
-$D$-modules over $\cO$. 
+$D$-modules over~$\cO$. 
 
 The internal hom $\Hom_{\hO}(\cV,\cW)$ also provides a vector bundle on the formal disk, 
 where the Harish-Chandra action is extended by
 \[
 (X \cdot \phi)(v) = X \cdot (\phi(v)) - \phi(X\cdot v). 
 \]
-
 Observe that for any $D$-module $M$, we have an isomorphism
 \[
 \Hom_{D}(\hO, M) \cong \Hom_{\Vect}(\CC, M)
 \]
-since a map of $\hD$-modules out of $\hO$ is determined by where it sends the constant function 1. 
+since a map of $D$-modules out of $\hO$ is determined by where it sends the constant function~1. 
 Hence we find that there is a quasi-isomorphism 
 \[
 \RR\Hom_{D}(\hO, \cV) \simeq \clie^*(\Vect ; \cV),
@@ -899,8 +905,8 @@ Consider the decreasing filtration of $\Vect$ by vanishing order of jets
 \cdots \subset \fm^{2}_n \cdot {\rm W}_{n} \subset \fm^1_n \cdot {\rm W}_n \subset {\rm W}_n .
 \een 
 The induced map $\fm_n^1 \cdot \Vect \to \fm_n^1 \cdot \Vect / \fm_n^2
-\cdot \Vect \cong \fgl_n$ allows us to restrict $V$ to a $\fm_n^1 \cdot
-\Vect$-module. 
+\cdot \Vect \cong \fgl_n$ allows us to restrict $V$ to a $(\fm_n^1 \cdot
+\Vect)$-module. 
 We  then coinduce this module along the inclusion $\fm^1 \cdot \Vect
 \subset \Vect$ to get a $\Vect$-module $\cV = \Hom_{\fm_n^1 \cdot \Vect}(\Vect,V)$. 
 There is an induced action of $\GL_n$ on $\cV$. Indeed, as a $\GL_n$-representation one has $\cV \cong \hO_n \tensor_{\CC} V$.
@@ -1092,7 +1098,7 @@ A {\em holomorphic connection} on $E$ is a splitting of the Atiyah sequence (as 
 Atiyah's first main result in the paper is the following.
 
 \begin{prop}[Theorem 2, \cite{atiyah}]
-A connection exists on $E$ if and only if the Atiyah class $\At(E)$ vanishes.
+A holomorphic connection exists on $E$ if and only if the Atiyah class $\At(E)$ vanishes.
 \end{prop}
 
 He observes immediately after this statement that the construction is
@@ -2372,22 +2378,27 @@ There is a natural action of $\Aut_n$ on this complex, as Cartan's
 formula for the action of vector fields on differential forms
 intertwines with the de Rham differential. 
 
-First, we write down a 2-cocycle $\alpha_{GMS} \in {\rm C}_{\rm Grp}^*(\Aut_n ; \hOmega^{\geq 2}_n)$.
-Following \cite{GMS}, we give an explicit formula via a pair of linear maps $(\alpha_2, \alpha_3)$, where 
+\def\J{{\rm J}}
+
+First, we write down a 2-cocycle $\alpha_{GMS} \in {\rm C}_{\rm Grp}^*(\Aut_n ; \hOmega^{\geq 2}_n)$,
+following~\cite{GMS}.
+Given an element $f \in \Aut_n$, we will use $Df$ to denote its Jacobian.
+we give an explicit formula via a pair of maps $(\alpha_2, \alpha_3)$, where 
 \ben
 \begin{array}{cccc}
 \alpha_2 : & \Aut_n \times \Aut_n & \to & \hOmega^{2}_n \\ 
-& (f_1,f_2) & \mapsto&\tr\left(g_1^{-1} \d_{dR} g_1 (\d_{dR}g_2 g_2^{-1})\right)
+& (f_1,f_2) & \mapsto&\tr\left(Df_1^{-1} \d_{dR} Df_1 (\d_{dR}Df_2 Df_2^{-1})\right)
 \end{array}
 \een
 and
 \ben
 \begin{array}{cccc}
 \alpha_3 : & \Aut_n & \to & \hOmega^3_n \\ 
-& f & \mapsto & \frac{1}{3} \tr\left( (g^{-1}\d_{dR} g)^3\right) .
+& f & \mapsto & \frac{1}{3} \tr\left( (Df^{-1}\d_{dR} Df)^3\right) .
 \end{array}
 \een
-This cochain is of degree 2 and has no terms of type $\Omega^k$ for $k \geq 4$. Here $g_1, g_2, g$ are the Jacobians of $f_1,f_2,f$, respectively. One
+This cochain is of degree 2 and has no terms of type $\Omega^k$ for $k \geq 4$. 
+One
 immediately checks that this is a cocycle. That is, 
 \begin{align*}
 \d_{dR} \alpha_2 (f_1,f_2) & =  (\d_{\rm Grp} \alpha_3) (f_1,f_2),  \\
@@ -2401,18 +2412,18 @@ The first equation follows from the relation
 \alpha_3(f_2 \circ f_1) = \alpha_3(f_1) + f_1^* \alpha_3(f_2) - \d_{dR} \alpha_2(f_1,f_2), 
 \ee
 which is an instance of the Polyakov-Wiegmann identity. The Jacobian of the composition $f_2
-\circ f_1$ is given by $Jac(f_2 \circ f_1) = f_1^* (g_2) g_1$ as matrix-valued formal power series. 
+\circ f_1$ is given by $Jac(f_2 \circ f_1) = f_1^* (Df_2) Df_1$ as matrix-valued formal power series. 
 Thus, for instance, we have
 \ben
-\d_{dR} \left(Jac(f_2 \circ f_1)\right) = f_1^*(\d_{dR} g_2) g_1 + f_1^* g_2
-\d_{dR} g_1 . 
+\d_{dR} \left(Jac(f_2 \circ f_1)\right) = f_1^*(\d_{dR} Df_2) Df_1 + f_1^* Df_2
+\d_{dR} Df_1 . 
 \een 
-Let $g = Jac(f_2 \circ f_1)$ so that $\alpha_3(f_2 \circ f_1) =
-\frac{1}{3} \Tr\left((g^{-1} \d_{dR} g)^3\right)$. Plugging in the formula for the
+Let $Df = Jac(f_2 \circ f_1)$ so that $\alpha_3(f_2 \circ f_1) =
+\frac{1}{3} \Tr\left((Df^{-1} \d_{dR} Df)^3\right)$. Plugging in the formula for the
 Jacobian we compute
 \bestar
-\frac{1}{3} \left(g^{-1} \d_{dR} g\right)^3 & = & \frac{1}{3} \left(g_1^{-1} f_1^*(g_2^{-1} \d_{dR}
-g_2) g_1\right)^3 + \frac{1}{3} \left(g_1^{-1} \d_{dR} g_1\right)^3 +
+\frac{1}{3} \left(Df^{-1} \d_{dR} Df\right)^3 & = & \frac{1}{3} \left(Df_1^{-1} f_1^*(Df_2^{-1} \d_{dR}
+Df_2) Df_1\right)^3 + \frac{1}{3} \left(Df_1^{-1} \d_{dR} Df_1\right)^3 +
 \{{\rm cross \; terms}\} .
 \eestar
 Taking the trace of both sides we see that the first two terms return
@@ -2433,7 +2444,7 @@ quasi-isomorphism is a representative for the group extension~(\ref{grpses}).
 
 We can obtain an explicit formula as follows. 
 Since $\d_{dR} \alpha_3(f) = 0$ for all $f$, 
-the formal Poincar\'e lemma assures the existence of a linear map
+the formal Poincar\'e lemma assures the existence of a map
 $\mu : \Aut_n \to \hOmega^2_n$
 such that $\d_{dR} \mu  = \alpha_3$. 
 We define the 2-cocycle
