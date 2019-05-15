@@ -2607,7 +2607,13 @@ In this section we define and compute the ``local character" of the vertex algeb
 \ee
 \end{dfn}
 
-\begin{rmk} When $V$ is a {\em conformal} vertex algebra there is a slight variant of the graded character which involves the central charge $c$ of $V$. If $L_0$ is the zero mode of the Virasoro vector in the conformal vertex algebra the character is defined by ${\rm char}(V) := {\rm Tr}_{V} q^{L_0 - c/24}$. The relationship to the graded character we defined in Equation (\ref{char1}) is given by $q^{-c/24} \chi(V) =  {\rm char}(V) \in q^{-c/24} \CC[[q]]$. The reason for this extra factor of $q$ is that $\chi(V)$ has much nicer modular properties. For more about this modularity, and motivation for the the definition of the character, see \cite{Zhu}. 
+\begin{rmk} 
+When $V$ is a {\em conformal} vertex algebra, there is a slight variant of the graded character that involves the central charge $c$ of $V$. 
+If $L_0$ is the zero mode of the Virasoro vector in the conformal vertex algebra, 
+the character is defined by ${\rm char}(V) := {\rm Tr}_{V} q^{L_0 - c/24}$. 
+The relationship to the graded character we defined in Equation~(\ref{char1}) is given by $q^{-c/24} \chi(V) =  {\rm char}(V) \in q^{-c/24} \CC[[q]]$. 
+The reason for this extra factor of $q$ is that $\chi(V)$ has nicer modular properties. 
+For more about this modularity, and motivation for the the definition of the character, see~\cite{Zhu}. 
 \end{rmk}
 
 We wish to define the graded character of a vertex algebra with an action of a Harish-Chandra pair $(\fg, K)$. Suppose $\fg$ acts on a  $\ZZ_{\geq 0}$-graded vertex algebra $V$ (by grading preserving derivations). Then, each weight space $V^{(N)}$ is a module for $\fg$. The character of the vertex algebra will be a $q$-expansion of equivariant characters of the individual spaces of fixed conformal dimension $V^{(N)}$. Thus, it suffices to define what we mean by the character of a $(\fg,K)$-module (in vector spaces). 
@@ -2616,7 +2622,7 @@ For simplicity we work just with the Lie algebra $\fg$. The generalization to a 
 Since the trace is conjugation invariant the character determines an element in the Hochschild homology of the algebra $\clie^*(\fg)$:
 \[
 {\rm ch}^\fg(W) \in {\rm HH}_0\left( \clie^*(\fg) \right) \cong
-\Sym (\fg^\vee)^\fg .
+\cSym (\fg^\vee)^\fg .
 \]
 There is a way to express this character at the cochain level. For this, it is useful to have an interpretation of the character in terms of Lie algebra cohomology, which will coincide with the Gelfand-Fuks-Chern characters in the case of $(\fg, K) = (\Vect, \GL_n)$. 
 
@@ -2626,7 +2632,7 @@ Let ${\rm Hoch}_*(-)$ denote the complex of Hochschild chains, computing Hochsch
 \een
 where $\Omega^{-*}_{R}$ is the regraded de Rham complex of the commutative ring $R$. In the case that $R = \clie^*(\fg)$ this quasi-isomorphism takes the form
 \ben
-{\rm Hoch}_*\left(\clie^*(\fg)\right) \simeq \clie^*\left(\fg ; \oplus_{k \geq 0} \Sym^k (\fg^\vee)[k] \right) . 
+{\rm Hoch}_*\left(\clie^*(\fg)\right) \simeq \clie^*\left(\fg ; \bigoplus_{k \geq 0} \Sym^k (\fg^\vee)[k] \right) . 
 \een
 The definition of the Atiyah class of a $\fg$-module $W$ can be found in \cite{GG1}. This class is an element $\At^\fg(W) \in \Omega^1_{B \fg} \tensor \End(W)$ gives a Chern-Weil description in Lie algebra cohomology of the Chern character above: 
 \ben
@@ -2639,9 +2645,9 @@ We will encounter the Atiyah class later, in Part II. Other characteristic class
 
 The {\em Euler class} of the $\fg$-module $W$ is defined to be
 \ben
-\chi^{\fg} (W) := {\rm Td}^\fg(\fg[1]) \cdot \ch^\fg(W) \in \clie^*\left(\fg ; \oplus_{k \geq 0} \Sym^k (\fg^\vee)[k] \right) .
+\chi^{\fg} (W) := {\rm Td}^\fg(\fg[1]) \cdot \ch^\fg(W) \in \clie^*\left(\fg ; \bigoplus_{k \geq 0} \Sym^k (\fg^\vee)[k] \right) .
 \een
-If $W$ is a module for the Harish-Chandra pair $(\fg,K)$ the same construction defines the Euler class in relative Lie algebra cochains $\chi^{(\fg,K)}(W) \in \clie^*\left(\fg,K ; \oplus_{k \geq 0} \Sym^k (\fg^\vee)[k]\right)$. 
+If $W$ is a module for the Harish-Chandra pair $(\fg,K)$ the same construction defines the Euler class in relative Lie algebra cochains $\chi^{(\fg,K)}(W) \in \clie^*\left(\fg,K ; \bigoplus_{k \geq 0} \Sym^k (\fg^\vee)[k]\right)$. 
 
 We now return to the case of a vertex algebra. 
 
@@ -2659,28 +2665,50 @@ We now return to the case of a vertex algebra.
 
 \subsubsection{} 
 
-We compute the character for the main example, the $(\TVect,\GL_n)$
-equivariant vertex algebra $\hCDO_n$. The equivariant graded character of $\hCDO_n$ as a module for $(\TVect, \GL_n)$ is an element $\chi^{(\Vect, \GL_n)} (\hCDO_n) \in \clie^*(\TVect , \GL_n ; \hOmega^{-*}_n)$. Here, $\hOmega^{-*}_n$ is the regraded de Rham complex on the formal disk $\oplus_{k \geq 0} \hOmega^k_n [k]$. The following lemma allows us to recognize this as the image of an element in $\clie^*(\Vect , \GL_n ; \hOmega^{-*}_n)$.
+We now turn to computing the character for the main example, the $(\TVect,\GL_n)$
+equivariant vertex algebra $\hCDO_n$. 
+The equivariant graded character of $\hCDO_n$ as a module for $(\TVect, \GL_n)$ is an element 
+\[
+\chi^{(\Vect, \GL_n)} (\hCDO_n) \in \clie^*(\TVect , \GL_n ; \hOmega^{-*}_n). 
+\]
+Here, $\hOmega^{-*}_n$ is the regraded de Rham complex on the formal disk $\oplus_{k \geq 0} \hOmega^k_n [k]$. 
+The character is the image of an element from~$\clie^*(\Vect , \GL_n ; \hOmega^{-*}_n)$ (note the tilde has vanished on $\Vect$),
+by the following argument.
 
-Let $p : \Tilde{\fg} \to \fg$ be a homomorphism of Lie algebras, and let $\mathfrak{k}$ be its kernel. We will say that a $\Tilde{\fg}$-module $V$ is {\em off-diagonal} for $p$ if there is a filtration 
+Let $p : \Tilde{\fg} \to \fg$ be a morphism of Lie algebras, and let $\mathfrak{k}$ be its kernel. 
+We say that a finite-dimensional $\Tilde{\fg}$-module $V$ is {\em off-diagonal} for $p$ if there is a filtration 
 \ben
 0 = F^{-1} V \subset F^0 V \subset F^1 V \subset \cdots \subset F^N V = V
 \een
-such that for all $i$, $\mathfrak{k} \cdot V^i \subset V^{j}$ for some $j < i$. We observe the following elementary fact about traces of such modules.
+such that for all $i$, $\mathfrak{k} \cdot F^i V \subset F^{j} V$ for some $j < i$. We observe the following elementary fact about traces of such modules.
 
-\begin{lemma} Suppose $p : \Tilde{\fg} \to \fg$ and $\mathfrak{k}$ are as above. Suppose $V$ is an off-diagonal module for $p$. Then, for all $x \in \Tilde{\fg}$ one has ${\rm tr}(\exp(x)) = \tr(\exp(p(x)))$. 
+\begin{lemma} 
+Let $V$ be an off-diagonal module for the Lie algebra map $p : \Tilde{\fg} \to \fg$,
+where $V$ has finite dimension. 
+Then ${\rm tr}(\exp(x)) = \tr(\exp(p(x)))$ for all $x \in \Tilde{\fg}$. 
 \end{lemma}
+
 \begin{proof} 
-Choose a filtration for $V$ as above and a filtered basis for the module $V$. In terms of matrices we see that the definition implies that $\frak{k}$ indeed acts off-diagonally, hence does not contribute to the trace. 
+Choose a filtration for $V$ exhibiting the off-diagonal action, and a pick a basis for $V$ compatible with this filtration. 
+In terms of this basis, each element of $\frak{k}$ acts by a matrix that is strictly upper triangular (i.e., off-diagonally), and hence does not contribute to the trace. 
 \end{proof}
 
-Now, consider the map of Lie algebras $p : \TVect \to \Vect$ and the $\TVect$-module $\hCDO_n$. The kernel of $p$ is $\hOmega^2_{n,cl}$. The underlying vector space of $\hCDO_n$ is spanned by products of elements $c^i_m, b^j_l$. We define the filtered subspace $F^q \hCDO_n$ to be the subspace spanned by elements of the form
+We wish to apply this observation to an infinite-dimensional vector space (for us, $\hCDO_n$),
+but the operations of exponentiating and taking traces may be ill-defined in the infinite-dimensional setting.
+One must check explicitly that they make sense for the operators of interest.
+In our case, with the map of Lie algebras $p : \TVect \to \Vect$ and the $\TVect$-module $\hCDO_n$,
+it will be seen explicitly.
+Note that we will exhibit a filtration of infinite length.
+ 
+Consider the basis of $\hCDO_n$ given by products of elements $c^i_m, b^j_l$. 
+Define the filtered subspace $F^q \hCDO_n$ to be the subspace spanned by elements of the form
 \ben
 c_{m_1}^{i_1} \cdots c_{m_k}^{i_k} b_{l_1}^{j_1} \cdots b_{l_q}^{j_q} .
 \een 
-It is clear, from the definition of the action of closed two-forms on the CDOs that $\hOmega^2_{n,cl} \cdot F^{q}\hCDO_n \subset F^{q-1} \hCDO_n$. Hence, the $\TVect$-module $\hCDO_n$ is off-diagonal with respect to the morphism $p : \TVect \to \Vect$ and we have the following corollary. 
+It is a quick computation to verify that the action of $\ker(p)=\hOmega^2_{n,cl}$ on the CDOs is off-diagonal for this filtation.
 
-\begin{cor}\label{cor formal char cdo} The $(\TVect, \GL_n)$-equivariant graded character of the vertex algebra $\hCDO_n$ is the image of an element 
+\begin{cor}\label{cor formal char cdo} 
+The $(\TVect, \GL_n)$-equivariant graded character of the vertex algebra $\hCDO_n$ is the image of an element 
 \ben
 \chi^{(\Vect, \GL_n)}(\hCDO_n) \in \clie^*(\Vect , \GL_n ; \hOmega^{-*}_n) 
 \een
