@@ -2380,21 +2380,23 @@ There is a natural action of $\Aut_n$ on this complex, as Cartan's
 formula for the action of vector fields on differential forms
 intertwines with the de Rham differential. 
 
+\def\D{{\rm D}}
+
 First, we write down a 2-cocycle $\alpha_{GMS} \in {\rm C}_{\rm Grp}^*(\Aut_n ; \hOmega^{\geq 2}_n)$,
 following~\cite{GMS}.
-Given an element $f \in \Aut_n$, we will use $Df$ to denote its Jacobian.
+Given an element $f \in \Aut_n$, we will use $\D f$ to denote its Jacobian.
 we give an explicit formula via a pair of maps $(\alpha_2, \alpha_3)$, where 
 \ben
 \begin{array}{cccc}
 \alpha_2 : & \Aut_n \times \Aut_n & \to & \hOmega^{2}_n \\ 
-& (f_1,f_2) & \mapsto&\tr\left(Df_1^{-1} \d_{dR} Df_1 (\d_{dR}Df_2 Df_2^{-1})\right)
+& (f_1,f_2) & \mapsto&\tr\left((\D f_1)^{-1} \d_{dR} (\D f_1) (\d_{dR}(\D f_2) (\D f_2)^{-1})\right)
 \end{array}
 \een
 and
 \ben
 \begin{array}{cccc}
 \alpha_3 : & \Aut_n & \to & \hOmega^3_n \\ 
-& f & \mapsto & \frac{1}{3} \tr\left( (Df^{-1}\d_{dR} Df)^3\right) .
+& f & \mapsto & \frac{1}{3} \tr\left( (\D f^{-1}\d_{dR} \D f)^3\right) .
 \end{array}
 \een
 This cochain is of degree 2 and has no terms of type $\Omega^k$ for $k \geq 4$. 
@@ -2412,18 +2414,18 @@ The first equation follows from the relation
 \alpha_3(f_2 \circ f_1) = \alpha_3(f_1) + f_1^* \alpha_3(f_2) - \d_{dR} \alpha_2(f_1,f_2), 
 \ee
 which is an instance of the Polyakov-Wiegmann identity. The Jacobian of the composition $f_2
-\circ f_1$ is given by $Jac(f_2 \circ f_1) = f_1^* (Df_2) Df_1$ as matrix-valued formal power series. 
+\circ f_1$ is given by $\D(f_2 \circ f_1) = f_1^* (\D f_2) \D f_1$ as matrix-valued formal power series. 
 Thus, for instance, we have
 \ben
-\d_{dR} \left(Jac(f_2 \circ f_1)\right) = f_1^*(\d_{dR} Df_2) Df_1 + f_1^* Df_2
-\d_{dR} Df_1 . 
+\d_{dR} \left(\D(f_2 \circ f_1)\right) = f_1^*(\d_{dR} \D f_2) \D f_1 + f_1^* \D f_2
+\d_{dR} \D f_1 . 
 \een 
-Let $Df = Jac(f_2 \circ f_1)$ so that $\alpha_3(f_2 \circ f_1) =
-\frac{1}{3} \Tr\left((Df^{-1} \d_{dR} Df)^3\right)$. Plugging in the formula for the
+Let $\D f = Jac(f_2 \circ f_1)$ so that $\alpha_3(f_2 \circ f_1) =
+\frac{1}{3} \Tr\left((\D f^{-1} \d_{dR} \D f)^3\right)$. Plugging in the formula for the
 Jacobian we compute
 \bestar
-\frac{1}{3} \left(Df^{-1} \d_{dR} Df\right)^3 & = & \frac{1}{3} \left(Df_1^{-1} f_1^*(Df_2^{-1} \d_{dR}
-Df_2) Df_1\right)^3 + \frac{1}{3} \left(Df_1^{-1} \d_{dR} Df_1\right)^3 +
+\frac{1}{3} \left((\D f)^{-1} \d_{dR} \D f\right)^3 & = & \frac{1}{3} \left((\D f_1)^{-1} f_1^*((\D f_2)^{-1} \d_{dR}
+\D f_2) \D f_1\right)^3 + \frac{1}{3} \left((\D f_1)^{-1} \d_{dR} \D f_1\right)^3 +
 \{{\rm cross \; terms}\} .
 \eestar
 Taking the trace of both sides we see that the first two terms return
