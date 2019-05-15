@@ -1,0 +1,401 @@
+\part*{Appendix}
+
+\section{The $\beta\gamma$ system as an infinite-volume limit}
+
+\subsection{Introduction}
+
+This appendix gives an explanation for where the curved $\beta\gamma$ system comes from.
+The idea is to approach the usual two-dimensional sigma model with Hermitian target in two steps: 
+\begin{enumerate}
+\item[(1)] we scale the metric on the target manifold until it becomes ``infinitely big" (this drastically simplifies the problem, as we'll show), and 
+\item[(2)] we show that this infinite-volume theory ``splits" into a holomorphic and antiholomorphic theory (physicists use ``chiral and antichiral splitting").
+\end{enumerate}
+The chiral part is the curved $\beta\gamma$ system.
+
+The core aspects of this construction can be seen by having a complex vector space (or formal disk) as the target manifold. After introducing the ingredients of our theory, we rework the usual action functional into a form better suited to our purposes. This {\em first-order formulation} of the theory makes the infinite-volume limit easy to understand and motivate. Finally, we exploit a special property of the theory --- arising from the interplay between the differential geometry of the source 2-manifold and the target Hermitian manifold --- to obtain the splitting.
+
+\begin{rmk}
+This approach is well-known to physicists.
+Essentially the same construction is given in \cite{Zeitlin,LMZ,Nek}, and a closely related argument for the half-twisted $\sigma$-model is given in \cite{KapCDR}.
+Perhaps the main contribution here is the explicit discussion of how to understand various manipulations within the BV formalism.
+The version presented here unpacks and elaborates upon on a lecture by Kevin Costello at the Northwestern CDO workshop in summer 2011.
+\end{rmk}
+
+\subsection{The ingredients}
+
+The input data of our classical field theory is the following.
+
+\begin{itemize}
+\item Let $S$ be an oriented real 2-manifold with a metric $g$. (We will indicate as we go along why everything only depends on the conformal class of $g$.) We denote the associated volume form by $\dvol_g$ and the dual inner product on $\Omega^1_S$ by $g^\vee$.
+
+\item Let $V$ be an even-dimensional real vector space, equipped with a complex structure by $J$ (so we can view $V$ as complex, when needed). It is equipped with a hermitian inner product $h$, also written $(-,-)_V$. (Recall this means that $h$ is a an ordinary inner product on the real vector space $V$ and that $J$ is an isometry.)
+
+\item Let $V^\vee$ denote the dual real vector space. We denote its dual complex structure by $J^\vee$. There is a canonical evaluation pairing $ev: V \otimes V^\vee \to \RR$, and we have 
+\[
+ev(Jv,\lambda) = \lambda(Jv) = ev(v,J^\vee \lambda)
+\]
+by definition.
+
+\item Let $\Omega^k_S(V)$ denote the $V$-valued $k$-forms, i.e., $\Omega^k_S \otimes_\RR V$.
+
+\end{itemize}
+
+Consider the Hodge star operator $\ast$ on $\Omega^1_S$ arising from $g$. A computation in local coordinates shows that 
+\[
+\int_S h \otimes g^\vee(\alpha, \beta) \dvol_g = \int_S h( \ast \alpha \wedge \beta),
+\]
+where the right hand side means ``apply $h$ to the $V$-component but simply wedge the 1-form components." 
+
+\subsection{The first-order formulation of the sigma model}
+
+Let $f: S \to V$ be a smooth map. The usual action functional for the sigma model is
+\[
+S_{SO}(f) =  \int_S h \otimes g^\vee(df, df) \dvol_g.
+\]
+The subscript $SO$ stands for ``second-order."
+
+There is an equivalent description of the same classical field theory where the fields are $f \in \rm{Maps}(S,V)$ and $A \in \Omega^1_S(V^\vee) $ and the action functional is
+\[
+S_{FO}(f,A) = \int_S ev(df \wedge A) - \frac{1}{2} \int_S h^\vee(\ast A \wedge A).
+\]
+The subscript $FO$ stands for ``first-order." This first-order action functional motivates the action functional we finally work with.
+
+\begin{lemma}
+The equations of motion for $S_{FO}$ are
+\[
+df = \ast h^\vee A  \quad\text{and}\quad dA = 0,
+\]
+and so solutions are given by all $f$ such that $d(\ast df) = 0$. This space of solutions is exactly the same as solutions to the equation of motion 
+\[
+\triangle_g f = (\ast d \ast) df = 0
+\]
+for $S_{SO}$.
+\end{lemma}
+
+\begin{proof}
+We obtain the equations of motion for $S_{SO}$ first. We have
+\[
+S_{SO}(f)  = \int_S h(\ast df \wedge df) = - \int_S h((d \ast d f) \wedge f) = - \int_S h(\triangle_g f, f) \dvol_g,
+\]
+where we use integration by parts in the second step and the fact that $\ast$ preserves inner products in the last step. The usual variational procedure then recovers the equation of motion.
+
+Now we treat $S_{FO}$. We obtain the equation $dA = 0$ by considering a variation $f \to f + \delta f$. On the other hand, a variation $A \to A + \delta A$ has the following consequences for the second term,
+\[
+\frac{1}{2} \int_S h^\vee(\ast \delta A \wedge A) + \frac{1}{2} \int_S h^\vee(\ast A \wedge \delta A) = \int_S h^\vee(\ast A \wedge \delta A),
+\]
+and so we need $df - h^\vee \ast A= 0$.
+
+Now observe that
+\[
+df = \ast h^\vee A  \Leftrightarrow \ast df = - h^\vee A,
+\]
+so we need
+\[
+d (\ast df) = 0,
+\]
+to satisfy the equations of motion for $S_{SO}$.
+\end{proof}
+
+\subsection{An involution on the space of fields}
+
+We now explore a special property of the fields, arising from the fact that the source is 2-dimensional and the target is Hermitian. Because $\ast^2 = -1$, it provides a natural complex structure on $\Omega^1_S$. Thus, we obtain two involutions:
+\begin{itemize}
+\item on $\Omega^1_S(V)$, there is $\sigma := \ast \otimes J$, and
+\item on $\Omega^1_S(V^\vee)$, there is $\sigma^\vee := \ast \otimes J^\vee$.
+\end{itemize}
+By using this polarization of the fields, we will obtain eventually the desired chiral decomposition.
+
+\begin{lemma}
+The operator $\sigma$ gives an eigenspace decomposition 
+\[
+\Omega^1_S(V) = \Omega^1_S(V)_+ \oplus \Omega^1_S(V)_-
+\]
+where $\Omega^1_S(V)_{\pm}$ denotes the $\pm 1$-eigenspace of $\sigma$, and likewise for $\Omega^1_S(V^\vee)$. 
+\end{lemma}
+
+\begin{proof}
+Let $\Pi_{\pm}$ denote the endomorphism $\frac{1}{2}(1 \pm \sigma)$ on $\Omega^1_S(V)$. Then
+\[
+\Pi_+^2 = \frac{1}{4}(1 + 2 \sigma + \sigma^2) = \Pi_+,
+\]
+so $\Pi_+$ is a projection operator (and likewise for $\Pi_-$). As $1 = \Pi_+ + \Pi_-$, we obtain the decomposition.
+\end{proof}
+
+\begin{dfn}
+We define $d_{\pm}: \Omega^0_S(V) \to \Omega^1_S(V)_{\pm}$ as $\Pi_{\pm} \circ d$. 
+\end{dfn}
+
+Consider the natural evaluation pairing
+\[
+\begin{array}{cccc}
+ev_S: & \Omega^1_S(V) \otimes \Omega^1_S(V^\vee) & \to & \RR \\
+& v \otimes \lambda & \mapsto & \int_S ev(v \wedge \lambda)
+\end{array}.
+\]
+Observe that
+\begin{align*}
+ev_S(\sigma v, \sigma^\vee \lambda) &= \int_S ev(\ast J v \wedge  \ast J^\vee \lambda) \\
+&= \int_S ev(Jv, J^\vee \lambda) \\
+&= \int_S ev(J^2 v, \lambda) \\
+&= -ev_S(v,\lambda),
+\end{align*}
+where in the second line we used the fact that $\ast \alpha \wedge \ast \beta = \alpha \wedge \beta$ for any $\alpha, \beta$ in $\Omega^1_S$. Thus we obtain the following.
+
+\begin{lemma}
+With respect to the pairing $ev_S$, $\Omega^1_S(V)_+$ is orthogonal to $\Omega^1_S(V^\vee)_+$, and $\Omega^1_S(V)_-$ is orthogonal to $\Omega^1_S(V^\vee)_-$.
+\end{lemma}
+
+\subsection{Replacing the first-order action functional}
+
+We introduce a new theory whose fields are $f \in C^\infty_S(V)$ and $B \in \Omega^1_S(V^\vee)_-$. The action functional is
+\[
+S_+(f,B) = \int_S ev(d_+f \wedge B) - \frac{1}{2} \int_S h^\vee(\ast B \wedge B).
+\]
+It might seem like this action only sees {\em half} the information of $S_{SO}$ or $S_{FO}$, but it is actually equivalent. We begin with the heuristic argument before delving into a careful proof in the BV formalism.
+
+\subsection{The heuristic argument} 
+
+There is an illuminating ``completing the square" maneuver. Consider the following automorphism on the space of fields:
+\[
+f \mapsto f \quad \text{ and } \quad B \mapsto B + h (d_+ f).
+\]  
+(For $v \in V$, $hv$ denotes the element $h(v, -) \in V^\vee$.) When we apply $S_+$ after this transformation, our integrand is a sum of six terms:
+\begin{multline*}
+ ev(d_+ f \wedge B) + ev(d_+ f \wedge h (d_+ f))  - \frac{1}{2}  h^\vee(\ast B \wedge B) \\  - \frac{1}{2} \left(  h^\vee(\ast h(d_+ f) \wedge B) +  h^\vee(\ast B \wedge h(d_+f))\right)    - \frac{1}{2} h^\vee(\ast h(d_+f) \wedge h(d_+f)).
+\end{multline*}
+We can simplify this sum.
+
+First, note that the fourth and fifth terms (which are grouped together already) are equivalent to
+\[
+- \frac{1}{2} \left( ev(\ast d_+ f \wedge B) +  ev(\ast B \wedge d_+f)\right) ,
+\]
+and thus together cancel the first term.
+
+Second, note that the second term is equivalent to $h(d_+ f \wedge d_+ f)$. This term vanishes because for any one-form $\alpha$, $\alpha \wedge \alpha = 0$.
+
+The last term is the most interesting: {\it the last term recovers the usual sigma model action.}
+
+\begin{lemma}\label{SOvsPlus}
+The last term
+\[
+- \frac{1}{2} h^\vee(\ast h(d_+f) \wedge h(d_+f))
+\] 
+is equivalent to $-h(\ast df \wedge df)/4$.
+\end{lemma}
+
+\begin{proof}
+Recall $d_+ = \Pi_+ d = (1/2) (1 + \sigma) d$. Thus
+\begin{align*}
+4h(\ast d_+ f \wedge d_+f) &= h(\ast (1+\sigma)d f \wedge (1+\sigma)df)\\
+&= h(\ast df \wedge df) + h(\ast \sigma df \wedge df) + h(\ast df \wedge \sigma df) + h(\ast \sigma df \wedge \sigma df) \\
+&= h(\ast df \wedge df) -i h( df \wedge df) + ih(\ast df \wedge \ast df) + h( df \wedge \ast df) \\
+&= 2 h(\ast df \wedge df).
+\end{align*}
+The initial term arises just by canceling out the excess copies of $h$ and $h^\vee$.
+\end{proof}
+
+All that remains to understand is the third term $ - \frac{1}{2}  h^\vee(\ast B \wedge B) $. From a heuristic perspective, it's irrelevant: for the classical theory, the only critical point is $B = 0$, and for the quantum theory, it contributes nothing of interest (just an extra space of fields equipped with a Gaussian measure centered at zero).
+
+To summarize, we have made an ``upper-triangular" change of coordinates on the space of fields. At the classical level, we recover the same equations of motion. At the quantum level, the nonexistent Lebesgue measure is preserved and the weight $e^{-S_+}$  factors into $e^{-S_{SO}}$ times a Gaussian.
+
+\subsection{The BV argument}
+
+In fact, it is fairly straightforward to rephrase this heuristic argument into a rigorous statement in the BV formalism.
+Our model throughout is the case of pure Yang-Mills theory (for which see Chapter 6, Section 3 of \cite{CosBook} or \cite{YMasBF}).
+
+\subsubsection{The ingredients}
+
+Our fields are $f \in C^\infty_S(V)$ and $B \in \Omega^1_S(V^\vee)_-$, so we introduce ``antifields" $f^\vee \in \Omega^2_S(V^\vee)$ and $B^\vee \in \Omega^1_S(V)_+$. As usual, the fields have cohomological degree 0 and the antifields have cohomological degree 1, as below.
+\[
+\begin{array}{cc}
+\underline{0} & \underline{1} \\
+C^\infty_S(V) & \Omega^2_S(V^\vee)\\
+\oplus & \oplus \\
+\Omega^1_S(V^\vee)_- & \Omega^1_S(V)_+\\
+\text{(fields)} & \text{(antifields)}
+\end{array}
+\]
+We equip this graded vector space $\sE$ with the following symplectic pairing of cohomological degree $-1$:
+\begin{align*}
+\langle f, f^\vee \rangle &= \int_S ev(f , f^\vee),\\
+\langle f, f^\vee \rangle &= - \langle f^\vee, f \rangle, \\
+\langle B, B^\vee \rangle &= -\int_S ev(B^\vee \wedge B),\\
+\langle B, B^\vee \rangle &= -\langle B^\vee, B \rangle,
+\end{align*}
+with all other pairings automatically zero (e.g., $\langle f, B \rangle = 0$). This is simply the shifted antisymmetrization of $ev_S$.
+
+We thus obtain a free BV theory (in the sense of Costello) as the following elliptic complex,
+\[
+\begin{array}{ccc}
+C^\infty_S(V) & \overset{d_+}{\rightarrow} &\Omega^1_S(V)_+\\
+& &  \\
+\Omega^1_S(V^\vee)_-& \overset{d}{\rightarrow} & \Omega^2_S(V^\vee)
+\end{array},
+\]
+where we simply extracted the quadratic part of $S_+$.
+
+In particular, let $\Phi = (f, f^\vee, B, B^\vee)$ denote an element of $\sE$. Then the free BV theory has action functional
+\begin{align*}
+S_{free}(\Phi) &= -\frac{1}{2}\langle \Phi, Q \Phi\rangle \\
+&= -\frac{1}{2}\langle (f, f^\vee, B, B^\vee), (0, dB, 0, d_+ f)\rangle \\
+&= -\frac{1}{2} \left( \langle f, dB \rangle + \langle B,d_+f\rangle \right)\\
+&= -\frac{1}{2} \left(\int_S ev(f, dB) - \int_S ev(d_+f \wedge B) \right)\\
+&= \int_S ev(d_+f \wedge B).
+\end{align*}
+Thus we recover the free part of $S_+$.
+
+In full, we have
+\[
+S_+(\Phi) = - \frac{1}{2}\langle \Phi, Q \Phi\rangle + \frac{1}{2} \langle B, h^\vee (\ast B) \rangle.
+\]
+
+\subsubsection{Equivalence at the classical level}
+
+In the classical BV formalism, two different action functionals $S$ and $S'$ give equivalent classical theories if they are cohomologous in the cochain complex $(\sO_{loc}(\sE), \{S,-\})$. (Here we assume $S$ satisfies the classical master equation $\{S,S\} = 0$.) Using more geometric language, we say that $S$ and $S'$ live in the same orbit of the gauge group of symplectomorphisms acting on the space of fields $\sE$ (and hence on the space of action functionals $\sO_{loc}(\sE)$).
+
+\begin{rmk} 
+To relate these two assertions, note that the cochain complex, once shifted, is a dg Lie algebra that describes the formal neighborhood of $S$ in the moduli space of classical field theories on $\sE$. Thus, if they are cohomologous, we can construct a Hamiltonian flow moving from $S$ to $S'$.
+\end{rmk}
+
+In fact, this setting lets us dress up the heuristic picture, as follows. We replace the change of coordinates by modifying $S_+$ by a boundary in $(\sO_{loc}, \{S_+,-\})$.
+
+\begin{lemma}
+Let $H$ denote the local functional of cohomological degree $-1$ where
+\[
+H(\Phi) = \langle \ast h(d_+f),B^\vee \rangle.
+\]
+Then
+\[
+\{S_+,H\} = S_{SO} - S_{free},
+\]
+so $S_+$ is cohomologous to
+\[
+S_{SO} - \frac{1}{2} \langle B, h^\vee (\ast B) \rangle
+\]
+in $(\sO_{loc}, \{S_+,-\})$.
+\end{lemma}
+
+\begin{proof}
+Observe
+\[
+\{S_{free},H\} = \pm \langle \ast h(d_+ f), d_+f\rangle = \pm S_{SO}.
+\]
+In the first equality, we use that the shifted Poisson bracket $\{-,-\}$ is dual to $\langle -, - \rangle$. In the second equality, we use lemma \ref{SOvsPlus}.
+
+A parallel computation shows that $\{I,H\}$, where $I$ denotes the ``interaction term" of $S_+$, recovers $\pm S_{free}$.
+\end{proof}
+
+The action functional $S_{SO} \pm I$ thus defines a classical BV theory equivalent to $S_+$. Note, however, that this action functional {\em completely decouples} $f$ and $B$. The term $S_{SO}$ only depends on $f$, and the term $I$ only depends on $B$. Moreover, the critical point of $I$ is $\{B = 0\}$, so the equations of motion pick out the same solutions as $S_{SO}$ on its own.
+
+\subsubsection{Equivalence at the quantum level}
+
+In our setting of a linear target with linear metric, we have shown that the classical BV theory specified by $S_+$ is equivalent to a free BV theory, given by the elliptic complex
+\[
+\begin{array}{ccc}
+C^\infty_S(V) & \overset{\triangle_g \dvol_g}{\longrightarrow} &\Omega^2(V)\\
+& &  \\
+\Omega^1_S(V^\vee)_-& \overset{Id}{\longrightarrow} & \Omega^1_S(V^\vee)_-
+\end{array},
+\]
+once one writes down a suitable pairing $\langle-,-\rangle$. (We chose to change the pairing so that the elliptic complex is simple. Alternatively, we could have retained the same pairing but written a complicated-looking elliptic complex.) As the second line is acyclic, we see it is irrelevant to {\em both} the classical and quantum theories. In particular, as the theory is free, we can quantize immediately and show that the quantum observables are homotopy-equivalent to the quantum observables constructed  just from the first line.
+
+This argument is another way of saying ``we can integrate out the $B$ fields and they do not affect any observables" (cf. the discussion of Yang-Mills theory in Chapter 6 of \cite{CosBook}).
+
+\begin{rmk}
+This argument is the only piece that does not port immediately to the case of a curved target. In that case, we need to verify we {\em can} construct a quantization. Nonetheless, it is plausible that we could quantize while maintaining the complete decoupling of the $f$ and $B$ fields, in which case we could work with just the subcomplex depending on the $f$ fields.
+\end{rmk}
+
+\subsection{The infinite volume limit}
+
+As $S_+$ is equivalent to $S_{SO}$, we hereafter focus on $S_+$. Our goal is to study a degenerate limit of $S_+$ where the situation drastically simplifies.
+
+The idea is quite simple: if we scale the metric $h^\vee$ to $t h^\vee$, then as $t$ goes to zero, we scale away the dependence on $h^\vee$ in $S_+$. The limit theory is then independent of the hermitian inner product on $V$. Note that on $V$, the limit $t \to 0$ is equivalent to scaling $h$ to $h/t$, so that the volume of any cube grows toward infinity.
+
+\begin{dfn}
+The {\em infinite volume limit} is the action functional
+\[
+S_{IVL}(f,B) = \int_S ev(d_+ f \wedge B),
+\]
+with $f \in C^\infty_S(V)$ and $B \in \Omega^1_S(V)_-$.
+\end{dfn}
+
+The equations of motion are $d_+ f = 0$ and $dB = 0$. 
+
+\subsection{The chiral splitting}
+
+The operator $d_+$ interacts nicely with the complexifications of our spaces of fields, and thus we will be able to massage our theory into another, appealing form.
+
+Consider the decompositions
+\[
+\Omega^1_S \otimes_\RR \CC = \Omega^{1,0}_S \oplus \Omega^{0,1}_S
+\]
+and
+\[
+V \otimes_\RR \CC = V^{1,0} \oplus V^{0,1}.
+\]
+We have the respective projection operators
+\begin{align*}
+p^{1,0}_S &= \frac{1}{2}(1 - i \ast),\\
+p^{0,1}_S &= \frac{1}{2}(1 + i \ast),\\
+p^{1,0}_V &= \frac{1}{2}(1 - i J),\\
+p^{1,0}_V &= \frac{1}{2}(1 + i J).
+\end{align*}
+By an explicit computation, we see
+\[
+p^{0,1}_S \otimes p^{1,0}_V  = \frac{1}{4} ( 1 +i \ast - i J + \ast J)
+\]
+and
+\[
+p^{1,0}_S \otimes p^{0,1}_V = \frac{1}{4} ( 1 - i \ast + i J + \ast J ),
+\]
+so
+\[
+p^{0,1}_S \otimes p^{1,0}_V + p^{1,0}_S \otimes p^{0,1}_V = \frac{1}{2} (1 + \ast J) = \Pi_+, 
+\]
+where we've extended scalars on $\Pi_+$ so that it works on the complexified $\Omega^1_S(V)^\CC$. 
+
+The following result is an immediate consequence.
+
+\begin{lemma}
+On $\Omega^*_S(V)^\CC$, we have
+\[
+d_+ = \dbar_{V^{1,0}} + \partial_{V^{0,1}}.
+\]
+\end{lemma}
+
+\begin{proof}
+Note that
+\begin{align*}
+\Omega^1_S(V)^\CC &\cong (\Omega^1_S)^\CC \otimes_\CC V^\CC \\ 
+&\cong \Omega^{1,0}(V^{1,0})\oplus \Omega^{1,0}(V^{0,1}) \oplus \Omega^{0,1}(V^{1,0}) \oplus \Omega^{0,1}(V^{0,1}).
+\end{align*}
+We thus need simply to unravel the relevant projections.
+
+Recall that $\dbar$ means ``project the image of $d$ onto the $-i$-eigenspace of $(\Omega^1)^\CC$." Hence, as an example, $\dbar_{V^{1,0}}: \Omega^0_S(V^{1,0}) \to \Omega^{0,1}_S(V^{1,0})$ is precisely the operator 
+\[
+(p ^{0,1}_S \circ d) \otimes 1_{V^{1,0}}.
+\]
+Plugging in all the relevant operators, we obtain the desired result.
+\end{proof}
+
+We write the elliptic complex of fields, once the fields are complexified, using the decomposition of $d_+$ given above. This specifies a free BV theory:
+\[
+\begin{array}{ccc}
+\Omega^{0,0}_S(V^{1,0}) & \overset{\dbar_{V^{1,0}}}{\longrightarrow} &\Omega^{0,1}_S(V^{1,0})\\
+\oplus & & \oplus\\
+\Omega^{0,0}_S(V^{0,1}) & \overset{\partial_{V^{0,1}}}{\longrightarrow} &\Omega^{1,0}_S(V^{0,1})\\
+\oplus & & \oplus\\
+\Omega^{1,0}_S(V^{\vee\,0,1}) & \overset{\dbar_{V^{\vee\,0,1}}}{\longrightarrow} & \Omega^{1,1}_S(V^{\vee\,0,1})\\
+\oplus & & \oplus\\
+\Omega^{0,1}_S(V^{\vee\,1,0}) & \overset{\partial_{V^{\vee\,1,0}}}{\longrightarrow} & \Omega^{1,1}_S(V^{\vee\,1,0})\\
+\end{array}.
+\]
+We can separate this into a direct sum of two theories, one holomorphic (the pieces involving $\dbar$) and one antiholomorphic (the pieces involving $\partial$). Equivalently, we view this as working with one complex structure and its conjugate.
+
+\begin{lemma}
+On the complexified fields,
+\[
+S_{IVL}(f, \overline{w}{f}, B, \overline{w}{B}) = \int_S ev(\dbar f \wedge B) + \int_S ev(\partial \overline{w}{f} \wedge \overline{w}{B}).
+\]
+When restricted to the real points, it recovers the infinite volume limit action.
+\end{lemma}

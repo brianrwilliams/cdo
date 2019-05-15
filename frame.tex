@@ -1,0 +1,53 @@
+\documentclass[10pt]{amsart}
+\setcounter{tocdepth}{1}
+
+%\usepackage{../macros}
+
+%for arxiv 
+\usepackage{macros}
+
+\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+\def\owen{\textcolor{red}{OG: }\textcolor{red}}
+
+\title{Chiral differential operators via\\Batalin-Vilkovisky quantization}
+
+\author{Vassily Gorbounov}
+\address{University of Aberdeen}
+\email{v.gorbunov@abdn.ac.uk}
+%\urladdr{http://people.mpim-bonn.mpg.de/gwilliam/}
+
+\author{Owen Gwilliam}
+\address{Max-Planck-Institut f\"ur Mathematik}
+\email{gwilliam@mpim-bonn.mpg.de}
+\urladdr{http://people.mpim-bonn.mpg.de/gwilliam/}
+
+\author{Brian Williams}
+\address{Northwestern University}
+\email{bwill@math.northwestern.edu}
+\urladdr{http://www.math.northwestern.edu/~bwill/}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We show that the local observables of the curved $\beta\gamma$ system
+encode the sheaf of chiral differential operators using the machinery of \cite{CG}, 
+which combines renormalization, the Batalin-Vilkovisky formalism, and factorization algebras. 
+Our approach is in the spirit of deformation quantization via Gelfand-Kazhdan formal geometry.
+We begin by constructing a quantization of the $\beta\gamma$ system with an $n$-dimensional formal disk as the target. There is an obstruction to quantizing equivariantly with respect to the action of formal vector fields $\Vect$ on the target disk, and it is naturally identified with the first Pontryagin class in Gelfand-Fuks cohomology.
+Any trivialization of the obstruction cocycle thus yields an equivariant quantization with respect to an extension of $\Vect$ by $\hOmega^2_{cl}$, the closed 2-forms on the disk. By results in \cite{CG}, we then naturally obtain a factorization algebra of quantum observables, which has an associated vertex algebra easily identified with the formal $\beta\gamma$ vertex algebra. Next, we introduce a version of Gelfand-Kazhdan formal geometry suitable for factorization algebras, and we verify that for a complex manifold $X$ with trivialized first Pontryagin class, the associated factorization algebra recovers the vertex algebra of CDOs of~$X$.\\
+\end{abstract}
+
+\input{intro}
+\tableofcontents
+\input{part1}
+\input{part2}
+\input{part3}
+\input{appx}
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{amsalpha}
+\bibliography{refs}
+
+\end{document}

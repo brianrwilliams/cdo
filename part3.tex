@@ -1,0 +1,1242 @@
+\part*{Part III: Comparison of the constructions}
+
+\section{Overview}
+
+In this part, we finally relate the two stories we have told: 
+we show that the Batalin-Vilkovisky quantization of the curved $\beta\gamma$ system from Part II 
+produces the chiral differential operators constructed in Part I. 
+The key technical tool is a functor $\Vert$ that extracts a vertex algebra 
+from a factorization algebra on $\CC$ satisfying a set of natural conditions.
+This tool was introduced in \cite{CG},
+where it was already shown that the formal $\beta\gamma$ system recovers the correct vertex algebra
+and an isomorphism was given from $\Vert(\Obs^\q_n)$ to $\hCDO_n$.
+But it is more subtle to identify that the BV quantization recovers the correct {\em equivariant} vertex algebra.
+To show this, we develop some general arguments that relate factorization algebra derivations with vertex algebra derivations.
+From these arguments we swiftly verify that $\Vert(\Obs^\q_n)$ is naturally isomorphic to $\hCDO_n$ 
+as a $(\TVect,\GL_n)$-equivariant vertex algebra.
+
+Thanks to the machinery of Gelfand-Kazhdan descent, we then deduce our main result.
+
+\begin{thm} 
+Let $X$ be a complex $n$-manifold together with a trivialization $\alpha$ of $\ch_2(T_X) \in H^2(X ; \Omega^{2,hol}_{cl})$. Then the factorization algebra $\Obs^q_{X,\alpha}$ obtained by Gelfand-Kazhdan descent 
+determines a sheaf of vertex algebras $\Vert(\Obs^q_{X,\alpha})$ on $X$. 
+Moreover, there is an isomorphism of sheaves of vertex algebras on $X$
+\ben
+\Phi : \CDO_{X,\alpha} \xto{\cong} \Vert(\Obs^q_{X,\alpha})
+\een
+that is natural in the choice of trivialization~$\alpha$.
+\end{thm}
+
+Another goal of this paper is to show how physical arguments about the curved $\beta\gamma$ system
+are transformed into vertex algebra arguments.
+Thus, as a short coda, we review the treatments by Witten \cite{WittenCDO} and Nekrasov \cite{Nek}, 
+and we indicate how their approaches are related to our methods.
+
+\section{From factorization to vertex algebras}
+
+Our central challenge now is to relate the vertex algebra produced in Part I with the factorization algebra produced in Part II.
+Although factorization algebras are more flexible and general than vertex algebras
+--- appearing in every dimension, for instance, and not just on Riemann surfaces --- 
+there are recognition criteria that guarantee when a factorization algebra on $\CC$ recovers a vertex algebra.
+In essence, the vector space of the vertex algebra is determined by the value of the factorization algebra on a disk,
+and the vertex operators are determined by the structure map for two disjoint disks sitting inside a larger disk (i.e., by a flattened pair of pants).
+Chapter 5 of \cite{CG} is devoted to a careful treatment of this relationship 
+and constructs a functor $\Vert$ from a certain category of ``holomorphic'' factorization algebras on $\CC$ to the category of vertex algebras.
+This chapter also includes a detailed examination of the free $\beta\gamma$ system and its associated vertex algebra.
+Here we will overview the main theorem relating factorization and vertex algebras, 
+which requires us to introduce some terminology and machinery we need for our main goal.
+
+Two kinds of technical issues appear in formulating the theorem:
+\begin{itemize}
+\item describing how the structure maps can ``vary holomorphically'' and
+\item pinning down various functional analytic aspects.
+\end{itemize}
+The first involves ideas essential to the goal of this paper, so we dwell a bit on it.
+The second is resolved essentially automatically, given our context and the results from \cite{CG},
+but we discuss it briefly.
+
+\subsection{Translation and derivations}
+
+We need to be able to talk about the structure maps in families in order to say that they vary holomorphically.
+Our earlier definition of factorization algebras, however, works with the collection of opens in $\CC$ as a set, 
+with no topological---much less complex-analytic---structure.
+It is straightforward to introduce variations of the definitions with such structure and 
+that manifestly contain the examples we've constructed here.
+
+\begin{dfn}
+For $U \subset \CC$ and $z \in \CC$, let 
+\[
+\tau_z U = \{ w \in \CC \,:\, w - z \in U \}
+\]
+denote the translation of $U$ by $z$. 
+Then a factorization algebra $\cF$ on $\CC$ is (discretely) {\em translation-invariant} if we have an isomorphism
+$\tau_z: \cF(U) \cong \cF(\tau_z U)$ for every open $U$ and every $z \in \CC$ satisfying
+\begin{enumerate}
+\item[(i)] for any $z, z'$, $\tau_{z} \circ \tau_{z'} = \tau_{z+z'}$ and
+\item[(ii)] for any disjoint open subsets $U_1,\dots, U_k$ in $V$, the diagram
+\[
+\xymatrix{
+\cF(U_1) \otimes \dots \otimes \cF(U_k)  \ar[r]^-{\tau_z} \ar[d] &
+\cF(\tau_z U_1) \otimes \dots \otimes \cF(\tau_z U_k)  \ar[d] \\
+\cF(V) \ar[r]^{\tau_x} & \cF(\tau_z V)
+}
+\]
+commutes. (Here the vertical arrows are the structure maps of the factorization algebra.) 
+\end{enumerate}
+\end{dfn}
+
+Note that the sheaf of holomorphic functions $\cO$ on $\CC$ satisfies the sheaf-theoretic version of this definition,
+as does the Dolbeault complex. 
+In consequence, the factorization algebras $\Obs^\cl_n$ and $\Obs^\q_n$ are translation-invariant.
+
+We now turn to talking about families.
+Let $\cl(U)$ denote the closure of an open set $U \subset \CC$.
+Given $U_1,\ldots,U_n$ disjoint opens in $V$, let
+\[
+{\rm Conf}(U_1,\ldots,U_n \,|\, V) = \{ (z_1,\ldots,z_n) \in \CC^n \,:\,\forall i \neq j ,\, \cl(\tau_{z_i} U_i) \cap  \cl(\tau_{z_j} U_j) =\emptyset \text{ and }\forall i,\, \cl(\tau_{z_i} U_i) \subset V \}.
+\]
+In other words, this open subset of $\CC^n$ parametrizes all the translations of the $U_i$ that keep them in $V$ 
+and keep their closures disjoint. (It will suffice to focus on collections $U_i$ whose closures are disjoint.)
+This space ${\rm Conf}(U_1,\ldots,U_n \,|\, V)$ inherits the structure of a complex manifold from $\CC^n$. 
+
+Now let $\cF$ be a discretely translation-invariant factorization algebra. 
+We can use the isomorphisms to replace any appearance of $\cF(\tau_z U)$ with $\cF(U)$.
+Hence for each point $(z_1,\ldots,z_n) \in {\rm Conf}(U_1,\ldots,U_n \,|\, V)$, we have a structure map
+\[
+m_{(z_1,\ldots,z_n)}: \cF(U_1) \otimes \cdots \otimes \cF(U_n) \to \cF(V)
+\]
+by the composite
+\[
+\cF(U_1) \otimes \cdots \otimes \cF(U_n) \to \cF(\tau_{z_1} U_1) \otimes \cdots \otimes \cF(\tau_{z_n} U_n) \to \cF(V),
+\]
+where the first map is the tensor product of translation maps $\tau_{z_i}$ and the second map is the structure map of $\cF$.
+
+To talk about these structure maps varying smoothly over ${\rm Conf}(U_1,\ldots,U_n \,|\, V)$, 
+we need the factorization algebra to take values in vector spaces (or cochain complexes thereof) 
+in which one can talk about smooth families.
+We will work in the context described in Section \ref{sec functional analysis}, 
+where the topology (or bornology) provides a precise notion of smooth families of linear maps.
+
+\begin{dfn}
+A translation-invariant factorization algebra $\cF$ on $\CC$ is {\em smoothly} translation-invariant 
+if: 
+\begin{enumerate}
+\item[(i)] For any collection of opens $U_1,\ldots,U_n$ in $V$ whose closures are pairwise disjoint, 
+the maps $m_{z_1,\dots,z_n}$ depend smoothly on $(z_1,\dots,z_k) \in {\rm Conf}(U_1,\ldots,U_n \,|\, V)$.
+\item[(ii)] The factorization algebra $\cF$ is equipped with an action by derivations of the abelian Lie algebra $\RR^2$ of translations. 
+For $v \in \RR^2$ and open $U \subset \CC$, we will denote the corresponding derivation by $\d/\d v : \cF(U) \to \cF(U)$.
+This Lie algebra action is viewed as an infinitesimal version of the global translation invariance.
+\item[(iii)] This infinitesimal action is compatible with the global translation invariance in the following sense. 
+For $v \in \RR^2$, let $v_i \in (\RR^2)^n$ denote the vector $(0,\ldots,v,\ldots,0)$, with $v$ placed in the $i$-slot and $0$ in the other $n-1$ slots.  If $\alpha_i \in \cF(U_i)$, then we require that
+$$
+\frac{\d}{\d v_i} m_{z_1,\dots,z_n} (\alpha_1,\dots,\alpha_n) = m_{z_1,\dots,z_n}\left(\alpha_1,\dots,\frac{\d}{\d v} \alpha_i, \dots, \alpha_n\right).
+$$
+\end{enumerate}  
+\end{dfn}
+
+The translation Lie algebra is real. 
+As $\cF$ is defined over $\CC$, we can extend the action to the complexified translation Lie algebra $\RR^{2} \otimes_{\RR} \CC$.  
+We will denote by $\partial_z$ and $\partial_{\zbar}$ the derivations on $\cF$ associated to the obvious vector fields on $\CC$.
+To be {\em holomorphic}, we want the vector field $\partial_{\zbar}$ to act homotopically trivially on $\cF$.
+
+\begin{dfn}\label{holomorphically_translation_invariant_definition}
+A translation-invariant prefactorization algebra $\cF$ on $\CC$ is \emph{holomorphically translation-invariant} 
+if it is equipped with a derivation $\eta: \cF \to \cF$ of cohomological degree $-1$ such that
+\[ 
+\d \eta = \partial_{\zbar}, \; [\eta,\eta] = 0,\,\text{and}\,  \left[ \eta,  \partial_{\zbar}  \right] = 0. 
+\]
+Here $\d$ refers to the differential on the dg Lie algebra ${\rm Der}(\cF)$.
+\end{dfn}
+
+\subsection{Rotation and decomposition}
+
+In practice, we are interested in $\cF$ where the action by translation extends to an action of orientation-preserving Euclidean transformations of $\CC$.
+
+\begin{dfn}
+A \emph{holomorphically translation-invariant prefactorization algebra $\cF$ on $\CC$ with a compatible $U(1)$ action} 
+is a smoothly $U(1) \ltimes \RR^2$-invariant prefactorization algebra $\cF$ 
+together with an extension of the action of the complex Lie algebra 
+$$
+{\rm Lie}_{\CC}(U(1) \ltimes \RR^2) = \CC\left\{ \partial_\theta, \partial_z, \partial_{\zbar} \right\},
+$$
+where $\partial_\theta$ is a basis of ${\rm Lie}_\CC(U(1))$, to an action of the dg Lie algebra
+$$
+\CC\left\{ \partial_\theta, \partial_z, \partial_{\zbar} \right\} \oplus \CC\{\eta\} ,
+$$
+where $\eta$ is of cohomological degree $-1$ and the differential is $\d \eta = \partial_{\zbar}$.
+In this dg Lie algebra, all commutators involving $\eta$ vanish except for $[\partial_\theta, \eta] =~-\eta$.
+\end{dfn}
+
+The theorem on vertex algebras requires a technical hypothesis regarding the $U(1)$-action on the factorization algebra $\cF$:
+we need this action to be {\em tame}, in the following sense. 
+
+For any compact Lie group $G$, the space $\mathcal{D}(G)$ of distributions on $G$ is an algebra under convolution.  
+The convolution product $\ast$ is smooth in the sense that it varies nicely in families, as per our approach to functional analysis,
+so that the algebra structure is smooth in families.
+There is a natural map $\delta: G \to \mathcal{D}(G)$
+sending an element $g$ to the $\delta$-function at $g$.  
+It is a smooth map and a homomorphism of monoids.  
+
+\begin{dfn} 
+A \emph{tame action} of $G$ on a vector space $V$ of the type discussed in Section \ref{sec functional analysis} (e.g., convenient) is a smooth action of the algebra $\mathcal{D}(G)$ on $V$.  
+(Note that this means $G$ acts on $V$ via composition $G \to \mathcal{D}(G)^{\times}$ sending $g$ to $\delta_g$.)
+For $V$ a cochain complex of such vector spaces, a tame action commutes with the differential on $E$. 
+\end{dfn}
+
+The case $G = U(1)$ is the only one relevant for us here. 
+For each integer $k$, the function $\rho_k: e^{i\theta} \mapsto e^{ik\theta}$ encodes an irreducible representation of $U(1)$.
+It determines a distribution $\rho_k \, \d \theta$ on $U(1)$ that we will abusively call $\rho_k$ as well.
+In $\mathcal{D}(U(1))$, the element $\rho_k$  is an idempotent.
+
+\begin{dfn}
+Let $V$ be equipped with a tame action of $U(1)$, which we will denote by $\ast$. 
+Let $V_k$ denote the {\em weight $k$ eigenspace} for the $U(1)$-action on $V$.
+The map $\rho_k \ast - : V \to V$ defines a projection from $V$ onto~$V_k$. 
+\end{dfn}
+
+\subsection{The theorem about $\Vert$}
+
+We now turn to the main theorem from Chapter 5 of \cite{CG}, 
+which provides a functor from a certain category of factorization algebras on $\CC$ to the category of vertex algebras.
+
+\begin{dfn}
+Let $\cF$ be a tamely $U(1)$-equivariant holomorphically translation-invariant factorization algebra on $\CC$.
+Let $\cF_k(D_r(0))$ denote the subcomplex of weight $k$ eigenspaces in $\cF(D_r(0))$, 
+the value of $\cF$ on a radius $r$ disk around the origin.
+Then $\cF$ is {\em amenably holomorphic} if it satisfies the following conditions:
+\begin{enumerate}
+\item 
+For every pair of radii $r < r'$, the structure map
+$$
+\cF_k(D(0,r)) \to \cF_k(D(0,r'))
+$$
+is a quasi-isomorphism.
+\item For $k \gg 0$, the vector space $H^\ast (\cF_k(D(0,r))$ is zero.  
+\item For each $k$ and $r$, we require that $H^\ast(\cF_k(D(0,r) )$ is isomorphic to a countable sequential colimit of finite-dimensional graded vector spaces. 
+\end{enumerate}
+\end{dfn}
+
+Observe that for an amenably holomorphic factorization algebra $\cF$, 
+the vector space $H^* (\cF_k(D(0,r))$ is independent of $r$ by assumption.
+Let $V_\cF$ denote the vector space $\bigoplus_{k \in \ZZ} H^* (\cF_k(D(0,r))$
+and $\overline{V}_\cF$ denote the vector space $\prod_{k \in \ZZ} H^* (\cF_k(D(0,r))$.
+Note that for any disk $D_r(0)$, there is a map $V_\cF \to H^*\cF(D_r(0))$ by the inclusion of the weight spaces.
+Likewise, there is map $H^*\cF(D_r(0)) \to \overline{V}_\cF$.
+The structure maps of $\cF$ thus determine a family of maps $m_z: V_\cF \otimes V_\cF \to \overline{V}_\cF$ 
+given by the composition
+\[
+V_\cF \otimes V_\cF \to H^*\cF(D_r(0)) \otimes H^* \cF(D_r(z)) \to \H^*\cF(D_R(0)) \to \overline{V}_\cF,
+\]
+where the middle map is the structure map of $H^* \cF$ with radii $r$ and $R$ such that $2r < |z|$ and $|z| + r < R$.
+By construction, these maps $m_z$ vary holomorphically in the parameter $z~\in~\CC-\{0\}$.
+
+Let $\FA^{am}$ denote the category of amenably holomorphic factorization algebras on $\CC$,
+where morphisms are maps of prefactorization algebras intertwining the actions of $\CC$ by translation and $U(1)$ by rotation.
+Let $\VA$ denote the category of vertex algebras.
+
+\begin{thm}
+\label{theorem_vertex_algebra}
+There is a functor $\Vert:\FA^{am} \to \VA$. 
+For $\cF$ amenably holomorphic, the underlying vector space of the vertex algebra is $V_\cF$,
+and the vertex operator $Y_{\Vert(\cF)}$ is determined by the maps $m_z$ arising from the structure maps of~$\cF$.
+\end{thm}
+
+For a proof, see Section 2 of Chapter 5 in \cite{CG}.  
+
+Immediate consequences of this theorem include the following.
+
+\begin{lemma}\label{factder}
+Let $X \in \Der(\cF)$ be a derivation of $\cF$ as an amenably holomorphic factorization algebra. In particular, we require that $X$ commutes with translation, $[X, \partial_z] = 0$, $[X, \partial_{\zbar}] = 0$, and $[X, \partial_\theta] = 0$. Then $X$ induces a vertex algebra derivation $V_X$ on $\Vert(\cF)$.
+\end{lemma}
+
+We call such derivations {\em amenably holomorphic}.
+
+\begin{proof}
+Let $D_r$ denote the disk of radius $r$ centered at the origin. 
+Let $\cF_k(D_r)$ denote the weight $k$ subspace of $\cF(D_r)$ with respect to the rotation action of $S^1$. 
+By hypothesis, $X$ preserves the weight spaces: $\partial_\theta$ acts on $\cF_k(D_r)$ by multiplication by $k$, 
+and since $X$ commutes with $\partial_\theta$, it preserves each weight space. 
+Hence $X$ induces a linear map $V_X$ on $V_\cF = \bigoplus_k H^*(\cF_k(D_r))$. 
+
+As $X$ is a derivation, it intertwines with the structure maps of $\cF$. In particular, for any two small disjoint disks $D_1$ and $D_2$ included into a larger disk $D_{big}$, we see that 
+\[
+X_{D_{big}}(m^{D_1,D_2}_{D_{big}}(v_1, v_2)) = m^{D_1,D_2}_{D_{big}}(X_{D_1} v_1, v_2) \pm m^{D_1,D_2}_{D_{big}}(v_1, X_{D_2} v_2).
+\]
+Since the action of $X$ equivariant with respect to affine transformations of $\CC$, we see that this derivation property holds for the one-parameter family of ``multiplication" operations 
+\[
+m_{z,0}: V_\cF \otimes V_\cF \to \overline{V}_\cF[[z,z^{-1}]].
+\]
+Hence the action of $V_X$ on $V_\cF$ is a derivation of the vertex operator map $Y$, which is given by the Laurent expansion of $m_{z,0}$. 
+\end{proof}
+
+By a similar but easier argument, we find the following.
+
+\begin{lemma}
+Let $\phi: \cF \to \cF$ be an automorphism of an amenably holomorphical factorization algebra $\cF$. Then $\phi$ induces an automorphism of vertex algebras $V_\phi: V_\cF \xto{\cong} V_\cF$.
+\end{lemma}
+
+Note that in both these situations we require that the derivation or
+automorphism commutes on the nose with all the equivariant structure on $\cF$. 
+Such a strict situation is adequate for our purposes here. 
+(The homotopical versions of these statements should hold but will not be pursued.)
+
+We now wish to apply these lemmas to the case where the factorization algebra has an action of a pair $(\fg,K)$. 
+The data of a semi-strict $(\fg,K)$-structure on $\cF$ involves a group homomorphism $\rho^K : K \to \Aut(\cF)$
+together with an $L_\infty$-homomorphism $\rho^\fg : \fg \to \Der(\cF)$
+that satisfy the compatibilities in Definition~\ref{dfn ss HC mod}. 
+
+\begin{cor}\label{vertpair} 
+Let $\cF$ be an amenably holomorphic factorization algebra 
+together with the structure of a semi-strict $(\fg,K)$-module. where
+$\fg$ acts by derivations and $K$ acts by automorphisms of the amenably holomorphic factorization
+algebra. 
+Then the $\ZZ_{\geq 0}$-graded vertex algebra $\Vert(\cF)$ has a
+strict action of the pair $(\fg,K)$. 
+\end{cor}
+
+\section{Observables for the formal $\beta\gamma$ system}
+
+As an example of the relationship encoded in $\Vert$,
+the free $\beta\gamma$ system is examined in depth in Chapter 5 of \cite{CG}.
+It is shown that the factorization algebra $\Obs^{\fr}_n$ of quantum observables is amenably holomorphic
+and that the associated vertex algebra is precisely the usual $\beta\gamma$ vertex algebra.
+
+\begin{thm}[Theorem 5.3.3.2, \cite{CG}]
+The factorization algebra $\Obs^{\q,\fr}_n$ is amenably holomorphic. 
+Moreover, 
+there is an isomorphism of $\ZZ_{\geq 0}$-graded vertex algebras 
+$\Phi^{\fr}_n : \CDO_n \xto{\cong} \Vert(\Obs^{\q,\fr}_n)|_{\hbar= 2 \pi i}$ after specializing $\hbar=2 \pi i$.
+\end{thm}
+
+The construction is naturally $\GL_n$-equivariant, and 
+it extends from the symmetric algebra to the completed symmetric algebra without difficulties.
+(We discuss below some features of this construction important to our main objective.)
+Hence, in combination with Proposition \ref{equiv of noneq},
+we obtain the following result.
+
+\begin{cor}
+The factorization algebra $\Obs^\q_n$ is amenably holomorphic. 
+Moreover, there is a $\GL_n$-equivariant isomorphism of $\ZZ_{\geq 0}$-graded vertex algebras 
+$\Phi_n : \hCDO_n \xto{\cong} \Vert(\Obs^\q_n)|_{\hbar= 2 \pi i}$.
+\end{cor}
+
+Section \ref{sec loc sym} tackles the much more subtle challenge of showing the isomorphism $\Phi_n$ is $\TVect$-equivariant,
+and hence that we get an isomorphism of $(\TVect,\GL_n)$-equivariant vertex algebras.
+This property is crucial for applying Gelfand-Kazhdan descent 
+and hence recognizing that the BV quantization truly does recover chiral differential operators.
+
+In the remainder of this section, we review some aspects of the $\beta\gamma$ system's factorization
+and vertex algebras that are useful for our central goal.
+
+\begin{rmk}
+An extensive and expository treatment of these aspects appears in Chapter 6 of \cite{GwThesis}.
+\end{rmk}
+
+\subsection{Some useful identifications}
+\label{identifications}
+
+It will be useful to understand explicitly how to identify a representative in the factorization algebra for an element in the vertex algebra.
+To be more precise, the construction $\Vert$ ensures that given $v \in \hCDO_n$, there is some cohomology class $[O_v]$ in $H^* \Obs^\q_n(D_r(0)$.
+We would like to have a {\em cochain} representative $O_v$ in the disk observables $\Obs^\q_n(D_r(0))$ as well.
+Similarly, given a Fourier mode $v_{(n)}$, 
+we would like to know a cochain representative $O_{v_{(n)}}$ in the annular observables $\Obs^\q_n(A_{r<R}(0))$.
+Although the functor $\Vert$ ensures these wishes can be fulfilled,
+the formulas may be quite complicated.
+
+We now examine this issue, starting with the classical observables, where the situation is simpler,
+before turning to the quantum observables.
+To minimize the number of indices, we restrict to $n = 1$; 
+hence, we have elements $b_n$ and $c_m$ with no upper index. 
+The extension to arbitrary $n$ is straightforward:
+just reinsert the superscripts, e.g., use $c^j_m$ and not just $c_m$.
+
+For the classical observables and $\Gr \hCDO_n$,
+Cauchy's formula provides explicit integral expressions for the most important linear observables
+(i.e., distributions on the fields $\gamma$ and $\beta$).
+For example, set 
+\[
+O_{c_{-m}}(\gamma,\beta) = \frac{m!}{2 \pi i} \int_{|z| = 1} \frac{\gamma(z)}{z^{m+1}} \d z.
+\]
+This linear observable simply reads off the coefficient of $z^m$ in the power series expansion of a holomorphic $\gamma$.
+The support of this distribution is the unit circle, 
+so that we can view $O_{c_n}$ as a cocycle in $\Obs^{\cl}_1(A_{r<R}(0))$ for any annulus with $r < 1 < R$.
+But it also provides a cocycle in $\Obs^{\cl}_1(D_R(0))$, 
+and this cocycle is a representative of the element $c_n$ in $\Gr\, \hCDO_1$.
+Similarly, a cochain representative of $b_n$ is
+\[
+O_{b_{-l}}(\gamma,\beta) = \frac{(l-1)!}{2 \pi i} \int_{|z| = 1} \frac{\beta(z)}{z^{l}},
+\]
+which reads off the coefficient of $z^{l+1}$ in the power series expansion of a holomorphic one-form~$\beta$.
+
+It is thus easy to provide explicit representatives for monomials like $b_{i_1} \cdots b_{i_l} c_{j_1} \cdots c_{j_m}$.
+One simply takes the obvious product --- in the symmetric algebra of distributions --- of the representatives just given.
+
+It is also straightforward to produce smeared versions of these observables, if one wants 
+(and we will want it shortly).
+Fix a bump function $f(r)$ on some interval $(a,b)$, with $0 < a$, 
+such that $\int_a^b f(r) \, \d r = 1$.
+Then
+\[
+O'_{c_{-m}}(\gamma,\beta) = \frac{m!}{2 \pi i}\int_a^b \int_{|z| = r} \frac{\gamma(z)}{z^{m+1}} \d z \, f(r) \d r
+\]
+is a smeared representative of $c_m$.
+
+Note that if one is working with an annulus rather than disk, then negative powers of $n$ are allowed in the denominator.
+In this setting the cocycles $O_{c_m}$ and $O_{b_l}$ read off Laurent coefficients.
+As observables on an annulus, they correspond to Fourier modes from the point of view of vertex algebras.
+To be explicit, the zeroth Fourier mode $(c_m)_{(0)}$ is represented by $O_{c_m}$ viewed as an observable on an annulus.
+Let us explain why.
+
+The vertex operator on $\Gr\CDO$ admits a concrete interpretation in terms of ``observing'' coefficients of expansions.
+The element $Y(c_m;w)$ should be viewed as an observable on the annulus:
+given $\gamma$ a holomorphic function on the annulus and $w$ a point on that annulus, 
+$Y(c_m;w)$ measures the coefficient of $(z-w)^m$ in the power series expansion of $\gamma$ around $w$.
+If we know the Laurent expansion of $\gamma$ around $0$, then we can provide an expression for this coefficient.
+
+For instance, if we know a Laurent expansion
+\[
+\gamma(w) = \sum_{m \in \ZZ} c_{-m} w^m,
+\]
+then
+\[
+Y(c_0;w)(\gamma) = \sum_m w^m c_{-m}(\gamma).
+\]
+In the first line, we view the $c_m$ as numbers, providing the Laurent coefficients of $\gamma$,
+but in the second line, we view the $c_m$ as operators, providing the Laurent coefficients of~$\gamma$.
+In consequence, we see that the $m$th Fourier mode $(c_0)_{(-m)}$ has 
+\[
+O_{c_{-m}}(\gamma,\beta) = \frac{m!}{2 \pi i} \int_{|z| = 1} \frac{\gamma(z)}{z^{m+1}} \d z
+\]
+as an explicit representative.
+
+From the factorization algebra point of view, 
+the vertex operator amounts to saying that the observable
+\[
+O_{c_0,w}(\gamma,\beta) = \frac{1}{2 \pi i} \int_{|z-w| = \epsilon} \frac{\gamma(z)}{z-w} \d z,
+\]
+which measures the value of $\gamma$ at $w$, is cohomologous to the observable
+\[
+\sum_{m \in \ZZ} w^m O_{c_{-m}}(\gamma,\beta)
+\]
+in $\Obs^{\cl}(A_{r<R}(0))$ with for $r < |w| < R$ and $\epsilon$ sufficiently small. 
+
+We now turn to providing a tool for understanding how the quantum observables
+and $\hCDO_n$ relate.
+
+\subsection{Quantizing observables}
+\label{sec quant map}
+
+For the free $\beta\gamma$ system on $\CC$, 
+there is a natural cochain isomorphism 
+\[
+\frak{q}_U: \Obs^{\cl,\fr}(U)[\hbar] \xto{\cong} \Obs^{\q,\fr}(U)
+\]
+between the classical and quantum observables on any fixed open $U$.
+(Recall that the superscript $\fr$ means the smooth or smeared observables.
+See Section \ref{noneqsec}.)
+This isomorphism ``promotes'' a classical observable to a quantum observable.
+It does not preserve, however, the structure maps of the factorization algebras,
+and so we view the quantum observables as deforming the structure maps of $\Obs^{\cl,\fr}$ in an interesting, $\hbar$-dependent way:
+for $U, U'$ disjoint opens in $V$, the ``quantized'' structure map sends observables 
+$F \in \Obs^{\cl,\fr}(U)$ and $F' \in \Obs^{\cl,\fr}(U')$ to 
+\[
+F \star F' = \frak{q}_{V}^{-1}(\frak{q}_U(F) \cdot \frak{q}_{U'}(F')) \in \Obs^{\cl,\fr}(V)[\hbar],
+\]
+where $\cdot$ denotes the factorization product in $\Obs^{\q,\fr}$.
+We use $\star$ to emphasize that we are ``deformation-quantizing'' the factorization product on the classical observables.
+
+This description allows one to understand concretely how BV quantization affects the factorization algebra,
+since the classical observables $\Obs^{\cl,\fr}(U)$ are very explicit and simply amount to algebraic functions on the space of holomorphic functions $\cO(U)$ and holomorphic one-forms~$\Omega^1_{hol}(U)$.
+Details of this construction can be found in Section 6, Chapter 4 and Section 3, Chapter 5 of~\cite{CG}.
+
+To construct the map $\frak{q}$, we use the fact that on $\CC$, 
+the operator $\dbar$ possesses a natural choice of propagator (or Green's function),
+namely
+\[
+P(z,w) = \frac{1}{2\pi i}\frac{\d z + \d w}{z - w}.
+\]
+This distributional one-form on $\CC^2$ satisfies $(\dbar \otimes 1) P = \delta_{\Delta}$, 
+where $\delta_{\Delta}$ is the delta-current supported along the diagonal and providing the integral kernel for the identity.
+One can view this one-form as a distributional section of the fields $\gamma$ and $\beta$:
+for example, for fixed $w$, the one-form $\d z/(z-w)$ is a $\beta$ field in the $z$-variable as it is a $(1,0)$-form,
+and dually for the other term in~$P$.
+
+This element $P$ also defines a second-order differential operator $\partial_P$ on the commutative algebra $\Obs^{\cl,\fr}(U)$.
+Let us recall the general algebraic context.
+For any symmetric algebra $\Sym(V^*)$, an element $v \in V$ defines a vector field $\partial_v$ via contraction:
+given $f \in \Sym^{n+1}(V^*)$, we set 
+\[
+\partial_v f(x_1 \otimes \cdots \otimes x_n) = f(v \otimes x_1 \otimes \cdots \otimes x_n),
+\]
+by viewing $f$ as an $S_n$-invariant element of $(V^*)^{\otimes n}$.
+Similarly, given $p \in V^{\otimes 2}$, we define a second-order differential operator $\partial_p$ by contraction.
+Recall that the classical observables $\Obs^{\cl,\fr}(U)$ are a symmetric algebra,
+and let $\partial_P$ be the operator obtained by contraction.
+
+\begin{dfn}
+Define the {\em promotion map}
+\[
+\begin{array}{cccc}
+\frak{q}:& \Obs^{\cl,\fr}(U)[\hbar] &\to& \Obs^{\q,\fr}(U)\\
+& F & \mapsto & \exp(\hbar \partial_P)F
+\end{array}.
+\]
+In other words, one applies a version of Wick contraction to any classical observable $F$,
+repeatedly contracting away two inputs with the propagator.
+\end{dfn}
+
+\begin{rmk}
+In terms of the RG flow used in Part II, this map $\frak{q}$ encodes flowing to length scale $L = \infty$.
+Because our theory is free and we restrict to smeared observables, this operation is well-defined.
+Effectively, it describes the relations between observables after integrating out the nonzero modes.
+\end{rmk}
+
+\subsection{An example}
+\label{circ ex}
+
+Consider the classical observable on the annulus $A = \{1/2 < |z| < 3/2\}$ given by
+\[
+F(\gamma,\beta) = \frac{1}{2\pi i}\int_{|z| = 1} \gamma \wedge \beta,
+\]
+for $\gamma \in C^\infty(A)$ and $\beta \in \Omega^{1,0}(A)$.
+(We say $F$ vanishes if $\gamma$ is a $(0,1)$-form or if $\beta$ is a $(1,1)$-form.)
+Its cohomology class $[F]$ in $H^0 \Obs^{\cl,\fr}(A)$ encodes a function on $\cO(A)$ and $\Omega^1_{hol}(A)$
+where for 
+\[
+\gamma = \sum_{n \in \ZZ} c_{-n} z^n \quad \text{and} \quad \beta = \sum_{n \in \ZZ} b_{-n} z^n \, \d z,
+\]
+we have
+\[
+[F](\gamma,\beta) =  \sum_{-m - n = -1} c_m b_n
+\]
+by Cauchy's integral formula.
+As $F$ is not a smeared classical observable, 
+we cannot immediately apply $\frak{q}$ but first must replace it by a cohomologous smeared observable $\widetilde{F}$.
+(If one tries to evaluate $\partial_P F$, one finds it is ill-defined.)
+
+Here is one approach to smearing among many.
+Note that the functional
+\[
+H(\gamma,\beta) = \frac{1}{(2\pi i)^2} \int_{|z| = r} \int_{|w| = R} \frac{\gamma(z) \d z \wedge \beta(w)}{z-w},
+\]
+with $R > r$, is cohomologous to $F$.
+(Simply plug in holomorphic $\gamma$ and $\beta$ and use Cauchy's theorems.)
+This functional $H$, while distributional, is easier to ``smear''
+by letting $r$ and $R$ vary.
+Fix a compactly supported bump function $f(r,R)$ on $B = (1/2,1) \times (1,3/2)$ such that $\int_B f(r,R) \,\d r \, \d R = 1$.
+Define
+\[
+\widetilde{F}(\gamma,\beta) = 
+\frac{1}{(2\pi i)^2} \int_B  \int_{|z| = r} \int_{|w| = R} \frac{\gamma(z) \d z \wedge \beta(w)}{z-w}\, f(r,R) \,\d r \, \d R.
+\]
+Then $\frak{q}(\widetilde{F}) = \widetilde{F}$, since 
+\[
+\partial_P \widetilde{F} = \widetilde{F}(P(z,w)) = \frac{1}{(2\pi i)^2} \int_B  \int_{|z| = r} \int_{|w| = R} \frac{\d z \wedge \d w}{(z-w)^2}\, f(r,R) \,\d r \, \d R = 0.
+\]
+In fact, the smearing was not necessary here: the contraction $\partial_P H$ is already well-defined.
+
+\begin{rmk}
+\label{promotion}
+This approach works well for classical observables with simple descriptions, like our $F$ above.
+The initial formula might involve integrating some polynomial in $\gamma$ and $\beta$ around a circle,
+but one can replace it, up to cohomology, by an integral over a collection of disjoint circles,
+where each copy of $\gamma$ and $\beta$ has its own circle.
+Our $H$ is constructed in such a fashion.
+Once the supports of these circles are disjoint, 
+one can apply $\frak{q}$ directly, without smearing.
+\end{rmk}
+
+\section{Local symmetries acting on observables}
+\label{sec loc sym}
+
+Our goal here is to articulate how local symmetries of a field theory like the $\beta\gamma$ system
+produce derivations of the associated vertex algebras. 
+The core construction makes sense for any BV theory 
+but we will focus on a version applicable here.
+(These manipulations are certainly well-known in the physics literature; 
+our work just articulates them in the language of factorization algebras.)
+
+\subsection{General arguments}
+
+Every local functional $L$ in a field theory provides both a derivation of the observables 
+and an observable itself.
+We want to understand how these two manifestations of $L$ relate.
+
+The derivations arise as ``Hamiltonian vector fields.''
+Consider the map of dg Lie algebras
+\[
+\begin{array}{cccc}
+{\rm Ham}: & \cO_{loc}[-1] & \to & \Der(\Obs_T^\cl) \\
+& L & \mapsto & \{L,-\} 
+\end{array}.
+\]
+(See Section 3, Chapter 5 of \cite{CosBook} for a discussion of this construction.)
+In other words, a local functional can be viewed as a symmetry of the classical field theory.
+Note that this map naturally extends to a map of graded Lie algebras into $\Der(\Obs_T^q)$,
+but it does not intertwine the differentials,
+which is an example of why classical symmetries might not quantize.
+
+We would like to view some of these symmetries as ``inner,''
+i.e., realized as the factorization product with an observable,
+just as an inner derivation of an associative algebra means it is given by bracketing with an element of the algebra.
+To compare derivations to factorization products, however, 
+we need to be able to turn local functionals into observables.
+A minor issue is that local functionals need not have compact support
+and hence do not provide observables on fields with non-compact support.
+This problem is easy to fix.
+
+Let $L$ be a local functional,
+and let $\cL$ denote the Lagrangian density such that $L = \int \cL$.
+By this we mean that if $\gamma$ and $\beta$ are fields with compact support, 
+then
+\[
+L(\gamma,\beta) = \int_\CC \cL(\gamma,\beta).
+\]
+Let $K \subset \CC$ be a compact subset whose boundary $\partial K$ is a smooth submanifold.
+Set $L_K = \int_K \cL,$ so that one simply integrates over $K$ rather than all of $\CC$.
+As $K$ is compact, we see that $L_K$ is a well-defined observable on all fields, not just those with compact support.
+
+In short, for $U$ an open set containing the compact submanifold $K$, we have a cochain map
+\[
+\begin{array}{cccc}
+(-)_K: & \cO_{loc} & \to & \Obs_n^\cl(U) \\
+& L & \mapsto & L_K
+\end{array}.
+\]
+This map extends to quantum observables but no longer respects the differentials.
+
+A direct computation then gives a relationship between the factorization product and the derivation.
+
+\begin{lemma}
+Let $F$ be a cocycle in $\Obs_n^\q(U)$ and $K \subset U$ a compact submanifold.
+Then
+\[
+\d^\q(L_K F) = \d^\q(L_K)F + \{ L_K, F\},
+\]
+where the notation $L_K F$, for instance, denotes the product in the completed symmetric algebra underlying~$\Obs^\q_n$.
+Hence, if $\d^\q(L_K)$ has support in $U\setminus K$, then at the level of cohomology
+\[
+[\{ L_K, F\}] = - [ \d^\q(L_K) \cdot F],
+\]
+where $\cdot$ denotes the factorization product for the structure map 
+$\Obs_T^\q(V \setminus U) \otimes \Obs_T^\q(U) \to \Obs_T^\q(V)$.
+\end{lemma}
+
+\begin{rmk}
+This relationship between ``local symmetries'' (i.e., given by local functionals {\em aka} local currents) and the operator product of observables is reminiscent of Ward identities.
+We will see below an explicit instantiation of this relationship,
+but note here one simple consequence of the lemma:
+An observable that is killed by $\{L_K,-\}$ classically --- and hence is fixed by that symmetry --- 
+may not be killed at the quantum level.
+\end{rmk}
+
+We now restrict our attention to local functionals of a special form,
+which admit a particularly useful application of this lemma.
+(The arguments we develop here apply with minor changes 
+to any free BV theory on $\CC$ whose action is given by~$\dbar.$)
+
+Given a finite set of constant-coefficient holomorphic differential operators
+\[
+D_1,\ldots,D_m \in \CC[\partial/\partial z],
+\]
+consider the local functional
+\[
+L(\gamma,\beta) = \int_\CC D_1(\gamma) \wedge \cdots \wedge D_m(\gamma) \wedge \beta.
+\]
+Note that one must take some care to properly interpret such a functional, 
+as with $I^{{\rm W}}$ or $J$ defined in Section \ref{sec obsdef}. 
+This functional vanishes except when working over base dg algebras not concentrated in degree zero.
+
+\begin{dfn}
+A local functional $L$ is {\em constant-coefficient holomorphic, $\beta$-linear} if it is a sum of local functionals of the form above.
+\end{dfn}
+
+A nice property of such a local functional $L$ is that the derivation $\{L,-\}$ is manifestly amenably holomorphic 
+because the integrand is translation-invariant and rotation-equivariant. Hence we see the following.
+
+\begin{lemma}
+The factorization algebra derivation $\{L,-\}$ induces a derivation $V_L$ on the vertex algebra~$\hCDO_n$.
+\end{lemma}
+
+We now wish to find an alternative description of that derivation.
+Recall that the differential on $\Obs^\cl_n$ is denoted $\dbar$, 
+as it is the extension of $\dbar$ on the linear observables to a derivation on the symmetric algebra.
+
+\begin{lemma}
+For a local functional
+\[
+L(\gamma,\beta) = \int_\CC D_1(\gamma) \wedge \cdots \wedge D_m(\gamma) \wedge \beta,
+\]
+with $D_1,\ldots,D_m \in \CC[\partial/\partial z]$, there is an equality
+\[
+(\dbar L_K)(\gamma,\beta) = \int_{\partial K} D_1(\gamma) \wedge \cdots \wedge D_m(\gamma) \wedge \beta,
+\]
+for any compact submanifold $K$ of~$\CC$.
+\end{lemma}
+
+\begin{proof}
+This claim follows from Stokes' lemma.
+Compute
+\begin{align*}
+(\dbar L_K)(\gamma,\beta) 
+&= \int_K \dbar \left( D_1(\gamma) \wedge \cdots \wedge D_m(\gamma) \wedge \beta. \right)\\
+&= \int_K (\d - \partial) \left( D_1(\gamma) \wedge \cdots \wedge D_m(\gamma) \wedge \beta \right)\\
+&= \int_K \d \left( D_1(\gamma) \wedge \cdots \wedge D_m(\gamma) \wedge \beta \right)\\
+&= \int_{\partial K} D_1(\gamma) \wedge \cdots \wedge D_m(\gamma) \wedge \beta.
+\end{align*}
+The reason $\partial$ annihilates the integrand is that $\beta$ contributes a $\d z$ term already.
+\end{proof}
+
+Consider as well a closely related situation.
+
+\begin{dfn}
+A local functional $L$ is {\em constant-coefficient holomorphic, $\beta$-free} if it is a sum of local functionals of the form
+\[
+\int_\CC D_1(\gamma) \wedge \cdots \wedge D_m(\gamma) \wedge \d z
+\]
+where the $D_j$ are constant-coefficient holomorphic differential operators.
+\end{dfn}
+
+\begin{lemma}
+For a constant-coefficient holomorphic, $\beta$-free local functional $L = \int \cL$,
+there is an equality
+\[
+\dbar L_K = \int_{\partial K} \cL,
+\]
+for any compact submanifold $K$ of~$\CC$.
+\end{lemma}
+
+We now want to promote this relationship of classical observables to one between quantum observables.
+We do this in two steps.
+First, recall that the smeared classical observables are quasi-isomorphic to the (distributional) classical observables,
+by the Atiyah-Bott lemma. (See Appendix D of \cite{CG} as well as Section 2, Chapter 4.)
+Hence we replace $L_K$ by a smeared observable $\widetilde{L}_K$ that is cohomologous, and likewise for any classical observable.
+Notationally, we will leave this replacement implicit and write simply $L_K$.
+Second, every (smeared) classical observable $F$ can be promoted to a quantum observable $\frak{q}(F)$ 
+by the cochain isomorphism $\frak{q}$, as discussed in Section~\ref{sec quant map}.
+
+As we want to identify elements of the vertex algebra from observables,
+we restrict our attention to the following situation.
+Fix radii $0 < s < S < r <R$ and
+consider the inclusion 
+\[
+A_{S<r}(0) \sqcup D_s(0) \hookrightarrow D_R(0)
+\]
+of an annulus and a small disk into a big disk.
+All are centered at the origin. We will consider the factorization product 
+\be\label{disk ann disk}
+\Obs^q_n(A_{S<r}(0)) \tensor \Obs^q_n (D_s(0)) \to \Obs^q_n(D_R(0)) .
+\ee
+At the level of vertex algebras, this map corresponds to the action of ``fields'' (which live on annulus and thus depend on $z$ and $z^{-1}$) on ``states'' (which live on a disk and hence in the state space).
+
+\begin{dfn}
+Let $L$ be a constant-coefficient local functional that is $\beta$-linear or $\beta$-free.
+Its {\em disk observable} $L_{disk}$ is $L_{\{|z| \leq r\}}$. For the circle $S^1_r$ of radius $r$, its {\em circle observable} $L_{circ}$ is $\dbar L_{disk}$.
+\end{dfn}
+
+The circle observable $L_{circ}$ is an element of $\Obs^q_{n}(A)$ where $A$ is any annulus containing the circle of radius $r$. Note that a circle observable should be identifiable with a Fourier mode of some field for the vertex~algebra.
+
+\begin{lemma}
+\label{der vs star}
+Let $L$ be a constant-coefficient local functional that is $\beta$-linear or $\beta$-free.
+For any cocycle $F \in \Obs^\q_n(D_s(0))$, we have
+\[
+\hbar \left[ \{\frak{q}(L) , F\} \right] = \left[\frak{q}(L_{circ}) \cdot F\right]
+\]
+at the level of cohomology, where $\cdot$ denotes the factorization product in (\ref{disk ann disk}), and where $L_{circ}$ is the circle observable supported on some circle contained in the annulus $A_{S<r}(0)$.
+\end{lemma}
+
+\begin{proof}
+We compute
+\begin{align*}
+\d^\q(\frak{q}(L_{disk}) F) &= \d^\q(\frak{q}(L_{disk})) F \pm \frak{q}(L_{disk}) \d^\q F+ \hbar \{\frak{q}(L_{disk}),F\} \\
+&=\frak{q}(L_{circ})F +\hbar \{\frak{q}(L_{disk}),F\},
+\end{align*}
+since $\frak{q}$ intertwines the classical differential $\dbar $ and quantum differential $\d^\q$ and
+since the support of $F$ is contained in the disk $|z| < r$, 
+on which $L$ and $L_{disk}$ are indistinguishable.
+
+At the level of cohomology, we thus obtain
+\[
+[\frak{q}(L_{circ}) \cdot F] =\hbar \left[ \{\frak{q}(L) , F\} \right] 
+\]
+as claimed.
+\end{proof}
+
+\begin{ex} Consider the local functional
+\[
+L(\gamma,\beta) = \frac{1}{2\pi i}\int \gamma \wedge \beta. 
+\]
+Note that
+\[
+L_{circ} (\gamma,\beta) = \frac{1}{2\pi i}\int_{|z|=1} \gamma \wedge \beta,
+\]
+is precisely the functional $F$ from Section \ref{circ ex}.
+We showed there that $L_{circ}$ is cohomologous to the functional
+\[
+H(\gamma,\beta) = \frac{1}{(2\pi i)^2} \int_{|z| = r} \int_{|w| = R} \frac{\gamma(z) \d z \wedge \beta(w)}{z-w},
+\]
+with $R > r$.
+This functional $H$ is manifestly the zeroth Fourier mode of $c_0 b_{-1}$,
+by the discussion in Section~\ref{identifications}.
+
+The zeroth Fourier mode of $c_0 b_{-1}$ acts like a number operator or Euler vector field, in the sense that 
+\[
+(c_0 b_{-1})_{(0)} f = p f 
+\]
+when $f$ is a homogeneous polynomial of degree $p$ in the variables $c_{m},b_{l}$, with $m \leq 0$ and~$l < 0$.
+
+%\brian{Everything comes from the relation $(b_{-1})_{(0)} c_0 = 1$ (if we're setting $\hbar = 1$). The zero Fourier mode satisfies 
+%\ben
+%x_{(0)} a = - a_{(0)} x \;\; , \;\; x_{(0)} y = y_{(0)} x + T (y_{(1)} x) 
+%\een 
+%for $x,y$ conformal weight $1$ and $a$ conformal weight zero. So, in particular we have $(c_0 b_{-1})_{(0)} c_0 = - (c_0)_{(0)}  (c_0 b_{-1}) = - c_0 (c_0)_{(0)} b_{-1} = c_0$ using the fact the the zero mode is also a derivation. 
+%}
+
+On the other hand, note that $\frak{q}(L) = L + C$, where $C$ is a constant, since $L$ is quadratic and hence only admits at most one nontrivial contraction with the propagator $P$. Hence, the derivation $\{\frak{q}(L), -\}$ agrees with the derivation $\{L, -\}$.
+Direct computation of this derivation shows that it also counts the number of incoming $\gamma$ and $\beta$ legs into any observable; it is the number operator. At the level of the vertex algebra, it thus recovers the zeroth Fourier mode of $c_0 b_{-1}$,
+as claimed by the lemma.
+\end{ex}
+
+Let us build on this example to get a general statement.
+As a matter of notation, if $A_{S<r}(0) \hookrightarrow D_R(0)$ denotes the inclusion of the annulus inside of the disk, 
+denote the resulting structure map of the factorization algebra by $\iota : \Obs^q_n(A_{S<r}(0)) \to \Obs^q_n(D_R(0))$. 
+In the language of vertex algebras, this map sends a field $A$ to the state~$A |0\rangle$.
+
+For an arbitrary constant-coefficient local functional, 
+we then have the following relation between the vertex algebra and in the factorization algebra.
+
+\begin{lemma}\label{zero fourier mode} 
+Let $L$ be a local functional that is $\beta$-linear or $\beta$-free, 
+and let $\cdot$ be the factorization product (\ref{disk ann disk}). 
+For each disk observable $O \in \Obs^q_n(D_s(0))^{(k)}$, 
+\ben
+[\frak{q}(L_{circ}) \cdot O] = \hbar [\iota(\frak{q}(L_{circ}))]_{(0)} [O] .
+\een
+That is, $L$ determines a vertex algebra derivation that is {\em inner}.
+\end{lemma}
+
+\begin{proof}
+For notational convenience, we assume $n = 1$. 
+Moreover, it suffices to assume that $c$ is a linear observable, since the operations are derivations and one can thus apply the Leibniz rule.
+
+Let $L$ be a functional of the form $\int \gamma^{\wedge p} \wedge \beta$.
+It follows that the circular observable is given by 
+\[
+L_{circ} = \int_{|z| = 1} \gamma^{\wedge p} \wedge \beta.
+\] 
+In the vertex algebra $\hCDO_1$, the element $(c_{0})^p b_{-1}$ corresponds to the cohomology class of~$L_{circ}$. 
+
+Recall that a linear observable on the disk is a linear combination of observables of the form
+\begin{align*}
+O_{c_{-m}}\gamma,\beta) &= \frac{m!}{2\pi i} \int_{|z| = } \frac{\gamma(z)}{z^{m+1}} \d z \\
+O_{b_{-l}}(\gamma,\beta)  &= \frac{(l-1)!}{2\pi i} \int_{|z| = } \frac{\beta(z)}{z^l}
+\end{align*}
+where $m \geq 0$, $l > 0$. 
+We will compute the cohomology class of $L_{circ} \cdot O_{c_{-m}}$ in $\Obs^\q(D_{R}(0))$ and demonstrate the claim explicitly  in this case. We leave the case of $O_{b_{-l}}$ for the reader, as it follows a parallel treatment. 
+
+Note that $\frak{q}(L_{circ}) = L_{circ}$ because both $O_{c_{-m}}$ and $O_{b_{-l}}$ involve a factor of $\d z$. Also, $\frak{q}(O_{c_{-m}}) = O_{c_{-m}}$. Moreover, we have
+\ben
+\partial_P \left(L_{circ} \cdot O_{c_{-m}} \right) (\gamma,\beta) = \frac{m!}{2\pi i}  \int_{|z| = } \frac{\gamma(z)^{\wedge p}}{z^{m+1}}  .
+\een
+Thus $(L_{circ} \cdot O_{c_{-m}})(\gamma) =  \hbar \frac{m!}{2\pi i}  \int_{|z| = } \frac{\gamma(z)^{\wedge p}}{z^{m+1}}$. 
+On the other hand, the zeroth Fourier mode of $c_0^pb_{-1}$ applied to $c_{-m}$ is computed as
+\ben
+(c_0^p b_{-1})_{(0)} (c_{-m}) = (c_0^p b_{-1})_{(0)} (T^m c_{0}) = T^m ((c_0^p b_{-1})_{(0)} c_0) = T^m(c_0^p),
+\een
+which is precisely the cohomology class of the observable above. 
+
+The proof for local functionals that are $\beta$-free is completely analogous. 
+\end{proof}
+ 
+%\begin{lemma} Let $a \in \Obs^q_n(A_{S<r}(0))^{(1)}$ and $\cdot$ be the factorization product in (\ref{disk ann disk}). Then, for each $c \in \Obs^q_n(D_s(0))^{(l)}$, one has 
+%\ben
+%[a \cdot c] = [a_{disk}]_{(0)} [c] 
+%\een 
+%in the vertex algebra $\Vert(\Obs^q_n)$. 
+%\end{lemma}
+%
+%\begin{proof}
+%For convenience, we assume $n = 1$. The general case is a direct generalization. It suffices to evaluate on linear observables $a,c$. The linear observables supported on the annulus $A_{S<r}(0)$ have the form
+%\begin{align*}
+%O_{c_p}(A) & : (\gamma,\beta) \mapsto \frac{p!}{2\pi i} \int_{|z| = s'} \frac{\gamma(z)}{z^{p+1}} \d z \\
+%O_{b_{q}} (A) & : (\gamma,\beta) \mapsto \frac{(q-1)!}{2\pi i} \int_{|z| = s'} \frac{\beta(z)}{z^q}
+%\end{align*}
+%where $p,q \in \ZZ$ and where $s' \in (S,r)$. The weight of $O_{c_p}(A)$ is $-p$ and the weight of $O_{b_q}(A)$ is $-q$. These describe all linear observables up to exact elements. Given a bump function $f$ on the interval $(S,r)$ we can write down smeared versions of these observables. For instance:
+%\ben
+%O'_{b_q} (A) (\gamma,\beta) = \frac{(q-1)!}{2 \pi i} \int_{S}^r \int_{|z|=s'} \frac{\beta(z)}{z^q} \d z f(r) \d r .
+%\een 
+%These observables represent familiar elements of the vertex algebra. Indeed, we find $[(O_{c_p})_{disk}] = c_p$ and $[(O_{b_q})_{disk}] = b_q$ for $p \leq 0$ and $q < 0$. 
+%
+%We verify the claim in the case $a = O'_{b_{-k}}$ and $c = (O'_{c_{-l}})_{disk}$. One one hand, the zero Fourier mode satisfies
+%\ben
+%(b_{-k})_{(0)} c_{-l} = 
+%
+%
+%\end{proof}
+%
+%\begin{proof}
+%For convenience, we assume $n = 1$. The general case is a direct generalization. It suffices to evaluate on linear observables
+%\begin{align*}
+%a & \in \left(\Omega^{1,*}_c(A_{S<r}(0)) \oplus \Omega^{0,*}_c(A_{S<r}(0)) \right)^{(k)} \subset (\Obs^{q}_n(A_{S<r}(0))^{(k)} \\
+%c & \in \left(\Omega^{1,*}_c((D_r(0)) \oplus \Omega^{0,*}_c((D_r(0)) \right)^{(l)} \subset (\Obs^{q}_n((D_r(0))^{(l)} .
+%\end{align*} 
+%Let $f$ be a bump function for $A_{S<r}(0)$. Up to exact elements, the linear observables of weight $k$ supported on the annulus are of the form 
+%\begin{align*}
+%\Tilde{c}_k (A) & = f(z,\zbar) z^{k} \d z \d \zbar \in \Omega^{1,1}_c(A_{S<r}(0)) \\
+%\Tilde{b}_{1+k} (A) & = f(z,\zbar) z^{1+k} \d \zbar \in \Omega^{0,1}_c (A_{S<r}(0)) .
+%\end{align*}
+%Similarly, up to exact elements, the linear observables of weight $l$ on the disk are of the form
+%\begin{align*}
+%\Tilde{c}_{l}(D) &= f(z,\zbar) z^l \d z \d \zbar \in \Omega^{1,1}_c(D_s(0)) \\
+%\Tilde{b}_{l} (D) & = f(z,\zbar) z^{1+k} \d \zbar \in \Omega^{0,1}_c (D_s(0)) .
+%\end{align*}
+%The cohomology classes of these elements correspond to the elements $c_l = [\Tilde{c}_l(D)]$, ...
+%
+%Consider the case $a = \Tilde{b}_k(A)$ and $c = \Tilde{c}_l(D)$. The factorization product yields $\Tilde{b}_k(A) \cdot \Tilde{c}_l(D) = \delta_{k,-l}$. 
+%
+%\end{proof}
+
+
+\subsection{The action of $\TVect$}
+
+The preceding discussion was abstract but there are two local functionals that play an important role for us:
+the local functionals $I^{{\rm W}}$ and $J$ produced by equivariant BV quantization.
+As discussed in Section \ref{extendedtheory} in Part II, the local functionals encode how $\TVect$ acts on 
+the rank $n$ formal $\beta\gamma$ system.
+Specifically, we showed that this equivariant quantization equipped the the factorization algebra
+$\Obs^q_n$ with the structure of a semi-strict $(\TVect,\GL_n)$-module. 
+Moreover, we showed that this semi-strict action induces a strict action of $(\TVect,\GL_n)$ on the cohomology $H^*\Obs^q_n$.
+
+Our goal now is to use the tools we just introduced to describe the strict action of $\TVect$ on $\hCDO_n$
+determined by these local functionals. 
+Recall that there exists a Lie algebra map $\rho : \TVect \to \Der_{{\rm VA}}(\hCDO_n)$,
+by Theorem \ref{MSV1} from Section \ref{sec hc cdo}.
+Explicitly, viewing a pair $(X, \omega) \in \Vect \times \hOmega^2_{n,cl}$ as an element of $\TVect$
+as in Section \ref{sec hc cdo}, 
+we have
+\[
+\rho(f(t) \partial_j,0) = (f(c) b_{-1}^j)_{(0)}
+\]
+and
+\[
+\rho(0, \d(f(t) \d t_j)) = \left(f(c) T (c_0^{j})\right)_{(0)}.
+\]
+(On a formal disk, every closed 2-form is exact, so it suffices to give the formula in terms of a 1-form $f(t) \d t_j$.)
+These vertex algebra derivations are manifestly \emph{inner}, i.e., come from elements of the state space of~$\hCDO_n$.
+
+\begin{lemma}
+For $X \in \Vect$, the local functional $I_X^{\rm W}$ determines 
+a derivation $\{\frak{q}(I_X^{\rm W}),-\}$ of the factorization algebra $\Obs^\q_n$ 
+whose associated vertex algebra derivation is~$\rho(X,0)$.
+\end{lemma}
+
+\begin{proof}
+Every formal vector field is a linear combination of vector fields with monomial coefficients,
+so we simply consider  $X = t^{m_1}_1 \cdots t^{m_n}_n \partial_j$.
+The associated local functional is
+\ben
+I^{\rm W}_X (\gamma, \beta) =\int_\CC\gamma_1^{m_1} \wedge \cdots \wedge \gamma_n^{m_n} \wedge \beta_j,
+\een 
+which is constant-coefficient holomorphic and $\beta$-linear.
+By Lemma \ref{der vs star}, we know that we can understand the derivation $\{\frak{q}(I^{\rm W}_X),-\}$ 
+through the factorization product with $(I^{\rm W}_X)_{circ}$, 
+which should correspond to the Fourier mode of some element of~$\hCDO_n$.
+
+By Lemma \ref{zero fourier mode} we find that for $X = t^{m_1}_1 \cdots t^{m_n}_n \partial_j$,
+the factorization product by $(I^{\rm W}_X)_{circ}$ corresponds, at the level of the vertex algebra, to the zeroth Fourier mode of~$(c^1_0)^{m_1} \cdots (c^n_0)^{m_n} b^j_{-1}$, as desired. Thus, we recover precisely the formula for~$\rho$.
+\end{proof}
+
+Likewise, we have the following.
+
+\begin{lemma}
+For $\omega \in \hOmega^2_{n,cl}$, the local functional $J_\omega$ corresponds to the vertex algebra derivation $\rho(0,\omega)$.
+\end{lemma}
+
+\begin{proof}
+Every closed 2-form $\omega$ on the formal disk is the exterior derivative $\d \theta$ of a 1-form $\theta$. 
+Moreover, every 1-form is a linear combination of 1-forms with monomial coefficients,
+so we simply consider  $\theta = t^{m_1}_1 \cdots t^{m_n}_n \d t_j$.
+The associated local functional is
+\ben
+J_{\d \theta} (\gamma, \beta) = \int_\CC\gamma_1^{m_1} \wedge \cdots\wedge \gamma_n^{m_n} \wedge \partial_z \gamma_j \,\d z,
+\een 
+which is constant-coefficient holomorphic and $\beta$-free.
+The derivation $\{\frak{q}(J_{\d \theta}),-\}$ corresponds to the factorization product with the circle observable
+\[
+(J_{\d \theta})_{circ} (\gamma, \beta) =\int_{|z|=1}\gamma_1^{m_1} \wedge \cdots\wedge \gamma_n^{m_n} \wedge \partial_z \gamma_j \,\d z.
+\]
+Moreover, this circle observable corresponds to the zeroth Fourier mode of $(c^1_0)^{m_1} \cdots (c^n_0)^{m_n} T(c^j_0)$, by Lemma \ref{zero fourier mode}, as desired.
+\end{proof}
+
+\section{The main result}
+
+In light of our arguments in the preceding sections, we obtain the following.
+
+\begin{thm} 
+The isomorphism of $\ZZ_{\geq 0}$-graded vertex algebras
+\ben
+\Phi : \hCDO_n \xto{\cong} \Vert(\Obs^q_n) 
+\een
+is equivariant with respect to the actions of $(\TVect, \GL_n)$. 
+Moreover, it is compatible with the $\hO_n$-module structure. 
+\end{thm}
+
+\begin{proof}
+We proved the equivariance assertion in the preceding sections. 
+Thus it remains to discuss the $\hO_n$-module structure.
+This aspect, however, is the focus of Section \ref{sec concrete},
+where we describe how observables on a disk decompose according to conformal dimension
+and then identify each subspace of fixed conformal dimension with some type of formal tensor fields.
+At the level of cohomology --- which provides the decomposition for $\Vert(\Obs^q_n)$ --- these match with~$\hCDO_n$.
+\end{proof}
+
+An immediate corollary, via Gelfand-Kazhdan descent and its variants, is our main result.
+
+\begin{cor} 
+Let $X$ be a complex $n$-manifold together with a trivialization $\alpha$ of $\ch_2(T_X) \in H^2(X ; \Omega^{2,hol}_{cl})$. Then the factorization algebra $\Obs^q_{X,\alpha}$ obtained by Gelfand-Kazhdan descent 
+determines a sheaf of vertex algebras $\Vert(\Obs^q_{X,\alpha})$ on $X$. 
+Moreover, there is an isomorphism of sheaves of vertex algebras on $X$
+\ben
+\Phi : \CDO_{X,\alpha} \xto{\cong} \Vert(\Obs^q_{X,\alpha})
+\een
+that is natural in the choice of trivialization~$\alpha$.
+\end{cor}
+
+The naturality in the choice of trivialization can be phrased in a compelling way.
+Recall from Section \ref{sec obsdef} that there is an obstruction-deformation complex for the curved $\beta\gamma$ system on $X$, which is a sheaf of dg vector spaces encoding important information about this BV theory.
+For instance, a degree one cocycle encodes a first-order deformation of the classical action that satisfies the classical master equation and thus defines a well-posed classical BV theory.
+This complex is obtained by Gelfand-Kazhdan descent, and it involves only local functionals that are invariant for the action of $\CC^\times \times {\rm Aff}(\CC)$ by scaling (of the $\beta$ field) and affine transformations.
+
+In particular, the obstruction to quantization is a degree two cocycle in this cochain complex, 
+which is identified with $\ch_2(T_X)$ by Lemma \ref{obsprop}.
+Corollary \ref{gerbe of obsdef} tells us that this sheaf of dg vector spaces is quasi-isomorphic to the sheaf $\Omega^{2,hol}_{cl}$ on $X$. Hence we deduce the following.
+
+\begin{cor}
+The map $\Phi$ provides an isomorphism of gerbes from the gerbe of BV quantizations of the curved $\beta\gamma$ system (constructed via descent and invariant under $\CC^\times \times {\rm Aff}(\CC)$) to the gerbe of CDOs.
+\end{cor}
+
+\subsection{Remark on conformal structure}
+
+With the identification of chiral differential operators with the observables of the $\beta\gamma$ system, 
+our analysis in Part II immediately implies an observation about the conformal symmetry of this sheaf of vertex algebras. 
+
+In Section \ref{sec conformal obs} we showed that after fixing a trivialization $\alpha$ of $\ch_2(T_X)$, 
+there is a map of sheaves on~$X$ 
+\ben
+\Psi^\q : \ul{\sVir}_{c=2n} \to \Obs^\q_{X, \alpha}
+\een 
+of factorization algebras on $\CC$, {\em provided} that $c_1(T_X) = 0$. (In fact, we have such a map for every trivialization of~$c_1(T_X)$). 
+
+The factorization algebra $\sVir_{c}$ is amenably holomorphic, and it is shown in \cite{bw_vir} that its associated vertex algebra $\Vert(\sVir_{c})$ is isomorphic to the Virasoro vertex algebra ${\rm Vir}_c$ of central charge $c$. 
+By the functoriality of the functor $\Vert$, 
+we obtain the following immediate corollary of the above analysis, which implies the aforementioned Proposition \ref{prop conformal cdo} from Part~I. 
+
+\begin{cor} 
+Let $\alpha$ be trivialization of $\ch_2(T_X)$ and let $\CDO_{X,\alpha}$ be the associated sheaf of CDOs. 
+Then for each trivialization $\beta$ of $c_1(T_X)$, 
+the map of holomorphic factorization algebras $\Psi^\q_\beta : \ul{\sVir}_{c=2n} \to \Obs^\q_{X,\alpha}$ determines a map of sheaves of vertex algebras $\Vert(\Psi^\q_\beta) : \ul{\rm Vir}_{c=2n} \to \CDO_{X,\alpha}$.
+\end{cor}
+
+\section{Discussion of some physics literature}
+
+Our goal in this section is to relate our work to the perspectives offered by Witten and Nekrasov on the curved $\beta\gamma$ system.
+Both \cite{WittenCDO} and \cite{Nek} undertake a similar analysis, but we will focus on Witten's.
+The format of our comparison is to remind the reader about general aspects of $\sigma$-models,
+to explain how Witten identifies the anomalies to quantization and how his method relates to ours,
+and to indicate how Witten determines the patching rules for the chiral algebras and how this approach relates to ours.
+
+\subsection{General comments about nonlinear $\sigma$-models}
+
+\def\Maps{{\rm Maps}}
+
+We begin by sketching a general perspective that informs the problem.
+
+\begin{rmk}
+This perspective assumes that the path integral exists and exhibits behavior analogous to finite-dimensional integrals.
+In a sense, we run the argument sketched here {\it backwards} to construct the putative path integral measure.
+\end{rmk}
+
+Let $\Sigma$ denote a source manifold and $X$ a target manifold.
+A nonlinear $\sigma$-model has, as its space of fields, the infinite-dimensional manifold $\Maps(\Sigma,X)$.
+The equations of motion for the theory cut out a submanifold $Sol$ of this mapping space as the space of solutions,
+and typically a component of this space of solutions is given by a copy of $X$ viewed as the constant maps from $\Sigma$ to $X$.
+We will call this the {\em perturbative} sector.
+
+In trying to compute the path integral, one expects that for $\hbar$ very small, 
+the putative measure should be concentrated very close to $Sol$ inside $\Maps(\Sigma,X)$.
+One might then try to approximate the path integral by simply integrating over a small tubular neighborhood around $Sol$.
+The perturbative contribution would then be the integral over a small tubular neighborhood around $X$ inside $\Maps(\Sigma,X)$.
+To organize the computation of this perturbative contribution, one can identify a tubular neighborhood with the normal bundle to $X$ inside $\Maps(\Sigma,X)$.
+Hence, one obtains an infinite-dimensional vector bundle over $X$ whose fiber over $x \in X$ is 
+\[
+N_x \Maps(\Sigma,X) \cong T_x \Maps(\Sigma,X)/T_x X \cong \Maps(\Sigma, T_x X)/T_x X.
+\]
+One then computes the integral over the tubular neighborhood in two stages: 
+first, fiberwise integration over the normal bundle, and then integration over $X$.
+This fiberwise integral can be approached with Feynman diagrammatics,
+with the base $X$ playing the role of a ``background field.''
+In this sense, the perturbative sector is {\em local on the target~$X$}
+
+A better approximation to the full path integral would involve the other components of $Sol$. 
+They provide the ``instanton corrections'' to the perturbative computation.
+As a nonconstant solution is not concentrated at a single point in $X$ --- by definition --- 
+these corrections are not local on $X$ and require different techniques.
+
+\subsection{Anomalies and obstructions}
+
+Fix some method for perturbative computations.
+At each point $x$ of $X$, we apply our method to integrate over the normal bundle $N_x$.
+This integral ought to take values in a one-dimensional vector space, and 
+hence the full fiberwise integral provides a section in a line bundle over $X$.
+{\em A priori} we do not know which line bundle it is, 
+since the perturbative constructions are done locally on $X$ and then patched together.
+
+As Witten notes in Section 2.3 of \cite{WittenCDO}, the Chern class of this line bundle is a discrete invariant and 
+hence should not depend on continuous parameters, 
+such as the coupling constants of the fiberwise perturbative field theories.
+Thus we can compute it by fiberwise quantizing the family of free theories over $X$,
+scaling the interactions to zero.
+In other words, one simply keeps the Hessian of the action functional at each point $x \in X \subset \Maps(\Sigma,X)$.
+The free theory at each $x$ corresponds to some elliptic complex on $\Sigma$. 
+Now, it is standard to identify the one-dimensional vector space at $x \in X$ with the determinant line of the cohomology of this elliptic complex.
+(This identification can be recovered as a {\em consequence} of BV quantization, as shown in \cite{HaugGwil}.)
+Hence, one can use a families index theorem to compute the Chern class of the determinant line bundle.
+
+In the case of the $\beta\gamma$ system, 
+this amounts to considering the trivial fiber bundle $\pi: \Sigma \times X \to X$
+and letting the elliptic complex at a point $x \in X$ be $\Omega^{0,*}(\Sigma) \otimes T_x X$.
+In other words, we are considering $\cF = \cO_\Sigma \otimes \cT_X$ as a sheaf on $\Sigma \times X$.
+We wish to understand the pushforward $\pi_* \cF$ on $X$ or, more accurately, the determinant line of its derived pushforward.
+
+\def\Td{{\rm Td}}
+
+We assume now that $\Sigma$ is closed.
+The first Chern class of the determinant line agrees with the first Chern class of the derived pushforward.
+The Grothendieck-Riemann-Roch theorem then implies that the Chern character of the derived pushforward 
+is given by 
+\begin{align*}
+\pi_*( \ch(\cF) \Td(\cT_\pi)) &= \pi_*( (1 + c_1(\cF) + \frac{1}{2}(c_1(\cF)^2 - 2c_2(\cF)) + \cdots)(1 +\frac{1}{2}c_1(T_\Sigma)))\\
+&= \pi_*( (1 + \pi^* c_1(\cT_X) + \pi^* \ch_2(\cT_X) + \cdots)(1 +\frac{1}{2}c_1(T_\Sigma)))
+\end{align*}
+and the first Chern class is the component of cohomological degree 2, namely
+\[
+(1-g) c_1(\cT_X) + \ch_2(\cT_X) 
+\]
+where $g$ denotes the genus of $\Sigma$.
+In short, one finds that the determinant line is trivial if and only if 
+both $\ch_2(\cT_X) = 0$ and either $c_1(\cT_X) = 0$ or $\Sigma$ is genus one.
+
+These results correspond to ours,
+although our approach is, on its face, rather different.
+We choose to work with the formal $n$-disk as target 
+and then apply Gelfand-Kazhdan descent to obtain (the perturbative sector of) the theory with any complex $n$-manifold $X$ as target.
+Our obstruction cocycle (or anomaly) thus lives in Gelfand-Fuks cohomology
+and maps to de Rham cohomology of some $X$ by descent.
+As we have seen in \ref{sec equiv bv}, the obstruction to BV quantization descends to $\ch_2(\cT_X)$ when the source is $\CC$ 
+and we require equivariance with respect to
+\begin{itemize}
+\item translation and dilation on the source (which ensures we can descend to genus one curves) and
+\item holomorphic diffeomorphisms of the formal $n$-disk as target.
+\end{itemize}
+It is a consequence of the calculations of Section \ref{sec conformal anomaly} combined with Gelfand-Kazhdan descent that requiring equivariance under {\em all} holomorphic diffeomorphisms of a source disk requires $c_1(\cT_X) = 0$.
+Such equivariance ensures one can descend to higher genus curves by considering them as quotients of the disk by Fuchsian groups.
+
+\begin{rmk}
+On the other hand, Witten's global argument using Grothendieck-Riemann-Roch applies in the BV context as well,
+because BV quantization of the free $\beta\gamma$ system 
+on a Riemann surface $\Sigma$ but twisted by $\cT_X$ recovers the same determinant line, 
+up to some cohomological shift.
+A benefit of our approach here is that we actually construct the BV quantization for the full $\beta\gamma$ system
+rather than merely identifying the obstruction cohomologically.
+\end{rmk}
+
+As a further point of comparison, note that the obstruction-deformation complex we compute in Section \ref{sec eq def cplx} recovers precisely the same information that Witten and Nekrasov find.
+For instance, they find that first-order deformations of the theory are given by $H^1(X, \Omega^2_{cl})$.
+(See Section 2.2 of \cite{WittenCDO} or Section 2.6.3 of \cite{Nek}, although Nekrasov keeps track of deformations of complex structure of the target too.)
+Similarly, one can see that the local symmetries of the theory are $H^0(X, \Omega^2_{cl})$, as Nekrasov notes in Section 2.6.6.
+In other words, the BV formalism provides a systematic mechanism for answering the questions that Witten and Nekrasov address.
+
+\subsection{Chiral algebras and observables}
+
+In Section 3 on \cite{WittenCDO}, Witten explains how one can recover the sheaf of chiral differential operators by physical arguments.
+His approach might be summarized as follows:
+\begin{enumerate}
+\item since the perturbative theory is local on the target $X$, we fix a good cover $\{U_i\}$ of $X$ and try to patch the quantizations;
+\item a coordinatization $\phi_i: U_i \hookrightarrow \CC^n$ allows one to view the field theory as a restriction of the $\beta\gamma$ system with target $\CC^n$ to the open $\phi_i(U_i)$; 
+\item one then constructs the chiral algebra of operators for the open $\phi_i(U_i)$ as target by restricting the chiral algebra for the free $\beta\gamma$ system of rank $n$;
+\item one tries to patch the chiral algebras on overlaps $U_i \cap U_j$.
+\end{enumerate}
+The first two steps are built into this perturbative approach to general $\sigma$-models.
+The third step depends on two things: 
+first, knowing the chiral algebra of the free $\beta\gamma$ system 
+(which is a standard computation in physics and which we formalized in Part I), 
+and second, knowing the chiral algebra can be localized to smaller opens.
+(We remark that {\em chiral} algebra here is synonymous with {\em vertex} algebra in the mathematics literature,
+although physicists often (though not here) presume that a chiral algebra is invariant under holomorphic changes of coordinates 
+and hence what a mathematician might call a vertex operator algebra.)
+This second result is a computation done in \cite{MSV, GMS},
+and it requires one to show that the OPE for the free $\beta\gamma$ system can be localized from polynomials in the coordinates on the target $\CC^n$ to holomorphic functions in those coordinates.
+
+The final step is a bit involved, and Witten explains it in Section 3.4 of \cite{WittenCDO}.
+He wants to patch the chiral algebras for small opens in $\CC^n$,
+so he needs to identify the automorphism group of the chiral algebra.
+In practice, he instead computes the Lie algebra of this automorphism group 
+or, more accurately, the infinitesimal automorphisms arising from the chiral algebra itself.
+Witten wants to find those elements of the chiral algebra whose zeroth Fourier mode 
+acts on the chiral algebra as a derivation that preserves conformal dimension.
+In his terminology, such an element is a ``dimension one current'' and 
+its zeroth Fourier mode is called its ``charge,'' 
+which is the integral of the current along a loop around the origin in the source manifold.
+Witten uses $\fg$ to denote the Lie algebra given by integrals of dimension one currents modulo total derivatives.
+
+Witten provides two natural types of symmetries.
+A holomorphic vector field $V = V^i \partial_i$ on the target determines the current $J_V = -V^i \beta_i$,
+viewed as an element of the chiral algebra.
+Similarly, a holomorphic 1-form $B = B_i \d z^i$ determines a current $J_B = B_i \partial \gamma^i$.
+The charge of a 1-form $B$ vanishes if and only if it is exact (i.e., $B = \partial H$),
+so that the collection of such charges is isomorphic to closed 2-forms (as a vector space).
+The charges of distinct vector field are, by contrast, distinct.
+Let $\frak{v}$ denote the Lie algebra formed by the charges for vector fields $V$ and 
+let $\frak{c}$ denote the Lie algebra formed by the charges for one-forms $B$.
+Together they span $\fg$, according to Witten.
+
+A direct computation with the charges (or using OPE with these currents) shows that there is an exact sequence of Lie algebras
+\[
+0 \to \frak{c} \to \fg \to \frak{v} \to 0,
+\]
+and this Lie algebra corresponds to the extension $\widetilde{W}_n$ that we construct.
+
+In our setting, a current can be defined as a local functional $I$ such that $\{I,-\}$ is a cocycle in derivations of the observables.
+As discussed in Section \ref{sec loc sym}, such a functional $I$ determines an element $I_{disk}$ in the observables on the disk and hence an element of the vertex algebra.
+The associated charge is the element $I_{circ}$, which is an observable on the annulus and hence corresponds to the zeroth Fourier mode of the element in the vertex algebra.
+
+Witten chooses to find the infinitesimal symmetries of the $\beta\gamma$ system 
+by doing explicit computations in the chiral algebra after obtaining it from the free theory.
+By contrast, we use the BV formalism to determine how to lift the classical symmetries to quantum symmetries
+(at the cost of a Lie algebra extension)
+and then extract the chiral algebra statements.
+In a sense, we do path integral manipulations to recover chiral algebra, 
+and Witten follows the reverse logic.
+The results naturally agree.
+
+\begin{rmk}
+Recent work of Si Li \cite{LiQME} provides another useful perspective on this relationship.
+He considers free holomorphic BV theories on the complex line,
+and he produces an identification between the obstruction-deformation complex of the BV theory and the mode Lie algebra of its vertex algebra.
+His result, extended to our equivariant context, then recovers Witten's computation. 
+\end{rmk}
+
+After determining the appropriate symmetries of the chiral algebra, 
+Witten tries to lift the patching of coordinates on the good cover to patching of the chiral algebras.
+The coordinate patching can be seen as living in the Lie algebra $\frak{v}$ (or rather its assciated group),
+so the challenge is to lift to $\fg$, which involves choices.
+Any choice determines a \v{C}ech 2-cocycle with values in $\Omega^2_{cl}$,
+and if the cocycle vanishes,
+the choices determine a patching of the chiral algebras.
+The work of \cite{GMS} showed that this cocycle is indeed $\ch_2(T_X)$.
+Our method provides another perspective.
+
+%\bibliographystyle{amsalpha}
+%\bibliography{../fulldraft/refs}
+
