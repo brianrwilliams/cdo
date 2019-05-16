@@ -2065,12 +2065,18 @@ The construction in the preceding paragraph defines the structure of a $(\Vect, 
 \end{prop}
 
 \begin{proof} The associated graded can be written as 
-\ben
+%\ben
+%\Gr \; \hCDO_n \cong
+%\underset{{0<k}}{\widehat{\bigotimes}}\,\cSym_{\hO_n}(\hT^*_n)\,
+%\widehat{\otimes}\, \underset{{0\leq
+%    l}}{\widehat{\bigotimes}}\,\cSym_{\hO_n}(\hT_n) .
+%\een
+\[
 \Gr \; \hCDO_n \cong
-\underset{{0<k}}{\widehat{\bigotimes}}\,\cSym_{\hO_n}(\hT^*_n)\,
-\widehat{\otimes}\, \underset{{0\leq
-    l}}{\widehat{\bigotimes}}\,\cSym_{\hO_n}(\hT_n) .
-\een
+\underset{{0\leq k}}{\bigotimes} \,\Sym_{\hO_n}(\hOmega^1_n)\,
+\otimes \, \underset{{0<
+    l}}{\bigotimes} \,\Sym_{\hO_n}(\hT_n) .
+\]
 The action by $\Vect$ and $\GL_n$ is by Lie derivative and changes of
 linear
 frame on the respective tensor
@@ -2728,12 +2734,12 @@ as an cocycle in $\clie^*\left(\Vect , \GL_n ; \hOmega^{-*}_n\right)[[q]]$.
 
 \begin{proof}
 The conformal dimension zero subspace of $\hCDO_n$ is identified with $\hO_n$ and the conformal dimension one subspace is identified with $\hOmega^1_n \oplus \hT_n$ (all as $\TVect$-modules). The full associated graded of CDOs is given by
-\ben
+\[
 \Gr \; \hCDO_n \cong
-\underset{{0<k}}{\widehat{\bigotimes}}\,\cSym_{\hO_n}(\hOmega^1_n)\,
-\widehat{\otimes}\, \underset{{0\leq
-    l}}{\widehat{\bigotimes}}\,\cSym_{\hO_n}(\hT_n) .
-\een
+\underset{{0\leq k}}{\bigotimes} \,\Sym_{\hO_n}(\hOmega^1_n)\,
+\otimes \, \underset{{0<
+    l}}{\bigotimes} \,\Sym_{\hO_n}(\hT_n) .
+\]
 Putting this all together we find
 \begin{align*}
 {\rm char}^{(\TVect, \GL_n)} (\hCDO_n) & = \sum_{N \geq 0} q^N {\rm
