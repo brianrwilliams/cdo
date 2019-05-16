@@ -1,6 +1,6 @@
 \part*{Part I: Gelfand-Kazhdan descent and chiral differential
   operators}
-  
+
 The goal of this part is to provide a construction of chiral differential operators via the methods of Gelfand-Kazhdan formal geometry; this approach is a modest modification of an approach described for the chiral de Rham complex in \cite{MSV}. (In subsequent work we will provide a BV construction of chiral de Rham complex, along with a family of related sheaves of vertex algebras.) Our phrasing here aims to highlight the parallels with the next part, where we introduce a homotopy-coherent version of Gelfand-Kazhdan formal geometry that works nicely with the Batalin-Vilkovisky formalism and Feynman diagrammatics and thus allows us to construct a factorization algebra refining CDOs.
 
 Recall that Gelfand-Kazhdan formal geometry is an approach to any ``natural'' construction in differential geometry, i.e., to constructions that apply uniformly to all manifolds of a given dimension (or with some other common, local geometric structure). The basic idea is that on any $n$-manifold, the immediate neighborhood of every point looks the same, and so if some construction can be described on any sufficiently small neighborhood and is equivariant for local diffeomorphisms, the construction should apply to every $n$-manifold. In other words, it is a kind of refinement of tensor calculus. To be more precise, in formal geometry, one works with a ``formal'' neighborhood of a point $p$ in $\RR^n$, namely the ``space'' whose algebra of functions is the $\infty$-jets of functions at $p$ ({\em aka} Taylor series at $p$ of functions). Let us denote this space by $\hD^n$.The relevant group of ``formal'' diffeomorphisms then means the $\infty$-jet at $p$ of diffeomorphisms that fix $p$ ({\em aka} Taylor series at $p$ of diffeomorphisms), which we will denote by $\Aut_n$. (Note that for every point $p$, the group is isomorphic.) Every $n$-manifold $X$ possesses a canonical {\em flat} principal $\Aut_n$-bundle $X^{coor}$ whose fiber over $p \in X$ is the space of formal coordinates centered at $p$ and is equipped with a flat connection valued in formal vector fields $\Vect$ (which is slightly larger than the Lie algebra of $\Aut_n$).  In the context of this paper we are interested in complex manifolds and there is a corresponding bundle of holomorphic formal coordinates. These are $\infty$-jets of biholomorphisms.
@@ -135,7 +135,7 @@ where the bracket is taken in the Lie algebra $\fg$.
 \end{itemize}
 \end{dfn}
 
-In particular, if $\fg = \Lie(K)$, then condition (1) encdes the usual notion of a principal $K$-bundle, while condition (2) says that $\omega$ is {\em flat}, i.e., we have a principal bundle for the discrete group~$K^\delta$ underlying~$K$. 
+In particular, if $\fg = \Lie(K)$, then condition (1) encodes the usual notion of a connection on a principal $K$-bundle, while condition (2) says that the connection is {\em flat}, i.e., we have a principal bundle for the discrete group~$K^\delta$ underlying~$K$.\si
 
 Recall that one can interpret a connection on a principal $K$-bundle as a splitting of the tangent bundle $TP$ into horizontal and vertical components in a $K$-equivariant way. 
 Let $T_\pi P$ denote the vertical tangent bundle (i.e., the kernel of the projection map $TP \to \pi^* TX$);
@@ -227,7 +227,7 @@ Recall the associated bundle construction: given a principal $K$-bundle $\pi : P
 V_X := P \times^K V
 \een
 over $X$. 
-(People often use the notation $P\times_K V$ instead, but we wish to avoid potential confusion with the fibered product.)
+(People often use the notation $P\times_K V$ instead, but we wish to avoid potential confusion with the fibered product.)\si
 
 One can view this construction as a pairing between the category of principal $K$-bundles and the category of finite-dimensional $K$-modules, i.e., a functor
 \[
@@ -359,12 +359,12 @@ we obtain the following functors.
 \begin{dfn}
 The {\em $(\fg,K)$-descent functor} is the functor 
 \[
-\desc: \Loc_{(\fg,K)}^\op \times \Mod_{(\fg,K)} \to {\rm VB}_{flat}
+\desc: \Loc_{(\fg,K)}^\op \times \Mod^{fin}_{(\fg,K)} \to {\rm VB}_{flat}
 \]
 sending $(P \to X, V)$ to $(V_X,\nabla^{P,V})$.
 There is a closely related functor
 \[
-\ddesc: \Loc_{(\fg,K)}^\op \times \Mod_{(\fg,K)} \to \Mod_{\Omega^*}
+\ddesc: \Loc_{(\fg,K)}^\op \times \Mod^{fin}_{(\fg,K)} \to \Mod_{\Omega^*}
 \]
 sending $(P \to X, V)$ to the de Rham complex of $\desc((P \to X,V))$. 
 \end{dfn}
@@ -398,7 +398,7 @@ cohomology of $V$.
 \end{ex}
 
 \begin{ex} 
-Suppose $K$ is a Lie group and let $\fk$ be its Lie algebra. 
+Let $K$ be a Lie group and let $\fk$ be its Lie algebra. 
 Then $(\fk,K)$ is a HC-pair and we have an equivalence of categories
 \ben
 \Mod^{fin}_{(\fk,K)} \cong {\rm Rep}^{fin}_K .
@@ -567,20 +567,24 @@ picture of formal geometry: the coordinate bundle.
 
 \subsubsection{}
 
-Given a complex manifold, its {\em coordinate space} $X^{coor}$ is the (infinite-dimensional) space parametrizing jets of holomorphic coordinates of $X$. 
+Given a complex manifold, its {\em coordinate space} $X^{coor}$ is the (infinite-dimensional) space parametrizing holomorphic formal coordinate systems of $X$. 
 (It is a pro-complex manifold, as we'll see.) 
 Explicitly, a point in $X^{coor}$ consists of a point $x \in X$ 
-together with an $\infty$-jet class of a local biholomorphism $\phi : U \subset \CC^n \to X$ 
-sending a neighborhood $U$ of the origin to a neighborhood of $x$ such that $\phi(0) = x$. 
+together with an isomorphism of completed commutative algebras 
+\[
+\phi: \sO_{X,x}^\wedge \to \CC[[t_1,\ldots,t_n]] = \hO_n,
+\]
+where $\sO_{X,x}^\wedge$ denotes the completion $\lim_{\leftarrow} \sO_{X,x}/\fm_x^k$ of the germ at $x$ of holomorphic functions with respect to powers of the ideal $\fm_x$ of functions vanishing at~$x$.\si
+Intuitively, $\phi$ corresponds to an embedding of the formal disk into $X$, sending the base point to~$x$.
 
 There is a canonical projection map $\pi^{coor} : X^{coor} \to X$ by remembering only the underlying point in $X$. 
 The group $\Aut_n$ acts on $X^{coor}$ by ``change of coordinates," 
-i.e., by precomposing a local biholomorphism $\phi$ with an automorphism of the disk around the origin in $\CC^n$.
+i.e., by precomposing a  $\phi$ with an automorphism of the disk around the origin in $\CC^n$.
 This action identifies $\pi^{coor}$ as a principal bundle for the pro-Lie group $\Aut_n$. 
 
 One way to formalize these ideas is to realize $X^{coor}$ as a limit of finite-dimensional complex manifolds. 
 Let $X_k^{coor}$ be the space consisting of points $(x, [\phi]_k)$, 
-where $\phi$ is a local biholomorphism as above and $[-]_k$ denotes taking its $k$-jet equivalence class. 
+where $\phi$ is a formal holomorphic coordinate system, as above, and $[-]_k$ denotes the projection on $\CC[[[t_1,\ldots,t_n]]/(t_1,\ldots,t_n)^{k+1}$. 
 Let $\pi_k^{coor} : X^{coor}_k \to X$ be the projection. 
 By construction, the finite-dimensional Lie group $\Aut_{n,k}$ acts on the fibers of the projection freely and transitively 
 so that $\pi_k^{coor}$ is a principal $\Aut_{n,k}$-bundle. The bundle $X^{coor} \to X$ is the limit of the sequence of principal bundles on X
@@ -628,7 +632,7 @@ Moreover, this action induces the isomorphism $\Vect \cong
 T_{(x,[\phi]_\infty)} X^{coor}$ at each point.
 \end{prop}
 
-\noindent Here, $\cX(X^{coor})$ is understood as the inverse limit of the finite-dimensional Lie algebras $\cX(X^{coor}_k)$.
+\noindent Here, $\cX(X^{coor})$ is understood as the inverse limit of the Lie algebras $\cX(X^{coor}_k)$. The superscript $hol$ means the inverse limit of the subalgebras of holomorphic vector fields.\si \owen{I'm also confused about what these things are. We need to spell it out contra comment 14.}
 
 The inverse of the map $\theta$ provides a connection one-form
 \ben
@@ -843,9 +847,8 @@ Indeed, let
 \ben
 \VB_n \subset \Mod_{(\Vect, \GL_n)}^{\cO_n}
 \een
-be the full subcategory spanned by objects that are free and finitely generated as underlying $\hO_n$-modules. 
-Upon descent these will correspond to ordinary vector bundles and so
-we refer to this category as {\em formal vector bundles}. 
+be the full subcategory spanned by objects that are free and finitely generated as underlying $\hO_n$-modules,\si
+so we refer to this category as {\em formal vector bundles}.
 
 The category of formal $\hO_n$-modules has a natural symmetric monoidal structure by tensor product over~$\hO$. The Harish-Chandra action is extended by
 \[

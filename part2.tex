@@ -889,8 +889,8 @@ First, there is an assignment
 \ben
 (-)^S : \hO_n \to {\rm Hom}_{\CC} \left( \Sym(\Omega^{0,*}_S \tensor \fg_n[1]), \Omega^{0,*}_S\right) 
 \een
-that produces an $L_\infty$ map on $\fgn^S$ from a function on the formal $n$-disk,
-which we now describe.
+that promotes a function on the formal $n$-disk to a function on the formal moduli space $\fg_n^S$ with values in holomorphic functions on $S$.
+It goes as follows.
 Given an input $f \in \hO_n$, let $f_k$ denote its homogeneous component of degree $k$. 
 View $f_k$ as a linear map $f_k : \Sym^k(\fg_n[1]) \to \CC$. 
 We then define 
@@ -910,7 +910,7 @@ Let $\theta_k : \Sym^k(\fg_n[1]) \to \fg_n^\vee[-1]$ be its homogenous component
 As above, there is a natural linear map
 \ben
 \begin{array}{cccc}
-\theta^S_k :  & \Sym^k(\Omega^{0,*}_S \tensor \fg_n) & \to & \Omega^{0,*}_S \tensor
+\theta^S_k :  & \Sym^k(\Omega^{0,*}_S \tensor \fg_n[1]) & \to & \Omega^{0,*}_S \tensor
 \fg_n^\vee[-1] \\ 
 &(\gamma_1 \tensor \xi_1) \cdots (\gamma_k \tensor \xi_k) & \mapsto &
 (\gamma_1 \wedge \cdots \wedge \gamma_k) \tensor \theta_k(\xi_1, \cdots, \xi_k) 
@@ -1351,8 +1351,8 @@ when it becomes relevant, in the context of factorization algebras, we switch to
 If we start with an $\fh$-equivariant classical BV theory $\cE$ with action functional $S$ --- so that $\fh$ has an $\L8$ action on the fields that preserves the pairing and the action functional $S$ --- then we can encode the action of $\fh$ as a Maurer-Cartan element $I^\fh$ in $\clies(\fh) \otimes {\rm C}^*_{\rm loc}(\cE)$.
 (For the formal $\beta\gamma$ system, we did this in Lemma \ref{Noether}.)
 We then view the sum $S + I^\fh$ as the \emph{equivariant} action functional:
-the operator $\{S+ I^\fh,-\}$ is the twisted differential on $\clies(\fh) \otimes {\rm C}^*_{\rm loc}(\cE)$ with $I^\fh$ as the twisting cocycle,
-and this operator is square-zero because $\{S + I^\fh, S+ I^\fh\}$ is a ``constant'' (i.e., lives in $\clies(\fh)$ and hence is annihilated by the BV bracket).
+the operator $\d_{\clies(\fh)} + \{S+ I^\fh,-\}$ is the twisted differential on $\clies(\fh) \otimes {\rm C}^*_{\rm loc}(\cE)$ with $I^\fh$ as the twisting cocycle,
+and this operator is square-zero because $\d_{\clies(\fh)}(S + I^\fh) + \{S + I^\fh, S+ I^\fh\}$ is a ``constant'' (i.e., lives in $\clies(\fh)$ and hence is annihilated by the BV bracket).\si
 
 This perspective suggests the following definition of an equivariant quantum BV theory.
 The starting data is two-fold:
@@ -1374,7 +1374,7 @@ W(P_\epsilon^L, I[\epsilon]+I^\fh[\epsilon]) = I[L] + I^\fh[L]
 for all $0 < \epsilon < L$,
 \item the equivariant scale $L$ quantum master equation, which is that
 \[
-Q(I[L]+I^\fh[L]) + \d_\fh I^\fh[L] + \frac{1}{2}\{I[L]+I^\fh[L],I[L]+I^\fh[L]\}_{L} + \hbar \Delta_L(I[L]+I^\fh[L])
+Q(I[L]+I^\fh[L]) + \d_{\clies(\fh)} I^\fh[L] + \frac{1}{2}\{I[L]+I^\fh[L],I[L]+I^\fh[L]\}_{L} + \hbar \Delta_L(I[L]+I^\fh[L])
 \]
 lives in $\clies(\fh)$ for every scale $L$, and
 \item the locality axiom, with the additional condition that as $L \to 0$, we recover the equivariant classical action functional $S+ I^\fh$ modulo $\hbar$.
@@ -3125,7 +3125,7 @@ We can now mimic the scale $L$ definition of global observables.
 For a parametrix $\Phi$, the  \emph{global $\Phi$-quantum observables for the rank $n$ formal $\beta\gamma$ system} has
 underlying graded vector space
 \[
-\cSym(\Bar{\Omega}^{1,*}(\CC)^{\oplus n}[1] \oplus \Bar{\Omega}^{0,*}(\CC)^{\oplus n}[1])[[\hbar]]
+\cSym(\Bar{\Omega}_c^{1,*}(\CC)^{\oplus n}[1] \oplus \Bar{\Omega}^{0,*}_c(\CC)^{\oplus n}[1])[[\hbar]]
 \]
 with differential $\dbar + \hbar \Delta_\Phi$. 
 We denote it $\Obs^q_n[\Phi](\CC)$.
@@ -3223,11 +3223,11 @@ we encode the $\L8$-action of $\TVect$ on observables in the differential.
 \begin{dfn}
 The \emph{factorization algebra of $\TVect$-equivariant quantum observables} on $\CC$ is
 \[
-\eqObs^\q_n = \clies(\TVect, \Obs^\cl_n).
+\eqObs^\q_n = \clies(\TVect, \Obs^\cl_n)[[\hbar]].
 \]
 The underlying graded vector space is
 \[
-\cSym(\TVect^\vee[-1]) \otimes \cSym((\Bar{\Omega}^{1,*}_c)^{\oplus n}[1] \oplus (\Bar{\Omega}^{0,*}_c)^{\oplus n}[1])
+\cSym(\TVect^\vee[-1]) \otimes \cSym((\Bar{\Omega}^{1,*}_c)^{\oplus n}[1] \oplus (\Bar{\Omega}^{0,*}_c)^{\oplus n}[1])[[\hbar]]
 \]
 with differential 
 \[
