@@ -3168,14 +3168,14 @@ In the notation from that section it reads
 (We use $\partial$ this time and not $\d_{dR}$ to stress that it is
 the holomorphic differential.) We expand the right-hand side of
 Equation~(\ref{rhoeqn}):
-\ben
+\begin{align*}
 \tr((\D f_1)^{-1} \partial \D f_2 A_{f_2^* \varphi}) 
-+ f_1^*\tr((\D f_2)^{-1} \partial \D f_2 A_\varphi) 
++ f_1^*\tr((\D f_2)^{-1} \partial \D f_2 A_\varphi) &
 - \tr( (f_1^*\D f_2 \D f_1)^{-1} \partial(f_1^*\D f_2 \D f_1) A_\varphi) 
-+ \mu_{f_1} 
+\\+ \mu_{f_1} 
 + f_1^*\mu_{f_2} 
 - \mu_{f_2 \circ f_1} .
-\een 
+\end{align*} 
 We have used the fact that the Jacobian of $f_2 \circ f_1$ is given by
 the product $f_1^*\D f_2 \D f_1$. Finally, to complete the proof we notice
 that the first three terms in the above formula simplify to 
@@ -3221,7 +3221,7 @@ commutes.
 The inverse of $\Tilde{\theta}_\alpha$ defines a connection one-form
 $\Tilde{\omega}_\alpha \in \Omega^1(\Tilde{X}^{coor}_\alpha ; \TVect) .$
 Now, $\Tilde{X}_\alpha^{coor}$ is an $\hOmega^2_{cl,n}$-torsor over
-$X^{coor}$ and so there exists a $\Aut_n$-equivariant section
+$X^{coor}$ and so there exists a $\Aut_n$-equivariant smooth section
 $\sigma_{\Omega^2} : X^{coor} \to \Tilde{X}^{coor}_\alpha.$
 Note that this section is {\em not} unique, but its choice will not matter in the end 
 (much as in the case of an ordinary Gelfand-Kazhdan structure). 
@@ -3257,7 +3257,7 @@ living  in $\Omega^1(\Fr_X; \TVect)$.
 \item[(i)] $\alpha$ is a trivialization for the second component of the
 Chern character of $X$;
 \item[(ii)] $\sigma$ is a Gelfand-Kazhdan structure on $X$; and
-\item[(iii)] $\sigma_{\Omega^2}$ is an $\Aut_n$-equivariant splitting of
+\item[(iii)] $\sigma_{\Omega^2}$ is an $\Aut_n$-equivariant smooth splitting of
   $\Tilde{X}^{coor}_\alpha \to X^{coor}$ .
 \end{itemize}
 \end{dfn}
@@ -3271,7 +3271,7 @@ The same argument as in the non-extended case (see Section \ref{gauge equiv}) gi
 
 \begin{lemma} 
 Fix a Gelfand-Kazhdan structure $\sigma$. 
-Let $\sigma^1_{\Omega^2}$ and $\sigma^1_{\Omega^2}$ be two splittings of $\Tilde{X}^{coor}_\alpha \to X^{coor}$. 
+Let $\sigma^1_{\Omega^2}$ and $\sigma^1_{\Omega^2}$ be two smooth splittings of $\Tilde{X}^{coor}_\alpha \to X^{coor}$. 
 Then the induced connection one-forms $\omega^{\alpha}_{\sigma, \sigma_{\Omega^2}^1}$ and $\omega^\alpha_{\sigma,\sigma_{\Omega^2}^2}$ are gauge equivalent.
 \end{lemma}
 
@@ -3380,9 +3380,10 @@ For another approach for constructing sheaves of vertex algebras on manifolds,
 see \cite{Malikov2008},  although the case of extended descent is not covered there. 
 
 For a \v{C}ech style approach to constructing the sheaf of vertex
-algebras given by CDOs see \cite{GMS2}. 
+algebras given by CDOs, see~\cite{GMS2}. 
 
-\subsection{General descent} \label{gendescent}
+\subsection{General descent} 
+\label{gendescent}
 
 We will define descent for vertex algebras in a
 similar way as in the general setting of Harish-Chandra descent. For this
@@ -3444,7 +3445,8 @@ for each $N \geq 0$ one has a $\GL_n$-equivariant identification
 \be\label{GK vert}
 \cV^{(N)} = \hO_n \tensor_\CC V^{(N)}
 \ee
-where $V^{(N)}$ is a finite dimensional $\GL_n$-representation. A {\em morphism} of Gelfand-Kazhdan vertex algebras is a $(\Vect, \GL_n)$-equivariant morphism of $\ZZ_{\geq 0}$-graded vertex algebras. This forms a category that we denote ${\rm Vert}_n$. 
+where $V^{(N)}$ is a finite dimensional $\GL_n$-representation. A {\em morphism} of Gelfand-Kazhdan vertex algebras is a $(\Vect, \GL_n)$-equivariant morphism of $\ZZ_{\geq 0}$-graded vertex algebras.
+We denote this category by~${\rm Vert}_n$. 
 \end{dfn}
 
 Thus, a Gelfand-Kazhdan vertex algebra is a vertex algebra in the category of
@@ -3504,10 +3506,12 @@ evident that all constructions are still functorial in this parameter.
 For each $N \geq 0$ we have a decomposition $\cV^{(N)} = \hO_n
 \tensor_\CC V^{(N)}$ and hence a filtration on $\cV^{(N)}$ coming
 from the vanishing order of jets. Thus, applying the same
-construction as in \ref{sec gk descent} we obtain the pro vector
-bundle $\Fr_X \times^{\GL_n} \cV^{(N)}$. Since the action of $(\Vect,
-\GL_n)$ preserves the $\ZZ_{\geq 0}$ grading it is a this pro vector
-bundle is equipped with a flat connection and hence we can define the
+construction as in Section~\ref{sec gk descent}, 
+we obtain the pro-vector
+bundle $\Fr_X \times^{\GL_n} \cV^{(N)}$. 
+Since the action of $(\Vect,
+\GL_n)$ preserves the $\ZZ_{\geq 0}$ grading, 
+it is a pro-vector bundle equipped with a flat connection and hence we can define the
 $\Omega^*(X)$-module 
 \ben 
 \bdesc(\sigma, \cV^{(N)}) = \left( \left(\Omega^*(\Fr_X) \tensor
@@ -3559,7 +3563,7 @@ $\cV$.
 
 By construction, each dimension space $\cV^{(N)} = \hO_n \tensor_\CC
 V^{(N)}$ has an action of $(\TVect, \GL_n)$ and hence we can form the
-pro vector bundle $\Fr_X \times^{\GL_n} \cV^{(N)}$ that is equipped
+pro-vector bundle $\Fr_X \times^{\GL_n} \cV^{(N)}$ that is equipped
 with a flat connection. The de Rham complex is the
 $\Omega^*(X)$-module
 \ben
@@ -3645,7 +3649,7 @@ In other words, in the case that $c_1(T_X) = 0$ the sheaf of chiral differential
 
 \subsubsection{The Witten genus}
 
-It is well-known \cite{BorLib, Cheung} that the character of the sheaf of chiral differential operators is equals, up to a factor, the Witten genus of the complex manifold. In this section, we remark on how to recover this fact using the construction of chiral differential operators via Gelfand-Kazhdan descent.
+It is well-known \cite{BorLib, Cheung} that the character of the sheaf of chiral differential operators equals, up to a factor, the Witten genus of the complex manifold. In this section, we remark on how to recover this fact using the construction of chiral differential operators via Gelfand-Kazhdan descent.
 
 Recall, in Section \ref{sec vert character} we have defined the formal graded character of a vertex algebra. For $\cV = \oplus_{N \geq 0} \cV^{(N)}$ a Gelfand-Kazhdan vertex algebra, it is the element 
 \ben
