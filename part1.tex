@@ -669,18 +669,33 @@ $X^{coor}$ is necessary in the remainder of this paper, it is convenient for us 
 indirect way. Rather, we will work with the frame bundle ${\rm Fr}_X \to X$ equipped with the structure of a module for the Harish-Chandra pair $(\Vect, \GL_n)$. 
 The $\Vect$-valued connection on $\Fr_X$ is induced from the Grothendieck connection above.
 
+\si
+
 \begin{dfn}\label{fmlexp} 
 Let $\Exp (X)$ denote the quotient $X^{coor} / \GL_n$. 
 A $C^\infty$-section of $\Exp(X)$ over $X$ is called a {\em formal exponential}. 
 \end{dfn}
 
 \begin{rmk} 
-The space $\Exp(X)$ can be equipped with the structure of a principal $\Aut_n^+$-bundle over $X$.
-This structure on $\Exp(X)$ depends on a choice of a section of the short exact sequence
+\si
+Following Section 4 of \cite{kapranov1999}, we can realize $\Exp (X)$ as the inverse limit of finite dimensional manifolds $\Exp_k (X) = X^{coor}_k / \GL_n$.
+Moreover, we can equip $\Exp(X)$ with the structure of a principal $\Aut_n^+$-bundle over $X$ in the following way.
+Consider the short exact sequence of pro-Lie groups
 \ben
 1 \to \Aut_n^+ \to \Aut_n \to \GL_n \to 1 .
 \een
-It is natural to use the splitting determined by the choice of coordinates on the formal disk.
+There is a splitting of this determined by the choice of coordinates on the formal disk which exhibits an isomorphism
+\[
+\Aut_n = \Aut_{n}^+ \rtimes \GL_n 
+\] 
+and a bijection of {\em sets} $q : \Aut_n^+ \xto{\cong} \Aut_n / \GL_n$. 
+
+Further, there is an action of $\Aut_n$ on $\Aut_n^+$ defined by
+\[
+f \cdot p := Jac(f) \circ p \circ Jac(f)^{-1}
+\]
+which makes $q$ a $\Aut_n$-equivariant isomorphism. 
+Using this isomorphism, we equip $X^{coor} / \GL_n$ with the desired $\Aut_n^+$ structure.
 \end{rmk}
 
 Note that $\Aut_n^+$ is contractible, and so smooth sections always exist. 
@@ -2212,6 +2227,7 @@ The map $\rho_{\Omega^2_{cl}}$ is the desired action by closed two-forms.
 
 We can explicitly describe the action by a closed two-form $\omega$ as follows.
 Let $\alpha = \alpha_i (t) \d t^i$ be a one-form such that $\d \alpha =  \omega$.
+\si
 Then
 \ben
 \rho_{\Omega^2_{cl}} (\omega) = - \left(\partial_j \alpha_i (c) T(c_0^j) T (c_0^{i}) + \alpha_i(c) T (c_0^{i})^2 \right)_{(1)} .
@@ -2357,6 +2373,7 @@ let ${\rm C}_{\rm Grp}^k(G ; M)$ denote the space of smooth functions $C^\infty(
 (Typically we have in mind a finite-dimensional representation,
 but it is well-defined for any vector space $M$ such that smooth maps $C^\infty(G^k,M)$ is defined.)
 The differential $\d_{Grp}$ is defined by
+\si
 \ben
 (\d_{\rm Grp} \alpha)(g_1,\ldots, g_{k+1}) = 
 g_1 \alpha(g_2, \ldots, g_{k+1}) + 
@@ -2903,6 +2920,7 @@ degree zero)
 A direct calculation shows that $\Theta^{(k)}_A$ is both $\partial$ and
 $\dbar$-closed. In fact, we will use a
 preferred one given by the Chern-Simons functional. 
+\si
 In the case $k = 2$ we evaluate the usual Chern-Simons functional on the Chern connection $A$:is defined as the $3$-form
 \begin{align*}
 \CS (A) & = {\rm Tr}\left(A \wedge \d A + \frac{2}{3} A \wedge A \wedge A \right) \\ & = {\rm Tr}\left(A \wedge \dbar A + A \wedge \partial A + \frac{2}{3} A \wedge A \wedge A \right) \\
