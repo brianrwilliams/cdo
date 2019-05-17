@@ -2496,14 +2496,14 @@ The $n$-dimensional {\em logarithmic formal Witten class} evaluated at $(E,\omeg
 \een 
 \end{dfn}
 
-Here the Eisenstein series is given by the formala 
+The Eisenstein series $E_{2k}$ is given by the formula
 \ben
 E_{2k}(\CC/\Lambda,\d z) = \sum_{\lambda \in \Lambda - \{0\}} \lambda^{-2k}
 \een
-where we consider an elliptic curve given as a quotient of the complex plane by the lattice $\Lambda$.
+where we witness the elliptic curve given as a quotient of the complex plane by the lattice $\Lambda$.
 For an arbitrary $E$, we find a lattice $\Lambda$ such that 
 $\d z$ identifies with $\omega$ under the isomorphism $\CC / \Lambda \cong E$. 
-Suppose the lattice is spanned by two elements
+If the lattice is spanned by two elements
 \ben
 a + i b, c + i d \in \CC .
 \een
@@ -2511,6 +2511,11 @@ Then the sum can be written as
 \ben
 \sum_{\lambda \neq \{0\}} \lambda^{-2k} = \sum_{(m,n) \in \ZZ^2 - \{(0,0)\}} (m a + i m b + n c + i n d)^{-2k} .
 \een
+
+Our main result is that the scale $\infty$ effective interaction of the formal $\beta\gamma$ system, in the presence of the background $W_n$ fields, is equivalent to the formal Witten class $\Wit_n(E,\omega)$ plus a term proportional to $\ch_2^{\rm GF}(\hT_n)$. 
+See Proposition \ref{prop: formalwitten}.
+The term proportional to $\ch_2^{\rm GF}(\hT_n)$ arises from the term in the effective interaction on $E$ given by the weight of a wheel with two vertices. 
+There is some delicate analysis involved in computing the precise contribution of this weight, but we see that when restricted to the extended Lie algebra $\TVect$ it is cohomologous to zero, by construction so we may disregard it. 
 
 \subsection{The theory on an elliptic curve}
 
@@ -2640,7 +2645,7 @@ Section \ref{sec atiyah 2}.
 
 Now we can move on to the main result of this section.
 
-\begin{prop} 
+\begin{prop} \label{prop: formalwitten}
 As a function on the harmonic forms $\cH(E)$,
 the one-loop part of the scale $\infty$ effective quantization
 $\Tilde{I}^{{\rm W}, (1)}[\infty]$ is
@@ -2652,11 +2657,49 @@ as a cocycle in $\clie^*(\TVect ; \hOmega^{-*}_{n}) $.
 In particular, the one-loop effective quantization is cohomologous to $p^*\log \Wit_n(E, \omega)$.
 \end{prop}
 
+\begin{rmk}
+The series $\Bar{E}_2(E)$ is the ``modular completion" of the second Eisenstein series.
+In terms of the modular parameter $\tau$, it is defined by
+\[
+\Bar{E}_2 (\tau,\Bar{\tau}) = 1 - 24 \sum_{n=1}^\infty \frac{n q^n}{1-q^n} - \frac{3}{\pi {\rm Im}(\tau)}
+\]
+where $q = e^{2\pi i \tau}$. 
+It has the property that it is modular, but not holomorphic. 
+\end{rmk}
+
+Before we prove this proposition, we recall the general approach for computing the renormalized effective action on the elliptic curve $E$. 
+The procedure splits into the following steps:
+\begin{itemize}
+\item[(1)] truncate the propagator $P_{\epsilon < L}$ at both the lower and upper bounds;
+\item[(2)] compute the Feynman graph weight $W(P_{\epsilon<L}, I) = \sum_{\Gamma} W_{\Gamma} (P_{\epsilon<L}, I)$ as integrals over the elliptic curve $W_{\Gamma}(P_{\epsilon<L} , I) = \int_{E} w_{\Gamma}(P_{\epsilon < L}, I)$;
+\item[(3)] take the limit $\lim_{\substack{\epsilon \to 0 \\ L \to 0}} W_{\Gamma}(P_{\epsilon<L} , I)$.
+\end{itemize}
+Our analysis so far has shown that the limit in step (3) exists.
+However, in the proof of the proposition we will compute the limit in a direct way by exchanging the limit with the integration over $E$:
+\[
+\lim_{\substack{\epsilon \to 0 \\ L \to 0}}\int_{E} w_{\Gamma}(P_{\epsilon < L}, I) \stackrel{?}{=} \int_E \lim_{\substack{\epsilon \to 0 \\ L \to 0}}w_{\Gamma}(P_{\epsilon < L}, I) .
+\]
+The issue is that even though the limit in (3) exists, the expression above is not valid in general. 
+Feynman integrals of this type were studied extensively in the work \cite{LiFeynman}.
+A similar analysis as done there, and one we can check by direct calculation, implies that the limits above can be interchanged when the graph $\Gamma$ has no wheels with fewer than $3$ vertices.
+The term proportional to $\ch_2^{\rm GF}(\hT_n)$ in the proposition corresponds to the wheel with two vertices, and so the proper regularization scheme outlined above must be performed. 
+
 \begin{proof}
 The weight expression for $\Tilde{I}^{{\rm W},(1)}$ is given by
+\[
+\sum_{\Gamma \in \text{\rm Wheels}} \frac{1}{|\Aut(\Gamma)|} \lim_{\substack{\epsilon \to 0 \\ L \to 0}} W_\Gamma(P_{\epsilon < L}, \Tilde{I}^{\rm W}) .
+\]
+Just as in the effective action on $\CC$, the tadpole diagram is identically zero.
+When the number of vertices of the wheel is two, a similar calculation as in Lemma 2.2 of \cite{LiFeynman} shows that the weight of the graph is $\frac{1}{32 \pi^4} \Bar{E}_2(E,\omega)\, p^*\ch_2^{\rm GF}(\hT_n)$.
+This is the first term in the expression of the effective action. 
+
+It remains to compute the weights of wheels with number of vertices strictly bigger than two. 
+By the remarks above, we can interchange the limits to obtain
 \ben
-\sum_{\Gamma \in \text{\rm Wheels}} \frac{1}{|\Aut(\Gamma)|} W_\Gamma(P_{0 < \infty}, \Tilde{I}^{\rm W}) .
+\sum_{\Gamma \in \text{\rm Wheels}_{>2}} \frac{1}{|\Aut(\Gamma)|} \lim_{\substack{\epsilon \to 0 \\ L \to 0}} W_\Gamma(P_{\epsilon < L}, \Tilde{I}^{\rm W})  = \sum_{\Gamma \in \text{\rm Wheels}_{>2}} \frac{1}{|\Aut(\Gamma)|} W_\Gamma(P_{0 < \infty}, \Tilde{I}^{\rm W}) 
 \een
+where the sum is over $\Gamma \in \text{\rm Wheels}_{>2}$ all wheels with number of vertices bigger than two. 
+
 We are computing the restriction of this to the subspace
 \ben
 \cSym(\Vect[1]^\vee) \tensor \cSym\left((\left(\CC[\delta] \tensor
@@ -2713,8 +2756,9 @@ We know that the algebraic piece simplifies to $\Tr(\At^{\rm GF}(\hT_n)) = k! (2
 For odd $k$, the analytic factor vanishes. 
 Finally, a direct computation shows that
 \ben
-\Tr\left(\left(\mu^{-1} \frac{\partial}{\partial z} (2\dbar \dbar^*)^{-1} \right)^{2k} \right) = \frac{1}{(4 \pi^2)^{2k}} E_{2k} .
+\Tr\left(\left(\mu^{-1} \frac{\partial}{\partial z} (2\dbar \dbar^*)^{-1} \right)^{2k} \right) = \frac{1}{(4 \pi^2)^{2k}} E_{2k} 
 \een
+for $k > 2$.
 One simply picks a natural Fourier basis for smooth functions on an elliptic curve $E = \CC/\Lambda$,
 on which basis the operator  $\frac{\partial}{\partial z} (2\dbar \dbar^*)^{-1}$ is easy to describe.
 (See, for instance, section 17.8 in \cite{WG2}.) This fact completes the proof. 
