@@ -2512,11 +2512,35 @@ Then the sum can be written as
 \sum_{\lambda \neq \{0\}} \lambda^{-2k} = \sum_{(m,n) \in \ZZ^2 - \{(0,0)\}} (m a + i m b + n c + i n d)^{-2k} .
 \een
 
-Our main result is that the scale $\infty$ effective interaction of the formal $\beta\gamma$ system, in the presence of the background $W_n$ fields, is equivalent to the formal Witten class $\Wit_n(E,\omega)$ plus a term proportional to $\ch_2^{\rm GF}(\hT_n)$. 
-See Proposition \ref{prop: formalwitten}.
+\si 
+
+Our main result in this section is that the scale $\infty$ effective interaction of the formal $\beta\gamma$ system, in the presence of the background $\TVect$ fields, is equivalent to the formal Witten class $\Wit_n(E,\omega)$ plus a term proportional to $\ch_2^{\rm GF}(\hT_n)$. 
+To state the result, recall the extension $p : \TVect \to \Vect$ of Lie algebras determined by the formal second Chern character.
+
+\begin{prop} \label{prop: formalwitten}
+As a function on the harmonic forms $\cH(E)$,
+the one-loop part of the scale $\infty$ effective quantization
+$\Tilde{I}^{{\rm W}, (1)}[\infty]$ is
+\ben
+\frac{1}{32 \pi^4} \Bar{E}_2(E,\omega)\, p^*\ch_2^{\rm GF}(\hT_n) + 
+\sum_{k \geq 2} \frac{(2k-1)!}{(4 \pi^2)^{2k}} E_{2k}(E, \omega)\, p^*\ch_{2k}^{\rm GF} (\hT_n),
+\een
+as a cocycle in $\clie^*(\TVect ; \hOmega^{-*}_{n}) $.
+In particular, the one-loop effective quantization is cohomologous to $p^*\log \Wit_n(E, \omega)$.
+\end{prop}
+
+\begin{rmk}
+The series $\Bar{E}_2(E)$ is the ``modular completion" of the second Eisenstein series.
+In terms of the modular parameter $\tau$, it is defined by
+\[
+\Bar{E}_2 (\tau,\Bar{\tau}) = 1 - 24 \sum_{n=1}^\infty \frac{n q^n}{1-q^n} - \frac{3}{\pi {\rm Im}(\tau)}
+\]
+where $q = e^{2\pi i \tau}$. 
+It has the property that it is modular, but not holomorphic. 
+\end{rmk}
+
 The term proportional to $\ch_2^{\rm GF}(\hT_n)$ arises from the term in the effective interaction on $E$ given by the weight of a wheel with two vertices. 
 There is some delicate analysis involved in computing the precise contribution of this weight, but we see that when restricted to the extended Lie algebra $\TVect$ it is cohomologous to zero, by construction so we may disregard it. 
-\si{Addressing Question 46. See below as well.}
 
 \subsection{The theory on an elliptic curve}
 
@@ -2646,29 +2670,11 @@ Section \ref{sec atiyah 2}.
 
 Now we can move on to the main result of this section.
 
-\begin{prop} \label{prop: formalwitten}
-As a function on the harmonic forms $\cH(E)$,
-the one-loop part of the scale $\infty$ effective quantization
-$\Tilde{I}^{{\rm W}, (1)}[\infty]$ is
-\ben
-\frac{1}{32 \pi^4} \Bar{E}_2(E,\omega)\, p^*\ch_2^{\rm GF}(\hT_n) + 
-\sum_{k \geq 2} \frac{(2k-1)!}{(4 \pi^2)^{2k}} E_{2k}(E, \omega)\, p^*\ch_{2k}^{\rm GF} (\hT_n),
-\een
-as a cocycle in $\clie^*(\TVect ; \hOmega^{-*}_{n}) $.
-In particular, the one-loop effective quantization is cohomologous to $p^*\log \Wit_n(E, \omega)$.
-\end{prop}
+\subsection{Proof of Proposition \ref{prop: formalwitten}}
 
-\begin{rmk}
-The series $\Bar{E}_2(E)$ is the ``modular completion" of the second Eisenstein series.
-In terms of the modular parameter $\tau$, it is defined by
-\[
-\Bar{E}_2 (\tau,\Bar{\tau}) = 1 - 24 \sum_{n=1}^\infty \frac{n q^n}{1-q^n} - \frac{3}{\pi {\rm Im}(\tau)}
-\]
-where $q = e^{2\pi i \tau}$. 
-It has the property that it is modular, but not holomorphic. 
-\end{rmk}
+\si
 
-Before we prove this proposition, we recall the general approach for computing the renormalized effective action on the elliptic curve $E$. 
+We recall the general approach for computing the renormalized effective action on the elliptic curve $E$. 
 The procedure splits into the following steps:
 \begin{itemize}
 \item[(1)] truncate the propagator $P_{\epsilon < L}$ at both the lower and upper bounds;
@@ -2684,10 +2690,7 @@ The issue is that even though the limit in (3) exists, the expression above is n
 Feynman integrals of this type were studied extensively in the work \cite{LiFeynman}.
 A similar analysis as done there, and one we can check by direct calculation, implies that the limits above can be interchanged when the graph $\Gamma$ has no wheels with fewer than $3$ vertices.
 The term proportional to $\ch_2^{\rm GF}(\hT_n)$ in the proposition corresponds to the wheel with two vertices, and so the proper regularization scheme outlined above must be performed. 
-\si{Further discussion related to Question 46.
-The proof below has also been restructured.}
 
-\begin{proof}
 The weight expression for $\Tilde{I}^{{\rm W},(1)}$ is given by
 \[
 \sum_{\Gamma \in \text{\rm Wheels}} \frac{1}{|\Aut(\Gamma)|} \lim_{\substack{\epsilon \to 0 \\ L \to 0}} W_\Gamma(P_{\epsilon < L}, \Tilde{I}^{\rm W}) .
@@ -2765,7 +2768,6 @@ for $k > 2$.
 One simply picks a natural Fourier basis for smooth functions on an elliptic curve $E = \CC/\Lambda$,
 on which basis the operator  $\frac{\partial}{\partial z} (2\dbar \dbar^*)^{-1}$ is easy to describe.
 (See, for instance, section 17.8 in \cite{WG2}.) This fact completes the proof. 
-\end{proof}
 
 \section{The factorization algebras of equivariant
   observables}\label{sec equiv obs}
