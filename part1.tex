@@ -2625,8 +2625,8 @@ Thus $\alpha(X) = c_1^{\GF}(\hT_n)(X)$ and the proof is complete.
 
 In this section we define and compute the ``local character" of the vertex algebra $\hCDO_n$. It will globalize, under Gelfand-Kazhdan descent, to the character of the sheaf of chiral differential operators on a complex manifold $X$. 
 
-\begin{dfn} Let $V$ be a $\ZZ_{\geq 0}$-graded vertex algebra. The
-{\em graded character} of $V$ is the following $q$-expansion
+\begin{dfn} Let $V$ be a $\ZZ_{\geq 0}$-graded vertex algebra.
+The {\em graded character} of $V$ is the following $q$-expansion
 \be\label{char1}
 \chi (V) := \sum_{N} q^{N} \left(\dim V^{(N)}\right) \in \CC[[q]] .
 \ee
@@ -2692,7 +2692,12 @@ We now return to the case of a vertex algebra.
 
 We now turn to computing the character for the main example, the $(\TVect,\GL_n)$
 equivariant vertex algebra $\hCDO_n$. 
-The equivariant graded character of $\hCDO_n$ as a module for $(\TVect, \GL_n)$ is an element 
+\si
+There is one subtlety, that the conformal weight spaces of $\hCDO_n$ (and $\CDO_n$) are not finite dimensional. 
+They are, however, finite rank over the ring $\hO_n$. 
+So, whenever we take count dimensions or take duals we will do so in a $\hO_n$-linear way.
+
+With this caveat, the equivariant graded character of $\hCDO_n$ as a module for $(\TVect, \GL_n)$ is an element 
 \[
 \chi^{(\Vect, \GL_n)} (\hCDO_n) \in \clie^*(\TVect , \GL_n ; \hOmega^{-*}_n). 
 \]
@@ -2707,22 +2712,26 @@ We say that a finite-dimensional $\Tilde{\fg}$-module $V$ is {\em off-diagonal} 
 \een
 such that for all $i$, $\mathfrak{k} \cdot F^i V \subset F^{j} V$ for some $j < i$. We observe the following elementary fact about traces of such modules.
 
-\begin{lemma} 
-Let $V$ be an off-diagonal module for the Lie algebra map $p : \Tilde{\fg} \to \fg$,
+Suppose that $V$ is an off-diagonal module for the Lie algebra map $p : \Tilde{\fg} \to \fg$,
 where $V$ has finite dimension. 
 Then ${\rm tr}(\exp(x)) = \tr(\exp(p(x)))$ for all $x \in \Tilde{\fg}$. 
+To see this, choose a filtration for $V$ exhibiting the off-diagonal action, and a pick a basis for $V$ compatible with this filtration. 
+In terms of this basis, each element of $\frak{k}$ acts by a matrix that is strictly upper triangular (i.e., off-diagonally), and hence does not contribute to the trace. 
+
+Similarly, we have the following.
+
+\begin{lemma}\label{lem: offdiag}
+Suppose $(\fg, K), (\Tilde{\fg}, K)$ are Harish-Chandra pairs, $V$ a $(\Tilde{\fg},K)$-module, and $(p, \id) : (\fg, K), (\Tilde{\fg}, K)$ is a morphism of pairs so that $V$ is an off-diagonal module.
+Then $\ch^\fg(V)$ is in the image of the map
+\[
+p^* : \clie^*\left(\fg,K ; \bigoplus_{k \geq 0} \Sym^k (\fg^\vee)[k]\right) \to  \clie^*\left(\Tilde{\fg},K ; \bigoplus_{k \geq 0} \Sym^k (\fg^\vee)[k]\right) .
+\]
 \end{lemma}
 
-\begin{proof} 
-Choose a filtration for $V$ exhibiting the off-diagonal action, and a pick a basis for $V$ compatible with this filtration. 
-In terms of this basis, each element of $\frak{k}$ acts by a matrix that is strictly upper triangular (i.e., off-diagonally), and hence does not contribute to the trace. 
-\end{proof}
-
-We wish to apply this observation to an infinite-dimensional vector space (for us, $\hCDO_n$),
-but the operations of exponentiating and taking traces may be ill-defined in the infinite-dimensional setting.
-One must check explicitly that they make sense for the operators of interest.
-In our case, with the map of Lie algebras $p : \TVect \to \Vect$ and the $\TVect$-module $\hCDO_n$,
-it will be seen explicitly.
+%We wish to apply this observation to an infinite-dimensional vector space (for us, $\hCDO_n$) and the Gelfand-Fuks character,
+%but the operations of exponentiating and taking traces may be ill-defined in the infinite-dimensional setting.
+%One must check explicitly that they make sense for the operators of interest.
+In our case, we take the map of Lie algebras $p : \TVect \to \Vect$ and the $\TVect$-module $\hCDO_n$.
 Note that we will exhibit a filtration of infinite length.
  
 Consider the basis of $\hCDO_n$ given by products of elements $c^i_m, b^j_l$. 
@@ -2732,10 +2741,12 @@ c_{m_1}^{i_1} \cdots c_{m_k}^{i_k} b_{l_1}^{j_1} \cdots b_{l_q}^{j_q} .
 \een 
 It is a quick computation to verify that the action of $\ker(p)=\hOmega^2_{n,cl}$ on the CDOs is off-diagonal for this filtration.
 
+A slight enhancement of Lemma \ref{lem: offdiag} which applies to the $q$-graded situation, implies the following. \si
+
 \begin{cor}\label{cor formal char cdo} 
 The $(\TVect, \GL_n)$-equivariant graded character of the vertex algebra $\hCDO_n$ is the image of an element 
 \ben
-\chi^{(\Vect, \GL_n)}(\hCDO_n) \in \clie^*(\Vect , \GL_n ; \hOmega^{-*}_n) 
+\chi^{(\Vect, \GL_n)}(\hCDO_n) \in \clie^*(\Vect , \GL_n ; \hOmega^{-*}_n) [[q]]
 \een
 along the pull-back $\clie^*(\Vect , \GL_n ; \hOmega^{-*}_n) \to \clie^*(\TVect , \GL_n ; \hOmega^{-*}_n).$
 \end{cor}
@@ -2746,10 +2757,19 @@ For the pair $(\fg,K) = (\Vect, \GL_n)$ the Chern character in the previous sect
 
 \begin{prop} \label{prop local character} The $(\Vect, \GL_n)$-equivariant graded character of $\hCDO_n$ is given by
 \ben
-\chi^{(\Vect, \GL_n)}(\hCDO_n) = \Td^{\GF} \cdot \ch \left(\bigotimes_{l \geq 1} \Sym_{q^l} (\hOmega^1_n \oplus \hT_n) \right)
+\chi^{(\Vect, \GL_n)}(\hCDO_n) = \Td^{\GF} \cdot \ch^{\rm GF} \left(\bigotimes_{l \geq 1} \Sym_{q^l} (\hOmega^1_n \oplus \hT_n) \right)
 \een
 as an cocycle in $\clie^*\left(\Vect , \GL_n ; \hOmega^{-*}_n\right)[[q]]$.
 \end{prop}
+
+\si
+
+\begin{rmk}
+Here, we use the notation $\Sym_{q^l}(V) = \oplus_{k \geq 0} q^{kl} \Sym^k(V)$ and 
+\[
+\ch\left(\Sym_{q^l}(V)\right) = \sum_{k \geq 0} q^{kl} \ch\left(\Sym^k(V)\right)
+\]
+\end{rmk}
 
 \begin{proof}
 The conformal dimension zero subspace of $\hCDO_n$ is identified with $\hO_n$ and the conformal dimension one subspace is identified with $\hOmega^1_n \oplus \hT_n$ (all as $\TVect$-modules). The full associated graded of CDOs is given by
@@ -3053,6 +3073,10 @@ Just as above, the degree two element
 is a representing form for $\Theta_{\nabla}^{(2)}$ on the formal disk.
 Note that this element is both $\partial$ and $\dbar$-closed. 
 Let $\Hat{\CS}(A) \in \hOmega^{\geq 2, *}_n$ be the corresponding Chern-Simons form on the formal disk. 
+
+\begin{rmk}
+It is here that we see the explicit appearance of closed $2$-forms, or really its natural resolution. \si
+\end{rmk}
 
 For each formal coordinate $\varphi$, 
 the trivialization $\alpha$ of $\Theta^{(2)}_X$ determines a formal trivialization 
