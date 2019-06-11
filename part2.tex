@@ -546,7 +546,7 @@ It thus should be no surprise that we can also use a local functional to express
 
 \subsubsection{Recollections on local functionals}
 
-A systematic exposition of local functionals and deformation complexes can be found in \cite{CosBook}, 
+A systematic exposition of local functionals and deformation complexes can be found in \cite{CosBook}, particularly in chapter 5,
 but here we provide a brief summary with our theory as a running example. 
 
 Let $\cE$ be a dg Lie (or $L_\infty$) algebra associated to a classical BV field theory on $S$. 
@@ -602,7 +602,14 @@ see Section \ref{sec functional analysis} for more thorough discussion of this p
 A cochain in the deformation complex of homogeneous degree $k$ is a distribution supported, by definition, along the small diagonal $X \hookrightarrow X^k$.
 
 The complex $\Def_n$ has a shifted Lie algebra structure arising from the BV bracket $\{-,-\}$,
-which is determined by the shifted pairing between the fields $\gamma$ and $\beta$. (See Equation (\ref{pairing2}).) The differential on $\Def_n$ is precisely $\{S_{\text{free}},-\}$.
+which is determined by the shifted pairing between the fields $\gamma$ and $\beta$ of Equation (\ref{pairing2}).
+In essence, we view the pairing on fields as encoding a shifted symplectic structure on the space of fields,
+and hence functionals should have a shifted Poisson bracket.
+From this perspective $\gamma$ and $\beta$ are conjugate variables (like $q$ and $p$ in traditional, unshifted symplectic geometry).
+Given two local functionals $F$ and $G$, one computes $\{F,G\}$ by pairing a $\gamma$ input from $F$ with a $\beta$ input from $G$, and {\it vice versa} (much as $\{q,p\} = 1$).
+With respect to this bracket, the differential on $\Def_n$ is then $\{S_{\text{free}},-\}$.
+(Note that local functionals do not form a commutative algebra, however, since the product of two such is no longer local!
+The bracket does provide a shifted Lie bracket, just not a Poisson bracket.)
 
 \subsubsection{The action of vector fields}
 
@@ -698,10 +705,12 @@ as the tensor product of a commutative algebra $C^\infty(\CC)$ and a graded Lie 
 (The differential on the dg Lie algebra does not respect this decomposition.)
 
 It will be convenient to analyze $I^{\rm W}$ in terms of this decomposition.
-To be more precise, we consider the local functional $I^{\rm W}_X$ for each formal vector field $X$ of the form $a^i \partial_i$, where the coefficient $a^i \in \hO_n$ is homogeneous. Observe that $I^{{\rm W}}_X$ is itself a homogeneous local functional of the form
+To be more precise, we consider the local functional $I^{\rm W}_X$ for each formal vector field $X$ of the form $a^i \partial_i$, where the coefficient $a^i \in \hO_n$ is a homogeneous polynomial. 
+Observe then that $I^{{\rm W}}_X$ is itself a homogeneous local functional of the form
 \ben
-I^{{\rm W}}_X : \Sym^{k+1}(\DD \fg_n^S) \to \CC .
+I^{{\rm W}}_X : \Sym^{k+1}(\DD \fg_n^S) \to \CC 
 \een 
+where $a^i$ has polynomial degree~$k$.
 Using the decomposition (\ref{decomposition}), 
 we can write $I^{{\rm W}}_X$ as $I^{{\rm W}, an}_X I^{{\rm W},alg}_X$, 
 a product of an analytic factor times a algebraic factor with $I^{{\rm W},an}_X \in \Sym^{k+1}(C^\infty(\CC)^\vee)$ and with
@@ -1134,9 +1143,10 @@ This identification is clearly $\Vect$-equivariant.
 
 \subsection{Holomorphic vector fields on the source} \label{sec hol vf}
 
-We digress momentarily to describe another important symmetry present in the $\beta\gamma$ system. 
-The two-dimensional $\sigma$-model of all maps from a Riemann surface $S$ to a complex manifold is classically conformal. 
-Analogously, the holomorphic $\sigma$-model possesses a natural symmetry of the Lie algebra of holomorphic vector fields $T_S := T^{1,0}_S$.  
+We digress momentarily to describe another important symmetry present in the $\beta\gamma$ system:
+%The two-dimensional $\sigma$-model of all maps from a Riemann surface $S$ to a complex manifold is classically conformal. 
+the holomorphic $\sigma$-model possesses a natural symmetry of the Lie algebra of holomorphic vector fields $T_S = T^{1,0}_S$, 
+much as the usual $\sigma$-model is conformal as a classical field theory.  
 We will formulate this symmetry on the formal $\beta\gamma$ system. 
 
 It is convenient for us to work with the Dolbeault resolution of holomorphic vector fields: 
@@ -1156,9 +1166,9 @@ $(0,*)$-forms:
 %(\xi , \gamma \tensor v) & \mapsto (\cL_\xi \gamma) \tensor v .
 %\end{align*}
 (We use the script $\cL$ to denote the Lie derivative with respect to
-vector fields on the source, to avoid confusin it with $L_X$, the Lie
-derivative of vector fields on the target.) This action extends to an action
-of $\cT_S$ on the ``double'' dg Lie algebra $\DD \fg^S_n$
+vector fields on the source, to avoid confusing it with $L_X$, 
+the Lie derivative of vector fields on the target.) 
+This action extends to an action of $\cT_S$ on the ``double'' dg Lie algebra $\DD \fg^S_n$
 so that it preserves the shifted pairing between $\gamma$ and $\beta$ fields.
 
 This action can be encoded by a local functional, and hence we obtain a $\hT_S$-equivariant field theory.
@@ -1184,14 +1194,15 @@ along the map determined by the BV bracket $\{-,-\} : \Def_n[-1] \to
 We wish to describe the equivariant obstruction-deformation complex
 for the action of $\cT_S$. The functional $I^{\cT}$ endows the direct
 sum $\cT_S \oplus \DD\fg_n^S$ with the structure of a local Lie
-algebra. By definition, on $S=\CC$, this equivariant deformation complex
+algebra. 
+By definition, this equivariant obstruction-deformation complex
 is given by the local cochains of this local Lie algebra
 \ben
-\Def_n^\cT = \cloc^*\left(\cT_\CC \ltimes \DD \fg_n^S\right) .
+\Def_n^\cT = \cloc^*\left(\cT_S \ltimes \DD \fg_n^S\right) .
 \een
 where $\Def_n$ is the deformation complex for the formal $\beta\gamma$
-system defined above. 
-Because $\cloc^*$ always involves taking the reduced Lie algebra cochains, 
+system defined earlier. 
+As $\cloc^*$ always involves taking the reduced Lie algebra cochains, 
 there is a useful splitting of the deformation complex
 \ben
 \Def_n^{\cT} \cong \cloc^*(\cT_\CC) \oplus \cloc^*(\cT_\CC ; \Def_n),
@@ -1199,9 +1210,9 @@ there is a useful splitting of the deformation complex
 where $\Def_n$ is the deformation complex for the free $\beta\gamma$
 system. 
 
-For any complex manifold $X$ the complex $\cloc^*(\cT_X)$ has an
-interpretation in terms of the diagonal cohomology of $X$, studied by
-\cite{Losik}. In the case of $X = \CC$ it has a simple interpretation
+For any complex manifold $Y$, the complex $\cloc^*(\cT_Y)$ has an
+interpretation in terms of the diagonal cohomology of $Y$, studied by
+\cite{Losik}. In the case of $Y = \CC$ it has a simple interpretation
 in terms of Gelfand-Fuks cohomology.
 
 \begin{prop}[Proposition 5.3 of \cite{bw_vir}] 
@@ -1212,17 +1223,20 @@ Hence, $H^*(\cloc^*(\cT_\CC)) \cong \CC [-1].$
 An explicit generator for the cohomology is given by the local cocycle 
 \[
 \begin{array}{lccc}
-\omega^{\GF} : & \cT_{\CC,c} \times \cT_{\CC,2} & \to & \CC \\
-& (\alpha \tensor \partial_z, \beta \tensor \partial_z) & \mapsto & \frac{1}{2\pi}\frac{1}{12}\int_\CC \left(
+\omega^{\GF} : & \cT_{\CC} \times \cT_{\CC} & \to & \Omega^{1,1}(\CC) \\
+& (\alpha \tensor \partial_z, \beta \tensor \partial_z) & \mapsto & \frac{1}{2\pi}\frac{1}{12} \left(
   \partial_z^3 \alpha^0 \beta^{0,1} +
   \partial_z^3\alpha^{0,1} \beta^0
 \right) \d^2 z 
 \end{array}
 \]
-where $\alpha = \alpha^0 + \alpha^{0,1} \d \zbar$ and similarly for
-$\beta$. 
+where $\alpha = \alpha^0 + \alpha^{0,1} \d \zbar$ and similarly for $\beta$. 
+(Note that we can integrate the density on the right whenever $\alpha$ or $\beta$ is compactly-supported,
+but otherwise it is not integrable.
+This situation is just like that with action functionals, where the Lagrangian density is the important information rather than the purported function.)
 
-\begin{prop} There exists a map of dg Lie algebras
+\begin{prop} 
+There exists a map of dg Lie algebras
 \ben
 (\omega^{\GF}, J,K) : \CC [-2] \oplus \hOmega^1_{n}[-1] \oplus
 \hOmega^2_{n,cl} \to \Def_n^\cT [-1]
@@ -1232,21 +1246,21 @@ sending $(1, \omega, \eta)$ to $(\omega^{\GF}, J_\omega, K_\eta)$ where
 \item $\omega^{\GF} \in \cloc^*(\cT_\CC) \subset \Def_n^{\cT}$
   represents the generator of the Gelfand-Fuks cohomology $H^3_{\rm
     Lie}({\rm W}_1) \cong \CC$; 
-\item for every $\omega \in \hOmega^2_{n,cl}$ the functional $J_\omega
-  \in \Def_n \subset \Def_n^\cT$ is the one defined in Section
-  \ref{sec j functional}, and;
-\item for $\eta \in \hOmega^1_n$, $K_\eta$ is the cocycle in $\cloc^1(\cT_\CC ; \Def_n)$ sending a
-  holomorphic vector field $\xi = \xi^0 \partial_z + \xi^{0,1} \d
-  \zbar \partial_z$ in $\cT_\CC$ to the element in $K_\eta(\xi,-) \in \Def_n$ defined by
+\item for every $\mu \in \hOmega^2_{n,cl}$, the functional $J_\mu
+  \in \Def_n \subset \Def_n^\cT$ is the one defined in Section~\ref{sec j functional}; and
+\item for $\eta \in \hOmega^1_n$, $K_\eta$ is the cocycle in $\cloc^1(\cT_\CC ; \Def_n)$ defined by
 \ben
 K_\eta(\xi, \gamma) = \int_\CC \partial_z \xi^0
 \<\eta^S(\gamma), \partial \gamma\>_{\fg_n} + \int_\CC \partial_z
-\xi^{1,0} \d \zbar \<\eta^S(\gamma), \partial \gamma\>_{\fg_n} . 
+\xi^{0,1} \d \zbar \<\eta^S(\gamma), \partial \gamma\>_{\fg_n} 
 \een
+where $\xi = \xi^0 \partial_z + \xi^{0,1} \d
+  \zbar \,\partial_z$ is an element of $\cT_\CC$.
 \end{itemize}
 Moreover, this map is equivariant for the action of formal vector
-fields $\Vect$ (where $\CC[-1]$ is the trivial module). 
+fields~$\Vect$. 
 \end{prop}
+
 \begin{proof}
 The assignment $\CC \to \cloc^*(\cT_\CC)$ sending $1 \mapsto \omega^{\GF}$ is tautologically
 $\Vect$-equivariant. Moreover, we have already shown that the assignment
@@ -3065,16 +3079,19 @@ We denote it $\Obs^q_n[L](\CC)$.
 
 The quantum observables are isomorphic for any choice of length scale.
 In fact, the RG flow provides an explicit isomorphism $W_\epsilon^L: \Obs^q_n[\epsilon](\CC) \to \Obs^q_n[L](\CC)$ as follows: 
-given an observable $f$ at scale $\epsilon$, let $W_\epsilon^L(f)$ satisfy
+given an observable $f$ at scale $\epsilon$, let $W_\epsilon^L(f)$ denote the observable such that
 \[
-\delta W_\epsilon^L(f) = W(P_\epsilon^L, \delta f)
+W(P_\epsilon^L, \delta f) = \delta W_\epsilon^L(f)
 \]
-where $\delta^2=0$ and $|\delta| = - |f|$. 
-(In other words, this map arises by taking the ``derivative of RG flow.'')
-We remark that Lemma 9.3.1.2 of \cite{CG2} provides a proof 
+where $W(P_\epsilon^L, -)$ is the RG flow operation defined earlier on action functionals, 
+$\delta^2=0$,  and $|\delta| = - |f|$. 
+(In other words, this map arises by taking the ``derivative of RG flow'' $W(P_\epsilon^L, -)$.)
 
-The basic approach used here works in general, except that we will need to work with a more flexible notion of ``length scale'':
+The basic approach used here works in general, 
+except that we will need to work with a more flexible notion of ``length scale'':
 we need to allow arbitrary parametrices for $\dbar$.
+(Indeed, when interactions are included, the RG flow map $W_\epsilon^L$ does not preserve support conditions on observables,
+because the heat kernel has support everywhere.)
 After reviewing this machinery, we use it to define the factorization algebra of quantum observables.
 
 \subsubsection{Recap of parametrices and BV Laplacians}
@@ -3087,13 +3104,15 @@ to this metric. It is our choice of ``gauge-fix,'' in the terminology of \cite{C
 Let $\triangle = [\dbar,\dbar^*]$ denote the Hodge Laplacian on Dolbeault forms.
 
 We remark on our convention for integral kernels.
-Given an operator $P$ on $\Omega^{0,*}(\CC)$, 
-we use $K_P$ to denote the \emph{integral kernel} for $P$,
-which is the section of $\Omega^{0,*}(\CC) \widehat{\otimes}_\pi \Bar{\Omega}^{1,*}_c(\CC)$ such that
+Given a continuous linear endomorphism $P$ of $\Omega^{0,*}(\CC)$, 
+we use $K_P$ to denote the \emph{integral kernel} for $P$:
+it is the section of $\Omega^{0,*}(\CC) \widehat{\otimes}_\pi \Bar{\Omega}^{1,*}_c(\CC)$ such that
 \[
 (P\alpha)(z) = \int_{w \in \CC} \langle K_P(z,w), \alpha(w)\rangle_w,
 \]
 where the BV pairing is along the $w$-direction.
+(We remark that Schwarz's kernel theorem tells us where the integral kernel lives depending upon the domain and range of the continuous linear operator.
+Here $\Bar{\Omega}^{1,*}_c(\CC)$ appears because the domain is the continuous linear dual space~$\Omega^{0,*}(\CC)$.)
 
 \begin{dfn}
 A {\em parametrix} for $\dbar$ on $\Omega^{0,*}(\CC)$ is a distributional section $\Phi$ of
