@@ -2138,14 +2138,13 @@ L_{-2} := \sum_{i=1}^n b^i_{-1} T c^i_0 = \sum_{i=1}^n b^i_{-1}
 c^i_{-1} \in \hCDO_n^{(2)}.
 \een
 
-\begin{rmk} Suppose $V$ is a conformal vertex algebra and $L_0 \in
-  V$ is the zero Fourier mode of the Virasoro field. Then for every
-  $v \in V$ one has $L_0 v = N(v) v$ for some $N(v) \in \ZZ$. If $N(v)
-  \in \ZZ_{\geq 0}$ for all $v$ we see that $L_0$ determines the
-  structure of a $\ZZ_{\geq 0}$ vertex algebra on $V$ where $V^{(N)}$
-  equals the $N$-eigenspace of the $L_0$ operator. This motivates the
-  use of the term ``conformal dimension'' for a $\ZZ_{\geq 0}$-graded
-  vertex algebra.
+\begin{rmk} 
+If $V$ is a conformal vertex algebra and $L_0 \in V$ is the zero Fourier mode of the Virasoro field, 
+then for every $v \in V$, one has $L_0 v = N(v) v$ for some $N(v) \in \ZZ$. 
+If $N(v) \in \ZZ_{\geq 0}$ for all $v$, 
+we see that $L_0$ determines the structure of a $\ZZ_{\geq 0}$-graded vertex algebra on $V$, 
+where $V^{(N)}$ denotes the $N$-eigenspace of the $L_0$ operator. 
+This fact motivates the use of the term ``conformal dimension'' for a $\ZZ_{\geq 0}$-graded vertex algebra.
 \end{rmk}
 
 \subsection{Harish-Chandra structure on $\CDO_n$}\label{sec hc cdo}
@@ -2641,7 +2640,11 @@ The reason for this extra factor of $q$ is that $\chi(V)$ has nicer modular prop
 For more about this modularity, and motivation for the the definition of the character, see~\cite{Zhu}. 
 \end{rmk}
 
-We wish to define the graded character of a vertex algebra with an action of a Harish-Chandra pair $(\fg, K)$. Suppose $\fg$ acts on a  $\ZZ_{\geq 0}$-graded vertex algebra $V$ (by grading preserving derivations). Then, each weight space $V^{(N)}$ is a module for $\fg$. The character of the vertex algebra will be a $q$-expansion of equivariant characters of the individual spaces of fixed conformal dimension $V^{(N)}$. Thus, it suffices to define what we mean by the character of a $(\fg,K)$-module (in vector spaces). 
+We wish to define the graded character of a vertex algebra with an action of a Harish-Chandra pair $(\fg, K)$. 
+Suppose $\fg$ acts on a  $\ZZ_{\geq 0}$-graded vertex algebra $V$ by grading-preserving derivations. 
+Then, each weight space $V^{(N)}$ is a module for $\fg$. 
+The character of the vertex algebra will be a $q$-expansion of equivariant characters of the individual spaces of fixed conformal dimension $V^{(N)}$. 
+Thus, it suffices to define what we mean by the character of a $(\fg,K)$-module (in vector spaces). 
 
 For simplicity we work just with the Lie algebra $\fg$. The generalization to a module for the pair $(\fg, K)$ is a small extension of this. For any $\fg$-module $W$, with action $\rho : \fg \to \End(W)$, its Chern character is given by $\ch^\fg(W) = {\rm Tr}\left(\exp(\rho(X)) \right) \in \Sym(\fg^\vee)$. 
 Since the trace is conjugation invariant the character determines an element in the Hochschild homology of the algebra $\clie^*(\fg)$:
@@ -2676,10 +2679,13 @@ If $W$ is a module for the Harish-Chandra pair $(\fg,K)$ the same construction d
 
 We now return to the case of a vertex algebra. 
 
-\begin{dfn} Suppose a pair $(\fg,K)$ acts on a $\ZZ_{\geq 0}$-graded vertex algebra $V$. We define the $(\fg,K)$-{\em equivariant graded character} of $V$ to be the following $q$-expansion
+\begin{dfn} 
+If a pair $(\fg,K)$ acts on a $\ZZ_{\geq 0}$-graded vertex algebra $V$, 
+the $(\fg,K)$-{\em equivariant graded character} of $V$ is the $q$-expansion
 \ben
-{\rm char}^{(\fg,K)}(V) := \sum_{N \geq 0} q^N \chi^{(\fg,K)} (V^{(N)}) \in \clie^*\left(\fg,K ; \oplus_{k \geq 0} \Sym^k (\fg^\vee)[k]\right)[[q]] .
+{\rm char}^{(\fg,K)}(V) := \sum_{N \geq 0} q^N \chi^{(\fg,K)} (V^{(N)})
 \een 
+in~$\clie^*\left(\fg,K ; \bigoplus_{k \geq 0} \Sym^k (\fg^\vee)[k]\right)[[q]]$.
 \end{dfn}
 
 %\begin{rmk} Note that ${\rm char}^{(\fg,K)} (V) = {\rm
@@ -2712,7 +2718,7 @@ We say that a finite-dimensional $\Tilde{\fg}$-module $V$ is {\em off-diagonal} 
 \een
 such that for all $i$, $\mathfrak{k} \cdot F^i V \subset F^{j} V$ for some $j < i$. We observe the following elementary fact about traces of such modules.
 
-Suppose that $V$ is an off-diagonal module for the Lie algebra map $p : \Tilde{\fg} \to \fg$,
+Let $V$ be an off-diagonal module for the Lie algebra map $p : \Tilde{\fg} \to \fg$,
 where $V$ has finite dimension. 
 Then ${\rm tr}(\exp(x)) = \tr(\exp(p(x)))$ for all $x \in \Tilde{\fg}$. 
 To see this, choose a filtration for $V$ exhibiting the off-diagonal action, and a pick a basis for $V$ compatible with this filtration. 
@@ -2721,8 +2727,9 @@ In terms of this basis, each element of $\frak{k}$ acts by a matrix that is stri
 Similarly, we have the following.
 
 \begin{lemma}\label{lem: offdiag}
-Suppose $(\fg, K), (\Tilde{\fg}, K)$ are Harish-Chandra pairs, $V$ a $(\Tilde{\fg},K)$-module, and $(p, \id) : (\fg, K), (\Tilde{\fg}, K)$ is a morphism of pairs so that $V$ is an off-diagonal module.
-Then $\ch^\fg(V)$ is in the image of the map
+Let $(\fg, K)$ and $(\Tilde{\fg}, K)$ be Harish-Chandra pairs with $(p, \id) : (\fg, K), (\Tilde{\fg}, K)$ is a morphism of pairs. 
+If $V$ is an off-diagonal $(\Tilde{\fg},K)$-module,
+then $\ch^\fg(V)$ is in the image of the map
 \[
 p^* : \clie^*\left(\fg,K ; \bigoplus_{k \geq 0} \Sym^k (\fg^\vee)[k]\right) \to  \clie^*\left(\Tilde{\fg},K ; \bigoplus_{k \geq 0} \Sym^k (\fg^\vee)[k]\right) .
 \]
@@ -2755,7 +2762,8 @@ along the pull-back $\clie^*(\Vect , \GL_n ; \hOmega^{-*}_n) \to \clie^*(\TVect 
 
 For the pair $(\fg,K) = (\Vect, \GL_n)$ the Chern character in the previous section coincides with the Gelfand-Fuks-Chern character $\ch^{\GF}(W)$ for any formal vector bundle $W$. We let $\Td^{\GF} := \Td^{(\Vect, \GL_n)}$. 
 
-\begin{prop} \label{prop local character} The $(\Vect, \GL_n)$-equivariant graded character of $\hCDO_n$ is given by
+\begin{prop} \label{prop local character} 
+The $(\Vect, \GL_n)$-equivariant graded character of $\hCDO_n$ is given by
 \ben
 \chi^{(\Vect, \GL_n)}(\hCDO_n) = \Td^{\GF} \cdot \ch^{\rm GF} \left(\bigotimes_{l \geq 1} \Sym_{q^l} (\hOmega^1_n \oplus \hT_n) \right)
 \een
@@ -2765,9 +2773,13 @@ as an cocycle in $\clie^*\left(\Vect , \GL_n ; \hOmega^{-*}_n\right)[[q]]$.
 \si
 
 \begin{rmk}
-Here, we use the notation $\Sym_{q^l}(V) = \oplus_{k \geq 0} q^{kl} \Sym^k(V)$ and 
+Here we use the notation 
 \[
-\ch\left(\Sym_{q^l}(V)\right) = \sum_{k \geq 0} q^{kl} \ch\left(\Sym^k(V)\right)
+\Sym_{q^l}(V) = \bigoplus_{k \geq 0} q^{kl} \Sym^k(V),
+\] 
+so that
+\[
+\ch\left(\Sym_{q^l}(V)\right) = \sum_{k \geq 0} q^{kl} \ch\left(\Sym^k(V)\right).
 \]
 \end{rmk}
 
@@ -2973,9 +2985,9 @@ Before we proceed to the formal situation, and the construction of the extended 
 we need to understand how all of the trivializations above change as we make a gauge transformation. 
 
 Suppose that our holomorphic vector bundle $E$ is $TU$, the holomorphic tangent bundle. 
-Given a biholomorphism $f : U \to U$, we obtain a gauge transformation of $A$ via
+Given a biholomorphism $f : U \to U$, we obtain a gauge transformation of $A$ to the new connection
 \ben
-A \mapsto f \cdot A := g^{-1} A g + g^{-1} \partial g,
+f \cdot A := g^{-1} A g + g^{-1} \partial g,
 \een
 where $g = Jac(f)$ is the Jacobian of $f$. 
 
@@ -3453,15 +3465,12 @@ a {\em dg $\ZZ_{\geq 0}$-graded vertex algebra} is a dg vertex algebra such that
 $\d$ preserves the dimension grading. 
 \end{dfn}
 
-Suppose we have a Harish-Chandra pair $(\fg, K)$ together with a
-torsor $P \to X$ for the pair. If $V$ is a vertex algebra such that
-$K$ acts on it via vertex algebra automorphisms then clearly
-invariants for this group action will be a sub vertex
-algebra. Likewise, if $\fg$ acts on $V$ via vertex algebra derivations
-then the induced connection $\nabla^{P,V} = \d_{dR} +
-\rho_\fg(\omega)$ also acts by vertex algebra derivations on
-$\Omega^*(P) \tensor V$. If we choose actions that are compatible (as
-well as $\ZZ_{\geq 0}$ graded) we
+Consider now a torsor $P \to X$ for a Harish-Chandra pair $(\fg, K)$. 
+If $V$ is a vertex algebra on which $K$ acts via vertex algebra automorphisms, 
+then invariants for this group action will be a sub-vertex algebra. 
+Likewise, if $\fg$ acts on $V$ via vertex algebra derivations,
+then the induced connection $\nabla^{P,V} = \d_{dR} + \rho_\fg(\omega)$ also acts by vertex algebra derivations on $\Omega^*(P) \tensor V$. 
+If we choose actions that are compatible (as well as $\ZZ_{\geq 0}$-graded) we
 obtain the following. 
 
 \begin{prop} 
@@ -3690,7 +3699,8 @@ Now, the action of $\TVect$ on ${\rm Vir}_{c=2n}$ is trivial. So, when we equip 
 
 The right hand side also has a natural differential $\d_{dR} + \Tilde{\omega}_{\sigma, \sigma_{\Omega^2}}$ coming from a fixed extended Gelfand-Kazhdan structure making it a $\Omega^*_X$-module. The calculation of Proposition \ref{prop c1 conformal} implies that the failure for $\Phi$ to be a map of $\Omega^*_X$-modules is the image of the cocycle $c^\GF_1(\hT_n)$ under the characteristic map of the Gelfand-Kazhdan structure. This is precisely the usual first Chern class $c_1(T_X)$. We have arrived at the following. 
 
-\begin{prop}\label{prop conformal cdo} Let $\alpha$ be a trivialization of $\ch_2(T_X)$ and suppose that $c_1(T_X) = 0 \in H^1(X ; \Omega^1_X)$. Then there exists a map of sheaves of vertex algebras on $X$
+\begin{prop}\label{prop conformal cdo} 
+Let $\alpha$ be a trivialization of $\ch_2(T_X)$ and suppose that $c_1(T_X) = 0$ in $H^1(X ; \Omega^1_X)$. Then there exists a map of sheaves of vertex algebras on $X$
 \ben
 \Phi : \ul{\rm Vir}_{c=2n} \to \CDO_{X,\alpha} . 
 \een

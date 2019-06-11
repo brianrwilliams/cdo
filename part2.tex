@@ -986,7 +986,7 @@ In this notation, we have $\Tilde{J}_\theta = \int_S \mathbf{J}_\theta$.
 Before proving the main result, we make the following simple observations about the functional $\mathbf{J}$. 
 
 \begin{lemma} \label{easy} 
-Suppose $f \in \hO_n$ and $\theta \in \hOmega^1_n$. Then
+For $f \in \hO_n$ and $\theta \in \hOmega^1_n$,
 \begin{itemize}
 \item[(1)] $\mathbf{J}_{f \theta} = f^S \wedge
   \mathbf{J}_\theta$ and
@@ -1052,7 +1052,7 @@ we obtain
 The first term is $\Tilde{J}_{L_X\theta}$. Being the integral of a
 total derivative the second term vanishes, so we are done. The case of
 a general formal vector field $X$ is similar. Indeed, suppose $X$ is
-homogenous of the form $X= t_1^{k_1} \cdots
+homogeneous of the form $X= t_1^{k_1} \cdots
 t_n^{k_n} \partial_i$. Then for $\theta$ as above we have
 \ben
 L_X \theta = m_i t_1^{k_1 + m_1} \cdots t_i^{k_i + m_i - 1}
@@ -2207,11 +2207,11 @@ encoding the obstruction.
 
 \begin{lemma}[Lemma 3.33 of \cite{LiLi}]
 \label{genlem}
-Suppose $I^{qc}$ and $O_1 \in \Def_n$ satisfy
+If $I^{qc}$ and $O_1 \in \Def_n$ satisfy
 \ben
-Q I^{qc} + \{I, I^{qc}\} = O_1 .
+Q I^{qc} + \{I, I^{qc}\} = O_1,
 \een 
-Then, for each $L$, the functional
+then, for each $L$, the functional
 \ben
 I^{qc} [L] = \lim_{\epsilon \to 0} \sum_{\substack{\Gamma \in
     \text{\rm Trees}\\ v \in V(\Gamma)}} W_{\Gamma, v}(P_{\epsilon <
@@ -2475,7 +2475,7 @@ We do not discuss that here, but his interpretation applies to our approach as w
 
 \subsection{The formal Witten class}
 
-Suppose $\cV$ is a formal vector bundle, i.e., an object of the category $\VB_{(\Vect, \GL_n)}$. 
+Let $\cV$ be a formal vector bundle, i.e., an object of the category $\VB_{(\Vect, \GL_n)}$. 
 We have constructed the Gelfand-Fuks-Chern characters
 \ben
 \ch^{\rm GF}_k(\cV) \in \clie^k(\Vect, \GL_n ; \hOmega^k_{n,cl}) .
@@ -4306,7 +4306,7 @@ We already know that the factorization algebra of quantum observables $\Obs^{\q}
 The natural question is, then, how to construct the quantum version of the map (\ref{classical vir}). This question can also be understood as a problem of equivariant quantization, by the Koszul-type duality between solutions of the equivariant quantum master equation and maps of BD algebras. We have already computed the obstruction to quantizing the symmetry of holomorphic vector fields on $S = \CC$ in a way compatible with the action of formal vector fields on the target $\Vect$. Hence, the main result is the following.
 
 \begin{prop} \label{prop quantum vir} 
-Suppose $\alpha$ is a trivialization of $\ch_2(T_X)$ and let $\Obs^\q_{X,\alpha}$ be the resulting factorization algebra on $\CC$ of observables for the curved $\beta\gamma$ system with target $X$. If $c_1(T_X) = 0$,  then there is a map of sheaves on $X$ of holomorphic factorization algebras on $\CC$ 
+Let $\alpha$ be a trivialization of $\ch_2(T_X)$, and let $\Obs^\q_{X,\alpha}$ be the resulting factorization algebra on $\CC$ of observables for the curved $\beta\gamma$ system with target $X$. If $c_1(T_X) = 0$,  then there is a map of sheaves on $X$ of holomorphic factorization algebras on $\CC$ 
 \be\label{quantum vir}
 \Psi^\q_X : {\ul \sVir}_{c=n} \to \Obs^q_{X,\alpha}
 \ee
