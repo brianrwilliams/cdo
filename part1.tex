@@ -1920,7 +1920,7 @@ saying that $c_0^j$ has conformal dimension $0$ and $b_{-1}^j$ has
 conformal dimension $1$. Denote by $\CDO_n^{(N)}$ the conformal dimension
 $N$ subspace. 
 
-\begin{rmk}
+\begin{rmk}\label{rmk:notations}
 The generators of this vertex algebra are given a variety of symbols:
 \begin{enumerate}
 \item in \cite{MSV}, they use $a^j_{m}$ for what we call $b^j_m$ and $b^j_{m}$ for our $c^j_m$;
@@ -1952,26 +1952,19 @@ by using the $(-1)$-Fourier mode as a bilinear operation
 (-)_{(-1)} (-) : \CDO_n^{(0)} \times \CDO_n^{(0)} \to \CDO_n^{(0)} 
 \een
 to equip $\CDO_n^{(0)}$ with a commutative algebra structure.
-The issue is that this product is not associative! 
-Hence, we emphasize that $\CDO_n$ {\em as a vertex algebra} is not $\cO_n$-linear.
+The issue is that this product is not associative! \si 
+Hence, we emphasize that $\CDO_n$ {\em as a vertex algebra} is not $\cO_n$-linear. 
 
 \begin{rmk}
-In \cite{BorVAMS} Borisov develops a clean formalization of this situation by introducing the notion of an $R$-loop module over a commutative algebra $R$.
-This notion leads to quasi-loop-coherent sheaves and then to sheaves of vertex algebras, in a way that clarifies 
+In \cite{BorVAMS} Borisov develops a clean formalization of this situation by introducing the notion of an $R$-loop module over a commutative algebra $R$,
+clarifying how, in our example above, the $\cO_n$-module structure interacts with the vertex algebra structure on $\CDO_n$.
+This notion of loop module also leads to quasi-loop-coherent sheaves and then to sheaves of vertex algebras.
+Borisov used it to globalize the chiral de Rham complex to complex manifolds, 
+and suitably modified, it should apply to chiral differential operators too.
 \end{rmk}
 
 \subsubsection{Completion}
 
-Consider the conformal dimension zero piece of a $\ZZ_{\geq 0}$-graded
-vertex algebra $V^{(0)} \subset V$. The $(-1)$-Fourier mode preserves
-this subspace and hence has the
-form of a bilinear operation
-
-The vertex algebra axioms guarantee that this endows $V^{(0)}$ with the structure
-of a commutative algebra. 
-
-
- 
 We use this module structure to complete along powers of $\{t^1,\ldots,t^n\}$. 
 That is, we base change $\CDO_n$ to a module for $\hO_n$:
 \ben
@@ -3552,19 +3545,9 @@ same argument as in Lemma \ref{lemma GK vert gr} shows that the spaces of fixed 
 \end{proof}
 
 \begin{rmk} 
-Note that we do {\em not} require that a Gelfand-Kazhdan vertex algebra $\cV$
-be an $\hO_n$-module. 
-Indeed, for the case of formal chiral differential operators,
-the $\CC$-linear maps $\hO_n \times \hCDO^{(N)}_n
-\to \hCDO^{(N)}_n$ induced by the $(-1)$ bracket does not endow
-$\hCDO_n$ with the structure of an $\hO_n$-module. 
-The issue is that this action is not associative. That is,
-$a_{(-1)}(b_{(-1)} v) \ne (a_{(-1)} b)_{(-1)} v$ for $a,b \in \hO_n$
-and $v \in \hCDO_n^{(N)}$. Moreover, while we have a decomposition
-$\hCDO^{(N)}_n = \hO_n \tensor_\CC V^{(N)}_n$, for some finite
-dimensional vector space $V^{(N)}_n$, the obvious structure of an
-$\hO_n$-module by left multiplication is {\em not} compatible with the
-vertex algebra operations.
+As noted following Remark \ref{rmk:notations}, we do {\em not} require that a Gelfand-Kazhdan vertex algebra $\cV$
+be $\hO_n$-linear.
+The underlying vector space of $\cV$ is an $\hO_n$-module but  vertex algebra operations do not preserve that action.
 \end{rmk}
 
 
