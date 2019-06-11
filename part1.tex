@@ -574,7 +574,7 @@ together with an isomorphism of completed commutative algebras
 \[
 \phi: \sO_{X,x}^\wedge \to \CC[[t_1,\ldots,t_n]] = \hO_n,
 \]
-where $\sO_{X,x}^\wedge$ denotes the completion $\lim_{\leftarrow} \sO_{X,x}/\fm_x^k$ of the germ at $x$ of holomorphic functions with respect to powers of the ideal $\fm_x$ of functions vanishing at~$x$.\si
+where $\sO_{X,x}^\wedge$ denotes the completion $\lim_{\leftarrow} \sO_{X,x}/\fm_x^k$ of the germ at $x$ of holomorphic functions with respect to powers of the ideal $\fm_x$ of functions vanishing at~$x$. \si 
 Intuitively, $\phi$ corresponds to an embedding of the formal disk into $X$, sending the base point to~$x$.
 
 There is a canonical projection map $\pi^{coor} : X^{coor} \to X$ by remembering only the underlying point in $X$. 
@@ -861,7 +861,7 @@ Indeed, let
 \ben
 \VB_n \subset \Mod_{(\Vect, \GL_n)}^{\cO_n}
 \een
-be the full subcategory spanned by objects that are free and finitely generated as underlying $\hO_n$-modules,\si
+be the full subcategory spanned by objects that are free and finitely generated as underlying $\hO_n$-modules, \si
 so we refer to this category as {\em formal vector bundles}.
 
 The category of formal $\hO_n$-modules has a natural symmetric monoidal structure by tensor product over~$\hO$. The Harish-Chandra action is extended by
@@ -1929,21 +1929,10 @@ The generators of this vertex algebra are given a variety of symbols:
 %wen{Add further references, possibly. Verify indices!}
 \end{rmk}
 
-\subsubsection{Completion}
-
-Consider the conformal dimension zero piece of a $\ZZ_{\geq 0}$-graded
-vertex algebra $V^{(0)} \subset V$. The $(-1)$-Fourier mode preserves
-this subspace and hence has the
-form of a bilinear operation
-\ben
-(-)_{(-1)} (-) : V^{(0)} \times V^{(0)} \to V^{(0)} .
-\een
-The vertex algebra axioms guarantee that this endows $V^{(0)}$ with the structure
-of a commutative algebra. 
-
-The underlying vector space of $\CDO_n$ is identified with $\CC [b_{l}^i, c_{m}^j]$ where $l < 0$, $m \leq 0$, and $i,j = 1,\ldots,d$. One identifies the commutative algebra $\cO_n$ as the conformal dimension zero subspace $\CDO_n^{(0)} \subset \CDO_n$, 
-which consists of polynomials in the variables $c_0^1,\ldots, c_0^{n}$. 
-That is, we have a multiplicative isomorphism
+It is important to note how $\CDO_n$ relates to the geometry of $\CC^n$, and some subtleties thereof.
+The underlying vector space of $\CDO_n$ is isomorphic with the underlying vector space of the commutative algebra $\CC [b_{l}^i, c_{m}^j]$, 
+where $l < 0$, $m \leq 0$, and $i,j = 1,\ldots,d$. 
+The map
 \[
 \begin{array}{cccc}
 \label{poly}
@@ -1951,13 +1940,37 @@ That is, we have a multiplicative isomorphism
 & t_i & \mapsto & c_0^i .
 \end{array}
 \]
-In other words, for any polynomial $f$, we substitute $c^i_0$ for $t_i$ in the polynomial $f$.
+identifies the commutative algebra $\cO_n$ of functions on $\CC^n$ with the conformal dimension zero subspace $\CDO_n^{(0)} \subset \CDO_n$, 
+which consists of polynomials in the variables $c_0^1,\ldots, c_0^{n}$. 
+In other words, for any polynomial function $f$ on $\CC^n$, we substitute $c^i_0$ for $t_i$ in the polynomial $f$.
 We will express this, somewhat abusively, as $\tau(f) = f(c)$.
+This relationship shows that one can view the underlying vector space of $\CDO_n$ as an $\cO_n$-module.
 
-Note that ``multiplicative'' makes sense here: 
-we have just seen that the conformal dimension zero subspace of any $\ZZ_{\geq 0}$-graded vertex algebra 
-has the structure of a commutative algebra. 
-In this way, $\CDO_n$ is a module for the commutative algebra $\cO_n$.
+One might hope that this map $\tau$ is a map of commutative algebras,
+by using the $(-1)$-Fourier mode as a bilinear operation
+\ben
+(-)_{(-1)} (-) : \CDO_n^{(0)} \times \CDO_n^{(0)} \to \CDO_n^{(0)} 
+\een
+to equip $\CDO_n^{(0)}$ with a commutative algebra structure.
+The issue is that this product is not associative! 
+Hence, we emphasize that $\CDO_n$ {\em as a vertex algebra} is not $\cO_n$-linear.
+
+\begin{rmk}
+In \cite{BorVAMS} Borisov develops a clean formalization of this situation by introducing the notion of an $R$-loop module over a commutative algebra $R$.
+This notion leads to quasi-loop-coherent sheaves and then to sheaves of vertex algebras, in a way that clarifies 
+\end{rmk}
+
+\subsubsection{Completion}
+
+Consider the conformal dimension zero piece of a $\ZZ_{\geq 0}$-graded
+vertex algebra $V^{(0)} \subset V$. The $(-1)$-Fourier mode preserves
+this subspace and hence has the
+form of a bilinear operation
+
+The vertex algebra axioms guarantee that this endows $V^{(0)}$ with the structure
+of a commutative algebra. 
+
+
  
 We use this module structure to complete along powers of $\{t^1,\ldots,t^n\}$. 
 That is, we base change $\CDO_n$ to a module for $\hO_n$:
@@ -2949,15 +2962,16 @@ $U$ together with the obvious spectral sequence. (Note that the left hand side i
 degree zero)
 
 A direct calculation shows that $\Theta^{(k)}_A$ is both $\partial$ and
-$\dbar$-closed. In fact, we will use a
+$\dbar$-closed. 
+In fact, we will use a
 preferred one given by the Chern-Simons functional. 
 \si
-In the case $k = 2$ we evaluate the usual Chern-Simons functional on the Chern connection $A$:is defined as the $3$-form
+In the case $k = 2$ we evaluate the usual Chern-Simons functional on the Chern connection $A$: consider the $3$-form
 \begin{align*}
 \CS (A) & = {\rm Tr}\left(A \wedge \d A + \frac{2}{3} A \wedge A \wedge A \right) \\ & = {\rm Tr}\left(A \wedge \dbar A + A \wedge \partial A + \frac{2}{3} A \wedge A \wedge A \right) \\
 & = {\rm Tr}\left(A \wedge \dbar A - \frac{1}{3} A\wedge A \wedge A\right)
 \end{align*}
-using the property of the Chern connection: $\partial A + A \wedge A = 0$. 
+using $\partial A + A \wedge A = 0$. 
 Note that $\CS (A)$ is an element in $\Omega^{\geq 2, *} (U)$ of cohomological degree one. 
 By construction $\d\CS(A) =\Theta^{(2)}_A$, 
 where $\d$ is the total differential on the complex. 
@@ -3519,7 +3533,8 @@ finiteness property.
 We have already seen that $\Gr \; \hCDO_n$ has an action of the pair $(\Vect, \GL_n)$. Moreover, from the explicit formula $\Gr \; \hCDO_n = \Hat{\tensor}_{0 < k} \Hat{\Sym}_{\hO_n} (\hOmega^1_n) \Hat{\tensor} \Hat{\tensor}_{0 \leq l} \Hat{\Sym}_{\hO_n} (\hT_n)$ shows that the spaces of fixed conformal dimension are finite sum of tensor products of the $(\Vect,\GL_n)$ modules $\hOmega^1_n$ and $\hT_n$. Thus, we can write each space of conformal dimension $N$ in the presentation of Equation (\ref{GK vert}). 
 \end{proof}
 
-\begin{dfn} An {\em extended Gelfand-Kazhdan vertex algebra} is a $\ZZ_{\geq 0}$-graded vertex algebra together with an action of $(\TVect, \GL_n)$ as in Definition \ref{graction} such that for each $N \geq 0$ one has a $\GL_n$-equivariant identification
+\begin{dfn} 
+An {\em extended Gelfand-Kazhdan vertex algebra} is a $\ZZ_{\geq 0}$-graded vertex algebra together with an action of $(\TVect, \GL_n)$ as in Definition \ref{graction} such that for each $N \geq 0$ one has a $\GL_n$-equivariant identification
 \be\label{GK vert 2}
 \cV^{(N)} = \hO_n \tensor_\CC V^{(N)}
 \ee 
@@ -3528,19 +3543,22 @@ where $V^{(N)}$ is a finite dimensional $\GL_n$-representation. A {\em morphism}
 
 The category ${\rm Vert}_n$ is a full subcategory of vertex algebras in $\Mod^{\ZZ/2}_{(\TVect, \GL_n)}$ consisting of those objects that satisfy the finiteness constraint above. 
 
-\begin{lemma} The vertex algebra $\hCDO_n$ is an extended Gelfand-Kazhdan vertex algebra.
+\begin{lemma} 
+The vertex algebra $\hCDO_n$ is an extended Gelfand-Kazhdan vertex algebra.
 \end{lemma}
+
 \begin{proof} We have already seen that $\hCDO_n$ has the structure of a $(\TVect, \GL_n)$-module. The 
 same argument as in Lemma \ref{lemma GK vert gr} shows that the spaces of fixed conformal dimension can be expressed as in Equation (\ref{GK vert 2}). 
 \end{proof}
 
 \begin{rmk} 
 Note that we do {\em not} require that a Gelfand-Kazhdan vertex algebra $\cV$
-be an $\hO_n$-
-module. Indeed, for the case of formal chiral differential operators,
+be an $\hO_n$-module. 
+Indeed, for the case of formal chiral differential operators,
 the $\CC$-linear maps $\hO_n \times \hCDO^{(N)}_n
 \to \hCDO^{(N)}_n$ induced by the $(-1)$ bracket does not endow
-$\hCDO_n$ with the structure of an $\hO_n$-module. The issue is that this action is not associative. That is,
+$\hCDO_n$ with the structure of an $\hO_n$-module. 
+The issue is that this action is not associative. That is,
 $a_{(-1)}(b_{(-1)} v) \ne (a_{(-1)} b)_{(-1)} v$ for $a,b \in \hO_n$
 and $v \in \hCDO_n^{(N)}$. Moreover, while we have a decomposition
 $\hCDO^{(N)}_n = \hO_n \tensor_\CC V^{(N)}_n$, for some finite
