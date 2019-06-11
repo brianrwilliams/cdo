@@ -31,7 +31,7 @@ They also interpret this theory as the half-twisted form of a $(0,2)$-supersymme
 
 Our goal in this part is to describe and quantize the curved $\beta\gamma$ system 
 using the renormalization and BV machinery of \cite{CosBook} in combination with Gelfand-Kazhdan descent.
-Applying the main theorem of \cite{CG}, we then obtain a factorization algebra of quantum observables 
+Applying the main theorem of \cite{CG2}, we then obtain a factorization algebra of quantum observables 
 and extract from it a vertex algebra, which is the CDOs.
 In other words, we develop mathematically the physical arguments and results in \cite{WittenCDO} and \cite{Nek}.
 Along the way, we will see how aspects of those physical arguments, such as the anomalies,
@@ -66,7 +66,7 @@ in both cases, the classical situation works nicely with usual Gelfand-Kazhdan d
 Indeed, the primary changes are that we replace vertex algebras with factorization algebras and that we use the BV formalism to produce the quantization, rather than a vertex algebra version of canonical quantization.
 Both changes require a heavy use of homological machinery, and so it should be no surprise that we must allow homotopical actions of the Harish-Chandra pair $(\Vect,\GL_n)$ on cochain complexes and thus develop a homotopical version of Gelfand-Kazhdan descent.
 
-Throughout this part, we work in the formalism developed in \cite{CosBook,CG}
+Throughout this part, we work in the formalism developed in \cite{CosBook,CG1, CG2}
 and refer to them liberally, not aiming to be self-contained here.
 Nonetheless, we recall essential ideas and notations along the way and give detailed citations.
 
@@ -82,7 +82,7 @@ these ways being equivalent but distinct in flavor.
 The reader familiar with $\L8$ algebras, Maurer-Cartan elements, twisting cocycles,
 and so on, can safely skip this section.
 For others, it will at least identify the tricks outside the complicated context in which we use them.
-Our treatment is succinct and casual, and we cite \cite{LV, Hinich, LurieSAG, CG}
+Our treatment is succinct and casual, and we cite \cite{LV, Hinich, LurieSAG, CG2}
 for detailed treatments.
 
 There is one important idea, and not just manipulation, connected with these constructions:
@@ -266,7 +266,7 @@ and thence a description as a $\Vect$-equivariant classical BV theory.
 
 \subsection{The free $\beta\gamma$ system as a BV theory}
 
-We briefly recall how to encode the free $\beta\gamma$ system --- where the target $X$ is the affine space $\AA^n$ --- as a BV theory, following \cite{GwThesis,CG}.
+We briefly recall how to encode the free $\beta\gamma$ system --- where the target $X$ is the affine space $\AA^n$ --- as a BV theory, following \cite{GwThesis,CG1}.
 (Note that the name is due to the traditional choice of letters to denote the fields.)
 
 \begin{dfn} 
@@ -1314,13 +1314,13 @@ The $\CC^\times$-symmetry condition says that the quantization has weight one wi
 \subsection{Recollections on equivariant BV quantization} \label{sec equiv bv 1}
 
 In this section we discuss what it means for a Lie algebra $\fh$ to act on a quantum field theory.
-To be more precise, we review the formalism developed in \cite{CG}, notably for the factorization Noether theorems  (see chapters 11 and 12).
+To be more precise, we review the formalism developed in \cite{CG2}, notably for the factorization Noether theorems  (see chapters 11 and 12).
 A key idea is to make $\clies(\fh)$ the base ring over which the field theory is defined, rather than the complex numbers $\CC$.
 Under the dictionary discussed in Section \ref{sec DDT}, this approach should encode how the Lie algebra $\fh$ acts on the theory.
 We have already seen this idea deployed for the classical field theory, 
 by interpreting the local functional $I^{\rm W}$ of Lemma \ref{Noether} as a Maurer-Cartan element.
 
-Recall that in the BV formalism, as developed in \cite{CosBook,CG}, 
+Recall that in the BV formalism, as developed in \cite{CosBook,CG2}, 
 a quantum BV theory consists of a space of fields and an effective action functional $\{S[L]\}_{L \in (0,\infty)}$,
 which is a family of non-local functionals on the fields that are parametrized by a length scale $L$ 
 and satisfy
@@ -1334,7 +1334,7 @@ The second can be interpreted as saying that we have a proper path integral meas
 (i.e., the QME can be seen as a definition of the measure).
 The third condition implies that the effective action is a quantization of a classical field theory,
 since a defining property of a classical theory is that its action functional is local.
-(A full definition is available in Section 8.2 of \cite{CG}.)
+(A full definition is available in Section 8.2 of~\cite{CG2}.)
 
 \begin{rmk}
 The length scale is associated with a choice of Riemannian metric on the underlying manifold,
@@ -1343,7 +1343,7 @@ but the formalism of \cite{CosBook} keeps track of how the space of quantum BV t
 Hence, when the choices should not be essential --- such as with a topological field theory --- one can typically show rigorously that different choices give equivalent answers.
 The length scale is also connected with the use of heat kernels in \cite{CosBook},
 but one can work with more general parametrices (and hence more general notions of ``scale''),
-as explained in Chapter 8 of \cite{CG}.
+as explained in Chapter 8 of \cite{CG2}.
 We use a natural length scale in this section; 
 when it becomes relevant, in the context of factorization algebras, we switch to general parametrices.
 \end{rmk}
@@ -1381,7 +1381,7 @@ lives in $\clies(\fh)$ for every scale $L$, and
 \end{enumerate}
 \end{dfn}
 
-In other words, we simply follow the constructions of \cite{CosBook,CG} working over the base ring $\clies(\fh)$.
+In other words, we simply follow the constructions of \cite{CosBook,CG2} working over the base ring $\clies(\fh)$.
 A careful reading of those texts shows that the freedom to work over interesting dg commutative algebras is built into the formalism.
 %\owen{We may need to be a bit careful since a version of nilpotency is used there but ..}
 Note that our situation is particularly simple since the non-equivariant classical field theory is free and hence admits a very simple quantization,
@@ -2774,12 +2774,12 @@ on which basis the operator  $\frac{\partial}{\partial z} (2\dbar \dbar^*)^{-1}$
 
 So far we have constructed classical and quantum BV theories for the formal $\beta\gamma$ system.
 We now turn to analyzing the observables of these theories,
-using the machinery of \cite{CG}, which intertwines the BV formalism with factorization algebras.
+using the machinery of \cite{CG2}, which intertwines the BV formalism with factorization algebras.
 As we show in Part 3, the factorization algebras that we construct here 
 provide a refinement of the vertex algebras $\Gr\,\hCDO_n$ and $\hCDO_n$ from Part 1.
 
 In brief a factorization algebra is a local-to-global object on a manifold --- in that sense, it is like a sheaf --- that encodes how to combine sections living on disjoint opens --- and hence, like an algebra.
-In \cite{CG} it is shown that every field theory in the BV formalism has an associated factorization algebra of observables.
+In \cite{CG2} it is shown that every field theory in the BV formalism has an associated factorization algebra of observables.
 For a classical field theory, the observables $\Obs^\cl$ assign to an open $U$, 
 the commutative dg algebra of functions on the space of fields on $U$.
 Thus classical observables form a commutative factorization algebra.
@@ -2794,7 +2794,7 @@ we must give the definition of a factorization algebra and discuss the relevant 
 
 \begin{rmk}
 Although we attempt to describe all the relevant ideas and definitions here,
-we rely extensively on results and arguments in \cite{CG},
+we rely extensively on results and arguments in \cite{CG2},
 which contains a lengthy treatment of the formalism we deploy.
 For further details, motivation, and context, we refer the reader there.
 \end{rmk}
@@ -2806,7 +2806,7 @@ For us $X$ will be a Riemann surface, typically $\CC$, and
 $\cC^\otimes$ will be a category of cochain complexes of vector spaces with $\otimes$ the tensor product.
 (In Section \ref{sec functional analysis} we discuss the type of vector spaces and tensor product that we use,
 since issues of functional analysis appear.)
-Here we give the general definition and refer to \cite{CG} for more detail and motivation.
+Here we give the general definition and refer to \cite{CG1,CG2} for more detail and motivation.
 
 \begin{dfn}
 A \emph{prefactorization algebra} $\cF$ on $X$ with values in $\cC^\otimes$ 
@@ -2874,7 +2874,7 @@ there is some $U_i \supset \{x_1,\ldots,x_n\}$.
 
 We will restrict our attention now to $\cC$ that are categories of cochain complexes of vector spaces.
 (More generally, the definition below is well-behaved for cochain complexes on a Grothendieck abelian category.
-See Appendix C of \cite{CG}.)
+See Appendix C of \cite{CG1}.)
 Since we view quasi-isomorphic cochain complexes as equivalent 
 (i.e., we are interested in the higher category arising from quasi-isomorphism as the notion of weak equivalence),
 the local-to-global condition is a cochain refinement of the usual notion.
@@ -2897,10 +2897,10 @@ We are working throughout with infinite-dimensional vector spaces
 such as the space of smooth functions $C^\infty(X)$ on a smooth manifold.
 Thus we need to be careful about issues such as tensor products and duals,
 since the setting of plain vector spaces is not appropriate or adequate for our constructions.
-Appendix B of \cite{CG} describes a category of {\em differentiable vector spaces} well-suited to our setting, 
+Appendix B of \cite{CG1} describes a category of {\em differentiable vector spaces} well-suited to our setting, 
 and it explains its relationship with other natural choices, 
 such as locally convex topological vector spaces, bornological vector spaces, or convenient vector spaces.
-The reader wishing for a discussion about the subtleties of constructing factorization algebras in such settings should look in~\cite{CG}.
+The reader wishing for a discussion about the subtleties of constructing factorization algebras in such settings should look in~\cite{CG1}.
 
 Here we simply state explicitly what we mean by duals and tensor product for the vector spaces with which we work.
 These definitions are natural for both differential geometry and functional analysis.
@@ -3018,7 +3018,7 @@ that is naturally induced by the restriction map of fields
 \[
 i^*: \DD\fgn^{S'} \to \DD\fgn^{S}.
 \]
-Indeed, we have a factorization algebra on any Riemann surface by Theorem 5.2.1 of \cite{CG}.
+Indeed, we have a factorization algebra on any Riemann surface by Theorem 5.2.1 of \cite{CG1}.
 For the purpose of extracting the vertex algebra, it will suffice to focus on $S = \CC$ and not consider all Riemann surfaces at the same time.
 
 \begin{dfn}
@@ -3040,17 +3040,17 @@ The BV formalism suggests that the quantum observables on $S$ should arise by
 This suggestion does not work because $\Delta$ is not defined on all of the observables;
 the naive formula involves an ill-defined pairing of distributions.
 There are two ways to circumvent this difficulty. 
-First, one can work with a smaller class of observables --- such as those arising from smooth functionals, not distributional ones --- and this approach is developed in detail for the free $\beta\gamma$ system in Chapter 5, Section 3 of \cite{CG}.
+First, one can work with a smaller class of observables --- such as those arising from smooth functionals, not distributional ones --- and this approach is developed in detail for the free $\beta\gamma$ system in Chapter 5, Section 3 of \cite{CG1}.
 (We discuss this approach in Section \ref{noneqsec}, where we also show the two approaches agree.) 
 Second, one can mollify $\Delta$ instead.
-This approach is developed in a very broad context in Chapter 9 of \cite{CG},
+This approach is developed in a very broad context in Chapter 9 of \cite{CG2},
 and we have encountered it already in the scale $L$ BV Laplacians $\Delta_L$.
 These two approaches provide quasi-isomorphic factorization algebras, 
-as we show in Proposition \ref{equiv of noneq}. The second approach is what we will explain here, as it is the one that extends to the equivariant setting.
+as we show in Proposition~\ref{equiv of noneq}. The second approach is what we will explain here, as it is the one that extends to the equivariant setting.
 
 
 Before delving into the machinery necessary to define a factorization algebra of quantum observables,
-let us note that we have a working description of the global observables on $\CC$.
+let us note that we have a working description of the global observables on~$\CC$.
 
 \begin{dfn}
 The \emph{global scale $L$ quantum observables for the rank $n$ formal $\beta\gamma$ system} has
@@ -3070,7 +3070,7 @@ given an observable $f$ at scale $\epsilon$, let $W_\epsilon^L(f)$ satisfy
 \]
 where $\delta^2=0$ and $|\delta| = - |f|$. 
 (In other words, this map arises by taking the ``derivative of RG flow.'')
-ThisWe remark that Lemma 9.3.1.2 of \cite{CG} provides a proof 
+We remark that Lemma 9.3.1.2 of \cite{CG2} provides a proof 
 
 The basic approach used here works in general, except that we will need to work with a more flexible notion of ``length scale'':
 we need to allow arbitrary parametrices for $\dbar$.
@@ -3079,7 +3079,7 @@ After reviewing this machinery, we use it to define the factorization algebra of
 \subsubsection{Recap of parametrices and BV Laplacians}
 \label{parametrices}
 
-We give here the specialization to our situation of the general definition from Chapter 8, Section 2.4 of \cite{CG}.
+We give here the specialization to our situation of the general definition from Chapter 8, Section 2.4 of \cite{CG2}.
 Recall that we are working on $\CC$ with its standard, Euclidean metric.
 Let $\dbar^*$ denote the Hodge dual operator to $\dbar$ with respect
 to this metric. It is our choice of ``gauge-fix,'' in the terminology of \cite{CosBook}.
@@ -3158,7 +3158,7 @@ Then
 where we insert $n-2$ copies of $x$ on the right hand side.
 
 These definitions allow one to define effective field theories, but with length scale replaced by a choice of parametrix.
-For a full treatment, see Section 8.2.9 of \cite{CG}.
+For a full treatment, see Section 8.2.9 of \cite{CG2}.
 The essential changes are that 
 \begin{itemize}
 \item RG flow from $\Phi$ to $\Psi$ is given by $W(P_\Phi - P_\Psi,-)$, using the same Feynman diagram expansion, and
@@ -3181,7 +3181,7 @@ with differential $\dbar + \hbar \Delta_\Phi$.
 We denote it $\Obs^q_n[\Phi](\CC)$.
 \end{dfn}
 
-Again, Lemma 9.3.1.2 of \cite{CG} shows that the quantum observables are isomorphic for any choice of parametrix.
+Again, Lemma 9.3.1.2 of \cite{CG2} shows that the quantum observables are isomorphic for any choice of parametrix.
 The isomorphism is explicitly given by the ``derivative of the RG flow'':
 \[
 W_\Phi^\Psi: f \in \Obs^q_n[\Phi](\CC) \mapsto \frac{\partial}{\partial \delta}(W(P_\Psi - P_\Phi, \delta f)) \in \Obs^q_n[\Psi](\CC).
@@ -3206,9 +3206,9 @@ for every $(j,k)$, there is some compact subset $C \subset U^k$ and some paramet
 such that $\supp(f_{j,k}[\Psi]) \subset C$ for all $\Psi \leq \Phi$.
 \end{dfn}
 
-By Lemma 9.4.0.2 of \cite{CG}, the graded vector space $\Obs^q_n(U)$ of observables with support in $U$
+By Lemma 9.4.0.2 of \cite{CG2}, the graded vector space $\Obs^q_n(U)$ of observables with support in $U$
 is preserved by the differential $\dbar + \hbar \Delta$ and hence provides a sub-complex of $\Obs^q_n(\CC)$.
-The remainder of Chapter 9 of \cite{CG} shows that these naturally form a factorization algebra.
+The remainder of Chapter 9 of \cite{CG2} shows that these naturally form a factorization algebra.
 
 \begin{dfn}\label{noneq quantum obs}
 Let $\Obs^q_n$ denote the factorization algebra on $\CC$ of quantum observables for the rank $n$ formal $\beta\gamma$ system.
@@ -3321,7 +3321,7 @@ vanishes. Thus, the quantum observables $\Obs^q_n$ admit a {\it strict} action b
 \label{noneqsec}
 
 As mentioned earlier, there is another approach to constructing the non-equivariant factorization algebra of observables
-for the formal $\beta\gamma$ system, which is developed in \cite{CG}.
+for the formal $\beta\gamma$ system, which is developed in \cite{CG1}.
 We sketch it briefly here and prove that it is quasi-isomorphic to the observables described above.
 
 Thus, the key idea is to work with observables built out of smooth or smeared distributions.
@@ -3404,7 +3404,7 @@ but we develop the minimum necessary to realize our primary goal and hence leave
 Nonetheless, our techniques should apply to a broad collection of situations, 
 notably to constructing the perturbative part of a nonlinear $\sigma$-model using BV quantization.
 Indeed, much of what we do is a re-articulation of the methods of Kontsevich, Cattaneo-Felder, and many others, 
-that is compatible with the machinery of \cite{CG}.
+that is compatible with the machinery of \cite{CG1, CG2}.
 We finish by explaining how our methods recover Costello's approach to the curved $\beta\gamma$ system in \cite{WG2}.
 (His use of $\L8$-spaces, however, allows for more exotic targets than just complex manifolds, though.)
 
@@ -4215,7 +4215,7 @@ The {\em smoothed observables} are
 so that we take the symmetric algebra on the smooth distributions,
 such as $\Omega^{1,*}_c(\CC) \subset \Bar{\Omega}^{1,*}_c(\CC)$, inside all distributions. 
 The naive BV Laplacian is well-defined on the smoothed observables. 
-(See \cite{CG} for a discussion.)
+(See \cite{CG1} for a discussion.)
 Ignoring the differentials momentarily, one sees that the same decompositions from above apply;
 one can still use the monomials $z^m \zbar^n$ to organize one's
 thinking.
@@ -4280,7 +4280,7 @@ Holomorphic vector fields on $S$ admit a natural enhancement to a {\em sheaf} of
 But a sheaf is contravariant in opens on $S$, whereas $\Obs^{\cl}_S$ is covariant in opens on $S$.
 There is an easy fix: take holomorphic vector fields with {\em compact support}.
 Let $\cT^S_c$ denote this precosheaf of dg Lie algebras, which is also a cosheaf of dg vector spaces. 
-By Chapter 11 of \cite{CG}, the map on global sections refines to a map of precosheaves 
+By Chapter 11 of \cite{CG2}, the map on global sections refines to a map of precosheaves 
 \ben
 \Psi^{\rm cl}_n : \cT^S_c \to \Obs^{\cl}_n [-1] 
 \een
@@ -4315,7 +4315,7 @@ that, modulo $\hbar$, agrees with the classical map of factorization algebras $\
 
 This claim will follow from obstruction calculations we have already done when combined with the following quantum version of the Noether theorem for factorization algebras. 
 
-\begin{thm}[\cite{CG}, Theorem 12.1.0.2] \label{thm quantum noether} 
+\begin{thm}[\cite{CG2}, Theorem 12.1.0.2] \label{thm quantum noether} 
 Let a local Lie algebra $\cE$ defined on a manifold $S$ describe a classical BV theory and suppose $\cE$ has an action of a local Lie algebra $\cL$. Fix a $\cL$-dependent quantization $\{I^\cL[L]\}_{L > 0}$ as described in Section \ref{sec equiv bv 1} such that the obstruction to solving the equivariant QME vanishes modulo functionals depending solely on $\cE$. There is then an $\hbar$-dependent cocycle $\eta \in \cloc^*(\cL)[[\hbar]]$ of degree one, and a map of factorization algebras
 \ben
 \Psi^{\q} : {\rm C}^{{\rm Lie}, \eta}_*(\cL_c) \to \Obs^q,
@@ -4332,8 +4332,8 @@ By definition, we set
 \[
 {\rm C}^{{\rm Lie}, \eta}_*(\cL_c) (U) = {\rm C}_*^{\rm Lie}(\Tilde{\cL}_c(U)),
 \] 
-which is a factorization algebra as shown in \cite{CG}.
-We now proceed to prove Proposition \ref{prop quantum vir}. 
+which is a factorization algebra as shown in \cite{CG2}.
+We now proceed to prove Proposition~\ref{prop quantum vir}. 
 
 \begin{proof} We consider the Gelfand-Kazhdan descent of the classical formal $\beta\gamma$ system. As  discussed in Section \ref{sec comparison}, the $L_\infty$ algebra $\DD \fg_n^S$ becomes the curved $L_\infty$ algebra $\DD \fg_X^S$ defined over $\Omega^*_X$. The dg Lie algebra of holomorphic vector fields $\cT^S$ is classically a trivial $\Vect$-module, thus the action of $\cT^S$ on the formal $\beta\gamma$ system descends to an action on the curved $\beta\gamma$ system described by $\DD \fg_X^S$. As usual, we work on $S = \CC$. 
 
