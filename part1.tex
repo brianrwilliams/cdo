@@ -2087,7 +2087,7 @@ ${\rm Gr} \, \hCDO_n$ via derivations.
 The construction in the preceding paragraph defines the structure of a $(\Vect, \GL_n)$-module on the $\ZZ_{\geq 0}$-graded vertex algebra ${\rm Gr} \; \hCDO_n$ preserving the family of brackets definining the Poisson vertex algebra structure. Moreover, this action is compatible with the $\hO_n$-module structure. 
 \end{prop}
 
-\begin{proof} The associated graded can be written as 
+\begin{proof} The associated graded can be written as \si 
 %\ben
 %\Gr \; \hCDO_n \cong
 %\underset{{0<k}}{\widehat{\bigotimes}}\,\cSym_{\hO_n}(\hT^*_n)\,
@@ -2702,39 +2702,43 @@ in~$\clie^*\left(\fg,K ; \bigoplus_{k \geq 0} \Sym^k (\fg^\vee)[k]\right)[[q]]$.
 
 \subsubsection{} 
 
-We now turn to computing the character for the main example, the $(\TVect,\GL_n)$
-equivariant vertex algebra $\hCDO_n$. 
+We now turn to computing the character for the main example, 
+the $(\TVect,\GL_n)$-equivariant vertex algebra $\hCDO_n$. 
 \si
-There is one subtlety, that the conformal weight spaces of $\hCDO_n$ (and $\CDO_n$) are not finite dimensional. 
-They are, however, finite rank over the ring $\hO_n$. 
-So, whenever we take count dimensions or take duals we will do so in a $\hO_n$-linear way.
+There is one subtlety: the conformal weight spaces of $\hCDO_n$ (and $\CDO_n$) are not finite dimensional. 
+They are, however, finite rank over the ring $\hO_n$, 
+and so, whenever we count dimensions or take duals, we will do so in a $\hO_n$-linear way.
 
-With this caveat, the equivariant graded character of $\hCDO_n$ as a module for $(\TVect, \GL_n)$ is an element 
+With this modification, the equivariant graded character of $\hCDO_n$ as a module for $(\TVect, \GL_n)$ will be an element 
 \[
-\chi^{(\Vect, \GL_n)} (\hCDO_n) \in \clie^*(\TVect , \GL_n ; \hOmega^{-*}_n). 
+\chi^{(\Vect, \GL_n)} (\hCDO_n) \in \clie^*(\TVect , \GL_n ; \hOmega^{-*}_n)[[q]]. 
 \]
-Here, $\hOmega^{-*}_n$ is the regraded de Rham complex on the formal disk $\oplus_{k \geq 0} \hOmega^k_n [k]$. 
-The character is the image of an element from~$\clie^*(\Vect , \GL_n ; \hOmega^{-*}_n)$ (note the tilde has vanished on $\Vect$),
-by the following argument.
+Here, $\hOmega^{-*}_n$ is the regraded de Rham complex $\bigoplus_{k \geq 0} \hOmega^k_n [k]$ on the formal disk.  
+
+Something important happens here: the tilde has vanished on $\Vect$ so that the character is the image of an element from~$\clie^*(\Vect , \GL_n ; \hOmega^{-*}_n)$.
+To justify this location for the character, we use the following argument.
 
 Let $p : \Tilde{\fg} \to \fg$ be a morphism of Lie algebras, and let $\mathfrak{k}$ be its kernel. 
 We say that a finite-dimensional $\Tilde{\fg}$-module $V$ is {\em off-diagonal} for $p$ if there is a filtration 
 \ben
 0 = F^{-1} V \subset F^0 V \subset F^1 V \subset \cdots \subset F^N V = V
 \een
-such that for all $i$, $\mathfrak{k} \cdot F^i V \subset F^{j} V$ for some $j < i$. We observe the following elementary fact about traces of such modules.
+such that for all $i$, $\mathfrak{k} \cdot F^i V \subset F^{j} V$ for some $j < i$. 
+There is an elementary fact about traces of such modules.
 
-Let $V$ be an off-diagonal module for the Lie algebra map $p : \Tilde{\fg} \to \fg$,
-where $V$ has finite dimension. 
-Then ${\rm tr}(\exp(x)) = \tr(\exp(p(x)))$ for all $x \in \Tilde{\fg}$. 
+\begin{lemma}
+If $V$ is an off-diagonal module for the Lie algebra map $p : \Tilde{\fg} \to \fg$ and $V$ has finite dimension, 
+then ${\rm tr}(\exp(x)) = \tr(\exp(p(x)))$ for all $x \in \Tilde{\fg}$. 
+\end{lemma}
+
 To see this, choose a filtration for $V$ exhibiting the off-diagonal action, and a pick a basis for $V$ compatible with this filtration. 
 In terms of this basis, each element of $\frak{k}$ acts by a matrix that is strictly upper triangular (i.e., off-diagonally), and hence does not contribute to the trace. 
 
 Similarly, we have the following.
 
 \begin{lemma}\label{lem: offdiag}
-Let $(\fg, K)$ and $(\Tilde{\fg}, K)$ be Harish-Chandra pairs with $(p, \id) : (\fg, K), (\Tilde{\fg}, K)$ is a morphism of pairs. 
-If $V$ is an off-diagonal $(\Tilde{\fg},K)$-module,
+Let $(\fg, K)$ and $(\Tilde{\fg}, K)$ be Harish-Chandra pairs with $(p, \id) : (\fg, K) \to (\Tilde{\fg}, K)$ a morphism of pairs. 
+If $V$ is a finite-dimensional off-diagonal $(\Tilde{\fg},K)$-module,
 then $\ch^\fg(V)$ is in the image of the map
 \[
 p^* : \clie^*\left(\fg,K ; \bigoplus_{k \geq 0} \Sym^k (\fg^\vee)[k]\right) \to  \clie^*\left(\Tilde{\fg},K ; \bigoplus_{k \geq 0} \Sym^k (\fg^\vee)[k]\right) .
@@ -2754,7 +2758,7 @@ c_{m_1}^{i_1} \cdots c_{m_k}^{i_k} b_{l_1}^{j_1} \cdots b_{l_q}^{j_q} .
 \een 
 It is a quick computation to verify that the action of $\ker(p)=\hOmega^2_{n,cl}$ on the CDOs is off-diagonal for this filtration.
 
-A slight enhancement of Lemma \ref{lem: offdiag} which applies to the $q$-graded situation, implies the following. \si
+A slight modification of Lemma \ref{lem: offdiag}, which applies to the $q$-graded situation, implies the following. \si
 
 \begin{cor}\label{cor formal char cdo} 
 The $(\TVect, \GL_n)$-equivariant graded character of the vertex algebra $\hCDO_n$ is the image of an element 
@@ -2766,7 +2770,8 @@ along the pull-back $\clie^*(\Vect , \GL_n ; \hOmega^{-*}_n) \to \clie^*(\TVect 
 
 \def\Td{{\rm Td}}
 
-For the pair $(\fg,K) = (\Vect, \GL_n)$ the Chern character in the previous section coincides with the Gelfand-Fuks-Chern character $\ch^{\GF}(W)$ for any formal vector bundle $W$. We let $\Td^{\GF} := \Td^{(\Vect, \GL_n)}$. 
+For the pair $(\fg,K) = (\Vect, \GL_n)$ the Chern character in the previous section coincides with the Gelfand-Fuks-Chern character $\ch^{\GF}(W)$ for any formal vector bundle $W$. 
+Set $\Td^{\GF} := \Td^{(\Vect, \GL_n)}$. 
 
 \begin{prop} \label{prop local character} 
 The $(\Vect, \GL_n)$-equivariant graded character of $\hCDO_n$ is given by
@@ -3322,7 +3327,10 @@ one-form
 \een
 living  in $\Omega^1(\Fr_X; \TVect)$.
 
-\begin{dfn} An {\em extended Gelfand-Kazhdan structure} on $X$ is a triple $(\alpha, \sigma, \sigma_{\Omega^2})$ where
+\owen{Did you put anything here to address comment 31? If so, please add an "Edit" note by the side.}
+
+\begin{dfn} 
+An {\em extended Gelfand-Kazhdan structure} on $X$ is a triple $(\alpha, \sigma, \sigma_{\Omega^2})$ where
 \begin{itemize}
 \item[(i)] $\alpha$ is a trivialization for the second component of the
 Chern character of $X$;
