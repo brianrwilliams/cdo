@@ -586,20 +586,19 @@ One way to formalize these ideas is to realize $X^{coor}$ as a limit of finite-d
 Let $X_k^{coor}$ be the space consisting of points $(x, [\phi]_k)$, 
 where $\phi$ is a formal holomorphic coordinate system, as above, and $[-]_k$ denotes the projection on $\CC[[[t_1,\ldots,t_n]]/(t_1,\ldots,t_n)^{k+1}$. 
 Let $\pi_k^{coor} : X^{coor}_k \to X$ be the projection. 
-By construction, the finite-dimensional Lie group $\Aut_{n,k}$ acts on the fibers of the projection freely and transitively 
-so that $\pi_k^{coor}$ is a principal $\Aut_{n,k}$-bundle. The bundle $X^{coor} \to X$ is the limit of the sequence of principal bundles on X
+By construction, the finite-dimensional complex Lie group $\Aut_{n,k}$ acts on the fibers of the projection freely and transitively 
+so that $\pi_k^{coor}$ is a holomorphic principal $\Aut_{n,k}$-bundle. The bundle $X^{coor} \to X$ is the limit of the sequence of holomorphic principal bundles on X
 \ben
 \xymatrix{
 \cdots \ar[r] & X^{coor}_k \ar[r] \ar[drrrr]_-{\pi_k^{coor}} & X^{coor}_{k-1} \ar[drrr]^-{\pi_{k-1}^{coor}} \ar[r] & \cdots \ar[r] & X_2^{coor} \ar[dr]^{\pi_2^{coor}} \ar[r] & X_1^{coor} \ar[d]^-{\pi_1^{coor}} \\ 
  & & & & & X .
 }
 \een
-
 In particular, note that the $\GL_n = \Aut_{n,1}$-bundle $\pi_1^{coor} : X^{coor}_1 \to X$ is the frame bundle
 \ben
 \pi^{fr} : {\rm Fr}_X \to X,
 \een
-i.e., the principal bundle associated to the tangent bundle of $X$.
+i.e., the principal bundle associated to the holomorphic tangent bundle of $X$.
 
 \subsubsection{The Grothendieck connection} 
 
@@ -632,7 +631,8 @@ Moreover, this action induces the isomorphism $\Vect \cong
 T_{(x,[\phi]_\infty)} X^{coor}$ at each point.
 \end{prop}
 
-\noindent Here, $\cX(X^{coor})$ is understood as the inverse limit of the Lie algebras $\cX(X^{coor}_k)$. The superscript $hol$ means the inverse limit of the subalgebras of holomorphic vector fields.\si \owen{I'm also confused about what these things are. We need to spell it out contra comment 14.}
+\noindent Here, $\cX(X^{coor})$ is understood as the inverse limit of the Lie algebras $\cX(X^{coor}_k)$. \si 
+The superscript $hol$ means the inverse limit of the sub-Lie algebras of holomorphic vector fields.
 
 The inverse of the map $\theta$ provides a connection one-form
 \ben
