@@ -3074,11 +3074,11 @@ underlying graded vector space
 \cSym(\Bar{\Omega}^{1,*}_c(\CC)^{\oplus n}[1] \oplus \Bar{\Omega}^{0,*}_c(\CC)^{\oplus n}[1])[[\hbar]]
 \]
 with differential $\dbar + \hbar \Delta_L$. 
-We denote it $\Obs^q_n[L](\CC)$.
+We denote it $\Obs^\q_n[L](\CC)$.
 \end{dfn}
 
 The quantum observables are isomorphic for any choice of length scale.
-In fact, the RG flow provides an explicit isomorphism $W_\epsilon^L: \Obs^q_n[\epsilon](\CC) \to \Obs^q_n[L](\CC)$ as follows: 
+In fact, the RG flow provides an explicit isomorphism $W_\epsilon^L: \Obs^\q_n[\epsilon](\CC) \to \Obs^\q_n[L](\CC)$ as follows: 
 given an observable $f$ at scale $\epsilon$, let $W_\epsilon^L(f)$ denote the observable such that
 \[
 W(P_\epsilon^L, \delta f) = \delta W_\epsilon^L(f)
@@ -3198,25 +3198,25 @@ underlying graded vector space
 \cSym(\Bar{\Omega}_c^{1,*}(\CC)^{\oplus n}[1] \oplus \Bar{\Omega}^{0,*}_c(\CC)^{\oplus n}[1])[[\hbar]]
 \]
 with differential $\dbar + \hbar \Delta_\Phi$. 
-We denote it $\Obs^q_n[\Phi](\CC)$.
+We denote it $\Obs^\q_n[\Phi](\CC)$.
 \end{dfn}
 
 Again, Lemma 9.3.1.2 of \cite{CG2} shows that the quantum observables are isomorphic for any choice of parametrix.
 The isomorphism is explicitly given by the ``derivative of the RG flow'':
 \[
-W_\Phi^\Psi: f \in \Obs^q_n[\Phi](\CC) \mapsto \frac{\partial}{\partial \delta}(W(P_\Psi - P_\Phi, \delta f)) \in \Obs^q_n[\Psi](\CC).
+W_\Phi^\Psi: f \in \Obs^\q_n[\Phi](\CC) \mapsto \frac{\partial}{\partial \delta}(W(P_\Psi - P_\Phi, \delta f)) \in \Obs^\q_n[\Psi](\CC).
 \]
 Because our parametrices have proper support, though, they only expand the support of an observable $f$ by a controlled amount 
 (essentially determined by how the size of the parametrix's support).
 
 \begin{dfn}
-Let $\Obs^q_n(\CC)$ denote the cochain complex of quantum observables up to isomorphism.
-That is, an \emph{observable} $f \in \Obs^q_n(\CC)$ is a family of elements $\{f[\Phi]\}_{\Phi \in {\rm Param}}$ for every parametrix $\Phi$ 
+Let $\Obs^\q_n(\CC)$ denote the cochain complex of quantum observables up to isomorphism.
+That is, an \emph{observable} $f \in \Obs^\q_n(\CC)$ is a family of elements $\{f[\Phi]\}_{\Phi \in {\rm Param}}$ for every parametrix $\Phi$ 
 such that the $f[\Psi] = W_\Phi^\Psi(f[\Phi])$ for any pair of parametrices $\Psi$ and $\Phi$.
 \end{dfn}
 
 \begin{dfn}
-Let $f$ be an observable in $\Obs^q_n(\CC)$ and denote its Taylor expansion by
+Let $f$ be an observable in $\Obs^\q_n(\CC)$ and denote its Taylor expansion by
 \[
 f = \sum_{j,k \geq 0} \hbar^j f_{j,k},
 \]
@@ -3226,12 +3226,12 @@ for every $(j,k)$, there is some compact subset $C \subset U^k$ and some paramet
 such that $\supp(f_{j,k}[\Psi]) \subset C$ for all $\Psi \leq \Phi$.
 \end{dfn}
 
-By Lemma 9.4.0.2 of \cite{CG2}, the graded vector space $\Obs^q_n(U)$ of observables with support in $U$
-is preserved by the differential $\dbar + \hbar \Delta$ and hence provides a sub-complex of $\Obs^q_n(\CC)$.
+By Lemma 9.4.0.2 of \cite{CG2}, the graded vector space $\Obs^\q_n(U)$ of observables with support in $U$
+is preserved by the differential $\dbar + \hbar \Delta$ and hence provides a sub-complex of $\Obs^\q_n(\CC)$.
 The remainder of Chapter 9 of \cite{CG2} shows that these naturally form a factorization algebra.
 
 \begin{dfn}\label{noneq quantum obs}
-Let $\Obs^q_n$ denote the factorization algebra on $\CC$ of quantum observables for the rank $n$ formal $\beta\gamma$ system.
+Let $\Obs^\q_n$ denote the factorization algebra on $\CC$ of quantum observables for the rank $n$ formal $\beta\gamma$ system.
 \end{dfn}
 
 We remark again that $\GL_n(\CC)$ acts naturally on $\CC^n \cong \fgn[1]$
@@ -3279,7 +3279,7 @@ The classical observables $\Obs^\cl_n$ are a representation of the Harish-Chandr
 In particular $\GL_n$ acts by (strict) automorphisms of the factorization algebra, and
 $\Vect$ acts by (strict) derivations of the factorization algebra. Via
 restriction along $p : (\TVect, \GL_n) \to (\Vect, \GL_n)$ the
-classical observables $\Obs^{cl}_n$ are also a representation for the pair
+classical observables $\Obs^{\cl}_n$ are also a representation for the pair
 $(\TVect, \GL_n)$. 
 \end{lemma}
 
@@ -3335,7 +3335,7 @@ contributions of every even power.
 Thus we cannot apply strict Gelfand-Kazhdan descent for
 $(\TVect,\GL_n)$. We have already observed that when restricted to
 linear vector fields $\gl_n \hookrightarrow \TVect$ that the anomaly
-vanishes. Thus, the quantum observables $\Obs^q_n$ admit a {\it strict} action by~$\gl_n$.
+vanishes. Thus, the quantum observables $\Obs^\q_n$ admit a {\it strict} action by~$\gl_n$.
 
 \subsection{An aside on the two versions of non-equivariant observables}
 \label{noneqsec}
@@ -3658,13 +3658,13 @@ but first we will swiftly relate our work to Costello's approach in \cite{WG2}.
 %\een
 %We identify the scale $L$ equivariant observables above with the $\clie^*(\TVect)$-module 
 %\ben
-%\clie^*(\TVect ; \Obs^q_n[L])
+%\clie^*(\TVect ; \Obs^\q_n[L])
 %\een
-%from which $\Obs^q_n[L]$ inherits the structure of an
+%from which $\Obs^\q_n[L]$ inherits the structure of an
 %$L_\infty$ module for the Lie algebra $\TVect$. The $L_\infty$ module
 %structure maps have the form
 %\ben
-%\rho_m : (\TVect)^{\tensor m} \tensor \Obs^q_n[L] \to \Obs^q_n[L] .
+%\rho_m : (\TVect)^{\tensor m} \tensor \Obs^\q_n[L] \to \Obs^\q_n[L] .
 %\een
 %The action of a fixed element
 %\ben
@@ -3684,7 +3684,7 @@ but first we will swiftly relate our work to Costello's approach in \cite{WG2}.
 %
 %At the level of cohomology, the action of $\TVect$ on the observables
 %is strict. Hence, the induced action on the vertex algebra
-%$\Vert(\Obs^q_n)$ is strict. Thus, we need only compute the linear piece of the action $\rho_1 : \TVect \tensor \Obs^q_n[L] \to \Obs^q_n[L]$ and there are no contributions from the higher brackets at the level of cohomology. Explicitly, for an observable $\{O[L]\}$ we need only compute
+%$\Vert(\Obs^\q_n)$ is strict. Thus, we need only compute the linear piece of the action $\rho_1 : \TVect \tensor \Obs^\q_n[L] \to \Obs^\q_n[L]$ and there are no contributions from the higher brackets at the level of cohomology. Explicitly, for an observable $\{O[L]\}$ we need only compute
 %\ben
 %\{I_X^{\rm W}[L] + \hbar J_\omega[L], O[L]\}_L
 %\een 
@@ -3699,14 +3699,14 @@ but first we will swiftly relate our work to Costello's approach in \cite{WG2}.
 %\een 
 %for any local functional $I$. 
 %
-%Thus, we can describe the action of $\TVect$ on $\Vert(\Obs^q_n)$ concretely as
-%follows. Given an element $a \in \Vert(\Obs^q_n)$ pick a cochain representative
+%Thus, we can describe the action of $\TVect$ on $\Vert(\Obs^\q_n)$ concretely as
+%follows. Given an element $a \in \Vert(\Obs^\q_n)$ pick a cochain representative
 %$\Tilde{a}$ in $\bObs^q(D(0,r))$. Then, the action of $(X,\omega) \in
 %\TVect$ on $a$ is given by the cohomology class of 
 %\ben
 %\{I^{\rm W}_X + \hbar J_\omega, \Tilde{a}\}
 %\een 
-%which is an element of $\Vert(\Obs_n) \subset H^*(\Obs^q(D(0,r)))$. 
+%which is an element of $\Vert(\Obs_n) \subset H^*(\Obs^\q(D(0,r)))$. 
 %
 %
 
@@ -3775,10 +3775,10 @@ Under Gelfand-Kazhdan descent on a complex manifold $X$,
 the formal $\beta\gamma$ system recovers the classical BV theory associated to $X$ in \cite{WG2}.
 Moreover, the obstruction-deformation complex descends to that in \cite{WG2},
 so that the obstruction to BV quantization recovers the obstruction identified in \cite{WG2}.
-Finally, given a trivialization of this obstruction, descent recovers the quantized action functional in \cite{WG2}.
+Finally, given a trivialization of this obstruction, descent recovers the quantized action functional in~\cite{WG2}.
 \end{prop}
 
-The primary corollary of this is that the factorization algebra associated to Costello's quantization of the curved $\beta\gamma$ system with target $X$ is isomorphic to the factorization algebra $\Obs^\q_{X,\alpha}$ we have constructed via semi-strict Gelfand-Kazhdan descent of the formal $\beta\gamma$ system with target $\hD^n$. 
+The primary corollary of this is that the factorization algebra associated to Costello's quantization of the curved $\beta\gamma$ system with target $X$ is isomorphic to the factorization algebra $\Obs^\q_{X,\alpha}$ we have constructed via semi-strict Gelfand-Kazhdan descent of the formal $\beta\gamma$ system with target~$\hD^n$. 
 
 Moreover, we recover the Witten class as originally obtained by Costello. That
 is, we have already identified the equivariant scale $\infty$ interaction
@@ -4307,7 +4307,7 @@ By Chapter 11 of \cite{CG2}, the map on global sections refines to a map of prec
 of dg Lie algebras on $S$.
 Since $\cT^S_c$ is a trivial $\Vect$-module, we see that applying Gelfand-Kazhdan descent yields a map of sheaves on~$X$
 \[
-\Psi^{\cl}_X : {\ul \cT^S_c} \to \Obs^{cl}_X[-1]
+\Psi^{\cl}_X : {\ul \cT^S_c} \to \Obs^{\cl}_X[-1]
 \]
 of precosheaves of dg Lie algebras on $S$, where $\Obs^{\cl}_X$ is the classical observables of the curved $\beta\gamma$ system with target $X$. The underline means that it is a constant sheaf in the $X$-direction. 
 
@@ -4328,7 +4328,7 @@ The natural question is, then, how to construct the quantum version of the map (
 \begin{prop} \label{prop quantum vir} 
 Let $\alpha$ be a trivialization of $\ch_2(T_X)$, and let $\Obs^\q_{X,\alpha}$ be the resulting factorization algebra on $\CC$ of observables for the curved $\beta\gamma$ system with target $X$. If $c_1(T_X) = 0$,  then there is a map of sheaves on $X$ of holomorphic factorization algebras on $\CC$ 
 \be\label{quantum vir}
-\Psi^\q_X : {\ul \sVir}_{c=2n} \to \Obs^q_{X,\alpha}
+\Psi^\q_X : {\ul \sVir}_{c=2n} \to \Obs^\q_{X,\alpha}
 \ee
 that, modulo $\hbar$, agrees with the classical map of factorization algebras $\Psi^{\rm cl}$ in Equation~(\ref{classical vir}). 
 \end{prop}
@@ -4338,7 +4338,7 @@ This claim will follow from obstruction calculations we have already done when c
 \begin{thm}[\cite{CG2}, Theorem 12.1.0.2] \label{thm quantum noether} 
 Let a local Lie algebra $\cE$ defined on a manifold $S$ describe a classical BV theory and suppose $\cE$ has an action of a local Lie algebra $\cL$. Fix a $\cL$-dependent quantization $\{I^\cL[L]\}_{L > 0}$ as described in Section \ref{sec equiv bv 1} such that the obstruction to solving the equivariant QME vanishes modulo functionals depending solely on $\cE$. There is then an $\hbar$-dependent cocycle $\eta \in \cloc^*(\cL)[[\hbar]]$ of degree one, and a map of factorization algebras
 \ben
-\Psi^{\q} : {\rm C}^{{\rm Lie}, \eta}_*(\cL_c) \to \Obs^q,
+\Psi^{\q} : {\rm C}^{{\rm Lie}, \eta}_*(\cL_c) \to \Obs^\q,
 \een
 where $ {\rm C}^{{\rm Lie}, \eta}_*(\cL_c)$ is the factorization algebra of $\eta$-twisted Chevalley-Eilenberg chains of~$\cL_c$.
 \end{thm}

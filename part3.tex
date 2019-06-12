@@ -18,11 +18,11 @@ as a $(\TVect,\GL_n)$-equivariant vertex algebra.
 Thanks to the machinery of Gelfand-Kazhdan descent, we then deduce our main result.
 
 \begin{thm} 
-Let $X$ be a complex $n$-manifold together with a trivialization $\alpha$ of $\ch_2(T_X) \in H^2(X ; \Omega^{2,hol}_{cl})$. Then the factorization algebra $\Obs^q_{X,\alpha}$ obtained by Gelfand-Kazhdan descent 
-determines a sheaf of vertex algebras $\Vert(\Obs^q_{X,\alpha})$ on $X$. 
+Let $X$ be a complex $n$-manifold together with a trivialization $\alpha$ of $\ch_2(T_X) \in H^2(X ; \Omega^{2,hol}_{cl})$. Then the factorization algebra $\Obs^{\q}_{X,\alpha}$ obtained by Gelfand-Kazhdan descent 
+determines a sheaf of vertex algebras $\Vert(\Obs^{\q}_{X,\alpha})$ on $X$. 
 Moreover, there is an isomorphism of sheaves of vertex algebras on $X$
 \ben
-\Phi : \CDO_{X,\alpha} \xto{\cong} \Vert(\Obs^q_{X,\alpha})
+\Phi : \CDO_{X,\alpha} \xto{\cong} \Vert(\Obs^{\q}_{X,\alpha})
 \een
 that is natural in the choice of trivialization~$\alpha$.
 \end{thm}
@@ -298,8 +298,8 @@ strict action of the pair $(\fg,K)$.
 
 As an example of the relationship encoded in $\Vert$,
 the free $\beta\gamma$ system is examined in depth in Chapter 5 of \cite{CG1}.
-It is shown that the factorization algebra $\Obs^{\fr}_n$ of quantum observables is amenably holomorphic
-and that the associated vertex algebra is precisely the usual $\beta\gamma$ vertex algebra.
+It is shown there that the factorization algebra $\Obs^{\fr,\q}_n$ of quantum observables for the free $\beta\gamma$ system is amenably holomorphic,
+and it is also shown that the associated vertex algebra is precisely the usual $\beta\gamma$ vertex algebra.
 
 \begin{thm}[Theorem 5.3.3.2, \cite{CG1}]
 The factorization algebra $\Obs^{\q,\fr}_n$ is amenably holomorphic. 
@@ -725,7 +725,7 @@ A_{S<r}(0) \sqcup D_s(0) \hookrightarrow D_R(0)
 of an annulus and a small disk into a big disk.
 All are centered at the origin. We will consider the factorization product 
 \be\label{disk ann disk}
-\Obs^q_n(A_{S<r}(0)) \tensor \Obs^q_n (D_s(0)) \to \Obs^q_n(D_R(0)) .
+\Obs^{\q}_n(A_{S<r}(0)) \tensor \Obs^{\q}_n (D_s(0)) \to \Obs^{\q}_n(D_R(0)) .
 \ee
 At the level of vertex algebras, this map corresponds to the action of ``fields'' (which live on annulus and thus depend on $z$ and $z^{-1}$) on ``states'' (which live on a disk and hence in the state space).
 
@@ -734,7 +734,7 @@ Let $L$ be a constant-coefficient local functional that is $\beta$-linear or $\b
 Its {\em disk observable} $L_{disk}$ is $L_{\{|z| \leq r\}}$. For the circle $S^1_r$ of radius $r$, its {\em circle observable} $L_{circ}$ is $\dbar L_{disk}$.
 \end{dfn}
 
-The circle observable $L_{circ}$ is an element of $\Obs^q_{n}(A)$ where $A$ is any annulus containing the circle of radius $r$. Note that a circle observable should be identifiable with a Fourier mode of some field for the vertex~algebra.
+The circle observable $L_{circ}$ is an element of $\Obs^{\q}_{n}(A)$ where $A$ is any annulus containing the circle of radius $r$. Note that a circle observable should be identifiable with a Fourier mode of some field for the vertex~algebra.
 
 \begin{lemma}
 \label{der vs star}
@@ -800,7 +800,7 @@ as claimed by the lemma.
 
 Let us build on this example to get a general statement.
 As a matter of notation, if $A_{S<r}(0) \hookrightarrow D_R(0)$ denotes the inclusion of the annulus inside of the disk, 
-denote the resulting structure map of the factorization algebra by $\iota : \Obs^q_n(A_{S<r}(0)) \to \Obs^q_n(D_R(0))$. 
+denote the resulting structure map of the factorization algebra by $\iota : \Obs^{\q}_n(A_{S<r}(0)) \to \Obs^{\q}_n(D_R(0))$. 
 In the language of vertex algebras, this map sends a field $A$ to the state~$A |0\rangle$.
 
 For an arbitrary constant-coefficient local functional, 
@@ -809,7 +809,7 @@ we then have the following relation between the vertex algebra and in the factor
 \begin{lemma}\label{zero fourier mode} 
 Let $L$ be a local functional that is $\beta$-linear or $\beta$-free, 
 and let $\cdot$ be the factorization product (\ref{disk ann disk}). 
-For each disk observable $O \in \Obs^q_n(D_s(0))^{(k)}$, 
+For each disk observable $O \in \Obs^{\q}_n(D_s(0))^{(k)}$, 
 \ben
 [\frak{q}(L_{circ}) \cdot O] = \hbar [\iota(\frak{q}(L_{circ}))]_{(0)} [O] .
 \een
@@ -849,11 +849,11 @@ which is precisely the cohomology class of the observable above.
 The proof for local functionals that are $\beta$-free is completely analogous. 
 \end{proof}
  
-%\begin{lemma} Let $a \in \Obs^q_n(A_{S<r}(0))^{(1)}$ and $\cdot$ be the factorization product in (\ref{disk ann disk}). Then, for each $c \in \Obs^q_n(D_s(0))^{(l)}$, one has 
+%\begin{lemma} Let $a \in \Obs^{\q}_n(A_{S<r}(0))^{(1)}$ and $\cdot$ be the factorization product in (\ref{disk ann disk}). Then, for each $c \in \Obs^{\q}_n(D_s(0))^{(l)}$, one has 
 %\ben
 %[a \cdot c] = [a_{disk}]_{(0)} [c] 
 %\een 
-%in the vertex algebra $\Vert(\Obs^q_n)$. 
+%in the vertex algebra $\Vert(\Obs^{\q}_n)$. 
 %\end{lemma}
 %
 %\begin{proof}
@@ -878,8 +878,8 @@ The proof for local functionals that are $\beta$-free is completely analogous.
 %\begin{proof}
 %For convenience, we assume $n = 1$. The general case is a direct generalization. It suffices to evaluate on linear observables
 %\begin{align*}
-%a & \in \left(\Omega^{1,*}_c(A_{S<r}(0)) \oplus \Omega^{0,*}_c(A_{S<r}(0)) \right)^{(k)} \subset (\Obs^{q}_n(A_{S<r}(0))^{(k)} \\
-%c & \in \left(\Omega^{1,*}_c((D_r(0)) \oplus \Omega^{0,*}_c((D_r(0)) \right)^{(l)} \subset (\Obs^{q}_n((D_r(0))^{(l)} .
+%a & \in \left(\Omega^{1,*}_c(A_{S<r}(0)) \oplus \Omega^{0,*}_c(A_{S<r}(0)) \right)^{(k)} \subset (\Obs^{\q}_n(A_{S<r}(0))^{(k)} \\
+%c & \in \left(\Omega^{1,*}_c((D_r(0)) \oplus \Omega^{0,*}_c((D_r(0)) \right)^{(l)} \subset (\Obs^{\q}_n((D_r(0))^{(l)} .
 %\end{align*} 
 %Let $f$ be a bump function for $A_{S<r}(0)$. Up to exact elements, the linear observables of weight $k$ supported on the annulus are of the form 
 %\begin{align*}
@@ -905,8 +905,8 @@ the local functionals $I^{{\rm W}}$ and $J$ produced by equivariant BV quantizat
 As discussed in Section \ref{extendedtheory} in Part II, the local functionals encode how $\TVect$ acts on 
 the rank $n$ formal $\beta\gamma$ system.
 Specifically, we showed that this equivariant quantization equipped the the factorization algebra
-$\Obs^q_n$ with the structure of a semi-strict $(\TVect,\GL_n)$-module. 
-Moreover, we showed that this semi-strict action induces a strict action of $(\TVect,\GL_n)$ on the cohomology $H^*\Obs^q_n$.
+$\Obs^{\q}_n$ with the structure of a semi-strict $(\TVect,\GL_n)$-module. 
+Moreover, we showed that this semi-strict action induces a strict action of $(\TVect,\GL_n)$ on the cohomology $H^*\Obs^{\q}_n$.
 
 Our goal now is to use the tools we just introduced to describe the strict action of $\TVect$ on $\hCDO_n$
 determined by these local functionals. 
@@ -976,7 +976,7 @@ In light of our arguments in the preceding sections, we obtain the following.
 \begin{thm} 
 The isomorphism of $\ZZ_{\geq 0}$-graded vertex algebras
 \ben
-\Phi : \hCDO_n \xto{\cong} \Vert(\Obs^q_n) 
+\Phi : \hCDO_n \xto{\cong} \Vert(\Obs^{\q}_n) 
 \een
 is equivariant with respect to the actions of $(\TVect, \GL_n)$. 
 Moreover, it is compatible with the $\hO_n$-module structure. 
@@ -988,17 +988,17 @@ Thus it remains to discuss the $\hO_n$-module structure.
 This aspect, however, is the focus of Section \ref{sec concrete},
 where we describe how observables on a disk decompose according to conformal dimension
 and then identify each subspace of fixed conformal dimension with some type of formal tensor fields.
-At the level of cohomology --- which provides the decomposition for $\Vert(\Obs^q_n)$ --- these match with~$\hCDO_n$.
+At the level of cohomology --- which provides the decomposition for $\Vert(\Obs^{\q}_n)$ --- these match with~$\hCDO_n$.
 \end{proof}
 
 An immediate corollary, via Gelfand-Kazhdan descent and its variants, is our main result.
 
 \begin{cor} 
-Let $X$ be a complex $n$-manifold together with a trivialization $\alpha$ of $\ch_2(T_X) \in H^2(X ; \Omega^{2,hol}_{cl})$. Then the factorization algebra $\Obs^q_{X,\alpha}$ obtained by Gelfand-Kazhdan descent 
-determines a sheaf of vertex algebras $\Vert(\Obs^q_{X,\alpha})$ on $X$. 
+Let $X$ be a complex $n$-manifold together with a trivialization $\alpha$ of $\ch_2(T_X) \in H^2(X ; \Omega^{2,hol}_{cl})$. Then the factorization algebra $\Obs^{\q}_{X,\alpha}$ obtained by Gelfand-Kazhdan descent 
+determines a sheaf of vertex algebras $\Vert(\Obs^{\q}_{X,\alpha})$ on $X$. 
 Moreover, there is an isomorphism of sheaves of vertex algebras on $X$
 \ben
-\Phi : \CDO_{X,\alpha} \xto{\cong} \Vert(\Obs^q_{X,\alpha})
+\Phi : \CDO_{X,\alpha} \xto{\cong} \Vert(\Obs^{\q}_{X,\alpha})
 \een
 that is natural in the choice of trivialization~$\alpha$.
 \end{cor}
