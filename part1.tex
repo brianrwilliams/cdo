@@ -605,13 +605,14 @@ i.e., the principal bundle associated to the holomorphic tangent bundle of $X$.
 We can also realize the Lie algebra $\Vect$ as an inverse limit. 
 Recall the filtration on $\Vect$ by powers of the maximal ideal $\fm_n$ of $\hO_n$. 
 Let ${\rm W}_{n,k}$ denote the quotient $\Vect / \fm_n^{k+1} \Vect$. 
-For instance, ${\rm W}_{n,1} = \mathfrak{aff}_n = \CC^n \ltimes \fgl_n$, the Lie algebra of affine transformations of $\CC^n$. We have $\Vect = \lim_{k \to \infty} {\rm W}_{n,k}$. 
+For instance, ${\rm W}_{n,1} = \mathfrak{aff}_n = \CC^n \ltimes \fgl_n$, the Lie algebra of affine transformations of $\CC^n$. 
+We have $\Vect = \lim_{k \to \infty} {\rm W}_{n,k}$. 
 
 The Lie algebra of $\Aut_{n,k}$ is
 \[
 {\rm W}_{n,k}^0 := \fm_n \cdot \Vectz /\fm_n^{k+1} \Vectz .
 \]
-That is, the Lie algebra of vector fields vanishing at zero modulo the $(k+1)$th power of the maximal ideal. Thus, the principal $\Aut_{n,k}$-bundle $X_{k}^{coor} \to X$ induces an exact sequence of tangent spaces
+That is, the Lie algebra of vector fields vanishing at zero modulo the $(k+1)$th power of the maximal ideal. Thus, the principal $\Aut_{n,k}$-bundle $X_{k}^{coor} \to X$ induces an exact sequence of holomorphic tangent spaces
 \ben
 {\rm W}_{n,k}^0 \to T_{(x,[\varphi]_k)}X^{coor} \to T_x X;
 \een
@@ -619,20 +620,18 @@ by using $\varphi$, we obtain a canonical isomorphism of tangent spaces $\CC^n \
 \ben
 {\rm W}_{n,k} \cong T_{(x,[\varphi]_k)} X^{coor}_k .
 \een
-In the limit $k \to \infty$ we obtain an isomorphism $\Vect \cong T_{(x,[\varphi]_\infty)} X^{coor}$. 
+In the limit $k \to \infty$ we obtain an isomorphism $\Vect \cong T_{(x,[\varphi]_\infty)} X^{coor}$ at each point.
+These isomorphisms glue together to give the following. \si
 
-\begin{prop}[Section 5 of \cite{NT}, Section 3 of \cite{CF2}]
-There exists a canonical action of $\Vect$ on $X^{coor}$ by
-holomorphic vector fields, i.e., there is a Lie algebra homomorphism
+\begin{dfn}
+Let
 \ben
 \theta : \Vect \to \cX^{hol}(X^{coor}) .
 \een
-Moreover, this action induces the isomorphism $\Vect \cong
-T_{(x,[\phi]_\infty)} X^{coor}$ at each point.
-\end{prop}
-
-\noindent Here, $\cX(X^{coor})$ is understood as the inverse limit of the Lie algebras $\cX(X^{coor}_k)$. \si 
-The superscript $hol$ means the inverse limit of the sub-Lie algebras of holomorphic vector fields.
+denote the Lie algebra morphism encoding the canonical action of $\Vect$ on $X^{coor}$ by
+holomorphic vector fields.
+(See Section 5 of \cite{NT} and Section 3 of \cite{CF2} for further discussions of this kind of construction.)
+\end{dfn}
 
 The inverse of the map $\theta$ provides a connection one-form
 \ben

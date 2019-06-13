@@ -218,8 +218,16 @@ is a quasi-isomorphism.
 
 Observe that for an amenably holomorphic factorization algebra $\cF$, 
 the vector space $H^* (\cF_k(D(0,r))$ is independent of $r$ by assumption.
-Let $V_\cF$ denote the vector space $\bigoplus_{k \in \ZZ} H^* (\cF_k(D(0,r))$
-and $\overline{V}_\cF$ denote the vector space $\prod_{k \in \ZZ} H^* (\cF_k(D(0,r))$.
+Let 
+\[
+V_\cF= bigoplus_{k \in \ZZ} H^* (\cF_k(D(0,r))
+\]
+be the direct sum of the weight spaces, 
+and let 
+\[
+\overline{V}_\cF = \prod_{k \in \ZZ} H^* (\cF_k(D(0,r))
+\]
+be the direct product of the weight spaces.
 Note that for any disk $D_r(0)$, there is a map $V_\cF \to H^*\cF(D_r(0))$ by the inclusion of the weight spaces.
 Likewise, there is map $H^*\cF(D_r(0)) \to \overline{V}_\cF$.
 The structure maps of $\cF$ thus determine a family of maps $m_z: V_\cF \otimes V_\cF \to \overline{V}_\cF$ 
@@ -234,14 +242,20 @@ Let $\FA^{am}$ denote the category of amenably holomorphic factorization algebra
 where morphisms are maps of prefactorization algebras intertwining the actions of $\CC$ by translation and $U(1)$ by rotation.
 Let $\VA$ denote the category of vertex algebras.
 
-\begin{thm}
+\begin{thm}[Theorem 5.3.3, \cite{CG1}] 
 \label{theorem_vertex_algebra}
 There is a functor $\Vert:\FA^{am} \to \VA$. 
 For $\cF$ amenably holomorphic, the underlying vector space of the vertex algebra is $V_\cF$,
 and the vertex operator $Y_{\Vert(\cF)}$ is determined by the maps $m_z$ arising from the structure maps of~$\cF$.
 \end{thm}
 
-For a proof, see Section 2 of Chapter 5 in~\cite{CG1}.  
+\begin{rmk}
+\label{rmk on completions}
+As remarked in \cite{CG1} immediately following the theorem, \si 
+this construction makes sense on a factorization algebra $\cF$ that is the inverse limit $\lim_k \cF_k$ of amenably holomorphic factorization algebras,
+so that $\Vert(\cF)$ is the inverse limit $\lim_k \Vert(\cF_k)$ of the associated vertex algebras.
+This variant is needed by use to recover the completed CDOs~$\hCDO_n$ from the $\beta\gamma$ observables where the target is the formal $n$-disk.
+\end{rmk}
 
 Immediate consequences of this theorem include the following.
 
@@ -305,13 +319,17 @@ and it is also shown that the associated vertex algebra is precisely the usual $
 The factorization algebra $\Obs^{\q,\fr}_n$ is amenably holomorphic. 
 Moreover, 
 there is an isomorphism of $\ZZ_{\geq 0}$-graded vertex algebras 
-$\Phi^{\fr}_n : \CDO_n \xto{\cong} \Vert(\Obs^{\q,\fr}_n)|_{\hbar= 2 \pi i}$ after specializing $\hbar=2 \pi i$.
+\[
+\Phi^{\fr}_n : \CDO_n \xto{\cong} \Vert(\Obs^{\q,\fr}_n)|_{\hbar= 2 \pi i}
+\] 
+after specializing $\hbar=2 \pi i$.
+The map is $\GL_n$-equivariant.
 \end{thm}
 
-The construction is naturally $\GL_n$-equivariant, and 
-it extends from the symmetric algebra to the completed symmetric algebra without difficulties.
-(We discuss below some features of this construction important to our main objective.)
-Hence, in combination with Proposition \ref{equiv of noneq},
+As noted in Remark~\ref{rmk on completions}, 
+these results immediately imply the analogous results about the completed case, \si 
+where the free $\beta\gamma$ system is replaced by having the target be the formal $n$-disk.
+Hence, in combination with Proposition~\ref{equiv of noneq},
 we obtain the following result.
 
 \begin{cor}
@@ -319,6 +337,16 @@ The factorization algebra $\Obs^\q_n$ is amenably holomorphic.
 Moreover, there is a $\GL_n$-equivariant isomorphism of $\ZZ_{\geq 0}$-graded vertex algebras 
 $\Phi_n : \hCDO_n \xto{\cong} \Vert(\Obs^\q_n)|_{\hbar= 2 \pi i}$.
 \end{cor}
+
+\begin{rmk}
+The reader might (correctly) object that $\Obs^\q_n$ lives in modules over $\CC[[\hbar]]$, \si 
+and so one cannot specialize $\hbar$ to a nonzero value.
+We note, however, that the differential on $\Obs^\q_n$ has the form $D_0 + \hbar D_1$, 
+so that only a single power of $\hbar$ appears.
+Hence the construction of the quantum observables is well-defined in modules over $\CC[\hbar]$,
+where one can specialize $\hbar$ to a nonzero value,
+and we are using that version of $\Obs^\q_n$ here.
+\end{rmk}
 
 Section \ref{sec loc sym} tackles the much more subtle challenge of showing the isomorphism $\Phi_n$ is $\TVect$-equivariant,
 and hence that we get an isomorphism of $(\TVect,\GL_n)$-equivariant vertex algebras.
@@ -329,7 +357,7 @@ In the remainder of this section, we review some aspects of the $\beta\gamma$ sy
 and vertex algebras that are useful for our central goal.
 
 \begin{rmk}
-An extensive and expository treatment of these aspects appears in Chapter 6 of \cite{GwThesis}.
+An extensive and expository treatment of these aspects appears in Chapter 6 of~\cite{GwThesis}.
 \end{rmk}
 
 \subsection{Some useful identifications}
@@ -350,7 +378,7 @@ hence, we have elements $b_n$ and $c_m$ with no upper index.
 The extension to arbitrary $n$ is straightforward:
 just reinsert the superscripts, e.g., use $c^j_m$ and not just $c_m$.
 
-For the classical observables and $\Gr \hCDO_n$,
+For the classical observables and $\Gr\, \hCDO_n$,
 Cauchy's formula provides explicit integral expressions for the most important linear observables
 (i.e., distributions on the fields $\gamma$ and $\beta$).
 For example, set 
@@ -387,7 +415,7 @@ As observables on an annulus, they correspond to Fourier modes from the point of
 To be explicit, the zeroth Fourier mode $(c_m)_{(0)}$ is represented by $O_{c_m}$ viewed as an observable on an annulus.
 Let us explain why.
 
-The vertex operator on $\Gr\CDO$ admits a concrete interpretation in terms of ``observing'' coefficients of expansions.
+The vertex operator on $\Gr\,\CDO$ admits a concrete interpretation in terms of ``observing'' coefficients of expansions.
 The element $Y(c_m;w)$ should be viewed as an observable on the annulus:
 given $\gamma$ a holomorphic function on the annulus and $w$ a point on that annulus, 
 $Y(c_m;w)$ measures the coefficient of $(z-w)^m$ in the power series expansion of $\gamma$ around $w$.
@@ -1236,7 +1264,4 @@ and if the cocycle vanishes,
 the choices determine a patching of the chiral algebras.
 The work of \cite{GMS} showed that this cocycle is indeed $\ch_2(T_X)$.
 Our method provides another perspective.
-
-%\bibliographystyle{amsalpha}
-%\bibliography{../fulldraft/refs}
 
