@@ -1316,14 +1316,44 @@ We construct this quantization explicitly using Feynman diagrams and, in later s
 
 Most of this section is devoted to formulating precisely what equivariant BV quantization means and then proving the following result.
 
-\begin{thm} \label{bvq} 
+\begin{thm} 
+\label{bvq} 
 There is a unique (up to contractible choice) $\TVect$-equivariant and $\CC^\times \times \Aff(\CC)$-invariant quantization 
 of the $\beta\gamma$ system on $\CC$ with target $\hD^n$.
 \end{thm}
 
 By an $\Aff(\CC)$-invariant quantization, we mean one that is invariant with respect to the action of affine symmetries of the complex line (i.e., translation and dilation by complex numbers). 
 The $\CC^\times$-symmetry condition says that the quantization has weight one with respect to scaling the $\beta$ fields, which can viewed as scaling the cotangent fibers of $T^*\hD^n$.
-(See the discussion preceding Proposition \ref{eqdef}.)
+(See the discussion preceding Proposition~\ref{eqdef}.)
+
+\begin{rmk}
+Subsequent to the writing of this paper,
+Si Li \cite{LiQME} developed general technology that should imply this theorem.
+(His results, as stated, do not explicitly encompass equivariant quantization but it is clear that they must  extend to our situation.)
+In brief, he exhibits a map from holomorphic ({\em aka} chiral) deformations of a free holomorphic field theory of $\beta\gamma$-type to the modes dg Lie algebra of the associated dg vertex algebra,
+and he shows that a deformation satisfies the quantum master equation if and only if it satisfies the Maurer-Cartan equation in the modes Lie algebra.
+Hence, one can take our interaction term $I$ and check if its associated Lie algebra element $\oint \d z\, I$ satisfies the Maurer-Cartan equation.
+This approach is easier in the sense that computing in the modes Lie algebra is purely algebraic in nature,
+and does not involve Feynman diagram computations,
+precisely because all the Feynman diagrams are hidden in Li's proof, where he does that analysis once and for all.
+
+In this paper, we wish to be self-contained and hence explicitly solve the equivariant quantum master equation and explicitly describe the Feynman diagrammatics.
+As a matter of taste, we also wanted to show clearly that the vertex algebra constructions are completely separate from quantum field theoretic constructions --- hence, the division between Parts I and II --- and then to exhibit  in Part III that these independent approaches produce equivalent answers.
+To use Li's theorem would intertwine the QFT construction with the vertex algebra construction,
+as it might misleadingly suggest we need results from the theory of CDOs to construct our factorization algebra.
+
+On the other hand, Li's work gives an explanation for {\em why} such identifications hold systematically --- indeed, for any theories that are $\beta\gamma$-like.
+It sets the stage for proving theorems like ours in a very broad range of examples.
+
+Finally, we remark that Li's theorem essentially reverses the logic of this paper.
+He relies on essentially the same logic as Part III but oriented to state a different result.
+As we explain in Part III, a free $\beta\gamma$-type field theory yields a factorization algebra that recovers a dg vertex algebra, which is the one ``expected'' from physics.
+Any holomorphic deformation of the theory must yield a deformation of the dg vertex algebra, 
+and so there must be a map of dg Lie algebras.
+We examine what deformation of the vertex algebra arises from our preferred deformation of the theory,
+but we exhibit general results that would let one describe other deformations as well.
+By contrast, Li shows that this map is injective at the level of sets of solutions (from QME to Maurer-Cartan equation) and hence can use the modes Lie algebra to identify deformations of the BV theory.
+\end{rmk}
 
 \subsection{Recollections on equivariant BV quantization} \label{sec equiv bv 1}
 
