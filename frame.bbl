@@ -27,6 +27,10 @@ Lev~A. Borisov and Anatoly Libgober, \emph{Elliptic genera of toric varieties
   and applications to mirror symmetry}, Inventiones mathematicae \textbf{140}
   (2000), no.~2, 453--485.
 
+\bibitem[Bor01]{BorVAMS}
+Lev~A. Borisov, \emph{Vertex algebras and mirror symmetry}, Comm. Math. Phys.
+  \textbf{215} (2001), no.~3, 517--557. \MR{1810943}
+
 \bibitem[Bre07]{Bressler}
 Paul Bressler, \emph{The first {P}ontryagin class}, Compos. Math. \textbf{143}
   (2007), no.~5, 1127--1163. \MR{2360313}
@@ -48,18 +52,24 @@ Alberto~S. Cattaneo and Giovanni Felder, \emph{A path integral approach to the
   no.~144, 38--53, Noncommutative geometry and string theory (Yokohama, 2001).
   \MR{2023844}
 
-\bibitem[CG]{CG}
+\bibitem[CG]{CG2}
 Kevin Costello and Owen Gwilliam, \emph{Factorization algebras in quantum field
-  theory}, available at \url{http://people.mpim-bonn.mpg.de/gwilliam}.
+  theory, {V}olume 2}, available at
+  \url{http://people.math.umass.edu/\~gwilliam}.
+
+\bibitem[CG17]{CG1}
+\bysame, \emph{Factorization algebras in quantum field theory. {V}olume 1}, New
+  Mathematical Monographs, vol.~31, Cambridge University Press, Cambridge,
+  2017. \MR{3586504}
 
 \bibitem[Che12]{Cheung}
 Pokman Cheung, \emph{Chiral differential operators on supermanifolds}, Math. Z.
   \textbf{272} (2012), no.~1-2, 203--237. \MR{2968222}
 
-\bibitem[CLL]{CLL}
-Kwokwai Chan, Naichung~Conan Leung, and Qin Li, \emph{A mathematical foundation
-  of {R}ozansky-{W}itten theory}, available at
-  \url{http://arxiv.org/abs/1502.03510}.
+\bibitem[CLL17]{CLL}
+Kwokwai Chan, Naichung~Conan Leung, and Qin Li, \emph{B{V} quantization of the
+  {R}ozansky-{W}itten model}, Comm. Math. Phys. \textbf{355} (2017), no.~1,
+  97--144. \MR{3670730}
 
 \bibitem[Cos]{WG2}
 Kevin Costello, \emph{A geometric construction of the {W}itten genus, {II}},
@@ -75,10 +85,10 @@ Kevin Costello, \emph{A geometric construction of the {W}itten genus, {II}},
   Surveys and Monographs, vol. 170, American Mathematical Society, Providence,
   RI, 2011. \MR{2778558}
 
-\bibitem[CPT{\etalchar{+}}]{CPTVV}
-Damien Calaque, Tony Pantev, Bertrand To{\"e}n, Michel Vaqui{\'e}, and Gabriele
-  Vezzosi, \emph{Shifted {P}oisson {S}tructures and {D}eformation
-  {Q}uantization}, available at \url{http://arxiv.org/abs/1506.03699}.
+\bibitem[CPT{\etalchar{+}}17]{CPTVV}
+Damien Calaque, Tony Pantev, Bertrand To\"{e}n, Michel Vaqui\'{e}, and Gabriele
+  Vezzosi, \emph{Shifted {P}oisson structures and deformation quantization}, J.
+  Topol. \textbf{10} (2017), no.~2, 483--584. \MR{3653319}
 
 \bibitem[FBZ04]{BZF}
 Edward Frenkel and David Ben-Zvi, \emph{Vertex algebras and algebraic curves},
@@ -95,10 +105,10 @@ Owen Gwilliam and Ryan Grady, \emph{One-dimensional {C}hern-{S}imons theory and
   the {$\hat A$} genus}, Algebr. Geom. Topol. \textbf{14} (2014), no.~4,
   2299--2377. \MR{3331615}
 
-\bibitem[GH]{HaugGwil}
-Owen Gwilliam and Rune Haugseng, \emph{{L}inear {B}atalin-{V}ilkovisky
-  quantization as a functor of $\infty$-categories}, available at
-  \url{https://arxiv.org/abs/1608.01290}.
+\bibitem[GH18]{GwHaug}
+Owen Gwilliam and Rune Haugseng, \emph{Linear {B}atalin-{V}ilkovisky
+  quantization as a functor of {$\infty$}-categories}, Selecta Math. (N.S.)
+  \textbf{24} (2018), no.~2, 1247--1313. \MR{3782422}
 
 \bibitem[GK71]{GK}
 I.~M. Gelfand and D.~A. Ka{\v{z}}dan, \emph{Certain questions of differential
@@ -106,9 +116,9 @@ I.~M. Gelfand and D.~A. Ka{\v{z}}dan, \emph{Certain questions of differential
   vector fields}, Dokl. Akad. Nauk SSSR \textbf{200} (1971), 269--272.
   \MR{0287566}
 
-\bibitem[GLL]{GLL}
-Ryan Grady, Qin Li, and Si~Li, \emph{{BV} quantization and the algebraic
-  index}, available at \url{http://arxiv.org/abs/1507.01812}.
+\bibitem[GLL17]{GLL}
+Ryan~E. Grady, Qin Li, and Si~Li, \emph{Batalin-{V}ilkovisky quantization and
+  the algebraic index}, Adv. Math. \textbf{317} (2017), 575--639. \MR{3682678}
 
 \bibitem[GMS00]{GMS}
 Vassily Gorbounov, Fyodor Malikov, and Vadim Schechtman, \emph{Gerbes of chiral
@@ -173,6 +183,10 @@ Mikhail Kapranov and Eric Vasserot, \emph{Formal loops {IV}: {C}hiral
 Si~Li, \emph{{V}ertex algebras and quantum master equation}, available at
   \url{https://arxiv.org/abs/1612.01292}.
 
+\bibitem[Li12]{LiFeynman}
+\bysame, \emph{Feynman graph integrals and almost modular forms}, Commun.
+  Number Theory Phys. \textbf{6} (2012), no.~1, 129--157. \MR{2955933}
+
 \bibitem[LL16]{LiLi}
 Qin Li and Si~Li, \emph{On the {B}-twisted topological sigma model and
   {C}alabi-{Y}au geometry}, J. Differential Geom. \textbf{102} (2016), no.~3,
@@ -227,13 +241,14 @@ Joseph Polchinski, \emph{String theory. {V}ol. {I}}, Cambridge Monographs on
 J.~P. Pridham, \emph{Unifying derived deformation theories}, Adv. Math.
   \textbf{224} (2010), no.~3, 772--826. \MR{2628795}
 
-\bibitem[Wila]{bw_vir}
-Brian Williams, \emph{The {V}irasoro vertex alegbra and factorization algebras
-  on {R}iemann surfaces}, available at \url{https://arxiv.org/abs/1603.02349}.
-
-\bibitem[Wilb]{willwacher}
+\bibitem[Wil]{willwacher}
 Thomas Willwacher, \emph{Local {RRH}}, available at
   \url{https://people.math.ethz.ch/~wilthoma/docs/LRRH.pdf}.
+
+\bibitem[Wil17]{bw_vir}
+Brian Williams, \emph{The {V}irasoro vertex algebra and factorization algebras
+  on {R}iemann surfaces}, Lett. Math. Phys. \textbf{107} (2017), no.~12,
+  2189--2237. \MR{3719639}
 
 \bibitem[Wit87]{WittenGenus1}
 Edward Witten, \emph{Elliptic genera and quantum field theory}, Comm. Math.

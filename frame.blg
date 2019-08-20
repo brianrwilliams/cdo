@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: frame.aux
 The style file: amsalpha.bst
 Database file #1: refs.bib
-You've used 54 entries,
+You've used 57 entries,
             2624 wiz_defined-function locations,
-            956 strings with 11936 characters,
-and the built_in function-call counts, 18951 in all, are:
-= -- 1789
-> -- 756
-< -- 36
-+ -- 245
-- -- 235
-* -- 1666
-:= -- 3057
-add.period$ -- 54
-call.type$ -- 54
-change.case$ -- 311
-chr.to.int$ -- 52
-cite$ -- 54
-duplicate$ -- 798
-empty$ -- 1484
-format.name$ -- 315
-if$ -- 3778
-int.to.chr$ -- 3
+            991 strings with 12127 characters,
+and the built_in function-call counts, 20551 in all, are:
+= -- 1949
+> -- 781
+< -- 39
++ -- 250
+- -- 242
+* -- 1862
+:= -- 3266
+add.period$ -- 57
+call.type$ -- 57
+change.case$ -- 327
+chr.to.int$ -- 56
+cite$ -- 57
+duplicate$ -- 854
+empty$ -- 1646
+format.name$ -- 327
+if$ -- 4114
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 104
-newline$ -- 173
-num.names$ -- 156
-pop$ -- 281
+missing$ -- 116
+newline$ -- 182
+num.names$ -- 163
+pop$ -- 269
 preamble$ -- 1
-purify$ -- 363
+purify$ -- 382
 quote$ -- 0
-skip$ -- 549
+skip$ -- 600
 stack$ -- 0
-substring$ -- 1190
-swap$ -- 117
-text.length$ -- 36
-text.prefix$ -- 28
+substring$ -- 1394
+swap$ -- 130
+text.length$ -- 39
+text.prefix$ -- 30
 top$ -- 0
-type$ -- 396
+type$ -- 416
 warning$ -- 0
-while$ -- 189
-width$ -- 59
-write$ -- 622
+while$ -- 208
+width$ -- 63
+write$ -- 672
