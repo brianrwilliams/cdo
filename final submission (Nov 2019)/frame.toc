@@ -1,0 +1,153 @@
+\contentsline {part}{\tocpart {Part}{}{Introduction}}{1}{section*.1}
+\contentsline {subsection}{\tocsubsection {}{0.1}{Overview}}{3}{subsection.0.1}
+\contentsline {subsection}{\tocsubsection {}{0.2}{Acknowledgements}}{3}{subsection.0.2}
+\contentsline {part}{\tocpart {Part}{}{Part I: Gelfand-Kazhdan descent and chiral differential operators}}{6}{section*.3}
+\contentsline {section}{\tocsection {}{1}{Flat vector bundles and Harish-Chandra descent}}{7}{section.1}
+\contentsline {subsection}{\tocsubsection {}{1.1}{Algebra of Harish-Chandra pairs}}{7}{subsection.1.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{1.1.1}{Harish-Chandra pairs}}{7}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{1.1.2}{Modules}}{8}{subsubsection.1.1.2}
+\contentsline {subsection}{\tocsubsection {}{1.2}{Bundles}}{8}{subsection.1.2}
+\contentsline {subsection}{\tocsubsection {}{1.3}{Descent}}{9}{subsection.1.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{1.3.1}{Basic forms}}{10}{subsubsection.1.3.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{1.3.2}{}}{11}{subsubsection.1.3.2}
+\contentsline {subsection}{\tocsubsection {}{1.4}{The characteristic map}}{12}{subsection.1.4}
+\contentsline {section}{\tocsection {}{2}{Formal vector bundles and Gelfand-Kazhdan descent}}{12}{section.2}
+\contentsline {subsection}{\tocsubsection {}{2.1}{A Harish-Chandra pair for the formal disk}}{12}{subsection.2.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.1}{Formal automorphisms}}{13}{subsubsection.2.1.1}
+\contentsline {subsection}{\tocsubsection {}{2.2}{The coordinate bundle}}{13}{subsection.2.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.2.1}{}}{14}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.2.2}{The Grothendieck connection}}{14}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.2.3}{A Harish-Chandra structure on the frame bundle}}{15}{subsubsection.2.2.3}
+\contentsline {subsection}{\tocsubsection {}{2.3}{The category of formal vector bundles}}{16}{subsection.2.3}
+\contentsline {subsection}{\tocsubsection {}{2.4}{Gelfand-Kazhdan descent}}{18}{subsection.2.4}
+\contentsline {subsection}{\tocsubsection {}{2.5}{Formal characteristic classes}}{19}{subsection.2.5}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.5.1}{Recollection}}{20}{subsubsection.2.5.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.5.2}{The formal Atiyah class}}{21}{subsubsection.2.5.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.5.3}{The formal Atiyah sequence}}{21}{subsubsection.2.5.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.5.4}{An explicit formula}}{23}{subsubsection.2.5.4}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.5.5}{Extended pair}}{24}{subsubsection.2.5.5}
+\contentsline {section}{\tocsection {}{3}{Harish-Chandra structure on CDOs}}{25}{section.3}
+\contentsline {subsection}{\tocsubsection {}{3.1}{Recollections on vertex algebras}}{25}{subsection.3.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.1.1}{Recollections}}{25}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.1.2}{Actions on vertex algebras}}{25}{subsubsection.3.1.2}
+\contentsline {subsection}{\tocsubsection {}{3.2}{The $\beta \gamma $-vertex algebra}}{26}{subsection.3.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.2.1}{Completion}}{27}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.2.2}{}}{27}{subsubsection.3.2.2}
+\contentsline {subsection}{\tocsubsection {}{3.3}{The classical limit}}{28}{subsection.3.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.3.1}{Conformal structure}}{29}{subsubsection.3.3.1}
+\contentsline {subsection}{\tocsubsection {}{3.4}{Harish-Chandra structure on ${\rm CDO}_n$}}{29}{subsection.3.4}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.4.1}{Extension of vector fields}}{29}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.4.2}{}}{30}{subsubsection.3.4.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.4.3}{}}{30}{subsubsection.3.4.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.4.4}{}}{31}{subsubsection.3.4.4}
+\contentsline {subsection}{\tocsubsection {}{3.5}{Formal automorphisms}}{31}{subsection.3.5}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.5.1}{An explicit formula for the cocycle}}{32}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.5.2}{}}{33}{subsubsection.3.5.2}
+\contentsline {subsection}{\tocsubsection {}{3.6}{The conformal structure for the equivariant vertex algebra}}{34}{subsection.3.6}
+\contentsline {subsection}{\tocsubsection {}{3.7}{The character of a graded vertex algebra}}{35}{subsection.3.7}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.7.1}{}}{36}{subsubsection.3.7.1}
+\contentsline {section}{\tocsection {}{4}{Extended Gelfand-Kazhdan descent}}{38}{section.4}
+\contentsline {subsection}{\tocsubsection {}{4.1}{The extended bundle}}{38}{subsection.4.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.1.1}{}}{38}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.1.2}{Warm-up: Chern-Simons forms on $\mathbb C^n$}}{39}{subsubsection.4.1.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.1.3}{Formal coordinates}}{40}{subsubsection.4.1.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.1.4}{Defining the bundle}}{41}{subsubsection.4.1.4}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.1.5}{Proof of Theorem \ref {extbundle}}}{43}{subsubsection.4.1.5}
+\contentsline {subsection}{\tocsubsection {}{4.2}{Extended modules}}{44}{subsection.4.2}
+\contentsline {subsection}{\tocsubsection {}{4.3}{Extended descent}}{44}{subsection.4.3}
+\contentsline {section}{\tocsection {}{5}{Descent for vertex algebras}}{45}{section.5}
+\contentsline {subsection}{\tocsubsection {}{5.1}{General descent}}{45}{subsection.5.1}
+\contentsline {subsection}{\tocsubsection {}{5.2}{Formal vertex algebras}}{45}{subsection.5.2}
+\contentsline {subsection}{\tocsubsection {}{5.3}{Descending Gelfand-Kazhdan vertex algebras}}{46}{subsection.5.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{5.3.1}{Classical limit of the sheaf of CDOs}}{46}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{5.3.2}{Extended descent for vertex algebras}}{47}{subsubsection.5.3.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{5.3.3}{The sheaf of CDOs}}{47}{subsubsection.5.3.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{5.3.4}{The conformal structure}}{47}{subsubsection.5.3.4}
+\contentsline {subsubsection}{\tocsubsubsection {}{5.3.5}{The Witten genus}}{48}{subsubsection.5.3.5}
+\contentsline {part}{\tocpart {Part}{}{Part II: The curved $\beta \gamma $ system and its factorization algebra}}{50}{section*.4}
+\contentsline {section}{\tocsection {}{6}{Overview}}{50}{section.6}
+\contentsline {section}{\tocsection {}{7}{A brief overview of derived deformation theory and $L_\infty $ algebras}}{51}{section.7}
+\contentsline {section}{\tocsection {}{8}{The formal $\beta \gamma $ system}}{53}{section.8}
+\contentsline {subsection}{\tocsubsection {}{8.1}{The free $\beta \gamma $ system as a BV theory}}{53}{subsection.8.1}
+\contentsline {subsection}{\tocsubsection {}{8.2}{The formal $\beta \gamma $ system}}{54}{subsection.8.2}
+\contentsline {subsection}{\tocsubsection {}{8.3}{The ${{\rm W}_n}$ action on $\mathfrak {g}_n^S$ and on $\mathbb D\mathfrak {g}_n^S$}}{54}{subsection.8.3}
+\contentsline {subsection}{\tocsubsection {}{8.4}{A Noether current and the obstruction-deformation complex}}{56}{subsection.8.4}
+\contentsline {subsubsection}{\tocsubsubsection {}{8.4.1}{Recollections on local functionals}}{56}{subsubsection.8.4.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{8.4.2}{The action of vector fields}}{57}{subsubsection.8.4.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{8.4.3}{The relation to the formal Atiyah class}}{58}{subsubsection.8.4.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{8.4.4}{Equivariant deformation complex}}{58}{subsubsection.8.4.4}
+\contentsline {subsection}{\tocsubsection {}{8.5}{Closed two-forms as local functionals}}{59}{subsection.8.5}
+\contentsline {subsubsection}{\tocsubsubsection {}{8.5.1}{Defining $J$}}{60}{subsubsection.8.5.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{8.5.2}{Understanding $J$}}{60}{subsubsection.8.5.2}
+\contentsline {subsection}{\tocsubsection {}{8.6}{Holomorphic vector fields on the source}}{62}{subsection.8.6}
+\contentsline {subsubsection}{\tocsubsubsection {}{8.6.1}{}}{63}{subsubsection.8.6.1}
+\contentsline {section}{\tocsection {}{9}{Equivariant BV quantization of the formal $\beta \gamma $ system}}{64}{section.9}
+\contentsline {subsection}{\tocsubsection {}{9.1}{Recollections on equivariant BV quantization}}{65}{subsection.9.1}
+\contentsline {subsection}{\tocsubsection {}{9.2}{The pre-theory}}{66}{subsection.9.2}
+\contentsline {subsection}{\tocsubsection {}{9.3}{The obstruction}}{70}{subsection.9.3}
+\contentsline {subsection}{\tocsubsection {}{9.4}{The extended theory}}{74}{subsection.9.4}
+\contentsline {subsubsection}{\tocsubsubsection {}{9.4.1}{}}{74}{subsubsection.9.4.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{9.4.2}{The extended pre-theory}}{74}{subsubsection.9.4.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{9.4.3}{Quantum correction}}{75}{subsubsection.9.4.3}
+\contentsline {subsection}{\tocsubsection {}{9.5}{The conformal anomaly}}{76}{subsection.9.5}
+\contentsline {section}{\tocsection {}{10}{The partition function of the equivariant theory}}{78}{section.10}
+\contentsline {subsection}{\tocsubsection {}{10.1}{The formal Witten class}}{78}{subsection.10.1}
+\contentsline {subsection}{\tocsubsection {}{10.2}{The theory on an elliptic curve}}{79}{subsection.10.2}
+\contentsline {subsection}{\tocsubsection {}{10.3}{Proof of Proposition \ref {prop: formalwitten}}}{81}{subsection.10.3}
+\contentsline {section}{\tocsection {}{11}{The factorization algebras of equivariant observables}}{82}{section.11}
+\contentsline {subsection}{\tocsubsection {}{11.1}{An overview of factorization algebras}}{82}{subsection.11.1}
+\contentsline {subsection}{\tocsubsection {}{11.2}{A comment on functional analysis}}{83}{subsection.11.2}
+\contentsline {subsection}{\tocsubsection {}{11.3}{The non-equivariant classical observables}}{84}{subsection.11.3}
+\contentsline {subsection}{\tocsubsection {}{11.4}{The non-equivariant quantum observables}}{85}{subsection.11.4}
+\contentsline {subsubsection}{\tocsubsubsection {}{11.4.1}{Recap of parametrices and BV Laplacians}}{86}{subsubsection.11.4.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{11.4.2}{Observables}}{87}{subsubsection.11.4.2}
+\contentsline {subsection}{\tocsubsection {}{11.5}{The ${{\rm W}_n}$-equivariant classical observables}}{88}{subsection.11.5}
+\contentsline {subsection}{\tocsubsection {}{11.6}{The $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle {{\rm W}}$}\mathaccent "0365{{{\rm W}}}_n$-equivariant quantum observables}}{88}{subsection.11.6}
+\contentsline {subsection}{\tocsubsection {}{11.7}{An aside on the two versions of non-equivariant observables}}{89}{subsection.11.7}
+\contentsline {section}{\tocsection {}{12}{Semi-strict Gelfand-Kazhdan descent}}{90}{section.12}
+\contentsline {subsection}{\tocsubsection {}{12.1}{Semi-strict modules}}{90}{subsection.12.1}
+\contentsline {subsection}{\tocsubsection {}{12.2}{Semi-strict descent}}{91}{subsection.12.2}
+\contentsline {subsection}{\tocsubsection {}{12.3}{Descent of the equivariant observables}}{92}{subsection.12.3}
+\contentsline {subsection}{\tocsubsection {}{12.4}{Comparison with Costello's work}}{92}{subsection.12.4}
+\contentsline {section}{\tocsection {}{13}{A concrete description of the observables}}{94}{section.13}
+\contentsline {subsection}{\tocsubsection {}{13.1}{Polynomials, power series, and the $({{\rm W}_n},{\rm GL}_n)$-decomposition of observables}}{94}{subsection.13.1}
+\contentsline {subsection}{\tocsubsection {}{13.2}{The classical observables supported at a point}}{97}{subsection.13.2}
+\contentsline {subsection}{\tocsubsection {}{13.3}{The decomposition by conformal dimension: the rotation action on the source}}{99}{subsection.13.3}
+\contentsline {subsection}{\tocsubsection {}{13.4}{The quantum observables}}{99}{subsection.13.4}
+\contentsline {section}{\tocsection {}{14}{Conformal structure on observables}}{100}{section.14}
+\contentsline {part}{\tocpart {Part}{}{Part III: Comparison of the constructions}}{102}{section*.5}
+\contentsline {section}{\tocsection {}{15}{Overview}}{102}{section.15}
+\contentsline {section}{\tocsection {}{16}{From factorization to vertex algebras}}{102}{section.16}
+\contentsline {subsection}{\tocsubsection {}{16.1}{Translation and derivations}}{102}{subsection.16.1}
+\contentsline {subsection}{\tocsubsection {}{16.2}{Rotation and decomposition}}{104}{subsection.16.2}
+\contentsline {subsection}{\tocsubsection {}{16.3}{The theorem about $\mathbb {V}{\rm ert}$}}{104}{subsection.16.3}
+\contentsline {section}{\tocsection {}{17}{Observables for the formal $\beta \gamma $ system}}{106}{section.17}
+\contentsline {subsection}{\tocsubsection {}{17.1}{Some useful identifications}}{106}{subsection.17.1}
+\contentsline {subsection}{\tocsubsection {}{17.2}{Quantizing observables}}{107}{subsection.17.2}
+\contentsline {subsection}{\tocsubsection {}{17.3}{An example}}{108}{subsection.17.3}
+\contentsline {section}{\tocsection {}{18}{Local symmetries acting on observables}}{109}{section.18}
+\contentsline {subsection}{\tocsubsection {}{18.1}{General arguments}}{109}{subsection.18.1}
+\contentsline {subsection}{\tocsubsection {}{18.2}{The action of $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle {{\rm W}}$}\mathaccent "0365{{{\rm W}}}_n$}}{113}{subsection.18.2}
+\contentsline {section}{\tocsection {}{19}{The main result}}{114}{section.19}
+\contentsline {subsection}{\tocsubsection {}{19.1}{Remark on conformal structure}}{114}{subsection.19.1}
+\contentsline {section}{\tocsection {}{20}{Discussion of some physics literature}}{115}{section.20}
+\contentsline {subsection}{\tocsubsection {}{20.1}{General comments about nonlinear $\sigma $-models}}{115}{subsection.20.1}
+\contentsline {subsection}{\tocsubsection {}{20.2}{Anomalies and obstructions}}{115}{subsection.20.2}
+\contentsline {subsection}{\tocsubsection {}{20.3}{Chiral algebras and observables}}{116}{subsection.20.3}
+\contentsline {part}{\tocpart {Part}{}{Appendix}}{117}{section*.6}
+\contentsline {section}{\tocsection {}{21}{The $\beta \gamma $ system as an infinite-volume limit}}{117}{section.21}
+\contentsline {subsection}{\tocsubsection {}{21.1}{Introduction}}{117}{subsection.21.1}
+\contentsline {subsection}{\tocsubsection {}{21.2}{The ingredients}}{118}{subsection.21.2}
+\contentsline {subsection}{\tocsubsection {}{21.3}{The first-order formulation of the sigma model}}{118}{subsection.21.3}
+\contentsline {subsection}{\tocsubsection {}{21.4}{An involution on the space of fields}}{119}{subsection.21.4}
+\contentsline {subsection}{\tocsubsection {}{21.5}{Replacing the first-order action functional}}{120}{subsection.21.5}
+\contentsline {subsection}{\tocsubsection {}{21.6}{The heuristic argument}}{120}{subsection.21.6}
+\contentsline {subsection}{\tocsubsection {}{21.7}{The BV argument}}{120}{subsection.21.7}
+\contentsline {subsubsection}{\tocsubsubsection {}{21.7.1}{The ingredients}}{121}{subsubsection.21.7.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{21.7.2}{Equivalence at the classical level}}{121}{subsubsection.21.7.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{21.7.3}{Equivalence at the quantum level}}{122}{subsubsection.21.7.3}
+\contentsline {subsection}{\tocsubsection {}{21.8}{The infinite volume limit}}{122}{subsection.21.8}
+\contentsline {subsection}{\tocsubsection {}{21.9}{The chiral splitting}}{123}{subsection.21.9}
+\setcounter {tocdepth}{0}
+\contentsline {section}{References}{124}{thm.21.12}
+\contentsline {section}{\tocsection {}{}{References}}{124}{section*.7}

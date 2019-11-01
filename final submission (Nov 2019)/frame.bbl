@@ -1,0 +1,277 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{CCRF{\etalchar{+}}98}
+
+\bibitem[Ati57]{atiyah}
+M.F. Atiyah, \emph{Complex analytic connections in fibre bundles}, Trans. Amer.
+  Math. Soc. \textbf{85} (1957), 181--207.
+
+\bibitem[BD04]{BD}
+Alexander Beilinson and Vladimir Drinfeld, \emph{Chiral algebras}, American
+  Mathematical Society Colloquium Publications, vol.~51, American Mathematical
+  Society, Providence, RI, 2004. \MR{2058353 (2005d:17007)}
+
+\bibitem[BK04]{BK}
+R.~Bezrukavnikov and D.~Kaledin, \emph{Fedosov quantization in algebraic
+  context}, Mosc. Math. J. \textbf{4} (2004), no.~3, 559--592, 782.
+  \MR{2119140}
+
+\bibitem[BL00]{BorLib}
+Lev~A. Borisov and Anatoly Libgober, \emph{Elliptic genera of toric varieties
+  and applications to mirror symmetry}, Inventiones mathematicae \textbf{140}
+  (2000), no.~2, 453--485.
+
+\bibitem[Bor01]{BorVAMS}
+Lev~A. Borisov, \emph{Vertex algebras and mirror symmetry}, Comm. Math. Phys.
+  \textbf{215} (2001), no.~3, 517--557. \MR{1810943}
+
+\bibitem[Bre07]{Bressler}
+Paul Bressler, \emph{The first {P}ontryagin class}, Compos. Math. \textbf{143}
+  (2007), no.~5, 1127--1163. \MR{2360313}
+
+\bibitem[CCRF{\etalchar{+}}98]{YMasBF}
+A.~S. Cattaneo, P.~Cotta-Ramusino, F.~Fucito, M.~Martellini, M.~Rinaldi,
+  A.~Tanzini, and M.~Zeni, \emph{Four-dimensional {Y}ang-{M}ills theory as a
+  deformation of topological {$BF$} theory}, Comm. Math. Phys. \textbf{197}
+  (1998), no.~3, 571--621. \MR{1652763}
+
+\bibitem[CF00]{CF}
+Alberto~S. Cattaneo and Giovanni Felder, \emph{A path integral approach to the
+  {K}ontsevich quantization formula}, Comm. Math. Phys. \textbf{212} (2000),
+  no.~3, 591--611. \MR{1779159 (2002b:53141)}
+
+\bibitem[CF01]{CF2}
+\bysame, \emph{On the globalization of {K}ontsevich's star product and the
+  perturbative {P}oisson sigma model}, Progr. Theoret. Phys. Suppl. (2001),
+  no.~144, 38--53, Noncommutative geometry and string theory (Yokohama, 2001).
+  \MR{2023844}
+
+\bibitem[CG]{CG2}
+Kevin Costello and Owen Gwilliam, \emph{Factorization algebras in quantum field
+  theory, {V}olume 2}, available at
+  \url{http://people.math.umass.edu/\~gwilliam}.
+
+\bibitem[CG17]{CG1}
+\bysame, \emph{Factorization algebras in quantum field theory. {V}olume 1}, New
+  Mathematical Monographs, vol.~31, Cambridge University Press, Cambridge,
+  2017. \MR{3586504}
+
+\bibitem[Che12]{Cheung}
+Pokman Cheung, \emph{Chiral differential operators on supermanifolds}, Math. Z.
+  \textbf{272} (2012), no.~1-2, 203--237. \MR{2968222}
+
+\bibitem[CLL17]{CLL}
+Kwokwai Chan, Naichung~Conan Leung, and Qin Li, \emph{B{V} quantization of the
+  {R}ozansky-{W}itten model}, Comm. Math. Phys. \textbf{355} (2017), no.~1,
+  97--144. \MR{3670730}
+
+\bibitem[Cos]{WG2}
+Kevin Costello, \emph{A geometric construction of the {W}itten genus, {II}},
+  available at \url{http://arxiv.org/abs/1112.0816}.
+
+\bibitem[Cos10]{WG1}
+\bysame, \emph{A geometric construction of the {W}itten genus, {I}},
+  Proceedings of the {I}nternational {C}ongress of {M}athematicians. {V}olume
+  {II}, Hindustan Book Agency, New Delhi, 2010, pp.~942--959. \MR{2827826}
+
+\bibitem[Cos11]{CosBook}
+\bysame, \emph{Renormalization and effective field theory}, Mathematical
+  Surveys and Monographs, vol. 170, American Mathematical Society, Providence,
+  RI, 2011. \MR{2778558}
+
+\bibitem[CPT{\etalchar{+}}17]{CPTVV}
+Damien Calaque, Tony Pantev, Bertrand To\"{e}n, Michel Vaqui\'{e}, and Gabriele
+  Vezzosi, \emph{Shifted {P}oisson structures and deformation quantization}, J.
+  Topol. \textbf{10} (2017), no.~2, 483--584. \MR{3653319}
+
+\bibitem[FBZ04]{BZF}
+Edward Frenkel and David Ben-Zvi, \emph{Vertex algebras and algebraic curves},
+  second ed., Mathematical Surveys and Monographs, vol.~88, American
+  Mathematical Society, Providence, RI, 2004. \MR{2082709 (2005d:17035)}
+
+\bibitem[Fuk86]{Fuks}
+D.~B. Fuks, \emph{Cohomology of infinite-dimensional {L}ie algebras},
+  Contemporary Soviet Mathematics, Consultants Bureau, New York, 1986,
+  Translated from the Russian by A. B. Sosinski{\u\i}. \MR{874337}
+
+\bibitem[GG14]{GG1}
+Owen Gwilliam and Ryan Grady, \emph{One-dimensional {C}hern-{S}imons theory and
+  the {$\hat A$} genus}, Algebr. Geom. Topol. \textbf{14} (2014), no.~4,
+  2299--2377. \MR{3331615}
+
+\bibitem[GH18]{GwHaug}
+Owen Gwilliam and Rune Haugseng, \emph{Linear {B}atalin-{V}ilkovisky
+  quantization as a functor of {$\infty$}-categories}, Selecta Math. (N.S.)
+  \textbf{24} (2018), no.~2, 1247--1313. \MR{3782422}
+
+\bibitem[GK71]{GK}
+I.~M. Gelfand and D.~A. Ka{\v{z}}dan, \emph{Certain questions of differential
+  geometry and the computation of the cohomologies of the {L}ie algebras of
+  vector fields}, Dokl. Akad. Nauk SSSR \textbf{200} (1971), 269--272.
+  \MR{0287566}
+
+\bibitem[GLL17]{GLL}
+Ryan~E. Grady, Qin Li, and Si~Li, \emph{Batalin-{V}ilkovisky quantization and
+  the algebraic index}, Adv. Math. \textbf{317} (2017), 575--639. \MR{3682678}
+
+\bibitem[GMS00]{GMS}
+Vassily Gorbounov, Fyodor Malikov, and Vadim Schechtman, \emph{Gerbes of chiral
+  differential operators}, Math. Res. Lett. \textbf{7} (2000), no.~1, 55--66.
+  \MR{1748287 (2002c:17040)}
+
+\bibitem[GMS04]{GMS2}
+\bysame, \emph{Gerbes of chiral differential operators. {II}. {V}ertex
+  algebroids}, Invent. Math. \textbf{155} (2004), no.~3, 605--680. \MR{2038198}
+
+\bibitem[Gwi12]{GwThesis}
+Owen Gwilliam, \emph{Factorization {A}lgebras and {F}ree {F}ield {T}heories},
+  ProQuest LLC, Ann Arbor, MI, 2012, Thesis (Ph.D.)--Northwestern University.
+  \MR{3034665}
+
+\bibitem[Hin01]{Hinich}
+Vladimir Hinich, \emph{D{G} coalgebras as formal stacks}, J. Pure Appl. Algebra
+  \textbf{162} (2001), no.~2-3, 209--250. \MR{1843805}
+
+\bibitem[JB95]{BL}
+Valery~Lunts Joseph~Bernstein, \emph{Localization for derived categories of (g,
+  k)-modules}, Journal of the American Mathematical Society \textbf{8} (1995),
+  no.~4, 819--856.
+
+\bibitem[Kac98]{Kac}
+Victor Kac, \emph{Vertex algebras for beginners}, second ed., University
+  Lecture Series, vol.~10, American Mathematical Society, Providence, RI, 1998.
+
+\bibitem[Kap]{KapCDR}
+Anton Kapustin, \emph{Chiral de {R}ham complex and the half-twisted
+  sigma-model}, available at \url{http://arxiv.org/abs/hep-th/0504074}.
+
+\bibitem[Kap99]{kapranov1999}
+M.~Kapranov, \emph{Rozansky-{W}itten invariants via {A}tiyah classes},
+  Compositio Mathematica \textbf{115} (1999), no.~1, 71--113.
+
+\bibitem[Kho07]{khors}
+A.~S. Khoroshkin, \emph{Lie algebra of formal vector fields which are extended
+  by formal g-valued functions}, Journal of Mathematical Sciences \textbf{143}
+  (2007), no.~1, 2816--2830.
+
+\bibitem[KM97]{KrieglMichor}
+Andreas Kriegl and Peter~W. Michor, \emph{The convenient setting of global
+  analysis}, Mathematical Surveys and Monographs, vol.~53, American
+  Mathematical Society, Providence, RI, 1997. \MR{1471480 (98i:58015)}
+
+\bibitem[KO03]{KapOrlov}
+Anton Kapustin and Dmitri Orlov, \emph{Vertex algebras, mirror symmetry, and
+  {D}-branes: the case of complex tori}, Comm. Math. Phys. \textbf{233} (2003),
+  no.~1, 79--136. \MR{1957733}
+
+\bibitem[Kon03]{KonDQ}
+Maxim Kontsevich, \emph{Deformation quantization of {P}oisson manifolds}, Lett.
+  Math. Phys. \textbf{66} (2003), no.~3, 157--216. \MR{2062626 (2005i:53122)}
+
+\bibitem[KV]{KV}
+Mikhail Kapranov and Eric Vasserot, \emph{Formal loops {IV}: {C}hiral
+  differential operators}, available at
+  \url{http://arxiv.org/abs/math/0612371}.
+
+\bibitem[Li]{LiQME}
+Si~Li, \emph{{V}ertex algebras and quantum master equation}, available at
+  \url{https://arxiv.org/abs/1612.01292}.
+
+\bibitem[Li12]{LiFeynman}
+\bysame, \emph{Feynman graph integrals and almost modular forms}, Commun.
+  Number Theory Phys. \textbf{6} (2012), no.~1, 129--157. \MR{2955933}
+
+\bibitem[LL16]{LiLi}
+Qin Li and Si~Li, \emph{On the {B}-twisted topological sigma model and
+  {C}alabi-{Y}au geometry}, J. Differential Geom. \textbf{102} (2016), no.~3,
+  409--484. \MR{3466804}
+
+\bibitem[LMZ06]{LMZ}
+Andrei~S. Losev, Andrei Marshakov, and Anton~M. Zeitlin, \emph{On first-order
+  formalism in string theory}, Phys. Lett. B \textbf{633} (2006), no.~2-3,
+  375--381. \MR{2198165}
+
+\bibitem[Los98]{Losik}
+Mark~V. Losik, \emph{Diagonal cohomology of the {L}ie algebra of vector
+  fields}, Differential Geom. Appl. \textbf{8} (1998), no.~1, 71--86.
+  \MR{1601530}
+
+\bibitem[Lur]{LurieSAG}
+Jacob Lurie, \emph{Spectral {A}lgebraic {G}eometry}, available at
+  \url{http://www.math.harvard.edu/~lurie/papers/SAG-rootfile.pdf}.
+
+\bibitem[LV12]{LV}
+Jean-Louis Loday and Bruno Vallette, \emph{Algebraic operads}, Grundlehren der
+  Mathematischen Wissenschaften [Fundamental Principles of Mathematical
+  Sciences], vol. 346, Springer, Heidelberg, 2012. \MR{2954392}
+
+\bibitem[Mal08]{Malikov2008}
+Fyodor Malikov, \emph{Lagrangian approach to sheaves of vertex algebras}, Comm.
+  Math. Phys. \textbf{278} (2008), no.~2, 487--548. \MR{2372767}
+
+\bibitem[MSV99]{MSV}
+Fyodor Malikov, Vadim Schechtman, and Arkady Vaintrob, \emph{Chiral de {R}ham
+  complex}, Comm. Math. Phys. \textbf{204} (1999), no.~2, 439--473.
+  \MR{1704283}
+
+\bibitem[Nek]{Nek}
+Nikita Nekrasov, \emph{Lectures on curved beta-gamma systems, pure spinors, and
+  anomalies}, available at \url{http://arxiv.org/abs/0511.3008}.
+
+\bibitem[NT95a]{NT}
+R.~Nest and B.~Tsygan, \emph{Algebraic {I}ndex {T}heorem for {F}amilies},
+  Advances in Mathematics \textbf{113} (1995), no.~2, 151 -- 205.
+
+\bibitem[NT95b]{nest1995}
+Ryszard Nest and Boris Tsygan, \emph{Algebraic index theorem}, Comm. Math.
+  Phys. \textbf{172} (1995), no.~2, 223--262.
+
+\bibitem[Pol98]{polchinski}
+Joseph Polchinski, \emph{String theory. {V}ol. {I}}, Cambridge Monographs on
+  Mathematical Physics, Cambridge University Press, Cambridge, 1998, An
+  introduction to the bosonic string. \MR{1648555}
+
+\bibitem[Pri10]{Pridham}
+J.~P. Pridham, \emph{Unifying derived deformation theories}, Adv. Math.
+  \textbf{224} (2010), no.~3, 772--826. \MR{2628795}
+
+\bibitem[Wil]{willwacher}
+Thomas Willwacher, \emph{Local {RRH}}, available at
+  \url{https://people.math.ethz.ch/~wilthoma/docs/LRRH.pdf}.
+
+\bibitem[Wil17]{bw_vir}
+Brian Williams, \emph{The {V}irasoro vertex algebra and factorization algebras
+  on {R}iemann surfaces}, Lett. Math. Phys. \textbf{107} (2017), no.~12,
+  2189--2237. \MR{3719639}
+
+\bibitem[Wit87]{WittenGenus1}
+Edward Witten, \emph{Elliptic genera and quantum field theory}, Comm. Math.
+  Phys. \textbf{109} (1987), no.~4, 525--536. \MR{885560}
+
+\bibitem[Wit88]{WittenGenus2}
+\bysame, \emph{The index of the {D}irac operator in loop space}, Elliptic
+  curves and modular forms in algebraic topology ({P}rinceton, {NJ}, 1986),
+  Lecture Notes in Math., vol. 1326, Springer, Berlin, 1988, pp.~161--181.
+  \MR{970288}
+
+\bibitem[Wit07]{WittenCDO}
+\bysame, \emph{Two-dimensional models with {$(0,2)$} supersymmetry:
+  perturbative aspects}, Adv. Theor. Math. Phys. \textbf{11} (2007), no.~1,
+  1--63. \MR{2320663 (2009c:17051)}
+
+\bibitem[Zei08]{Zeitlin}
+Anton~M. Zeitlin, \emph{Perturbed beta-gamma systems and complex geometry},
+  Nuclear Phys. B \textbf{794} (2008), no.~3, 381--401. \MR{2389685}
+
+\bibitem[Zhu96]{Zhu}
+Yongchang Zhu, \emph{Modular invariance of characters of vertex operator
+  algebras}, J. Amer. Math. Soc. \textbf{9} (1996), no.~1, 237--302.
+  \MR{1317233}
+
+\end{thebibliography}
