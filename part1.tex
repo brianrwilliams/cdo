@@ -383,18 +383,11 @@ the $(0,1)$-component of the connection $\nabla^{P,V}$ agrees with the $\dbar$ o
 \een
 Hence the horizontal sections are also holomorphic. 
 
-
 \begin{ex}
-A special role is played by the $(\fg,K)$-bundles over a point. 
-In this case, the only $K$-bundle is trivial, and the composite functor
-\[
-\begin{array}{ccc}
-\Mod_{(\fg,K)}&  \to & \Mod^{dg}_\CC \\
-V & \mapsto & \clie^*(\fg,K;V)
-\end{array}
-\]
-agrees with relative cochains computing the relative Lie algebra
-cohomology of $V$. 
+Suppose $G$ is a Lie group and $K \subset G$ is a subgroup. 
+Then, the $K$-principal bundle $G \to G/K$ has the natural structure of a $(\fg,K)$-principal bundle, $\fg = {\rm Lie}(G)$. 
+When $G$ is compact, there is an isomorphism $\bdesc(G \to G/K, V) \cong \clie^*(g, K ; V)$ for any $G$-representation $V$. 
+This is a relative version of the standard fact that the differential forms on $G$ are isomorphic to the absolute Chevalley-Eilenberg complex $\clie^*(\fg)$. 
 \end{ex}
 
 \begin{ex} 
@@ -1523,7 +1516,7 @@ there is an element $\alpha$ in $\clie^2(\Vect,\GL_n; \hOmega_n^1)$ such that
 \]
 where 
 \[
-\alpha: (f^i \partial_i, g^j \partial_j) \mapsto - \partial_j f^i \wedge \d_{dR}(\partial_i g^j).
+\alpha: (f^i \partial_i, g^j \partial_j) \mapsto \partial_j f^i \wedge \d_{dR}(\partial_i g^j).
 \]
 Moreover, as $\ch_2$ is closed for the differential $\partial$, 
 it lifts to a cocycle in $\clie^2(\Vect, \GL_n ; \hOmega^2_{n,cl})$.
