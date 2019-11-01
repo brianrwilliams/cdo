@@ -9,7 +9,8 @@ Recall that Gelfand-Kazhdan formal geometry is an approach to any ``natural'' co
 
 From this reasoning we see that every $\Aut_n$-representation $V$ that has a compatible action of $\Vect$ produces a flat vector bundle $\cV_X$ over each $n$-dimensional manifold $X$ whose horizontal sections typically encode familiar vector bundles. Such a representation is called a Harish-Chandra module. As an example, consider $\hO_n$, the functions on $\hD^n$, whose flat sections over $X$ are smooth functions on $X$ (holomorphic functions in the complex case). Or consider $\hT_n$, the vector fields on $\hD^n$, whose flat sections over $X$ are vector fields on $X$. This construction of a vector bundle on $X$ from an $\Aut_n$-representation is an example of Gelfand-Kazhdan descent. In light of this, it should be no surprise that there is a Gelfand-Kazhdan version of characteristic classes for these vector bundles that recovers the usual Chern classes.
 
-\begin{rmk} The Gelfand-Kazhdan approach to formal geometry can also be applied to more interesting geometries. For example, symplectic, Poisson, or even Riemannian geometry can be encapsulated by the formalism.
+\begin{rmk} 
+The Gelfand-Kazhdan approach to formal geometry can also be applied to more interesting geometries. For example, symplectic, Poisson, or even Riemannian geometry can be encapsulated by the formalism.
 \end{rmk}
 
 Chiral differential operators, like differential operators, are easy to define locally on an $n$-manifold, using coordinates. The challenge is to glue these local descriptions to produce the global object. The vertex algebra $\hCDO_n$ of CDOs on a formal $n$-disk $\hD_n$ is well-known, but it is not equivariant for the Harish-Chandra pair of automorphisms of $\hD_n$. The failure to be equivariant is a characteristic class that globalizes to the first Pontryagin class, or $\ch_2(T_X)$, in Dolbeault cohomology. This class defines an extension of the Harish-Chandra pair, and $\hCDO_n$ is equivariant for this extension. Each choice of trivialization $\alpha$ of $\ch_2(T_X)$ encodes an extension $\Tilde{X}^{coor}_\alpha$ of $X^{coor}$ to a flat principal bundle for this extension of pairs. Hence, one can apply Gelfand-Kazhdan descent to $\hCDO_n$ along $\Tilde{X}^{coor}_\alpha$ to produce a vertex algebra, and it is precisely the chiral differential operators on $X$ associated to the trivialization $\alpha$.
@@ -20,7 +21,8 @@ Specifically, in Section \ref{sec gk descent} we formulate a version of Harish-C
 
 We will extract some familiar properties and structures of the sheaf of chiral differential operators from the perspective of Gelfand-Kazhdan formal geometry. For instance, we show in Proposition \ref{prop conformal cdo} that chiral differential operators have the structure of a sheaf of {\em conformal} vertex algebras only if $X$ is Calabi-Yau (in addition to having $\ch_2(T_X) = 0$, of course). Moreover, we show how the Witten genus appears as the character of the sheaf of CDOs, which has already appeared in the works \cite{Cheung, BorLib}. 
 
-\begin{rmk} We should emphasize here that Part I is not the truly novel aspect of this paper. As mentioned in \cite{MSV}, the standard arguments of Gelfand-Kazhdan formal geometry apply to the chiral de Rham complex, and they certainly knew that a minor extension of such formal geometry should allow one to construct CDOs. Our main goal in Part I is to explain these standard arguments and this extension carefully and systematically. We do this for two reasons: first, to allow a systematic comparison with the BV quantization in Part II, and second, to provide a general tool that ought to be applicable to constructing many more interesting vertex algebras. There are elegant machines for such purposes, thanks to \cite{BD, KV}, but we wanted a version closer to the concrete computations that most interest us.
+\begin{rmk} 
+We should emphasize here that Part I is not the truly novel aspect of this paper. As mentioned in \cite{MSV}, the standard arguments of Gelfand-Kazhdan formal geometry apply to the chiral de Rham complex, and they certainly knew that a minor extension of such formal geometry should allow one to construct CDOs. Our main goal in Part I is to explain these standard arguments and this extension carefully and systematically. We do this for two reasons: first, to allow a systematic comparison with the BV quantization in Part II, and second, to provide a general tool that ought to be applicable to constructing many more interesting vertex algebras. There are elegant machines for such purposes, thanks to \cite{BD, KV}, but we wanted a version closer to the concrete computations that most interest us.
 \end{rmk}
 
 \section{Flat vector bundles and Harish-Chandra descent} \label{sec hc descent}
@@ -386,10 +388,10 @@ the $(0,1)$-component of the connection $\nabla^{P,V}$ agrees with the $\dbar$ o
 Hence the horizontal sections are also holomorphic. 
 
 \begin{ex}
-Suppose $G$ is a Lie group and $K \subset G$ is a subgroup. 
-Then, the $K$-principal bundle $G \to G/K$ has the natural structure of a $(\fg,K)$-principal bundle, $\fg = {\rm Lie}(G)$. 
-When $G$ is compact, there is an isomorphism $\bdesc(G \to G/K, V) \cong \clie^*(g, K ; V)$ for any $G$-representation $V$. 
-This is a relative version of the standard fact that the differential forms on $G$ are isomorphic to the absolute Chevalley-Eilenberg complex $\clie^*(\fg)$. 
+Let $G$ be a Lie group and let $K \subset G$ be a closed Lie subgroup. 
+Then the $K$-principal bundle $G \to G/K$ has the natural structure of a $(\fg,K)$-principal bundle where $\fg = {\rm Lie}(G)$. 
+When $G$ is compact, there is a quasi-isomorphism $\bdesc(G \to G/K, V) \simeq \clie^*(\fg, K ; V)$ for any $G$-representation $V$. 
+This quasi-isomorphism is a relative version of the standard fact that the differential forms on $G$ are quasi-isomorphic to the absolute Chevalley-Eilenberg complex~$\clie^*(\fg)$. 
 \end{ex}
 
 \begin{ex} 
@@ -669,8 +671,9 @@ Let $\Exp (X)$ denote the quotient $X^{coor} / \GL_n$.
 A $C^\infty$-section of $\Exp(X)$ over $X$ is called a {\em formal exponential}. 
 \end{dfn}
 
-\begin{rmk} 
-Following Section 4 of \cite{kapranov1999}, we can realize $\Exp (X)$ as the inverse limit of finite dimensional manifolds $\Exp_k (X) = X^{coor}_k / \GL_n$.
+\begin{rmk}
+Following Section 4 of \cite{kapranov1999}, 
+we can realize $\Exp (X)$ as the inverse limit of finite dimensional manifolds $\Exp_k (X) = X^{coor}_k / \GL_n$.
 Moreover, we can equip $\Exp(X)$ with the structure of a principal $\Aut_n^+$-bundle over $X$ in the following way.
 Consider the short exact sequence of pro-Lie groups
 \ben
@@ -1913,7 +1916,8 @@ saying that $c_0^j$ has conformal dimension $0$ and $b_{-1}^j$ has
 conformal dimension $1$. Denote by $\CDO_n^{(N)}$ the conformal dimension
 $N$ subspace. 
 
-\begin{rmk}\label{rmk:notations}
+\begin{rmk}
+\label{rmk:notations}
 The generators of this vertex algebra are given a variety of symbols:
 \begin{enumerate}
 \item in \cite{MSV}, they use $a^j_{m}$ for what we call $b^j_m$ and $b^j_{m}$ for our~$c^j_m$;
@@ -2266,7 +2270,8 @@ in the section above we obtain the following. This action is
 compatible with the action of $\Vect$ just constructed. In conclusion,
 we can summarize the above as follows. 
 
-\begin{prop}\label{hc str on cdo}
+\begin{prop}
+\label{hc str on cdo}
 The pair $(\TVect, \GL_n)$ acts on the $\ZZ_{\geq 0}$-graded vertex algebra $\hCDO_n$. Moreover, this action is compatible with the $\hO_n$-module structure. 
 \end{prop}
 
@@ -2282,7 +2287,8 @@ above.
 %The proof of the Proposition \ref{hc1} amounts to exhibiting the compatibility of results of \cite{GMS} and \cite{MSV}. 
 %We review their constructions here. 
 
-\begin{thm} \label{GMS1}
+\begin{thm} 
+\label{GMS1}
 Let $\Aut_{VA}(\hCDO_n)$ denote the group of automorphisms of the
 vertex algebra $\hCDO_n$. There is a subgroup 
 \ben
@@ -2369,7 +2375,6 @@ let ${\rm C}_{\rm Grp}^k(G ; M)$ denote the space of smooth functions $C^\infty(
 (Typically we have in mind a finite-dimensional representation,
 but it is well-defined for any vector space $M$ such that smooth maps $C^\infty(G^k,M)$ is defined.)
 The differential $\d_{Grp}$ is defined by
-
 \ben
 (\d_{\rm Grp} \alpha)(g_1,\ldots, g_{k+1}) = 
 g_1 \alpha(g_2, \ldots, g_{k+1}) + 
@@ -3016,7 +3021,8 @@ Now $\Tr((g^{-1} \partial g)^3)$ is both $\partial$ and $\dbar$
 closed, so the result follows.
 \end{proof}
 
-\begin{rmk} The $2$-form $\rho$ is only unique up to a holomorphic closed
+\begin{rmk} 
+The $2$-form $\rho$ is only unique up to a holomorphic closed
 $2$-form. We will need to fix one in the next section when we define
 the extended bundle.
 \end{rmk}
@@ -3091,7 +3097,8 @@ is a representing form for $\Theta_{\nabla}^{(2)}$ on the formal disk.
 Note that this element is both $\partial$ and $\dbar$-closed. 
 Let $\Hat{\CS}(A) \in \hOmega^{\geq 2, *}_n$ be the corresponding Chern-Simons form on the formal disk. 
 
-\begin{rmk}\label{rmk: closed2}
+\begin{rmk}
+\label{rmk: closed2}
 It is here that we see the explicit appearance of closed $2$-forms, or really its natural resolution. 
 \end{rmk}
 
@@ -3168,8 +3175,8 @@ the pull-back of forms.
 Equations (\ref{extended coords1}) and (\ref{extended coords2}) define an action of $\Tilde{\Aut}_n$ on $X^{coor}_\alpha$. Moreover, it induces the structure of a $\Tilde{\Aut}_n$-principal bundle $\pi^{coor}_\alpha :X^{coor}_\alpha \to X$ lifting the $\Aut_n$-principal bundle $\pi^{coor}:~X^{coor}~\to~X$.
 \end{prop}
 
-\begin{rmk} Note that the choice of $\Hat{\rho}_{f, \varphi}$ is
-  only unique up to a closed holomorphic $2$-form on the formal disk. That is, for each $\eta \in \hOmega^2_{n,cl}$ we get a different action of $\Tilde{\Aut}_n$ defined by
+\begin{rmk} 
+Note that the choice of $\Hat{\rho}_{f, \varphi}$ is only unique up to a closed holomorphic $2$-form on the formal disk. That is, for each $\eta \in \hOmega^2_{n,cl}$ we get a different action of $\Tilde{\Aut}_n$ defined by
 \ben
 f \cdot (\varphi, \beta_\varphi) := (f^*\varphi, f^* \beta_\varphi + \Hat{\rho}_{f,\varphi} + \eta) .
 \een
@@ -3311,13 +3318,12 @@ Fixing a section $\sigma_{\Omega^2}$ of the $\Omega^2_{n,cl}$-torsor
 over $X^{coor}$ as above,  we can compose with the canonical section
 $\sigma_{\Omega^2} : X^{coor} \to \Tilde{X}_\alpha^{coor}$ of
 $\Tilde{X}^{coor}_\alpha$ over $X^{coor}$ to get the section
-$\sigma_{\Omega^2} \circ \sigma$. This composite defines the connection
-one-form
+$\sigma_{\Omega^2} \circ \sigma$. This composite defines the connection one-form
 \ben
 \Tilde{\omega}_{\sigma, \sigma_{\Omega^2}}^\alpha = (\sigma_{\Omega^2} \circ \sigma)^*
 \omega^{coor} = \sigma^* \sigma_{\Omega^2}^* \omega^{coor}
 \een
-living  in $\Omega^1(\Fr_X; \TVect)$.
+living in~$\Omega^1(\Fr_X; \TVect)$.
 
 \begin{dfn} 
 An {\em extended Gelfand-Kazhdan structure} on $X$ is a triple $(\alpha, \sigma, \sigma_{\Omega^2})$ where
@@ -3664,7 +3670,8 @@ work.
 \een
 \end{dfn} 
 
-\begin{rmk} The descent functor $\Tilde{\desc}_{\GK}$ depends on the
+\begin{rmk} 
+The descent functor $\Tilde{\desc}_{\GK}$ depends on the
   choice of an extended Gelfand-Kazhdan structure and not just a
   trivialization of $\ch_2$. But, as we have already mentioned, the
   sheaf of flat sections does not depend on such a choice so we omit
