@@ -2,8 +2,6 @@
 
 \part*{Part II: The curved $\beta\gamma$ system and its factorization algebra}
 
-%\section{Overview}
-
 \section{Overview}
 
 The curved $\beta\gamma$ system is an elegant nonlinear $\sigma$-model,
@@ -21,8 +19,7 @@ The equations of motion for this action are then
 \]
 In other words, a solution is a holomorphic map $\gamma$ from $S$ to $X$ along with a holomorphic 1-form $\beta$ on $S$ with values in the pullback along $\gamma$ of the cotangent bundle. 
 (When $S$ admits a nowhere-vanishing holomorphic 1-form, such as when $S$ is an elliptic curve,
-one can view the classical $\beta\gamma$ system as picking out holomorphic maps from $S$ to $T^*X$.)
-%Here we will develop the perturbative aspects of the curved $\beta\gamma$ system in the BV formalism.
+one can view the classical $\beta\gamma$ system as picking out holomorphic maps from $S$ to~$T^*X$.)
 
 The quantization of the classical $\beta\gamma$ system is a chiral conformal field theory whose chiral algebra is the CDOs of $X$,
 as explained by Witten \cite{WittenCDO} and Nekrasov \cite{Nek}.
@@ -256,16 +253,6 @@ which was formulate as a classical BV theory in the style of a gauge theory.
 This encoding allows a concise description of how diffeomorphisms on the target act on the theory,
 and thence a description as a $\Vect$-equivariant classical BV theory.
 
-% \owen{
-% This paragraph is now an orphan:
-% As we will examine in detail soon, this isomorphism can be phrased as saying that $\fg_n$ is an $\L8$-module for $\Vect$, 
-% since we have a Lie algebra map 
-% $$\rho_W: \Vect \to \Der(\clies(\fg_n)) = \clies(\fg_n,\fg_n[-1]).$$
-% In other words, this map describes how $\Vect$ acts on the formal $n$-disk.
-% (As $\GL_n$ manifestly acts on $\fg_n$, the reader might ask in what sense $\fg_n$ is a module for the pair $(\Vect,\GL_n)$.
-% Pinning down a useful version of this notion is the goal of Section \ref{sec ss GK descent}.)
-% }
-
 \subsection{The free $\beta\gamma$ system as a BV theory}
 
 We briefly recall how to encode the free $\beta\gamma$ system --- where the target $X$ is the affine space $\AA^n$ --- as a BV theory, following \cite{GwThesis,CG1}.
@@ -407,11 +394,6 @@ and the bracket is
 \]
 Above, we took $A$ to be the Dolbeault complex $\Omega^{0,*}(S)$.
 
-% \owen{The next paragraph isn't quite accurate: 
-% $\Vect$ does not have an $\L8$ action on $\fgn$ or $\fgn^S$, because it acts through derivations on those Lie algebras.
-% In other words, they are not $\L8$ modules over $\Vect$, which is a linear notion.
-% Instead the action is nonlinear since they are spaces with an action of $\Vect$.}
-
 Now, if another Lie algebra $\fh$ acts on $\fg$, there is a natural extension to an action of $\fh$ on $A \otimes \fg$ by simply leaving the $A$-term alone.
 We want to use an $\L8$ version of this procedure to equip $\fg_n^S$ and $\DD \fg_n^S$ with an $\L8$ action of $\Vect$,
 extending the $\L8$ action of $\Vect$ on $\fg_n$.
@@ -463,52 +445,6 @@ Equivalently, we can encode the $\L8$ action in a Lie algebra map
 which assembles the $\ell^A_m$ maps into a ``Taylor series.''
 If we set $A$ to be $\Omega^{0,*}(S)$, then we obtain an $\L8$ action of $\Vect$ on $\fgn^S$.
 A lift of this action to an $\L8$ action of $\Vect$ on $\DD\fgn^S$ is uniquely determined by the requirement that the action preserve the degree -3 pairing.
-
-%\subsubsection{}
-%The action of $\Vect$ on the $L_\infty$-algebra $\fg_n$ extends to an
-%action on the $L_\infty$-algebra $A \otimes \fg_n$ for any commutative
-%dg algebra $A$ as follows. 
-%
-%For each $m$ the $m$-fold commutative multiplication on $A$ defines a map 
-%\ben
-%\mu_m : \Sym^m(A \otimes \fg_n) \to A \otimes \Sym^m (\fg_n)
-%\een
-%that sends $(a_1 \otimes a_m) \otimes (v_1 \otimes v_n) \mapsto
-%(a_1\cdots a_m) \otimes (v_1 \otimes \cdots \otimes v_n)$.
-%
-%
-%%Consider the linear endomorphisms of the algebra $A$, $\End (A)$. There is a map $\End(A) \cong A^\vee \otimes A = \Sym^1(A^\vee) \otimes A \hookrightarrow \Sym(A^\vee) \otimes A$. Let $\Bar{\id}_A$ denote the image of $\id_A \in \End(A)$ under this compoisition. 
-%
-%Consider the induced composition 
-%\ben
-%\xymatrix{\cSym(\fg_n^\vee[-]) \otimes \fg_n[1]
-%\ar[r]^-{\id_A} & \left(
-%  \cSym(\fg_n^\vee[-1])\right) \otimes \left(A^\vee \otimes A \right) \otimes \fg_n[1] \ar[r]^-{\mu^\vee} & \left(\cSym(\fg_n^\vee[-1]) \otimes \cSym(A^\vee) \right)\otimes (A \otimes \fg_n[1]) \ar@{=}[d] \\
-%& & \cSym\left((A \otimes \fg_n)^\vee[-1]\right) \otimes (A \otimes \fg_n)[1] .}
-%\een
-%where $\id_A \in \End(A) = A^\vee \otimes A$ is the identity endomorphism and $\mu^\vee$ is the dual to the commutative multiplication on $A$. Together with the map $\rho_W : \Vect \to \Sym(\fg_n^\vee[-1]) \otimes \fg_n[1]$ defining the $\Vect$ action on $\fg_n$ we obtain a map of graded vector spaces
-%\ben
-%A \otimes \rho_W := \mu^\vee \circ \id_A \circ \rho_W : \Vect \to  \clie^\sharp (A \otimes \fg_n ; A \otimes \fg_n[1]) .
-%\een 
-%
-%\begin{lemma} This defines a map of dg Lie algebras $A \otimes \rho_W : \Vect \to \Der(A \otimes \fg_n)$.
-%\end{lemma}
-%In the case that $A = \Omega^{0,*}(S)$ we get an action of $\Vect$ on the $L_\infty$-algebra $\fg_n^S$. Just as above, this action is encoded by an $L_\infty$-structure on the direct product $\Vect \oplus \fg_n^S$. Explicitly, the structure maps of this $L_\infty$-algebra have the form 
-%\ben
-%\xymatrix{
-%\Vect \otimes (\fgn^S)^{\otimes m} = \Vect \otimes \left(\Omega^{0,*}(S) \otimes \fgn \right)^{\otimes m} \cong \Vect \otimes \left(\Omega^{0,*}(S)\right)^{\otimes m} \otimes \fgn^{\otimes m} \ar[r]^-{\wedge \otimes \ell^\bW_m} & \Omega^{0,*}(S) \otimes \fgn = \fgn^S
-%}
-%\een
-%where $\ell^\bW_m : \Vect \to \fgn^{\otimes m} \to \fgn$ is the $L_\infty$-bracket above and $\wedge$ is the wedge product of differential forms. We denote these brackets by $\ell_m^{\bW,S}$. 
-%
-%If $X = t_1^{m_1} \cdots t_n^{m_n} \partial_j \in \Vect$ as above then it acts non-trivially on $\Omega^{0,*}(S, \fgn^S)$. Indeed, if
-%\ben
-%\Gamma = (\gamma_{1,1} \otimes \xi_1 \cdots \gamma_{1,m_1} \otimes \xi_1) \otimes \cdots \otimes (\gamma_{n,1} \otimes \xi_n \cdots \gamma_{n,m_n} \otimes \xi_n) \in \left(\Omega^{0,*}(S, \fgn^S)\right)^{\otimes m}
-%\een
-%where $\gamma_{i,j} \in \Omega^{0,*}(S)$, then
-%\ben
-%\ell_m^{\bW,S}(X \otimes \Gamma) = \wedge(\gamma_{i,j}) \otimes \xi_j .
-%\een
 
 Diffeomorphisms of a manifold $X$ naturally determine symplectomorphisms of the cotangent bundle $T^*X$,
 given simply by the associated map of vector bundles.
@@ -638,27 +574,6 @@ I^{\rm W}_X(\gamma, \beta) = \sum_{j = 1}^n \sum_{\bm \in \NN^n} a_{j, \bm} \int
 satisfies $\{I^{\rm W}_X,-\} = \DD\rho_W(X)$.
 \end{lemma}
 
-%\begin{rmk} 
-%Note something important about this definition (and possibly peculiar upon first acquaintance):
-%such a functional vanishes on fields $\gamma \in \Omega^{0,0}(S)$ and $\beta \in \Omega^{1,0}(S)$ because the integrand would not be a top form. Indeed, for fixed $X$ we see that the local functional $I^{\rm W}_X$ is of cohomological degree one. This fact does not, however, make $I^{\rm W}$ trivial. In fact, it has a familiar interpretation of a {\em current} of the classical field theory that we now explain. 
-%
-%Fix a vector field $X \in \Vect$ and consider the one-dimensional Lie algebra spanned by it. 
-%In \brian{ref} it is shown that actions of an ordinary Lie algebra $\fg$ on a field theory on $S$ are equivalent to actions by the {\em local} Lie algebra $\Omega^*_S \tensor \fg$. 
-%The data of a local Lie algebra acting a field theory $\cE$ is equivalent to a Maurer-Cartan element in
-%\ben
-%{\rm C}^*_{\rm loc} \left(\Omega^*_S \tensor \fg\right) \tensor {\rm C}^*_{\rm loc}\left(\cE \right) [-1]
-%\een
-%where the Lie bracket comes from the BV pairing $\{-,-\}$ on $\cE$ as above. Thus, for fixed $X$ in $\Vect$, and the Lie algebra $\fg = \CC \cdot X$, we can think of $I_X^{\rm W}$ as a Maurer-Cartan element in ${\rm C}^*_{\rm loc} \left(\Omega^*_S \right) \tensor {\rm C}^*_{\rm loc}\left(\DD \fg_n^S \right) [-1]$. Now, for each open $U \subset S$ we have a map of dg Lie algebras
-%\ben
-%\Phi_U : {\rm C}^*_{\rm loc} \left( \Omega^*_S \right) \tensor {\rm C}^*_{\rm loc}\left(\DD \fg_n^S\right) [-1]\to \clie^*(\Omega^*_c(U)) \tensor \clie^*(\DD \fg_n^U) [-1]
-%\een 
-%which is well-defined as we can restrict a local functional to an open set provided at least one of the inputs is compactly supported. The induced Maurer-Cartan element $I^{\rm W}_X (U) := \Phi_U(I^{\rm W}_X)$ defines a map of $L_\infty$-algebras
-%\ben
-%I^{\rm W}_X(U) : \Omega^*_c(U) \to \clie^*(\DD \fg_n^U) [-1] .
-%\een 
-%Taking the linear dual (\brian{and forgetting about completions}) we view this map as an element of degree zero in $\Omega^*(U) \tensor \clie^*(\DD \fg_n^U) [1]$ (the shift by $2$ comes from taking the dual of the compactly supported de Rham complex on $U$). To recover the current, we take $U \simeq A$ to be equivalent to an annulus. In this case the unique class $\d \theta$ in $\Omega^1(A)$ defines the degree zero element $I_X^{\rm W}(A) \d \theta \in \clie^*(\DD \fg_n^A)$. This is the associated current to the symmetry generated by $X$. 
-%\end{rmk}
-
 \begin{rmk}
 When restricted to linear vector fields, the action of $\Vect$ on $\beta\gamma$ system with target $\hD^n$ 
 agrees with the action of $\GL_n$ described in Lemma \ref{GLaction}. In this sense, we have described an action of the Harish-Chandra pair $(\Vect, \GL_n)$ on the classical $\beta\gamma$ system. 
@@ -666,16 +581,6 @@ This theory can thus be treated by Gelfand-Kazhdan formal geometry.
 We develop this reasoning more fully in Section \ref{sec comparison}. 
 In particular, in the next section we will show that this theory descends to the classical curved $\beta\gamma$ system where the target is a complex manifold $X$; more precisely, we will identify this theory with the theory defined by Costello in \cite{WG2}.
 \end{rmk}
-
-%\owen{I don't quite understand the remark below.}
-
-%\begin{rmk} 
-%We have already discussed how biholomorphisms act on the
-%  global $\beta \gamma$ system. The $\infty$-jet of a biholomorphism
-%  determines a formal vector field. Moreover, the local functional $I_X^{\rm W}$, or
-%  more precisely its BV bracket $\{I_X^{\rm W},-\}$, is the power series
- % expansion of the action of the original biholomorphism.
-%\end{rmk}
 
 As explained in Section \ref{sec DDT}, we can identify this map
 $I^{\rm W}$ with a Maurer-Cartan element $\clies(\Vect,
@@ -757,23 +662,6 @@ This map is, in fact, the restriction of the action $\rho_{\hT_n}$ of $\Vect$ on
 That is, $\rho_{\hT_n}|_{\Vect \tensor T_0} = I^{{\rm W}, alg}$. Proposition \ref{atiyahprop1} then implies that $(\d_{dR} \tensor 1) I^{{\rm W},alg}$ is a representative for the Gelfand-Fuks-Atiyah class.
 \end{proof}
 
-%\owen{This paragraph is false! So too is what we say afterward. The factorization is more subtle than that.}
-%In terms of this decomposition, the functionals that are homogeneous of degree $k$ live in
-%\[
-%\Sym^k(C^\infty(\CC)^\vee) \otimes \Sym^k(\fg_n^\vee[-1]).
-%\]
-%Note that the left hand factor is analytical in nature and only depends on the source manifold $S$,
-%whereas the right hand factor is algebraic in nature and only depends on the target formal $n$-disk.
-%For many of the local functionals we work with, their components of homogeneous degree $k$ factor as a product of two terms.
-%For instance, if we fix a vector fields $X$ and consider $I^{\rm W}_X$, 
-%its degree $k$ component is a product $I^{\rm W, k, an}_X I^{\rm W, k,alg}_X$. In fact, $I^{\rm W, alg}$ is a cocycle, which is a consequence of the fact that $I^{\rm W}$ is a Maurer-Cartan element.
-
-%In terms of this decomposition, 
-%one can view a local functional $I$ as factoring into a product $I^{\rm an} I^{\rm alg}$ of an analytic and algebraic component,
-%where $I^{\rm an}$ is a functional on $\Vect \tensor C^\infty(\CC)$ and 
-%$I^{\rm alg}$ is a functional on $\Vect$ and the other algebraic piece in the decomposition. 
-%More correctly, a local functional that is homogeneous of degree $k$ can be factored
-
 \subsubsection{Equivariant deformation complex} \label{sec eq def cplx}
 
 We can now make the following deformation complex that controls $\Vect$-equivariant deformations of the classical theory. 
@@ -806,8 +694,6 @@ In our setting there is thus an action of $\CC^\times$ on $\DD \fgn^S$ given by 
 Second, we restrict now to the Riemann surface is $S = \CC$ and 
 note that affine linear automorphisms ${\rm Aff}(\CC) = \CC \ltimes \CC^\times$ preserve the action functional
 of the $\beta\gamma$ system.
-%(Later, in Section \owen{ref}, we will consider instead how holomorphic vector fields act on local functionals
-%and hence determine the central charge of the quantized theory.)
 We are only interested in the subcomplex of $\Def^{W}_n$ consisting of local functionals that are weight zero under the scaling action and invariant under the $\Aff(\CC)$ action.
 Then we have the subcomplex
 \ben
@@ -863,18 +749,6 @@ J : \hOmega^2_{n,cl} \to \Cloc^*(\fg_n^S)
 and use $J_\omega$ to denote the image of $\omega$. 
 This map will exhibit the quasi-isomorphism of Proposition \ref{eqdef}. 
 
-% This map has the following geometric interpretation in the global
-% holomorphic $\sigma$-model. Recall, the
-% fundamental fields of the theory consist of a map $\gamma : S \to
-% X$ together with a one-form $\beta \in \Gamma(K_S \tensor \gamma^*
-% T X)$. Choose a disk $D \subset X$ inside of $X$. By the Poincar\'{e}
-% lemma every closed two-form $\omega$ on $D$ is exact, hence there is a
-% one-form $\theta$ such that $\d \theta = \omega$. We obtain a one-form
-% on $S$ via pulling back $\gamma^* S$. 
-
-%  Given a one-form $\theta \in \hOmega^1_n$ on the formal
-% disk we can consider the pull-back along $\gamma$, which is a section
-% $\gamma^* \theta \in \Gamma(\gamma^* T^* \hD^n)$. 
 
 \begin{rmk}
 This map has the following geometric interpretation. 
@@ -914,7 +788,6 @@ f^S_k : & \Sym^k(\Omega^{0,*}_S \tensor \fg_n[1]) & \to & \Omega^{0,*}_S \\
 \end{array}
 \een
 Extend to non-homogenous elements by linearity so that $f^S = \sum_k f^S_k$. 
-%Note that $\tau$ is simply base change along $\CC \to \Omega^{0,*}_S$ sending the unit to the constant function $1$
 
 Similarly, a one-form on the formal disk $\theta \in \hOmega^1_n = \clie^*(\fg_n ;\fg_n^\vee[-1])$ 
 encodes a linear map $\theta : \Sym(\fg_n[1]) \to \fg_n^\vee[-1]$. 
@@ -943,11 +816,6 @@ monomial one-form, then we have
 For shorthand notation, we will write $\Tilde{J}_{\theta} = \int_S
 \<\theta^S(\gamma), \partial \gamma\>_{\fg_n}$ where the sum over
 homogenous components is implicit. 
-
-%To treat $\theta$ as a parameter, we view $\hOmega^1_n$ as an abelian Lie algebra 
-%and $\clies(\hOmega^1_n)$ as the ring of functions on the associated space of one-forms.
-%Then the formula defines $J' \in \clie^1(\hOmega^1_n ;
-%\cloc^*(\fg_n^S))$.
 
 We tie up the properties of the functional $\Tilde{J}$ in the following proposition, proved below. 
 
@@ -1088,10 +956,8 @@ parts). Integration by parts again returns $\Tilde{J}_{L_X \theta}$ as
 desired.
 \end{proof}
 
-%\subsection{Proof of Proposition \ref{eqdef}}\label{seceqdef}
 \begin{proof}[Proof of Proposition \ref{eqdef}]
 \label{seceqdef}
-
 We have just seen that $J : \hOmega^2_{n,cl} \to \Def_n$ is
 $\Vect$-equivariant. To complete the proof it suffices to show that we have a $\Vect$-equivariant equivalence $(\Def_n)^{\CC^\times \times {\rm
     Aff}(\CC)} \simeq \hOmega^2_{n,cl}[1]$. With $\fgn$ as the choice of the $\L8$ algebra $\fg$, 
@@ -1145,7 +1011,6 @@ This identification is clearly $\Vect$-equivariant.
 \subsection{Holomorphic vector fields on the source} \label{sec hol vf}
 
 We digress momentarily to describe another important symmetry present in the $\beta\gamma$ system:
-%The two-dimensional $\sigma$-model of all maps from a Riemann surface $S$ to a complex manifold is classically conformal. 
 the holomorphic $\sigma$-model possesses a natural symmetry of the Lie algebra of holomorphic vector fields $T_S = T^{1,0}_S$, 
 much as the usual $\sigma$-model is conformal as a classical field theory.  
 We will formulate this symmetry on the formal $\beta\gamma$ system. 
@@ -1162,10 +1027,6 @@ $(0,*)$-forms:
 \[
 \xi \cdot (\gamma \tensor v) = (\cL_\xi \gamma) \tensor v.
 \]
-%\begin{align*}
-%\cT_S \times \Omega^{0,*}(S ; \CC^n) & \to \Omega^{0,*}(S ; \CC^n) \\
-%(\xi , \gamma \tensor v) & \mapsto (\cL_\xi \gamma) \tensor v .
-%\end{align*}
 (We use the script $\cL$ to denote the Lie derivative with respect to
 vector fields on the source, to avoid confusing it with $L_X$, 
 the Lie derivative of vector fields on the target.) 
@@ -1182,8 +1043,7 @@ This action can be encoded by a local functional, and hence we obtain a $\hT_S$-
 \[
 \begin{array}{cccc}
 I^{\cT} :& \cT_S & \to & \Def_n[-1] \\
-& \xi & \mapsto & \<\beta, \cL_\xi \gamma\> \\
-%&&&= \sum_{i=1}^n \int_S \beta_i \wedge \cL_\xi \gamma_i 
+& \xi & \mapsto & \<\beta, \cL_\xi \gamma\> 
 \end{array}
 \]
 along the map determined by the BV bracket $\{-,-\} : \Def_n[-1] \to
@@ -1286,16 +1146,6 @@ The complex $\clie^*(\Vect ; \Def_n^\cT)$ controls equivariant
 deformations for both the Lie algebra $\Vect$ {\em and} $\cT_\CC$. The
 map $(\omega^{\GF},K,J)$ will allow us to identify elements of the
 deformation complex with ordinary characteristic classes. 
-
-% \begin{rmk} There is an action of $\CC^\times$ on the deformation
-%  complex $\Def^{\cT}_n$ by scaling the cotangent fiber. We do not use
-%  the full calculation of the deformation complex here, though in
-%   future work we will show that there is a $\Vect$-equivariant quasi-isomorphism
-% \ben
-% \left(\Def^\cT_n\right)^{\CC^\times} \simeq \; \CC[-1] \oplus
-% \hOmega^1_{n,cl}[-1] \oplus \hOmega^1_n \oplus \hOmega^2_{n,cl}[1] .
-% \een 
-% \end{rmk}
 
 \section{Equivariant BV quantization of the formal $\beta\gamma$
   system}\label{sec equiv bv}
@@ -1431,7 +1281,6 @@ lives in $\clies(\fh)$ for every scale $L$, and
 
 In other words, we simply follow the constructions of \cite{CosBook,CG2} working over the base ring $\clies(\fh)$.
 A careful reading of those texts shows that the freedom to work over interesting dg commutative algebras is built into the formalism.
-%\owen{We may need to be a bit careful since a version of nilpotency is used there but ..}
 Note that our situation is particularly simple since the non-equivariant classical field theory is free and hence admits a very simple quantization,
 with $I[L] = 0$ for all $L$.
 
@@ -1981,21 +1830,6 @@ By describing this functional explicitly,
 we will complete the proof of Proposition \ref{obsprop},
 as it will agree on the nose with~$J^{\rm W}(\ch_2^{\GF}(\hT_n))$.
 
-%
-%We can factor this functional into an an algebraic piece (dependent on $\fg_n$) and an analytic piece (independent of $\fg_n$). 
-%Write 
-%\[
-%\Theta_{\Gamma,e}(X,Y) = \Theta_{\Gamma,e}^{an}(X,Y) \Theta_{\Gamma,e}^{alg}(X,Y).
-%\]
-%The analytic piece is a functional
-%\ben
-%\Theta^{an}_{\Gamma,e} (X,Y) :\Sym^{k+l-2} (\Omega_c^{0,*}(\CC)) \to \CC,
-%\een
-%which we describe explicitly in the next lemma. 
-%
-%It will be convenient to fix an anti-holomorphic 1-form $\d \zbar \in \Omega^{0,1}(\CC)$ 
-%and write $\Omega_c^{0,*}(\CC) = \Omega_c^{0,0}(\CC) [\d\zbar]$. 
-
 \begin{prop}
 Let $X = a^i \partial_i$ be homogeneous of degree $k$
 and $Y = b^j \partial_j$ homogeneous of degree $l$. Let $\Gamma$ be the two-vertex wheel with vertices of valencies $k+1$ and $l+1$ and mark one internal edge as distinguished. Then, we have an identification $\Theta_{\Gamma,e}(X,Y) = a J^{\rm W}(\ch_2^\GF (\hT_n))(X,Y)$ for some nonzero number $a$. 
@@ -2006,16 +1840,6 @@ and $Y = b^j \partial_j$ homogeneous of degree $l$. Let $\Gamma$ be the two-vert
 b^j)^S(\gamma)\right)\>_{\fgn}.
 \]
  
-%If $_1,\ldots,f_{k-1} \in \Omega_c^{0,0}(\CC)$ denote the inputs to the first vertex and 
-%$g_1,\ldots,g_{l-1} \in \Omega_c^{0,0}(\CC)$ denote the inputs to the second vertex, 
-%then
-%\ben
-%\Theta_{\Gamma,e}^{an}(X,Y)  (f_1 \d \zbar, f_2,\ldots,f_{k-1},g_1,\ldots,g_{l-1}) 
-%= \frac{1}{2 (4 \pi)^2}\int_{z \in \CC} \left( \prod_{i=1}^{k-1}f_i\right) \partial \left( \prod_{j=1}^{l-1} g_j \right) \d \zbar  .
-%\een
-%In particular, the analytic weight only depends on $k,l$. 
-%\end{prop}
-
 \begin{proof}
 We simplify further by setting
 \[
@@ -2135,12 +1959,6 @@ Integrating by parts (to get rid of the $(-)$ sign) we see that the total weight
 \een
 as desired. Setting $f_i = g_j$ we see that this coincides with the analytic part of $J^{\rm W}(\ch_2(\hT_n))(X,Y,f_i = g_j)$ written above in (\ref{J when n=1}). 
 \end{proof}
-%
-%We proceed to compute the algebraic factor $\Theta^{alg}_{\Gamma,e}(X,Y)$. Indeed, this is computed by
-%\ben
-%\Theta^{alg}_{\Gamma,e}(X,Y) = W_\Gamma^{alg}({\rm id}_{\fg_n} + {\rm id}_{\fg_n^\vee}, I^{{\rm W},k, alg}, I^{{\rm W}, l, alg})
-%\een
-%where...
 
 \begin{rmk} 
 Note that when restricted to {\em linear} vector fields $\gl_n \hookrightarrow \Vect$, 
@@ -2310,31 +2128,6 @@ We have already seen that the image of $p^*\ch_2^{\rm GF}(\hT_n)$
 under $J^{\Tilde{\rm W}}$ is the obstruction cocycle $\Tilde{\Theta}$,
 and this is what we wanted to show. 
 \end{proof}
-
-% Consider the following commuting diagram of obstruction-deformation complexes:
-% \ben
-% \xymatrix{
-% \left(\Def_n^{\rm W}\right)^{\CC^\times \times \Aff(C)} \ar[r]^-{p^*} & \left(\TDef_n^{\rm W}\right)^{\CC^\times \times \Aff(C)} \\
-% \clie^*(\Vect, \hOmega^2_{n,cl}) \ar[u]^-{\simeq} \ar[r]^-{p^*} & \clie^*(\TVect, \hOmega^2_{n,cl}) \ar[u]_-{\simeq}  .
-% }
-% \een
-% We can transfer the trivialization $\id_{\Omega^2}$ of
-% $\ch_2(\hT_n)$ to a trivialization
-% \ben
-% J \in \left(\TDef_n^{\rm W}\right)^{\CC^\times \times \Aff(C)} \subset \clie^*(\TVect, \Cloc^*(\fg_n^\CC))
-% \een
-% of $\Tilde{\Theta}$, and shortly will give an explicit description of $J$ at the level of local functionals (see Section \ref{explicit J} below).
-
-% First, though, observe that given the functional $J$, 
-% we can describe the quantum corrections to the equivariant pre-quantization $\{\Tilde{I}^{W}[L]\}$.
-% Define
-% \ben
-% J[L] := \sum_{\substack{\Gamma \in \; {\rm Trees}\\ v \in {\rm Vert}(\gamma)}} \frac{1}{|{\rm Aut}(\gamma)|} W_{\gamma,v}(P_\epsilon^L, \Tilde{I}^\bW,J),
-% \een
-% where the notation $W_{\gamma,v}(P_\epsilon^L, \Tilde{I}^{\bW}, J)$ is 
-% the weight computed by placing the interaction $J$ at the vertex labeled $v$ and $\Tilde{I}^{\bW}$ at the remaining vertices, as depicted \brian{below}. 
-% The sum here is over all isomorphism classes of connected trees with
-% a distinguished vertex.
 
 Finally, we arrive at the main result concerning the extended
 equivariant BV theory. 
@@ -2528,7 +2321,6 @@ We have constructed the Gelfand-Fuks-Chern characters
 \ben
 \ch^{\rm GF}_k(\cV) \in \clie^k(\Vect, \GL_n ; \hOmega^k_{n,cl}) .
 \een
-%(We are primarily interested in the case $\cV = \hT_n$.) 
 Let $\hOmega^{-*}_n = \bigoplus_{k} \hOmega^k_n [k]$ denote the formal de Rham forms 
 arranged in opposite degrees from usual (i.e., with $k$-forms beginning in degree $-k$ rather than $k$).
 Note that we do {\em not} include the exterior derivative as part of the total differential
@@ -3630,10 +3422,6 @@ We can thus apply semi-strict Gelfand-Kazhdan descent and obtain the following r
 Note that we are working in the category of dg modules over the commutative dg algebra $\Omega^*(X)$ 
 in the category of differentiable vector spaces discussed in Section~\ref{sec functional analysis}.
 
-%\owen{We {\em should} insert a discussion here about all the factorization gluing conditions,  
-%if we wanted to really spell everything out.
-%But I think it's quite formal and I'm not inclined to do it (unless compelled by a ref%eree or another reader, or my conscience).}
-
 \begin{cor}
 The strict Gelfand-Kazhdan descent of $\Obs^\cl_n$ on an $n$-dimensional complex manifold $X$ 
 is a commutative factorization algebra in dg modules over $\Omega^*(X)$.
@@ -3681,69 +3469,6 @@ the strict Gelfand-Kazhdan descent of $H^*\Obs^\q_n$ is a factorization algebra.
 In Section \ref{sec concrete} below, we provide a description of these
 factorization algebras that is humanly understandable,
 but first we will swiftly relate our work to Costello's approach in \cite{WG2}.
-
-%\subsubsection{Semi-strict to strict}
-%
-%\owen{I've copied what was in Part III. It seems that above I merely assert that everything works.
-%It should be a formal consequence of Lemma 12. But edit as you see fit.}
-%
-%Recall, the scale $L$ quantum observables on an open $U$ are
-%\ben
-%\eqObs^q_n (U) [L] = \left(\cO(\TVect [1] \oplus \DD \fg_n^U [1])[ \hbar ] , \d_{\TVect} + \dbar + \{\Tilde{I}^{\rm W}[L] + \hbar J[L], -\}\right) .
-%\een
-%We identify the scale $L$ equivariant observables above with the $\clie^*(\TVect)$-module 
-%\ben
-%\clie^*(\TVect ; \Obs^\q_n[L])
-%\een
-%from which $\Obs^\q_n[L]$ inherits the structure of an
-%$L_\infty$ module for the Lie algebra $\TVect$. The $L_\infty$ module
-%structure maps have the form
-%\ben
-%\rho_m : (\TVect)^{\tensor m} \tensor \Obs^\q_n[L] \to \Obs^\q_n[L] .
-%\een
-%The action of a fixed element
-%\ben
-%(\vec{X} , \vec{\omega}) := (X_1 \tensor \cdots X_{m_1},
-%\omega_1\tensor \cdots \tensor \omega_{m_2}) \in \TVect^{\tensor m}
-%\;\; , m_1 + m_2 = m ,
-%\een
-%is explicit to describe. For a fixed observable $\{O[L]\}$ the
-%observable
-%\ben
-%\rho(\vec{X},\vec{\omega}) (\{O[L]\})
-%\een
-%is defined by
-%\ben
-%\{I^{\rm W} [L](\vec{X}) + \hbar J[L] (\vec{\omega}), O[L]\}_L .
-%\een 
-%
-%At the level of cohomology, the action of $\TVect$ on the observables
-%is strict. Hence, the induced action on the vertex algebra
-%$\Vert(\Obs^\q_n)$ is strict. Thus, we need only compute the linear piece of the action $\rho_1 : \TVect \tensor \Obs^\q_n[L] \to \Obs^\q_n[L]$ and there are no contributions from the higher brackets at the level of cohomology. Explicitly, for an observable $\{O[L]\}$ we need only compute
-%\ben
-%\{I_X^{\rm W}[L] + \hbar J_\omega[L], O[L]\}_L
-%\een 
-%for $(X, \omega) \in \TVect$. \brian{It might be good to explain the notation $I_X^{\rm W}[L]$ and $J_\omega[L]$.} 
-%
-%Let $\Bar{O} \in \bObs^q_n$ and consider the tree level RG flow $O[L] :=
-%W(P_{0<L}, \Bar{O})$. Since $I_X^{\rm W}+ \hbar J_\omega$ is a local functional we see that to compute the scale $L$
-%bracket $\{I_X^{\rm W}[L], O[L]\}_L$ it suffices to compute $\{I^{\rm
-%  W}_X + \hbar J_\omega, \Bar{O}\}$ since 
-%\ben
-%\{W(P_{0<L}, I), O[L]\}_L = W(P_{0<L}, \{I, \Bar{O}\})
-%\een 
-%for any local functional $I$. 
-%
-%Thus, we can describe the action of $\TVect$ on $\Vert(\Obs^\q_n)$ concretely as
-%follows. Given an element $a \in \Vert(\Obs^\q_n)$ pick a cochain representative
-%$\Tilde{a}$ in $\bObs^q(D(0,r))$. Then, the action of $(X,\omega) \in
-%\TVect$ on $a$ is given by the cohomology class of 
-%\ben
-%\{I^{\rm W}_X + \hbar J_\omega, \Tilde{a}\}
-%\een 
-%which is an element of $\Vert(\Obs_n) \subset H^*(\Obs^\q(D(0,r)))$. 
-%
-%
 
 \subsection{Comparison with Costello's work} \label{sec comparison}
 
@@ -3958,14 +3683,6 @@ Let $\widehat{\otimes}$ denotes the completed tensor product,
 so that $\cSym(V \oplus W) \simeq \cSym(V)
 \,\widehat{\otimes}\,\cSym(W)$ for any pair of vector
 spaces. 
-
-% \brian{I think this is the first place where we use the
-%   notation $\widehat{\tensor}$ for completed tensor product. Does it
-%   warrant a brief digression? Or maybe it should go in the functional
-%   analysis warmup in the beginning of this section (main file).} 
-%   \owen{I'm not sure we ever use it again (although we probably
-%   should), so I'm happy not to define it earlier, which is really
-%   about other kinds of functional analysis issues.}
 
 Then 
 \begin{align*}
@@ -4396,6 +4113,3 @@ The obstruction calculation of Proposition \ref{sec conformal anomaly} for the $
 
 The resulting factorization algebra for the curved $\beta\gamma$ system with choice of trivialization $\alpha$ is given by $\Obs^\q_{X,\alpha}$. Finally, the Virasoro factorization algebra of central charge $2n$ is precisely the factorization algebra $\sVir_{c=2n} := {\rm C}^{{\rm Lie}, 2 n \omega^{\GF}}_* (\cT^\CC_c)$. The proposition follows.
 \end{proof}
-
-%\begin{rmk} Note that for every choice of trivialization $\beta$ of $c_1(T_X)$, as in the proof of the proposition, we obtain a map of factorization algebras (\ref{quantum vir}). \brian{not sure what more to say here...}
-%\end{rmk}

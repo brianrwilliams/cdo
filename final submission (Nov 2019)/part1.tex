@@ -66,18 +66,6 @@ such that the diagram in Lie algebras
 commutes. 
 \end{dfn}
 
-%Equivalently, this category can be described as follows. Let ${\rm LieGrp}_{\mathbb{F}}$ be the category of Lie groups and ${\rm Lie}_{\mathbb{F}}$ be the category of Lie algebras over $\FF$. 
-%Define the category ${\rm Lie}_{\FF}^{\rm inj}$ whose objects are injective maps of Lie algebras $\fh \hookrightarrow \fg$ and whose morphisms are the obvious commuting squares. There is a forgetful functor ${\rm Lie}_\FF^{\rm inj} \to {\rm Lie}_\FF$ that sends an object $\fh \hookrightarrow \fg$ to the source Lie algebra $\fh$. 
-%
-%\brian{Then $\pairs_\FF$ is the categorical pull-back
-%\ben
-%\xymatrix{
-%\pairs_\FF \ar[r] \ar[d] & {\rm LieGrp}_{\mathbb{F}} \ar[d]^-{\rm Lie} \\
-%{\rm Lie}^{\rm inj}_{\FF} \ar[r]^-{\rm forget} & {\rm Lie}_{\FF} . 
-%}
-%\een
-%BAD: This is a little funky, because I have no condition that the action of ${\rm Lie}(K)$ on $\fg$ agrees with the adjoint action. Need to fix this, any ideas?}
-
 \subsubsection{Modules}
 
 Fix a HC-pair $(\fg,K)$. In this section we set up the notion of a module for~$(\fg,K)$. Below, we discuss modules in the category of vector spaces, but the definition is easily generalized to $\CC$-linear symmetric monoidal categories.
@@ -101,8 +89,6 @@ A {\em morphism of $(\fg,K)$-modules} is a linear map intertwining the actions o
 Denote the category of $(\fg,K)$-modules by $\Mod_{(\fg,K)}$.
 Denote by $\Mod_{(\fg,K)}^{fin}$ the full subcategory whose objects consist of modules whose underlying vector space is finite-dimensional.
 \end{dfn}
-
-%In other words, a morphism of $(\fg,K)$-modules is specified by a  map of underlying $\fg$-modules. 
 
 \subsection{Bundles}
 
@@ -331,19 +317,6 @@ V_X)$, the cochain complex $(\Omega^{\#}(P; \ul{V})_{bas}, \nabla^V)$ is a
 dg module over $\Omega^*(X)$. 
 \end{lemma}
 
-%\begin{itemize}
-%\item[(1)] $\nabla^V$ preserves the sub-algebra of basic forms and so determines an operator
-%\ben
-%\nabla^V : \Omega^k(X; V_X) \to \Omega^{k+1}(X; V_X) .
-%\een
-%\item[(2)] If $f \in \cO(X) \cong \cO(P)^K$ and $\alpha \in \Omega^k(P; \ul{V})_{bas} \cong \Omega^k(X; V_X)$ then
-%\ben
-%\nabla^V(f \cdot \alpha) = (\d_{dR} f) \tensor \alpha + f \tensor \nabla^V \alpha .
-%\een
-%\item[(3)] It is square-zero, $(\nabla^V)^2 = 0$. 
-%\end{itemize}
-%$
-
 \begin{dfn}\label{def desc}
 The {\em associated flat vector bundle} to the flat $(\fg,K)$-bundle $P \to X$ and the finite-dimensional $(\fg,K)$-representation $V$ is 
 \[
@@ -558,10 +531,6 @@ The pair $(\Vect, \GL_n)$ form a Harish-Chandra pair.
 In this section we review the central object in the Gelfand-Kazhdan
 picture of formal geometry: the coordinate bundle.
 
-%Our version of Harish-Chandra localization is intimately related to, and motivated by, the methods of formal geometry developed by Gelfand, Fuchs, Kazhdan, and many others \brian{refs}. 
-%It has been used prominently in the setting of deformation quantization, notably by Kontsevich \brian{ref}, Nest-Tsygan \brian{ref}, Cattaneo-Felder \brian{ref}, and \brian{more}. 
-%Here we start by reviewing the big picture before delving into some precise definitions and summarizing the relevant results from the literature.
-
 \subsubsection{}
 
 Given a complex manifold, its {\em coordinate space} $X^{coor}$ is the (infinite-dimensional) space parametrizing holomorphic formal coordinate systems of $X$. 
@@ -696,19 +665,6 @@ Using this isomorphism, we equip $X^{coor} / \GL_n$ with the desired $\Aut_n^+$ 
 Note that $\Aut_n^+$ is contractible, and so smooth sections always exist. 
 A formal exponential is useful because it equips the frame bundle with a $(\Vect,\GL_n)$-module structure, as follows.
 
-%The space of formal exponentials is the (infinite dimensional) affine space $\Sect_X(\Exp_X^\infty)$. Unraveling the definition, such a section $\sigma$ of $X^{aff}$ is an $\infty$-jet equivalence class of a local diffeomorphism
-%\ben
-%\sigma_x : T_x X \to X
-%\een
-%for each $x \in X$ such that
-%\begin{itemize}
-%\item[(i)] $\sigma_x(0) = x$
-%\item[(ii)]\label{exp2} The derivative at $0$ of $\sigma_x$ is the identity $D (\sigma)_0 = {\rm id} : T_x X \to T_x X$. 
-%\end{itemize}
-% 
-%\begin{rmk} In \brian{Cattaneo-Felder, more} this bundle is denoted $X^{aff} \to X$ and is called the affine bundle. 
-%\end{rmk}
-
 \begin{prop} \label{gauge equiv}
 A formal exponential $\sigma$ pulls back to a $\GL_n$-equivariant map $\tilde{\sigma} : \Fr_X \to X^{coor}$,
 and hence equips $(\Fr_x, \sigma^* \omega^{coor})$ with the structure
@@ -734,11 +690,6 @@ so all issues are about carefully working with pro-manifolds.
 The final assertion is also straightforward: the space of sections is contractible since $\Aut_n^+$ is contractible, 
 so one can produce an explicit gauge equivalence.
 \end{proof}
-
-% \owen{Explain that a connection on the tangent bundle produces local exponential maps and hence a formal exponential,
-% an observation that Willwacher refines.}
-
-% In practice, formal exponentials are easy to produce. Consider a connection on the holomorphic tangent bundle. \brian{finish this}
  
 \begin{rmk} 
 In \cite{willwacher} Willwacher provides a description of the space $\Exp(X)$ of {\em all} formal exponentials. He shows that it is isomorphic to the space of pairs $(\nabla_0, \Phi)$
@@ -749,19 +700,6 @@ where $\nabla_0$ is a torsion-free connection on $X$ for $T_X$ and $\Phi$ is a s
 where ${\rm W}_n^3 \subset \Vect$ is the subspace of formal vector fields whose coefficients are at least cubic. 
 In particular, every torsion-free affine connection determines a formal exponential. The familiar case above that produces a formal coordinate from a connection corresponds to choosing the zero vector field. 
 \end{rmk}
-
-%Given a formal exponential $\sigma$ we now construct a formal vector field valued connection one-form $\omega^\sigma \in \Omega^1(\Fr_X; \Vect)$ satisfying the Maurer-Cartan equation. Hence, a $(\Vect,\GL_n)$-structure on $\Fr_X$. 
-%
-%Let $(x, \mathbf{y}) \in \Fr_X$. Define $\omega^\sigma_{(x, \mathbf{y})} : T_{(x, \mathbf{y})} \Fr_X \to \Vect$
-%as the composition 
-%\ben
-%\xymatrix{
-%T_{(x, \mathbf{y})} \Fr_X \ar[r]^-{D \sigma} & T_{(x, \sigma(\mathbf{y}))} X^{coor} \ar[r]^-{\omega^{coor}} & \Vect .
-%}
-%\een 
-%This defines $\omega^\sigma \in \Omega^1(\Fr_X; \Vect)$. The fact that $\omega^\sigma$ is $\GL_n$-invariant follows from the fact that $D \sigma|_0$ is the identity. 
-%
-%\brian{MC equation, gauge equivalence for different choices of splitting}
 
 \begin{dfn}
 A {\em Gelfand-Kazhdan structure} on the frame bundle $\Fr_X\to X$ of a complex manifold $X$ of dimension $n$ is a formal exponential $\sigma$, 
@@ -1063,19 +1001,13 @@ where $\Gamma_{hol}(-)$ denotes the space of holomorphic sections.
 In other words, Gelfand-Kazhdan descent produces every tensor bundle. 
 For example, for the defining representation $V = \CC^n$ of $\GL_n$, we have $\cV =\hT_n$, 
 i.e., the vector fields on the formal disk viewed as the adjoint representation of  $\Vect$. 
-Under Gelfand-Kazhdan descent, it produces the tangent bundle ${\rm T}$ on $\Hol_n$.
-
-%\begin{rmk}
-%It will be convenient for us to enlarge this category $\VB_n$ by adjoining countable direct sums and direct products. Denote this larger category by $\Hat{\VB}_n$. 
-%This enlargement will allow us to describe the vertex algebras in this
-%setting of formal geometry.
-%\end{rmk}
+Under Gelfand-Kazhdan descent, it produces the tangent bundle ${\rm T}$ on~$\Hol_n$.
 
 \subsection{Formal characteristic classes}
 
 \subsubsection{Recollection}
 
-In \cite{atiyah}, Atiyah examined the obstruction --- which now bears his name --- to equipping a holomorphic vector bundle with a holomorphic connection from several perspectives. To start, as he does, we take a very structural approach. He begins by constructing the following sequence of vector bundles (see Theorem 1).
+In \cite{atiyah}, Atiyah examined the obstruction --- which now bears his name --- to equipping a holomorphic vector bundle with a holomorphic connection from several perspectives. To start, as he does, we take a very structural approach. He begins by constructing the following sequence of vector bundles (see Theorem~1).
 
 \begin{dfn}
 Let $G$ be a complex Lie group. Let $E \to X$ be a holomorphic vector
@@ -1181,7 +1113,6 @@ the sequence $\desc_\GK(A) \to \desc_\GK(B) \to \desc_\GK(C)$. But
 this sequence is simply $A \to B \to C$, which is exact by
 hypothesis.
 \end{proof}
- %To see that we recover our original sequence, note that \owen{not sure how much to add here}
 
 \begin{cor}
 There is a canonical map from $\Ext^1_{\hc}(\cB,\cA)$ to $\Ext^1_{\GK_n}(\sdesc_\GK(\cB), \sdesc_\GK(\cA))$.
@@ -1189,25 +1120,6 @@ There is a canonical map from $\Ext^1_{\hc}(\cB,\cA)$ to $\Ext^1_{\GK_n}(\sdesc_
 
 In particular, once we produce the $\hc$-Atiyah sequence for a formal tensor field $\cV$, 
 we will have a very local model for the Atiyah class living in $\clie^*(\Vect,\GL_n; \hOmega^1_n \otimes_{\hO_n} \End_{\hO_n}(\cV))$.
-
-%\owen{For $\cV$ a formal tensor field, there is a natural Lie algebra inclusion $\Vect \to \End_\CC(\cV)$ in addition to the Lie algebra inclusion $\End_{\hO_n}(\cV)) \to \End_\CC(\cV)$.
-%By direct computation (e.g., picking an $\hO_n$ frame for $\cV$), one can show that the commutator of a vector field with an $\hO_n$-linear endomorphism is again an $\hO_n$-linear endomorphism.
-%Hence these subalgebras together span a Lie subalgebra, which we denote $\cA(\cV)$ for the {\em Atiyah algebra} of $\cV$.
-%In fact, these Lie algebras sit in an exact sequence
-%\[
-%\End_{\hO_n}(\cV) \to \cA(\cV) \xto{\sigma} \End_{\hO_n}(\cV) \otimes_{\hO_n}\hT_n.
-%\]
-%This sequence splits as $\hO_n$-modules (e.g., by picking an $\hO_n$ frame for $\cV$ and coordinates on the formal $n$-disk), 
-%but it is also a sequence of formal tensor fields and typically does not split in $\vb(\hD^n)_{\hc}$.}
-
-%\owen{\begin{dfn}
-%The {\em $\hc$-Atiyah sequence} of $\cV$ is the short exact sequence
-%\[
-%\End_{\hO}(\cV) \to \cA(\cV) \to \hT_n
-%\]
-%in $\vb(\hD^n)_{\hc}$.
-%\end{dfn}
-%}
 
 \subsubsection{The formal Atiyah sequence} \label{sec gk cc}
 
@@ -1323,43 +1235,6 @@ There is a cocycle $\At^\GF(\cV) \in \clie^1(\Vect,\GL_n; \hOmega^1_n \otimes_{\
 We call this cocycle the Gelfand-Fuks-Atiyah class of $\cV$ since it
 descends to the ordinary Atiyah class for $\desc(\cV)$ as a sheaf of
 $\cO$-modules. 
-
-%We call this cocycle the {\em universal Atiyah class} since it descends to the Atiyah class on any $n$-manifold with respect to the map
-%\ben
-%{\rm H}^1(\Vect, \GL_n ; \hOmega^1_n \tensor \End_{\hO_n}(\cV)) \cong \Ext^1(\cV \tensor \hOmega^1_n, \cV) \to \Ext_{\GK_n}(\desc(\cV) \tensor \Omega^1, \desc(\cV)) .
-%\een
-
-%Let us fix a GK-structure $\sigma$ over a complex manifold $X$. 
-
-%\begin{lemma} There is a quasi-isomorphism
-%\ben
-%\Ext^1_{\cO_X}(\sdesc(\sigma, \cV_1), \sdesc(\sigma, \cV_2)) \simeq \bdesc()
-%\een
-%\end{lemma}
-
-%For a fixed GK-structure $\sigma$ over a complex manifold $X$ the image of $\At^\GF(\cV)$ under t%he characteristic map
-%\ben
-%\ch_\sigma : \clie^*(\Vect , \GL_n ; \hOmega^1 \tensor_{\hO_n} \End_{\hO_n}(\cV)) \to \bdesc(\sigma, \\cV) = \dR\left(X ; \desc(\sigma, \cV)\right) \simeq \ch^*(X ; \sdesc(\sigma, \cV))
-%\een
-%agrees with the ordinary Atiyah class for $\desc(\cV)$ in cohomology.
-
-%\owen{\begin{proof}[Proof of lemma]
-%The key is to use the Lie algebra structure on the formal Atiyah sequence for $\cV$. 
-%The action of formal vector fields on $\cV$ descends to the action of vector fields on the tensor bundle $\desc_\GK(\cV)$, which is canonical and determined by the Lie derivative.
-%Likewise, the action of $\cO$-linear endomorphisms $\End_{\hO_n}(\cV)$ descends to the action of $\cO$-linear endomorphisms $\End_{\cO}(\desc_\GK(\cV))$, which is also canonical.
-%Hence, we have a short exact sequence of Lie algebras in sheaves on the site $\GK_n$, 
-%and its leftmost and rightmost terms are the same as Atiyah's sequence.
-%We need to identify the Lie algebras in the middle of the exact sequences.
-%One strategy would be to reinterpret $\cA(\cV)$ as "invariant vector fields on the total space of $\cV$ over $\hD^n$," although that may seem silly.
-%\end{proof}}
-%\owen{BW suggests the following approach: verify that $\desc_\GK(\Diff^{\leq 1})$ is the appropriate tensor bundle by directly doing sufficiently many examples}
-%%\owen{I'd like to say that $$\loc(\Diff^{\leq 1}_\cV) = \Diff^{\leq 1}_{\loc(\cV)}$$ but I'm not sure how to write something rigorous. The crux seems to be showing that this localized Lie algebra, whose avatar on the formal disk acts naturally on $\cV$ as a ``Lie algebroid,'' acts on the localization of $\cV$ in the appropriate way.}
-%
-%\owen{Vague thoughts: 
-%The local action of formal vector fields globalizes to the action of vector fields on a tensor bundle, which is canonical and determined by the Lie derivative.
-%Likewise, the local action of $\cO$-linear endomorphisms globalizes to the action of endomorphisms, which is also canonical.
-%Hence it will suffice to identify the usual Atiyah algebra, in the global setting, as this descent object. 
-%This must be somewhere in the literature.}
 
 \begin{dfn}
 The {\em Gelfand-Fuks-Chern character} is the formal sum $\ch^\GF(\cV) = \sum_{k \geq 0} \ch^\GF_k(\cV)$, 
@@ -1553,208 +1428,6 @@ $\Aut_n$. The extension of formal automorphisms $\Aut_n$ defined by
 the group two-cocycle $\ch_2^\GF(\hT_n)$ is trivial when restricted to
 $\GL_n$ so that it does not get extended.
 
-% \subsubsection{Calculation of the cocycle}
-
-% \begin{prop} 
-% The universal Atiyah class of $\cV = \hT_n$ is the cocycle 
-% \ben
-% f^i \partial_i \mapsto - \d_{dR} (\partial_j f^i) (\d t_j
-% \tensor \partial_i)
-% \een 
-% in $\clie^1(\Vect,\GL_n; \hOmega^1_n \tensor_{\hO} \hOmega^1_n
-% \tensor_{\hO} \hT_n) \cong \clie^1(\Vect , \GL_n ; \hOmega^1_n \tensor_{\hO} \End_{\cO}(\hT_n))$ .
-% \end{prop}
-
-% Here, $\d_{dR}$ denotes the formal differential on holomorphic forms
-% $\d_{dR} (f) = (\partial_i f) \d t_i$. 
-
-% \begin{proof}
-% We have already mentioned that a choice of a formal coordinate
-% determines a splitting $s : \cV \to J^1(\cV)$
-% for any formal vector bundle $\cV$. In the case of $\hT_n = \hO_n \tensor_\CC \CC\{\partial_1,\ldots, \partial_n\}$ the splitting has the form
-% \ben 
-% g^j \tensor_\CC \partial_j \mapsto \left(g^j
-% \tensor_\CC \partial_j, \d_{dR} (g^j) \tensor_{\hO} (1
-% \tensor_\CC \partial_j) \right) . 
-% \een  
-
-% With respect to the splitting the $\Vect$ action on $J^1(\cV)$ has the
-% form
-% \ben
-% \rho : \Vect \tensor (\hT_n \oplus \hOmega^1_n \tensor_{\hO} \hT_n) \to \hT_n \oplus
-% \hOmega^1_n \tensor_{\hO} \hT_n .
-% \een
-% This action has three terms:
-% \begin{itemize} 
-% \item[(i)] $\rho_1 : \Vect \tensor \hT_n \to \hT_n$, this is just the Lie
-%   bracket of vector fields; 
-% \item[(ii)] $\rho_2 : \Vect \tensor (\hOmega^1_n \tensor_{\hO} \hT_n) \to
-%   \hOmega^1_n \tensor_{\hO} \hT_n$, this is just the standard action
-%   on the tensor product according the symmetric monoid structure on
-%   $\VB_{(\Vect, \GL_n)}$;
-% \item[(iii)] $\rho_3 : \Vect \tensor \hT_n \to \hOmega^1_n \tensor_{\hO}
-%   \hT_n$. 
-% \end{itemize}
-% There is no term $\Vect \tensor (\hOmega^1_n \tensor_{\hO} \hT_n) \to
-% \hT_n$ since $\hOmega^1_n \tensor_{\hO} \hT_n$ is a submodule.
-
-% The map in (iii) determines a 1-cocycle in $\clie^1(\Vect ;
-% \hOmega^1_n \tensor_{\hO} \hT_n \tensor_{\hO} \hT_n^*) \cong
-% \clie^1(\Vect ; \hOmega^1_n \tensor_{\hO_n} \End_{\hO}(\hT_n))$ and
-% this is a representative for the Atiyah class. We will compute this
-% cocycle directly. 
-
-% Let $X = f^i \partial_i \in \Vect$ and
-% consider the constant section $Y = 1 \tensor_\CC \partial_j$. The vector field
-% $f^i \partial_i$ acts on this section via
-% \ben
-% X \cdot Y = (f^i \partial_i) \cdot (1 \tensor_\CC \partial_j) = - \partial_j f^i
-% \tensor_\CC \partial_i .
-% \een 
-% With respect to the splitting $s$ this maps to the element 
-% \ben
-% ([X,Y], -\d_{dR} (\partial_j f^i) \tensor_{\hO} (1 \tensor_\CC \partial_i) ) \in J^1
-% \cV = \cV \oplus \hOmega^1
-% \tensor_{\hO} \hT_n .
-% \een 
-% The second component corresponds to the component (iii) of the
-% action. That is 
-% \ben
-% \rho_3(f^i \partial_i, 1 \tensor \partial_j) = - \d_{dR} (\partial_j f^i)
-% \tensor_{\hO} (1 \tensor_\CC \partial_i) .
-% \een 
-% Dualizing we find the 1-cocycle
-% \ben
-% f^i \partial_j \mapsto - \d_{dR} (\partial_j f^i) \tensor_{\hO}
-% (\d t_j \tensor_\CC \partial_i) 
-% \een
-% as desired. 
-% \end{proof}
-
-% \brian{I think we can nix the following proof, since I do everything in terms
-% of jets anyway. }
-% \begin{proof} 
-% We have already mentioned that a choice of a formal coordinate determines a splitting of $\hO_n$-modules.
-% \ben
-% \cA(\hT_n) = \End(\hT_n) \oplus \hT_n .
-% \een
-% With respect to this splitting a general element in $\cA(\hT_n)$ is of the form
-% \ben
-% G + H = g_j^i (\partial_i \tensor \d t_j) + \id \tensor h^l \partial_l
-% \een
-% where $g_j^i,h^l \in \hO_n$. Here, we view $\End(\hT_n) \cong \hT_n \tensor \hOmega^1_n$ and the second component $\hT_n$ of $\cA(\hT_n)$ is embedded as
-% \ben
-% \hT_n = \id_{\hO_n} \tensor \hT_n \subset \End(\hT_n) \tensor \hT_n
-% \een
-% to which $\Diff^{\leq 1}(\hT_n)$ maps as the quotient by constant differential operators. 
-
-% Consider the $\Vect$-module structure on $\cA(\hT_n)$. It is given by a map
-% \ben
-% \rho : \Vect \tensor (\End(\hT_n) \oplus \hT_n) \to \End(\hT_n) \oplus \hT_n .
-% \een 
-% We will compute the inclusion followed by projection
-% \ben
-% {\rm pr}_{\End(\hT_n)} \circ \rho \circ i_{\hT_n}  : \Vect \tensor \hT_n \to \End(\hT_n).
-% \een
-% This will be the representative for the Atiyah class.  
-
-% Let $X = f^i \partial_i \in \Vect$. We first compute 
-% \ben
-% \rho(f^i \partial_i \tensor (\id \tensor h^l \partial_l)) = L_{f^i \partial_i} \circ (\id \tensor h^l \partial_l) - (\id \tensor h^l \partial_l) \circ L_{f^i \partial_i} \in \End(\hT_n) \oplus \hT_n .
-% \een
-% Choose a test section $a^m \partial_m \in \hT_n$. The first term acting on this test section is
-% \bestar
-% \left(L_{f^i \partial_i} \circ (\id \tensor h^l \partial_l)\right) (a^m \partial_m) & = & L_{f^i \partial_i}((h^l \partial_l a^m )\partial_m) \\ & = & [f^i \partial_i , (h^l \partial_l a^m \partial_m] \\ & = & (f^i \partial_i (h^l \partial_l a^m) \partial_m - (h^l \partial_l a^m \partial_m f^i)\partial_i \\ & = & (f^i \partial_i h^l \partial_l a^m)\partial_m + (f^i h^l \partial_i \partial_l a^m)\partial_m - (h^l \partial_l a^m \partial_m f^i)\partial_i .
-% \eestar 
-
-% The second term acting on the test section is
-% \bestar
-% \left((\id \tensor h^l \partial_l) \circ L_{f^i \partial_i} \right) (a^m \partial_m) & = & (\id \tensor h^l \partial_l) \left([f^i \partial_i, a^m \partial_m]\right) \\ & = & h^l \partial_l((f^i \partial_i a^m)\partial_m - (a^m \partial_m f^i)\partial_i) .
-% \eestar
-
-% Combining the above we see that
-% \ben
-% \rho(f^i \partial_i \tensor (\id \tensor h^l \partial_l)) = [f^i \partial_i, h^l \partial_l] (a^m \partial_m) - (h^l a^m \partial_m\partial_l f^i)\partial_l .
-% \een
-% Upon projecting on to the $\End(\hT_n)$ piece acting on the test function we see
-% \ben
-% ({\rm pr}_{\End} \circ \rho)(f^i \partial_i \tensor (\id \tensor h^l \partial_l)) = -(h^l a^m \partial_m\partial_l f^i)\partial_l
-% \een
-% for which it follows
-% \ben
-% {\rm pr}_{\End} \circ \rho(f^i \partial_i \tensor h^l \partial_l) = - h^l \partial_l \partial_m f^i (\partial_i \tensor \partial^m) .
-% \een
-% Dualizing we find that the Atiyah class
-% \ben
-% {\rm At}_{for}(\Vect) : \Vect \to \hOmega^1_n \tensor {\rm End}(\Vect) = \hOmega^1_n \tensor (\hT_n \tensor \hOmega^1_n)
-% \een
-% is given by 
-% \ben
-% f^i \partial_i \mapsto - \d_{dR}(\partial_j f^k) (\partial_k \tensor \d t_j)
-% \een 
-% as an element in $\clie(\Vect ; \hOmega^1_n)$ as desired. It is immediate to see that this lies in the subspace 
-% \ben
-% \clie^1(\Vect , \GL_n ; \hOmega^1_n).
-% \een
-% \end{proof}
-
-%We define differential operators of order $\leq 1$ on $\cV$ to be the formal vector field
-%\ben
-%\Diff^{\leq 1}(\cV) := {\rm Hom}_{\hO_n}(J^1(\cV), \cV) . 
-%\een
-%By the above lemma we have a short exact sequence
-%\be\label{1diff}
-%\End_{\hO_n}(\cV) \to \Diff^{\leq 1}(\cV) \to \End_{\hO_n}(\cV) \tensor \hT_n 
-%\ee
-%of formal tensor fields.
-%Consider the map
-%\ben
-%\iota : \hT_n \to \End_{\hO_n}(\cV) \tensor \hT_n \; \; , \;\; X \mapsto {\rm id}_{\hO_n} \tensor X,
-%\een
-%Note that this is a map of $\Vect$-modules but is {\em not} a map of Lie algebras. We define $\cA(\cV)$ to be the the pull-back 
-%\ben
-%\xymatrix{
-%\cA(\cV) \ar[r] \ar[d] & \hT_n \ar[d]^-{\iota} \\
-%\Diff^{\leq 1}(\cV) \ar[r] & \End_{\hO_n}(\cV) \tensor \hT_n 
-%}
-%\een
-%in the category of formal tensor fields.
-
-%\begin{prop} 
-%For any $\cV$ in $\VB_{\hc}$, there is a short exact sequence in $\VB_{\hc}$
-%\be\label{formalatiyah}
-%\cV \tensor_{\hO_n} \hOmega^1_{n} \to J^1(\cV) \to \cV .
-%\ee
-%Moreover, the Gelfand-Kazhdan descent of this short exact sequence
-%\[
-%\sdesc_\GK(\End_{\hO_n}(\cV)) \to \sdesc_\GK(\cA(\cV)) \to \sdesc_\GK(\hT_n)
-%\]
-%is isomorphic to the classical Atiyah sequence for the holomorphic vector bundle $\desc_\GK(\cV)$.
-%\end{prop}
-
-%\begin{proof}
-%The first statement is immediate. The second statement follows from the well-known fact that the Atiyah sequence is dual to the 
-%\end{proof}
-
-%\def\Diff{{\rm Diff}}
-%\def\xto{\xrightarrow}
-%
-%
-%
-%For $\cV$ in $\vb(\hD^n)_{\hc}$, let $\Diff_\cV$ denote the algebra of differential operators on $\cV$. If we fix an isomorphism $\cV \cong \hO^{\oplus d}$ of $\hO$-modules, then $\Diff_\cV \cong D \otimes_\CC \End_\CC(\CC^d)$. This algebra is filtered by order, just as ordinary differential operators are. Let $\Diff^{\leq 1}_\cV$ denote the order 1 differential operators on $\cV$. There is a canonical short exact sequence of $\hO$-modules
-%\[
-%\End_{\hO}(\cV) \to \Diff^{\leq 1}_\cV \xto{\sigma} \End_{\hO}(\cV) \otimes_{\hO}\hT_n
-%\]
-%where $\sigma$ is the principal symbol map. The $\Vect$-module structure on $\cV$ is encoded by a map of Lie algebras $\rho: \Vect \to \Diff^{\leq 1}_\cV$, and there is likewise a natural $\GL_n$-module structure. In other words, $\Diff^{\leq 1}_\cV$ is an $\hc$-module, and the above is a short exact sequence in $\vb(\hD^n)_{\hc}$. \owen{Need to give detailed descriptions of this structure! And why it's an SES in that category!}
-%
-%\begin{dfn}
-%The {\em $\hc$-Atiyah sequence} of $\cV$ is the short exact sequence
-%\[
-%\End_{\hO}(\cV) \to \cA(\cV) \to\hT_n
-%\]
-%pulled back from the sequence for $\Diff^{\leq 1}_\cV$ along the map $\sigma \circ \rho$.
-%\end{dfn}
-
 \section{Harish-Chandra structure on CDOs} \label{sec vertex alg}
 
 In this section, we first recall the definition of chiral differential
@@ -1882,8 +1555,6 @@ is a collection of $(\fg,K)$-actions $(\rho^{(N)}_{\fg}, \rho^{(N)}_{K})$ on the
 \end{itemize}
 \end{dfn}
 
-%\brian{examples where $V^{(N)}$ is actually finite dimensional? Check out BZF}
-
 \subsection{The $\beta\gamma$-vertex algebra}
 
 One of the main objects that we will focus on is the vertex algebra of
@@ -1923,7 +1594,6 @@ The generators of this vertex algebra are given a variety of symbols:
 \item in \cite{MSV}, they use $a^j_{m}$ for what we call $b^j_m$ and $b^j_{m}$ for our~$c^j_m$;
 \item in Chapter 11 Section 3.6 of \cite{BZF}, they use $a^j_{-m}$ for what we call $b^j_m$ and ${a^{\ast}}^j_{-m}$ for our~$c^j_m$.
 \end{enumerate}
-%wen{Add further references, possibly. Verify indices!}
 \end{rmk}
 
 It is important to note how $\CDO_n$ relates to the geometry of $\CC^n$, and some subtleties thereof.
@@ -2084,13 +1754,8 @@ ${\rm Gr} \, \hCDO_n$ via derivations.
 The construction in the preceding paragraph defines the structure of a $(\Vect, \GL_n)$-module on the $\ZZ_{\geq 0}$-graded vertex algebra ${\rm Gr} \; \hCDO_n$ preserving the family of brackets definining the Poisson vertex algebra structure. Moreover, this action is compatible with the $\hO_n$-module structure. 
 \end{prop}
 
-\begin{proof} The associated graded can be written as
-%\ben
-%\Gr \; \hCDO_n \cong
-%\underset{{0<k}}{\widehat{\bigotimes}}\,\cSym_{\hO_n}(\hT^*_n)\,
-%\widehat{\otimes}\, \underset{{0\leq
-%    l}}{\widehat{\bigotimes}}\,\cSym_{\hO_n}(\hT_n) .
-%\een
+\begin{proof} 
+The associated graded can be written as
 \[
 \Gr \; \hCDO_n \cong
 \underset{{0\leq k}}{\bigotimes} \,\Sym_{\hO_n}(\hOmega^1_n)\,
@@ -2103,26 +1768,6 @@ frame on the respective tensor
 bundles appearing in the large decomposition above. 
 \end{proof}
 
-%\begin{prop} 
-%The Poisson vertex algebra ${\rm Gr} \; \hCDO_n$ has the structure of
-%a $(\Vect, \Aut_n)$-module such that:
-%\begin{itemize}
-%\item[(i)] there is an action of $\Aut_n$ on $\Gr \; \hCDO_n$ by vertex
-%  algebra automorphisms;
-%\item[(ii)] there is an action of $\Vect$ on $\Gr \; \hCDO_n$ by vertex
-%  algebra derivations that is compatible with the action in (i), in the sense of Definition \ref{hcmod};
-%\item[(iii)] the action of $\Vect$ commutes with the vertex algebra
-%  derivations given by the family of brackets defining the Poisson
-%  vertex structure.
-%\end{itemize}
-%\end{prop}
-
-%\begin{rmk} The category of $(\Vect, \Aut_n)$-modules is symmetric
-%  monoidal and it makes sense to talk about vertex algebras and
-%  Poisson vertex algebras in it. Although we don't develop the
-%  machinery here, the above implies that $\hCDO_n$ is a Poisson vertex
-%  algebra object of $(\Vect,\Aut_n)$-modules.
-%\end{rmk}
 \subsubsection{Conformal structure}\label{sec conformal structure}
 
 The vertex algebra $\CDO_n$, and its completion $\hCDO_n$, has the additional structure of a {\em
@@ -2284,9 +1929,6 @@ an action of an extension of {\em all} formal automorphsims $\Tilde{\Aut}_n \to
 \Aut_n$ on CDOs. This action is compatible with our construction
 above.   
 
-%The proof of the Proposition \ref{hc1} amounts to exhibiting the compatibility of results of \cite{GMS} and \cite{MSV}. 
-%We review their constructions here. 
-
 \begin{thm} 
 \label{GMS1}
 Let $\Aut_{VA}(\hCDO_n)$ denote the group of automorphisms of the
@@ -2335,7 +1977,6 @@ by using the natural isomorphism
 \]
 But this group $\Aut^{GMS}_n$ has an interesting group structure because of how $\Aut_n$ acts on the dimension 1 component.
 In fact, it has the structure of a semi-direct product ${\rm Aut}_n \ltimes_{pb} (\hOmega^1_n)^{\tensor 2}$, where the pull-back action is as above.
-%\owen{Where? Let's give a precise citation.}
 
 By definition, the group $\Tilde{\rm Aut}_n$ is the subgroup of $\Aut^{GMS}_n$ consisting of vertex algebra automorphisms. 
 In other words, we pick out the dimension-preserving automorphisms of generators that intertwine with the vertex operator and so on.
@@ -2355,11 +1996,6 @@ This identifies the relevant short exact sequence (\ref{grpses}).
 
 \subsubsection{An explicit formula for the cocycle} 
 \label{sec GMScocycle}
-
-% \brian{I have extracted all the juice we need for our construction
-% in the previous sections. This last section should be seen as a
-% comparison to GMS's work, though we do not use their results
-% explicitly in our construction.}
 
 In this section we describe an explicit group 2-cocycle
 \ben
@@ -2535,31 +2171,6 @@ The action of $(\TVect, \GL_n)$ on $\hCDO_n$ constructed in
 Proposition \ref{hc str on cdo} is the restriction along the map $s$ of the action by
 $(\TVect, \TAut_n)$ constructed in~\cite{GMS}. 
 
-% Differential forms pull back along maps of manifolds, and so diffeomorphisms of the formal $n$-disk $\Aut_n$ acts via pullback on the vector space $\hOmega^2_n$ of two-forms on the formal $n$-disk. Let $\Aut_n \ltimes_{pb} \hOmega^2_{n,cl}$ denote the semidirect product of groups determined by this pullback action. The action by pullback is {\em not} an action on the vertex algebra (i.e., it does not preserve the vertex operator). We will see, however, that there is a ``deformation'' of the group $\Aut_n \ltimes_{pb} \hOmega^2_{n,cl}$ that does act on the vertex algebra. 
-
-%Moreover, there is a fiber square
-%\ben 
-%\xymatrix{
-%\Aut_n \ltimes_{pb} \hOmega^2_{n,cl} \ar[r] \ar[d] & \Aut_{\rm VA}({\rm Gr} \; \CDO_n) \ar[d] \\
-%\Aut_n \ltimes_{pb} \hOmega^2_n \ar[r] & \Aut_{\rm Vect}(V_n) .
-%}
-%\een
-%\brian{not sure about this, it seems like $\Aut_n \ltimes_{pb} \hOmega^2_n$ does act}
-
-%That is, the subgroup of $\Aut_n \ltimes_{pb} \hOmega^2_n$ that acts on $V_n$ by vertex algebra automorphisms is precisely the semi-direct product of automorphisms (via the pull-back action) by closed two-forms.
-
-%The group $\Aut_n \ltimes_{pb} \hOmega^2_{n,cl}$, and the corresponding Lie algebra, still do not act on the vertex algebra $\CDO_n$. There is, however, a deformation that does act.  
-
-% The main result of this section is the following.
-
-% \begin{prop}\label{hc1} 
-% There is an extension of Harish-Chandra pairs
-% \ben
-% 0 \to \Hat{\Omega}^2_{n,cl} \to (\TVect, \Tilde{\rm Aut}_n) \to (\Vect, {\rm Aut}_n) \to 0
-% \een
-% such that the vertex algebra $\hCDO_n$ has the structure of a $(\TVect, \Tilde{\rm Aut}_n)$-module .
-% \end{prop}
-
 \subsection{The conformal structure for the equivariant vertex algebra}
 
 We have already seen that the $\beta\gamma$ vertex algebra is
@@ -2691,12 +2302,6 @@ the $(\fg,K)$-{\em equivariant graded character} of $V$ is the $q$-expansion
 in~$\clie^*\left(\fg,K ; \bigoplus_{k \geq 0} \Sym^k (\fg^\vee)[k]\right)[[q]]$.
 \end{dfn}
 
-%\begin{rmk} Note that ${\rm char}^{(\fg,K)} (V) = {\rm
-%    char}^{(\fg,K)}({\rm Gr}(V))$ where ${\rm Gr}(V)$ is the
- % associated graded vertex algebra using the filtration coming from
- % conformal weight. 
-%\end{rmk}
-
 \subsubsection{} 
 
 We now turn to computing the character for the main example, 
@@ -2742,9 +2347,6 @@ p^* : \clie^*\left(\fg,K ; \bigoplus_{k \geq 0} \Sym^k (\fg^\vee)[k]\right) \to 
 \]
 \end{lemma}
 
-%We wish to apply this observation to an infinite-dimensional vector space (for us, $\hCDO_n$) and the Gelfand-Fuks character,
-%but the operations of exponentiating and taking traces may be ill-defined in the infinite-dimensional setting.
-%One must check explicitly that they make sense for the operators of interest.
 In our case, we take the map of Lie algebras $p : \TVect \to \Vect$ and the $\TVect$-module $\hCDO_n$.
 Note that we will exhibit a filtration of infinite length.
  
@@ -2917,11 +2519,6 @@ Let us consider an open subset $U \subset \CC^n$ and a hermitian vector
 bundle $E$ on $U$. We fix a trivialization $E = U \times E_0$ with $E_0$
 equipped with a hermitian inner product. 
 
-%\noindent {\bf Notation Warning:} As a matter of , when we
-%write $\Omega^{k,l}$ we mean the space of {\it smooth} $(k,l)$
-%forms. When we write $\Omega^{k}_{cl}$ we mean the space of {\it
- % holomorphic} $\partial$-closed $k$-forms.
-
 In this situation, there is a unique connection on $E$ 
 that preserves the hermitian inner product compatible with the complex structure. 
 With respect to the trivialization, it takes the form
@@ -3026,17 +2623,6 @@ The $2$-form $\rho$ is only unique up to a holomorphic closed
 $2$-form. We will need to fix one in the next section when we define
 the extended bundle.
 \end{rmk}
-
-%With respect to our trivialization, however, we can choose
-%our favorite one. 
-
-% \begin{lemma} Given $f$ and $A$ as above define the $(2,0)$ form
-% \ben
-% \rho_{f, A} = \Tr(g^{-1} \partial g \wedge A) + \# \Tr(g^{-1} \partial
-% g g^{-1} \partial g) \in \Omega^{2,0}(U) .
-% \een
-% Then $\d \rho_{f,A} = \CS(A) - \CS(f \cdot A)$.
-% \end{lemma}
 
 \subsubsection{Formal coordinates}
 
@@ -3405,8 +2991,6 @@ of categories.
 Explicitly, an object of $\Tilde{\VB}_n$ is a $\ZZ/2$-graded $\hO_n$-module 
 that is free and finite rank together with a compatible action of $(\TVect, \GL_n)$ that respects the two-step filtration of~$\TVect$.
 
-%One defines a slightly larger category $\Hat{\Tilde{\VB}}_{(\Vect,\GL_n)}$ by adjoining countable products and direct sums.
-
 \subsection{Extended descent}
 
 We are now in a place to define the extended Gelfand-Kazhdan descent
@@ -3433,13 +3017,6 @@ the corresponding $\Omega^*(X)$-module. Since different
 choices of sections $\sigma$ and $\sigma_{\Omega^2}$ determine gauge
 equivalent connections the resulting sheaf of flat sections is independent of such choices and
 we will denote the sheaf by $\sdesc_{\GK}(X, \alpha; \cV)$. 
-
-% \brian{We can probably define a category $\Tilde{\Hol}_n$ which consists of complex manifolds of dimension $n$ together with a trivialization $\alpha$. Morphisms are biholomorphisms that pull-back trivializations. Then there is a category $\Tilde{\GK}$ fibered over $\Tilde{\Hol}_n$ given by a pair $(X, \alpha)$ together with a choice of GK-structure as before. The category $\VB_{flat}$ pulls back to $\Tilde{\VB}_{flat}$ consisting of flat vector bundles on manifolds with trivialization. So it looks like we should write something like
-% \ben
-% \Tilde{\desc} : \Tilde{\GK}^{op} \times \VB_{(\TVect, \GL_n)}^{\rm fil} \to {\rm Pro}(\Tilde{\VB}_{flat})
-% \een
-% that sends a triple $(\Fr_X, \alpha, \sigma)$ together with filtered module $\cV$....
-% }
 
 \section{Descent for vertex algebras} \label{sec vertex desc}
 
@@ -3690,13 +3267,12 @@ disk.
 
 The compatibility of the Gelfand-Fuks-Chern class $\ch_2(\hT_n)$ and
 the group cocycle $\alpha_{GMS}$ 
-%\in {\rm C}_{Grp}^2(\Aut_n ; \hOmega^2_{n,cl
 shows how our definition of chiral differential operators is related
-to the original definition given in \cite{GMS}.
+to the original definition given in~\cite{GMS}.
 
 \subsubsection{The conformal structure}
 
-We address the conformal structure for the sheaf of chiral differential operators. We have already notes that the vertex algebra $\hCDO_n$ has the structure of a conformal vertex algebra of charge $c = 2n$. This conformal structure, however, is not compatible with the action of $\TVect$ on CDO's on the formal disk. Indeed, Proposition \ref{prop c1 conformal} implies that the obstruction for these structures to be compatible is the first Gelfand-Fuks-Chern class $c_1^{\GF}(\hT_n)$. 
+We address the conformal structure for the sheaf of chiral differential operators. We have already notes that the vertex algebra $\hCDO_n$ has the structure of a conformal vertex algebra of charge $c = 2n$. This conformal structure, however, is not compatible with the action of $\TVect$ on CDO's on the formal disk. Indeed, Proposition \ref{prop c1 conformal} implies that the obstruction for these structures to be compatible is the first Gelfand-Fuks-Chern class~$c_1^{\GF}(\hT_n)$. 
 
 The conformal vector $L_{-2} \in \hCDO_n^{(2)}$ is preserved, however, by the action of $\GL_n$. Thus, the map of vertex algebras $\Phi : {\rm Vir}_{c=2n} \to \hCDO_n$, encoding the conformal structure, determines a map of graded $\Omega^\#_X$-modules 
 \ben

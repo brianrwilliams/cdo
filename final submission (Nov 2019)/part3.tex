@@ -814,13 +814,6 @@ The zeroth Fourier mode of $c_0 b_{-1}$ acts like a number operator or Euler vec
 \]
 when $f$ is a homogeneous polynomial of degree $p$ in the variables $c_{m},b_{l}$, with $m \leq 0$ and~$l < 0$.
 
-%\brian{Everything comes from the relation $(b_{-1})_{(0)} c_0 = 1$ (if we're setting $\hbar = 1$). The zero Fourier mode satisfies 
-%\ben
-%x_{(0)} a = - a_{(0)} x \;\; , \;\; x_{(0)} y = y_{(0)} x + T (y_{(1)} x) 
-%\een 
-%for $x,y$ conformal weight $1$ and $a$ conformal weight zero. So, in particular we have $(c_0 b_{-1})_{(0)} c_0 = - (c_0)_{(0)}  (c_0 b_{-1}) = - c_0 (c_0)_{(0)} b_{-1} = c_0$ using the fact the the zero mode is also a derivation. 
-%}
-
 On the other hand, note that $\frak{q}(L) = L + C$, where $C$ is a constant, since $L$ is quadratic and hence only admits at most one nontrivial contraction with the propagator $P$. Hence, the derivation $\{\frak{q}(L), -\}$ agrees with the derivation $\{L, -\}$.
 Direct computation of this derivation shows that it also counts the number of incoming $\gamma$ and $\beta$ legs into any observable; it is the number operator. At the level of the vertex algebra, it thus recovers the zeroth Fourier mode of $c_0 b_{-1}$,
 as claimed by the lemma.
@@ -877,55 +870,6 @@ which is precisely the cohomology class of the observable above.
 The proof for local functionals that are $\beta$-free is completely analogous. 
 \end{proof}
  
-%\begin{lemma} Let $a \in \Obs^{\q}_n(A_{S<r}(0))^{(1)}$ and $\cdot$ be the factorization product in (\ref{disk ann disk}). Then, for each $c \in \Obs^{\q}_n(D_s(0))^{(l)}$, one has 
-%\ben
-%[a \cdot c] = [a_{disk}]_{(0)} [c] 
-%\een 
-%in the vertex algebra $\Vert(\Obs^{\q}_n)$. 
-%\end{lemma}
-%
-%\begin{proof}
-%For convenience, we assume $n = 1$. The general case is a direct generalization. It suffices to evaluate on linear observables $a,c$. The linear observables supported on the annulus $A_{S<r}(0)$ have the form
-%\begin{align*}
-%O_{c_p}(A) & : (\gamma,\beta) \mapsto \frac{p!}{2\pi i} \int_{|z| = s'} \frac{\gamma(z)}{z^{p+1}} \d z \\
-%O_{b_{q}} (A) & : (\gamma,\beta) \mapsto \frac{(q-1)!}{2\pi i} \int_{|z| = s'} \frac{\beta(z)}{z^q}
-%\end{align*}
-%where $p,q \in \ZZ$ and where $s' \in (S,r)$. The weight of $O_{c_p}(A)$ is $-p$ and the weight of $O_{b_q}(A)$ is $-q$. These describe all linear observables up to exact elements. Given a bump function $f$ on the interval $(S,r)$ we can write down smeared versions of these observables. For instance:
-%\ben
-%O'_{b_q} (A) (\gamma,\beta) = \frac{(q-1)!}{2 \pi i} \int_{S}^r \int_{|z|=s'} \frac{\beta(z)}{z^q} \d z f(r) \d r .
-%\een 
-%These observables represent familiar elements of the vertex algebra. Indeed, we find $[(O_{c_p})_{disk}] = c_p$ and $[(O_{b_q})_{disk}] = b_q$ for $p \leq 0$ and $q < 0$. 
-%
-%We verify the claim in the case $a = O'_{b_{-k}}$ and $c = (O'_{c_{-l}})_{disk}$. One one hand, the zero Fourier mode satisfies
-%\ben
-%(b_{-k})_{(0)} c_{-l} = 
-%
-%
-%\end{proof}
-%
-%\begin{proof}
-%For convenience, we assume $n = 1$. The general case is a direct generalization. It suffices to evaluate on linear observables
-%\begin{align*}
-%a & \in \left(\Omega^{1,*}_c(A_{S<r}(0)) \oplus \Omega^{0,*}_c(A_{S<r}(0)) \right)^{(k)} \subset (\Obs^{\q}_n(A_{S<r}(0))^{(k)} \\
-%c & \in \left(\Omega^{1,*}_c((D_r(0)) \oplus \Omega^{0,*}_c((D_r(0)) \right)^{(l)} \subset (\Obs^{\q}_n((D_r(0))^{(l)} .
-%\end{align*} 
-%Let $f$ be a bump function for $A_{S<r}(0)$. Up to exact elements, the linear observables of weight $k$ supported on the annulus are of the form 
-%\begin{align*}
-%\Tilde{c}_k (A) & = f(z,\zbar) z^{k} \d z \d \zbar \in \Omega^{1,1}_c(A_{S<r}(0)) \\
-%\Tilde{b}_{1+k} (A) & = f(z,\zbar) z^{1+k} \d \zbar \in \Omega^{0,1}_c (A_{S<r}(0)) .
-%\end{align*}
-%Similarly, up to exact elements, the linear observables of weight $l$ on the disk are of the form
-%\begin{align*}
-%\Tilde{c}_{l}(D) &= f(z,\zbar) z^l \d z \d \zbar \in \Omega^{1,1}_c(D_s(0)) \\
-%\Tilde{b}_{l} (D) & = f(z,\zbar) z^{1+k} \d \zbar \in \Omega^{0,1}_c (D_s(0)) .
-%\end{align*}
-%The cohomology classes of these elements correspond to the elements $c_l = [\Tilde{c}_l(D)]$, ...
-%
-%Consider the case $a = \Tilde{b}_k(A)$ and $c = \Tilde{c}_l(D)$. The factorization product yields $\Tilde{b}_k(A) \cdot \Tilde{c}_l(D) = \delta_{k,-l}$. 
-%
-%\end{proof}
-
-
 \subsection{The action of $\TVect$}
 
 The preceding discussion was abstract but there are two local functionals that play an important role for us:
